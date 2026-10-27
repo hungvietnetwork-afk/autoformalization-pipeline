@@ -1,0 +1,35 @@
+### P108
+A $150\times 324\times 375$ rectangular solid is made by gluing together $1\times 1\times 1$ cubes. An internal diagonal of this solid passes through the interiors of how many of the $1\times 1\times 1$ cubes?
+Answer: 768
+
+### P109
+If $x$ is an odd number, then find the largest integer that always divides the expression\[(10x+2)(10x+6)(5x+5)\]
+Answer: 960
+
+### P110
+Suppose that $a$ and $b$ are positive integers for which $a$ has $3$ factors and $b$ has $a$ factors. If $b$ is divisible by $a$, then what is the least possible value of $b?$
+Answer: 8
+
+### P111
+Find the greatest common divisor of 91 and 72.
+Answer: 1
+
+### P112
+A standard deck of cards has 52 cards divided into 4 suits, each of which has 13 cards.  Two of the suits ($\heartsuit$ and $\diamondsuit$, called 'hearts' and 'diamonds') are red, the other two ($\spadesuit$ and $\clubsuit$, called 'spades' and 'clubs') are black.  The cards in the deck are placed in random order (usually by a process called 'shuffling').  In how many ways can we pick two different cards? (Order matters, thus ace of spades followed by jack of diamonds is different than jack of diamonds followed by ace of spades.)
+Answer: 2652
+
+### P113
+Find $(4^4 \div 4^3) \cdot 2^8$.
+Answer: 1024
+
+### P114
+Express $1.\overline{27}$ as a common fraction in lowest terms.
+Answer: \dfrac{14}{11}
+
+### P115
+Marguerite drove 100 miles in 2.4 hours. If Sam drove for 3 hours at the same average rate as Marguerite, how many miles did he drive?
+Answer: 125\textnormal{ miles}
+
+### P116
+Let $\mathbf{v} = \begin{pmatrix} 2 \\ 1 \\ -1 \end{pmatrix}$ and $\mathbf{w} = \begin{pmatrix} 1 \\ 0 \\ 3 \end{pmatrix}.$  The columns of a matrix are $\mathbf{u},$ $\mathbf{v},$ and $\mathbf{w},$ where $\mathbf{u}$ is a unit vector.  Find the largest possible determinant of the matrix.
+Answer: \sqrt{59}

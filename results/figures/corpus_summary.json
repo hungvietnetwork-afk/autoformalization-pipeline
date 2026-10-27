@@ -1,0 +1,32 @@
+{
+ "problems": 1000,
+ "formalized": 990,
+ "by_source": {
+  "gsm8k": {
+   "problems": 100,
+   "formalized": 100
+  },
+  "math": {
+   "problems": 814,
+   "formalized": 806
+  },
+  "minif2f": {
+   "problems": 49,
+   "formalized": 49
+  },
+  "proofnet": {
+   "problems": 37,
+   "formalized": 35
+  }
+ },
+ "semantic_verdicts": {
+  "ARITHMETIC_ONLY": 36,
+  "PROVED_CONSISTENT": 271,
+  "NO_EVIDENCE_OF_ERROR": 509,
+  "ANSWER_MISSING": 143,
+  "EQUIV_GOLD": 29,
+  "TRIVIAL": 2
+ },
+ "formalized_not_flagged": 809,
+ "selection": "per problem: best semantic verdict, then shortest statement, then fastest check"
+}

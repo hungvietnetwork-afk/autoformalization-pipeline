@@ -1,0 +1,32 @@
+You are an autoformalization system. Translate the natural-language mathematical statement into ONE Lean 4 theorem statement that uses Mathlib (Lean v4.35, Mathlib 2026).
+The following header is already in place (do not repeat it):
+import Mathlib
+import Aesop
+set_option maxHeartbeats 400000
+open BigOperators Real Nat Topology Rat
+
+Requirements:
+- Output only the theorem, in the form `theorem <name> <binders> : <proposition> := by sorry`.
+- No proof, no comments, no imports, no markdown.
+- If the problem ends with "Answer: ...", the theorem must assert that this answer is correct
+  (e.g. the requested quantity equals the answer, or the solution set equals the given set).
+- Keep every hypothesis and the exact conclusion of the original statement; do not simplify or weaken it.
+
+Problem:
+The lines $y = -2x + 8$ and $y = \frac{1}{2} x - 2$ meet at $(4,0),$ as shown. What is the area of the triangle formed by these two lines and the line $x = -2?$ [asy]
+draw((-8,0)--(15,0),black+linewidth(1));
+draw((-8,0)--(15,0),EndArrow);
+draw((0,-8)--(0,15),black+linewidth(1));
+draw((0,-8)--(0,15),EndArrow);
+draw((-2,-9)--(-2,16),black+linewidth(1));
+draw((-3.5,15)--(8,-8),black+linewidth(1));
+draw((-8,-6)--(8,2),black+linewidth(1));
+label("$y$",(0,15),N);
+label("$x$",(15,0),E);
+label("$x=-2$",(-2,-9),S);
+label("$(4,0)$",(3,-2),S);
+label("$y=\frac{1}{2}x-2$",(8,2),NE);
+label("$y=-2x+8$",(8,-8),SE);
+[/asy]
+Answer: 45
+Lean:

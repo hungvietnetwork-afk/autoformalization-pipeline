@@ -1,0 +1,88 @@
+### P066
+theorem t66 (m n : ℕ) (hm : 1 < m) (hn : 1 < n)
+    (h : ∏ k ∈ Finset.Icc (1 : ℕ) 45, (1 / Real.sin ((2 * (k : ℝ) - 1) * π / 180)) ^ 2 = (m : ℝ) ^ n) :
+    m + n = 91 := by sorry
+
+### P067
+theorem t67 : (1 / 3 : ℝ) * π * (10 / 2 : ℝ) ^ 2 * 6 = 50 * π := by sorry
+
+### P068
+theorem t68 (F : Set (ℝ × ℝ)) (hF : F = Set.Icc (0 : ℝ) 1 ×ˢ Set.Icc (0 : ℝ) 1) (t : ℝ) (ht : 0 < t ∧ t < 1 / 2)
+    (hcross : (MeasureTheory.volume {p : ℝ × ℝ | p ∈ F ∧ (|p.2 - p.1| ≤ t ∨ |p.1 + p.2 - 1| ≤ t)}).toReal / (MeasureTheory.volume F).toReal * 100 = 36) :
+    (MeasureTheory.volume {p : ℝ × ℝ | p ∈ F ∧ |p.2 - p.1| ≤ t ∧ |p.1 + p.2 - 1| ≤ t}).toReal / (MeasureTheory.volume F).toReal * 100 = 2 := by sorry
+
+### P069
+theorem t69 (x y : ℝ) (hx : 0 < x) (hy : 0 < y) (E F : ℂ)
+    (hE : E ∈ segment ℝ (0 : ℂ) (x : ℂ)) (hF : F ∈ segment ℝ (0 : ℂ) ((y : ℂ) * Complex.I))
+    (hBE : dist (x : ℂ) E = 6) (hAF : dist (0 : ℂ) F = 2)
+    (h₁ : EuclideanGeometry.angle (x : ℂ) ((x : ℂ) + (y : ℂ) * Complex.I) E = EuclideanGeometry.angle E ((x : ℂ) + (y : ℂ) * Complex.I) F)
+    (h₂ : EuclideanGeometry.angle E ((x : ℂ) + (y : ℂ) * Complex.I) F = EuclideanGeometry.angle F ((x : ℂ) + (y : ℂ) * Complex.I) ((y : ℂ) * Complex.I)) :
+    x * y = 108 * Real.sqrt 3 - 36 := by sorry
+
+### P070
+theorem t70 : {z : ℂ | z ^ 4 = -4} = {1 + Complex.I, 1 - Complex.I, -1 + Complex.I, -1 - Complex.I} := by sorry
+
+### P071
+theorem t71 : ∑ n ∈ Finset.Icc (1 : ℕ) 1000, (1 : ℝ) / ((n : ℝ) ^ 2 + n) = 1000 / 1001 := by sorry
+
+### P072
+theorem t72 : IsGreatest {n : ℕ | 0 < n ∧ ∀ x : ℝ, Real.sin x ^ n + Real.cos x ^ n ≥ 1 / (n : ℝ)} 8 := by sorry
+
+### P073
+theorem t73 : IsLeast {y : ℝ | ∃ x : ℝ, 1 < x ∧ y = (x + 8) / Real.sqrt (x - 1)} 6 := by sorry
+
+### P074
+theorem t74 : IsGreatest {n : ℤ | (n : ℝ) < ∑ k ∈ Finset.Icc (2 : ℕ) 2010, Real.logb 2 ((k : ℝ) / ((k : ℝ) - 1))} 10 := by sorry
+
+### P075
+theorem t75 (b c : ℚ) (h₁ : (3 - Real.sqrt 7) ^ 3 + (b : ℝ) * (3 - Real.sqrt 7) + (c : ℝ) = 0)
+    (r : ℤ) (hr : (r : ℝ) ^ 3 + (b : ℝ) * (r : ℝ) + (c : ℝ) = 0) : r = -6 := by sorry
+
+### P076
+theorem t76 : ((Polynomial.X ^ 2018 + 44 * Polynomial.X ^ 2015 + 3 * Polynomial.X ^ 3 + 404 : Polynomial ℂ).roots.map (fun r => r ^ 2)).sum = 0 := by sorry
+
+### P077
+theorem t77 : IsLeast {c : ℝ | 0 < c ∧ ∀ x y : ℝ, 0 ≤ x → 0 ≤ y → Real.sqrt (x * y) + c * |x - y| ≥ (x + y) / 2} (1 / 2) := by sorry
+
+### P078
+theorem t78 (A B C : ℕ) (hA : 1 ≤ A ∧ A ≤ 5) (hB : 1 ≤ B ∧ B ≤ 5) (hC : 1 ≤ C ∧ C ≤ 5)
+    (hAB : A ≠ B) (hBC : B ≠ C) (hAC : A ≠ C)
+    (h : Nat.ofDigits (6 : ℕ) [C, B, A] + Nat.ofDigits (6 : ℕ) [A, C, B] + Nat.ofDigits (6 : ℕ) [B, A, C] = Nat.ofDigits (6 : ℕ) [0, A, A, A]) :
+    B + C = 5 := by sorry
+
+### P079
+theorem t79 : IsLeast {n : ℕ | (Nat.digits 2 n).length = 5 ∧ (Nat.digits 2 n).reverse = Nat.digits 2 n ∧ ∃ b : ℕ, 2 ≤ b ∧ b ≠ 2 ∧ (Nat.digits b n).length = 3 ∧ (Nat.digits b n).reverse = Nat.digits b n} 17 := by sorry
+
+### P080
+theorem t80 : Set.ncard {c : ℤ × ℤ × ℤ | ∃ t : ℝ, 0 < t ∧ t < 1 ∧ (∀ n : ℤ, 150 * t ≠ (n : ℝ) ∧ 324 * t ≠ (n : ℝ) ∧ 375 * t ≠ (n : ℝ)) ∧ c = (⌊150 * t⌋, ⌊324 * t⌋, ⌊375 * t⌋)} = 768 := by sorry
+
+### P081
+theorem t81 (h9901 : Nat.Prime 9901) : Set.ncard {n : ℕ | 1 < n ∧ ∀ i : ℕ, 1 ≤ i → (10 ^ i / n) % 10 = (10 ^ (i + 12) / n) % 10} = 255 := by sorry
+
+### P082
+theorem t82 : (9 : ℚ) * (1 / 13) * 26 = 18 := by sorry
+
+### P083
+theorem t83 : ∑ i ∈ Finset.Icc 1 40, (10 ^ i / 1111) % 10 = 90 := by sorry
+
+### P084
+theorem t84 (s w : ℝ) (hsq : 5 * w = s) (hper : 2 * (w + s) = 36) : 4 * s = 60 := by sorry
+
+### P085
+theorem t85 (b c : ℝ) (h₁ : 7 * b = 3 * c) (h₂ : c = 28) : b = 12 := by sorry
+
+### P086
+theorem t86 : ((Finset.univ : Finset (Fin 10)).powersetCard 2).card = 45 := by sorry
+
+### P087
+theorem t87 (a : ℝ) (h : a + a / 3 = 8 / 3) : a = 2 := by sorry
+
+### P088
+theorem t88 : (3 : ℚ) * (11 / 4) * (16 / (-55)) = -12 / 5 := by sorry
+
+### P089
+theorem t89 (M : Matrix (Fin 2) (Fin 2) ℝ) (v w : Fin 2 → ℝ) (hv : M.mulVec v = ![1, -5]) (hw : M.mulVec w = ![7, 2]) :
+    M.mulVec ((-2 : ℝ) • v + w) = ![5, 12] := by sorry
+
+### P090
+theorem t90 (N : Matrix (Fin 2) (Fin 2) ℝ) (hN : ∀ v : Fin 2 → ℝ, N.mulVec v = (-3 : ℝ) • v) : N = !![-3, 0; 0, -3] := by sorry

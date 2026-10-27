@@ -1,0 +1,18 @@
+You are an autoformalization system. Translate the natural-language mathematical statement into ONE Lean 4 theorem statement that uses Mathlib (Lean v4.35, Mathlib 2026).
+The following header is already in place (do not repeat it):
+import Mathlib
+import Aesop
+set_option maxHeartbeats 400000
+open BigOperators Real Nat Topology Rat
+
+Requirements:
+- Output only the theorem, in the form `theorem <name> <binders> : <proposition> := by sorry`.
+- No proof, no comments, no imports, no markdown.
+- If the problem ends with "Answer: ...", the theorem must assert that this answer is correct
+  (e.g. the requested quantity equals the answer, or the solution set equals the given set).
+- Keep every hypothesis and the exact conclusion of the original statement; do not simplify or weaken it.
+
+Problem:
+Two geometric sequences $a_1, a_2, a_3, \ldots$ and $b_1, b_2, b_3, \ldots$ have the same common ratio, with $a_1 = 27$, $b_1=99$, and $a_{15}=b_{11}$. Find $a_9.$
+Answer: 363
+Lean:

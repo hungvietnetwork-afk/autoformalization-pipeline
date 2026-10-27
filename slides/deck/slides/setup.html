@@ -1,0 +1,38 @@
+<section id="setup" data-transition="fade" style="background:#F3F0E8;color:#15212C;font-family:'Be Vietnam Pro', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#2B5FC4">Thiết lập thí nghiệm</p>
+<h2 style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:60px;font-weight:700;line-height:1.15;letter-spacing:-1px;color:#15212C">Một baseline, tám yếu tố, hai metric chính</h2>
+</div>
+<div style="display:flex;gap:48px">
+<div style="width:640px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#15212C;border-radius:16px;padding:28px 32px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#8FB3F5">Baseline bắt buộc</p>
+<p style="font-size:28px;font-weight:600;line-height:1.35;color:#F3F0E8">Zero-shot · 1 bài mỗi request · 1 candidate · 1 Lean worker · không repair</p>
+<p style="font-size:24px;line-height:1.4;color:#BCC6CF">20 request riêng trên T20; cấu hình kiểm chứng A trên 100, 1.000, 10.000 bài. Cùng dữ liệu, split, máy và timeout với phương pháp chính.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FBFAF6;border:1px solid #DCD6C8;border-radius:16px;padding:28px 32px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5E6976">Hai metric chính</p>
+<p style="font-size:28px;font-weight:600;line-height:1.35;color:#15212C">1 · Độ chính xác ngữ nghĩa trên tập audit</p>
+<p style="font-size:28px;font-weight:600;line-height:1.35;color:#15212C">2 · Throughput ổn định, ứng viên/s</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">Phụ: parse, compile, Pass@k, P50/P95, token, lỗi theo loại</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<table style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:24px;color:#15212C">
+<tr style="background:#E7E2D6"><th style="width:36%">Yếu tố</th><th style="width:44%">Mức</th><th style="width:20%">Lần chạy</th></tr>
+<tr><td>Quy mô × cấu hình</td><td>100 · 1K · 10K × A, B, C</td><td>27</td></tr>
+<tr><td>Batch size kiểm chứng</td><td>1 · 8 · 32, lô 1 có index</td><td>36</td></tr>
+<tr><td>Số Lean worker</td><td>1 · 2 · 4 · 8</td><td>6</td></tr>
+<tr><td>Bài mỗi request LLM</td><td>1 · 9 · 20–26 · 100–142</td><td>64 request</td></tr>
+<tr><td>Số candidate</td><td>1 · 2 · 3 · 4</td><td>400 ứng viên</td></tr>
+<tr><td>Prompt</td><td>zero-shot · few-shot</td><td>2</td></tr>
+<tr><td>Retry khi giết worker</td><td>giao tối đa 1 · 3 lần</td><td>6</td></tr>
+<tr><td>Release khi khởi động lại REPL</td><td>bật · tắt</td><td>6</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.4;color:#5E6976">3 lần mỗi ô, báo median và min–max; seed 42; heartbeat 400000; wall timeout 10 s hoặc 30 s</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1450px;font-size:24px;color:#5E6976">run_record.json cho mỗi lần chạy: commit, dữ liệu, máy, phần mềm, seed, tham số, metric, log · configs/experiments.json</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;text-align:right;color:#5E6976">6 / 17</p>
+<aside>Baseline đúng theo mục 7 của hướng dẫn: zero-shot, mỗi request một bài, một candidate, Lean kiểm tra bằng một worker, không repair. Trong môi trường của nhóm, gửi riêng từng bài tốn khoảng 87 nghìn token mỗi bài, nên baseline sinh mã chạy trên 20 bài phân tầng; ở ba mức 100, 1.000 và 10.000 bài, ứng viên zero-shot cùng prompt được kiểm chứng bằng đúng cấu hình một worker, lô 1. Tám yếu tố được thay đổi, đủ sáu yếu tố hướng dẫn liệt kê cộng hai ablation. Nhóm chọn hai metric chính: độ chính xác ngữ nghĩa trên tập audit cho chất lượng và throughput ổn định cho hệ thống; các chỉ số còn lại để giải thích trade-off. Mỗi lần chạy ghi một run record theo Phụ lục B của hướng dẫn, và lưới tham số nằm trong configs/experiments.json.</aside>
+</section>

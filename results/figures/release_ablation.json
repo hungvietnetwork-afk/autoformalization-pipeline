@@ -1,0 +1,98 @@
+{
+ "release_on": {
+  "runs": 3,
+  "steady_window_s": {
+   "median": 43.239,
+   "min": 42.762,
+   "max": 43.627
+  },
+  "makespan_s": {
+   "median": 106.178,
+   "min": 105.935,
+   "max": 106.971
+  },
+  "steady_throughput_candidates_per_s": {
+   "median": 23.127,
+   "min": 22.921,
+   "max": 23.385
+  },
+  "throughput_problems_per_s": {
+   "median": 9.418,
+   "min": 9.348,
+   "max": 9.44
+  },
+  "latency_ms_p95": {
+   "median": 115.82,
+   "min": 111.87,
+   "max": 121.4
+  },
+  "repl_timeouts": {
+   "median": 1.0,
+   "min": 1.0,
+   "max": 1.0
+  },
+  "retried_tasks": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "duplicate_result_rows": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dead_letter": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  }
+ },
+ "release_off": {
+  "runs": 3,
+  "steady_window_s": {
+   "median": 84.908,
+   "min": 83.217,
+   "max": 86.716
+  },
+  "makespan_s": {
+   "median": 147.42,
+   "min": 146.547,
+   "max": 149.323
+  },
+  "steady_throughput_candidates_per_s": {
+   "median": 11.777,
+   "min": 11.532,
+   "max": 12.017
+  },
+  "throughput_problems_per_s": {
+   "median": 6.783,
+   "min": 6.697,
+   "max": 6.824
+  },
+  "latency_ms_p95": {
+   "median": 107.48,
+   "min": 104.64,
+   "max": 127.92
+  },
+  "repl_timeouts": {
+   "median": 1.0,
+   "min": 1.0,
+   "max": 1.0
+  },
+  "retried_tasks": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "duplicate_result_rows": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dead_letter": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  }
+ }
+}

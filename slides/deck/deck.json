@@ -1,0 +1,66 @@
+{
+  "v": 4,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-26T13:50:00Z"
+  },
+  "lists": "css",
+  "title": "Autoformalization Pipeline – Nhóm 5",
+  "cover": "cover",
+  "order": [
+    "cover",
+    "problem",
+    "questions",
+    "data",
+    "architecture",
+    "setup",
+    "quality",
+    "q1-inference",
+    "q1-verify",
+    "scale",
+    "workers",
+    "q2-method",
+    "q2-results",
+    "fault",
+    "takeaways",
+    "team",
+    "closing"
+  ],
+  "sections": {
+    "s1": {
+      "description": "Mở đầu: bài toán, hai câu hỏi của đề bài và dữ liệu",
+      "start": "cover"
+    },
+    "s2": {
+      "description": "Hệ thống: kiến trúc và thiết lập thí nghiệm",
+      "start": "architecture"
+    },
+    "s3": {
+      "description": "Câu hỏi 1: chất lượng sinh mã, batching ở hai tầng, số candidate",
+      "start": "quality"
+    },
+    "s4": {
+      "description": "Vai trò Big Data: quy mô 100 → 10.000 task và số worker",
+      "start": "scale"
+    },
+    "s5": {
+      "description": "Câu hỏi 2: phát hiện phát biểu compile được nhưng sai nghĩa",
+      "start": "q2-method"
+    },
+    "s6": {
+      "description": "Chịu lỗi, kết luận, phân công và hỏi đáp",
+      "start": "fault"
+    }
+  },
+  "faces": {
+    "be-vietnam-pro": {
+      "family": "Be Vietnam Pro",
+      "href": "https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+    },
+    "jetbrains-mono": {
+      "family": "JetBrains Mono",
+      "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
+    }
+  },
+  "designSystems": []
+}

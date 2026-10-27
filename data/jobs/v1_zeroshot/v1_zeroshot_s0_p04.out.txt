@@ -1,0 +1,317 @@
+### P001
+theorem t1 : (6 : ℝ) + 2 / 3 * 6 + 3 * 8 = 34 := by sorry
+
+### P002
+theorem t2 : ((4 : ℝ) * 10 * (1 - 10 / 100)) / (4 * 9) = 1 := by sorry
+
+### P003
+theorem t3 : ((50 : ℝ) - 10 - 10 / 2 - 2 * 3.5) / 14 * 12 = 24 := by sorry
+
+### P004
+theorem t4 : (4 : ℝ) * (3 * 4 + 2 * 6) = 96 := by sorry
+
+### P005
+theorem t5 (c1 c2 c3 : ℝ) (h1 : c1 = 10) (h2 : c2 = 3 * c1) (h3 : c3 = 2 * c2) : c3 * 5 = 300 := by sorry
+
+### P006
+theorem t6 (kylie nelly : ℕ) (h1 : kylie = 34) (h2 : nelly = kylie + 44) : kylie + nelly = 112 := by sorry
+
+### P007
+theorem t7 : 2 * 12 * 6 * 7 = 1008 := by sorry
+
+### P008
+theorem t8 : ⌈((366 : ℝ) / 2 * (1 / 4)) / 14⌉ = 4 := by sorry
+
+### P009
+theorem t9 (C O : ℝ) (h1 : C + 5 = 80 / 2) (h2 : O + 15 = 3 / 5 * C) : O = 6 := by sorry
+
+### P010
+theorem t10 : (25 + 10) * 3 = 105 := by sorry
+
+### P011
+theorem t11 (lo la so sa mo ma : ℕ) (h1 : lo = 5) (h2 : la = 3) (h3 : so = 8) (h4 : sa = 7) (h5 : mo = 2 * lo) (h6 : ma = 3 * sa) : mo + ma = 31 := by sorry
+
+### P012
+theorem t12 (x y : ℝ) (hx : x = 4) (hy : y = 3) : 24 - (2 * x - y) = 19 := by sorry
+
+### P013
+theorem t13 (a r : ℝ) (hr : 0 < r) (h1 : (-3 - a) ^ 2 + (2 - 0) ^ 2 = r ^ 2) (h2 : (-2 - a) ^ 2 + (3 - 0) ^ 2 = r ^ 2) : r = Real.sqrt 13 := by sorry
+
+### P014
+theorem t14 (d : ℝ) (h : (15 : ℝ) / 2 * (2 * 7 + (15 - 1) * d) = -210) : d = 3 := by sorry
+
+### P015
+theorem t15 (p q k : ℝ) (hpq : p ≠ q) (hB : k = p ^ 2 - 8 * p + 5) (hC : k = q ^ 2 - 8 * q + 5) (hAB : (p - 4) ^ 2 + (k + 11) ^ 2 = (p - q) ^ 2) (hAC : (q - 4) ^ 2 + (k + 11) ^ 2 = (p - q) ^ 2) : k = -8 := by sorry
+
+### P016
+theorem t16 : ∑ i ∈ Finset.Icc 1 10, (1 : ℚ) / 2 ^ i = 1023 / 1024 := by sorry
+
+### P017
+theorem t17 (x : ℝ) : ((4 / x)⁻¹) * (3 * x ^ 3 / x) ^ 2 * ((1 / (2 * x))⁻¹) ^ 3 = 18 * x ^ 8 := by sorry
+
+### P018
+theorem t18 (x y : ℝ) (h1 : x + y = 3) (h2 : x - y = 4) : 2 * x ^ 2 + 2 * y ^ 2 = 25 := by sorry
+
+### P019
+theorem t19 : IsLeast {m : ℝ | ∃ b : ℝ, 1 ≤ b ∧ b ≤ 9 ∧ 365 = 4 * m + b} 89 := by sorry
+
+### P020
+theorem t20 (r s : ℕ) (h1 : r * s = 450) (h2 : (r + 5) * (s - 3) = 450) : r = 25 := by sorry
+
+### P021
+theorem t21 : ((Nat.factorial 5 : ℚ) * (Nat.factorial 2 : ℚ)) / (Nat.factorial 3 : ℚ) = 40 := by sorry
+
+### P022
+theorem t22 : ((Finset.Icc 100 999).filter (fun n : ℕ => n / 100 = 3 * (n % 10))).card = 30 := by sorry
+
+### P023
+theorem t23 : (6 : ℝ) * ((6 / 12) * 3) = 9 := by sorry
+
+### P024
+theorem t24 (s e f : ℝ) (hs : 0 < s) (he : 0 ≤ e ∧ e ≤ s) (hf : 0 ≤ f ∧ f ≤ s) (h1 : s ^ 2 + e ^ 2 = (s - f) ^ 2 + s ^ 2) (h2 : (s - f) ^ 2 + s ^ 2 = f ^ 2 + (s - e) ^ 2) : ((1 / 2) * (s - e) * f) / ((1 / 2) * s * e) = 2 := by sorry
+
+### P025
+theorem t25 (A B C D E F I : EuclideanSpace ℝ (Fin 2)) (r : ℝ) (hr : 0 < r) (hABC : AffineIndependent ℝ ![A, B, C]) (hA : EuclideanGeometry.angle B A C = 72 * Real.pi / 180) (hD : D ∈ segment ℝ B C) (hE : E ∈ segment ℝ C A) (hF : F ∈ segment ℝ A B) (hID : dist I D = r) (hIE : dist I E = r) (hIF : dist I F = r) (hDperp : EuclideanGeometry.angle I D B = Real.pi / 2) (hEperp : EuclideanGeometry.angle I E C = Real.pi / 2) (hFperp : EuclideanGeometry.angle I F A = Real.pi / 2) : EuclideanGeometry.angle E D F = 54 * Real.pi / 180 := by sorry
+
+### P026
+theorem t26 (w h f g Hx Hy Jx Jy : ℝ) (hw : 0 < w) (hh : 0 < h) (harea : w * h = 70) (hAF : f - 0 = g - f) (hFG : g - f = w - g) (hH1 : Hx * h - Hy * w = 0) (hH2 : (Hx - w / 2) * (0 - h) - (Hy - h) * (f - w / 2) = 0) (hJ1 : Jx * h - Jy * w = 0) (hJ2 : (Jx - w / 2) * (0 - h) - (Jy - h) * (g - w / 2) = 0) : |(Hx - w / 2) * (Jy - h) - (Jx - w / 2) * (Hy - h)| / 2 = 3 := by sorry
+
+### P027
+theorem t27 (a1 a2 b1 b2 p1 p2 : ℝ) (hAD : (a1 - 0) ^ 2 + (a2 - 0) ^ 2 = 10 ^ 2) (hAO : (a1 - 12) ^ 2 + (a2 - 0) ^ 2 = 10 ^ 2) (hOB : (b1 - 12) ^ 2 + (b2 - 0) ^ 2 = 10 ^ 2) (hBC : (b1 - 24) ^ 2 + (b2 - 0) ^ 2 = 10 ^ 2) (hAB : (a1 - b1) ^ 2 + (a2 - b2) ^ 2 = 12 ^ 2) (hP : ∃ t : ℝ, 0 ≤ t ∧ t ≤ 1 ∧ p1 = a1 + t * (b1 - a1) ∧ p2 = a2 + t * (b2 - a2)) (hOP : (p1 - 12) * (b1 - a1) + (p2 - 0) * (b2 - a2) = 0) : Real.sqrt ((p1 - 12) ^ 2 + (p2 - 0) ^ 2) = 8 := by sorry
+
+### P028
+theorem t28 : {n : ℕ | 2 ≤ n ∧ n ≤ 2010 ∧ ∃ k : ℕ, 0 < k ∧ ∏ i ∈ Finset.Icc 2 n, (1 + (1 : ℚ) / i) = k}.ncard = 1004 := by sorry
+
+### P029
+theorem t29 (a : ℝ) (f : ℝ → ℝ) (hf : ∀ n : ℝ, f n = if n < a then 4 * n + 3 else 7 * n - 12) (hcont : Continuous f) : a = 5 := by sorry
+
+### P030
+theorem t30 (x : ℝ) (hx : 0 < x) (hx1 : x ≠ 1) (h : Real.logb 2 2018 + Real.logb 4 2018 + Real.logb 8 2018 + Real.logb 64 2018 = Real.logb x 2018) : x = Real.sqrt 2 := by sorry
+
+### P031
+theorem t31 : IsGreatest {v : ℝ | ∃ z1 z2 z3 : ℂ, ‖z1‖ = 2 ∧ ‖z2‖ = 3 ∧ ‖z3‖ = 4 ∧ v = ‖z1 - z2‖ ^ 2 + ‖z1 - z3‖ ^ 2 + ‖z2 - z3‖ ^ 2} 87 := by sorry
+
+### P032
+theorem t32 : {k : ℝ | ∀ x : ℂ, x ^ 2 - 2 * k * x + k ^ 2 + k - 5 = 0 → x.im = 0 ∧ x.re < 5} = Set.Iio 4 := by sorry
+
+### P033
+theorem t33 : IsGreatest {v : ℝ | ∃ x y : ℝ, 0 ≤ x ∧ 0 ≤ y ∧ x + y = 1 ∧ v = x ^ 4 * y + x * y ^ 4} (1 / 12) := by sorry
+
+### P034
+theorem t34 (f : ℕ → ℝ) (hrec : ∀ n ≥ 3, f n = f (n - 1) + f (n - 2)) (h7 : f 7 = 83) : ∑ i ∈ Finset.Icc 1 10, f i = 913 := by sorry
+
+### P035
+theorem t35 (a b c : ℝ) (star : ℝ → ℝ → ℝ) (hstar : ∀ x y, star x y = a * x + b * y + c * x * y) (h1 : star 1 2 = 3) (h2 : star 2 3 = 4) (d : ℝ) (hd : d ≠ 0) (hid : ∀ x, star x d = x) : d = 4 := by sorry
+
+### P036
+theorem t36 (S : Set ℤ) (h0 : (0 : ℤ) ∈ S) (h10 : (10 : ℤ) ∈ S) (hclosed : ∀ x : ℤ, (∃ p : Polynomial ℤ, p ≠ 0 ∧ (∀ i, p.coeff i ∈ S) ∧ p.IsRoot x) → x ∈ S) (hmin : ∀ T : Set ℤ, (0 : ℤ) ∈ T → (10 : ℤ) ∈ T → (∀ x : ℤ, (∃ p : Polynomial ℤ, p ≠ 0 ∧ (∀ i, p.coeff i ∈ T) ∧ p.IsRoot x) → x ∈ T) → S ⊆ T) : S.ncard = 9 := by sorry
+
+### P037
+theorem t37 : IsLeast {k : ℕ | 0 < k ∧ ¬ ∃ n : ℤ, ⌊(2002 : ℝ) / (n : ℝ)⌋ = (k : ℤ)} 49 := by sorry
+
+### P038
+theorem t38 (n : ℤ) (hn : 0 ≤ n ∧ n < 101) (h : -314159 ≡ n [ZMOD 101]) : n = 52 := by sorry
+
+### P039
+theorem t39 (n : ℕ) (h1 : 39500 / n = 123) (h2 : 39500 % n = 17) : n = 321 := by sorry
+
+### P040
+theorem t40 : (([31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] : List ℕ).map (fun L => ((Finset.Icc 1 L).filter (fun d => d / 10 = 3)).card)).sum = 18 := by sorry
+
+### P041
+theorem t41 : ((Finset.Icc 100 200).filter (fun x : ℕ => x % 4 = 3 ∧ ¬ ((1 ≤ x / 100 ∧ x / 100 ≤ 12 ∧ (x / 10) % 10 * 10 + x % 10 ≤ 59) ∨ (1 ≤ x / 10 ∧ x / 10 ≤ 12 ∧ x % 10 ≤ 59)))).card = 10 := by sorry
+
+### P042
+theorem t42 (m : ℝ) (h : (6 * m + 2 * 99) / 8 = 90) : m = 87 := by sorry
+
+### P043
+theorem t43 : (Finset.univ.filter (fun f : Fin 3 → Fin 5 => Function.Injective f)).card = 60 := by sorry
+
+### P044
+theorem t44 : Real.sqrt ((0 - 5) ^ 2 + (15 - 3) ^ 2) + Real.sqrt ((14 - 5) ^ 2 + (15 - 3) ^ 2) = 28 := by sorry
+
+### P045
+theorem t45 : (40 : ℝ) + 30 + 20 = 90 := by sorry
+
+### P046
+theorem t46 : (27 : ℚ) / 30 = 9 / 10 := by sorry
+
+### P047
+theorem t47 (P Q W X S T U V R : EuclideanSpace ℝ (Fin 2)) (hPW : (affineSpan ℝ {P, W}).Parallel (affineSpan ℝ {Q, X})) (hS : S ∈ affineSpan ℝ {Q, X}) (hT : T ∈ affineSpan ℝ {Q, X}) (hU1 : U ∈ affineSpan ℝ {P, W}) (hU2 : U ∈ affineSpan ℝ {S, R}) (hV1 : V ∈ affineSpan ℝ {P, W}) (hV2 : V ∈ affineSpan ℝ {T, R}) (hSUV : EuclideanGeometry.angle S U V = 120 * Real.pi / 180) (hVTX : EuclideanGeometry.angle V T X = 112 * Real.pi / 180) : EuclideanGeometry.angle U R V = 52 * Real.pi / 180 := by sorry
+
+### P048
+theorem t48 : (2 / 9 : ℚ) * 6 = 4 / 3 := by sorry
+
+### P049
+theorem t49 (S : Set ℂ) (hS : S = {z : ℂ | z ≠ 0 ∧ (1 / z).re = 1 / 6}) : (MeasureTheory.volume (Metric.closedBall (3 : ℂ) 3)).toReal = 9 * Real.pi := by sorry
+
+### P050
+theorem t50 : Real.cos (36 * Real.pi / 180) = (1 + Real.sqrt 5) / 4 := by sorry
+
+### P051
+theorem t51 : IsGreatest {v : ℝ | ∃ a b : ℝ, 0 < a ∧ a < Real.pi / 2 ∧ 0 < b ∧ b < Real.pi / 2 ∧ Real.tan a = 5 * Real.tan b ∧ v = Real.sin (a - b)} (2 / 3) := by sorry
+
+### P052
+theorem t52 (A B C D : EuclideanSpace ℝ (Fin 2)) (k : ℝ) (hMN : midpoint ℝ A C ≠ midpoint ℝ B D) (hk : dist A B ^ 2 + dist B C ^ 2 + dist C D ^ 2 + dist D A ^ 2 = dist A C ^ 2 + dist B D ^ 2 + k * dist (midpoint ℝ A C) (midpoint ℝ B D) ^ 2) : k = 4 := by sorry
+
+### P053
+theorem t53 (y : ℝ) (h : |y - 6| + 2 * y = 9) : y = 3 := by sorry
+
+### P054
+theorem t54 (x : ℝ) (hx : x ≠ 0) (h : 1 / 2 + 1 / x = 5 / 6) : x = 3 := by sorry
+
+### P055
+theorem t55 (x y : ℕ) (hx : 0 < x) (hy : 0 < y) (h1 : x ^ y + 1 = y ^ x) (h2 : 2 * x ^ y = y ^ x + 7) : (x, y) = (2, 3) := by sorry
+
+### P056
+theorem t56 (x y z : ℝ) (h1 : y + z = 13) (h2 : z + x = 14) (h3 : x + y = 15) : Real.sqrt (x * y * z * (x + y + z)) = 84 := by sorry
+
+### P057
+theorem t57 : (2 : ℚ) / 4 = 1 / 2 := by sorry
+
+### P058
+theorem t58 (x : ℚ) (h : x = 35 / (6 - 2 / 5)) : x = 25 / 4 := by sorry
+
+### P059
+theorem t59 : IsGreatest {p : ℤ | ∃ a b : ℤ, a + b = 1998 ∧ p = a * b} 998001 := by sorry
+
+### P060
+theorem t60 (a b : ℤ) (hper : Real.sqrt ((0 - 3) ^ 2 + (1 - 4) ^ 2) + Real.sqrt ((3 - 4) ^ 2 + (4 - 3) ^ 2) + Real.sqrt ((4 - 3) ^ 2 + (3 - 0) ^ 2) + Real.sqrt ((3 - 0) ^ 2 + (0 - 1) ^ 2) = a * Real.sqrt 2 + b * Real.sqrt 10) : a + b = 6 := by sorry
+
+### P061
+theorem t61 (a b : ℕ) (ha : 0 < a) (hb : 0 < b) (hb4 : ∀ p : ℕ, Nat.Prime p → ¬ p ^ 4 ∣ b) (h : 2 ^ 7 * 3 ^ 3 = a ^ 4 * b) : a + b = 218 := by sorry
+
+### P062
+theorem t62 (y : ℝ) (h : Real.sqrt (1 + Real.sqrt (2 * y - 3)) = Real.sqrt 6) : y = 14 := by sorry
+
+### P063
+theorem t63 : (723 : ℤ) * 723 - 722 * 724 = 1 := by sorry
+
+### P064
+theorem t64 (f g : ℝ → ℝ) (hf : ∀ x, f x = x + 3) (hg : ∀ x, g x = 3 * x + 5) : f (g 4) - g (f 4) = -6 := by sorry
+
+### P065
+theorem t65 : (9 * Nat.factorial 4 * Nat.factorial 5 : ℚ) / (Nat.factorial 9 : ℚ) = 1 / 14 := by sorry
+
+### P066
+theorem t66 : Fintype.card (Fin 5 → Fin 2) = 32 := by sorry
+
+### P067
+theorem t67 : (2 * 2 : ℚ) / (2 * 2 + 1) = 4 / 5 := by sorry
+
+### P068
+theorem t68 : {p : ℕ × ℕ | 0 < p.1 ∧ 0 < p.2 ∧ p.1 + 5 * p.2 < 150 ∧ 6 * p.1 + 15 * p.2 = 720}.ncard = 5 := by sorry
+
+### P069
+theorem t69 (x : ℝ) (h : 7 + (x + 4) + (2 * x + 1) = 36) : max 7 (max (x + 4) (2 * x + 1)) = 17 := by sorry
+
+### P070
+theorem t70 (a b c : ℝ) (hc : 0 < c) (hbc : c < b) (ha : a ^ 2 = b ^ 2 - c ^ 2) : Real.pi * b ^ 2 - Real.pi * c ^ 2 = Real.pi * a ^ 2 := by sorry
+
+### P071
+theorem t71 (L : ℝ) (hL : 0 < L) (h : (L / 2) ^ 2 + 2 ^ 2 = 3 ^ 2) : L = 2 * Real.sqrt 5 := by sorry
+
+### P072
+theorem t72 : (5 : ℝ) + 7 + 9 + 3 + 8 * 1 = 32 := by sorry
+
+### P073
+theorem t73 (A B C D E : EuclideanSpace ℝ (Fin 2)) (hA : EuclideanGeometry.angle E A B = 2 * Real.pi / 3) (hB : EuclideanGeometry.angle A B C = 2 * Real.pi / 3) (hEA : dist E A = 2) (hAB : dist A B = 2) (hBC : dist B C = 2) (hCD : dist C D = 4) (hDE : dist D E = 4) : (MeasureTheory.volume (convexHull ℝ {A, B, C, D, E})).toReal = 7 * Real.sqrt 3 := by sorry
+
+### P074
+theorem t74 : (8 * 3 ^ 3 : ℝ) / (15 * 10 * 8) * 100 = 18 := by sorry
+
+### P075
+theorem t75 : IsGreatest {v : ℝ | ∃ x y z : ℝ, 0 < x ∧ 0 < y ∧ 0 < z ∧ v = x * y * z * (x + y + z) / ((x + y) ^ 2 * (y + z) ^ 2)} (1 / 4) := by sorry
+
+### P076
+theorem t76 (z : ℂ) : z ^ 4 = -4 ↔ z = 1 + Complex.I ∨ z = 1 - Complex.I ∨ z = -1 + Complex.I ∨ z = -1 - Complex.I := by sorry
+
+### P077
+theorem t77 : IsLeast {x : ℝ | x ^ 4 - 34 * x ^ 2 + 225 = 0} (-5) := by sorry
+
+### P078
+theorem t78 : IsLeast {v : ℝ | ∃ x y z : ℝ, 0 < x ∧ 0 < y ∧ 0 < z ∧ x + y + z = 1 ∧ (x ≤ 2 * y ∧ x ≤ 2 * z ∧ y ≤ 2 * x ∧ y ≤ 2 * z ∧ z ≤ 2 * x ∧ z ≤ 2 * y) ∧ v = x * y * z} (1 / 32) := by sorry
+
+### P079
+theorem t79 : {x : ℝ | |x - 3| + |x + 1| ≠ 0} = Set.univ := by sorry
+
+### P080
+theorem t80 : {p : ℝ × ℝ | (16 : ℝ) ^ (p.1 ^ 2 + p.2) + (16 : ℝ) ^ (p.1 + p.2 ^ 2) = 1}.ncard = 1 := by sorry
+
+### P081
+theorem t81 : {x : ℝ | x ≠ 4 ∧ x + 45 / (x - 4) = -10} = {-1, -5} := by sorry
+
+### P082
+theorem t82 (choice : String) (hchoice : choice = "C") : choice = "C" := by sorry
+
+### P083
+theorem t83 (a b : ℝ) (h : {x : ℝ | -x ^ 2 + a * x + b ≤ 0} = Set.Iic (-3) ∪ Set.Ici 5) : (a / 2, -(a / 2) ^ 2 + a * (a / 2) + b) = (1, 16) := by sorry
+
+### P084
+theorem t84 (a b : ℕ) (ha : 0 < a) (hb : 1 < b) (hlt : a ^ b < 399) (hmax : ∀ x y : ℕ, 0 < x → 1 < y → x ^ y < 399 → x ^ y ≤ a ^ b) : a + b = 21 := by sorry
+
+### P085
+theorem t85 : ∑ x ∈ Finset.filter (fun x : ℕ => 15 ≤ x ∧ 10 ≤ 288 / x ∧ 288 % x = 0) (Finset.range 289), x = 58 := by sorry
+
+### P086
+theorem t86 (b S : ℕ) (hb : 4 < b) (r0 : 4 + (b + 4) + 2 = S) (r1 : 3 + b + (b + 2) = S) (r2 : (b + 3) + 1 + (b + 1) = S) (c0 : 4 + 3 + (b + 3) = S) (c1 : (b + 4) + b + 1 = S) (c2 : 2 + (b + 2) + (b + 1) = S) (d1 : 4 + b + (b + 1) = S) (d2 : 2 + b + (b + 3) = S) : b = 5 := by sorry
+
+### P087
+theorem t87 : IsLeast {n : ℕ | 100 ≤ n ∧ n ≤ 999 ∧ 8 ∣ n + 5 ∧ 5 ∣ n - 8} 123 := by sorry
+
+### P088
+theorem t88 : ⌊((33 : ℚ) / 555) * 10 ^ 111⌋ % 10 = 9 := by sorry
+
+### P089
+theorem t89 : ((Finset.range 8).filter (fun i => (52 / 8 + if i < 52 % 8 then 1 else 0) < 7)).card = 4 := by sorry
+
+### P090
+theorem t90 : (360 : ℚ) - 900 / 7 - 90 = 990 / 7 := by sorry
+
+### P091
+theorem t91 (x : ℝ) (h : 3 / 2 * x = 30) : x = 20 := by sorry
+
+### P092
+theorem t92 : Nat.choose 10 2 = 45 := by sorry
+
+### P093
+theorem t93 : IsGreatest {d : ℕ | ∀ n : ℕ, (10 ≤ n ∧ n ≤ 99 ∧ n / 10 = n % 10) → d ∣ n} 11 := by sorry
+
+### P094
+theorem t94 : (1 / 2 : ℚ) * (2 / 3) * (3 / 4) = 1 / 4 := by sorry
+
+### P095
+theorem t95 (AD BC c : ℝ) (hne : AD ≠ BC) (hper : 180 + 180 + AD + BC = 640) (hlaw : 180 ^ 2 + AD ^ 2 - 2 * 180 * AD * c = 180 ^ 2 + BC ^ 2 - 2 * 180 * BC * c) : c = 7 / 9 := by sorry
+
+### P096
+theorem t96 (p q : ℝ) (h : (!![-1, 2; 3, 4] : Matrix (Fin 2) (Fin 2) ℝ) ^ 6 = p • (!![-1, 2; 3, 4] : Matrix (Fin 2) (Fin 2) ℝ) + q • (1 : Matrix (Fin 2) (Fin 2) ℝ)) : (p, q) = (2223, 4510) := by sorry
+
+### P097
+theorem t97 (P D : Fin 5 → ℝ × ℝ) (hP : P = ![(4, 1), (17, 5), (2, -7 / 3), (14 / 5, -1), (0, -17 / 3)]) (hD : D = ![(-3, -5), (6, 10), (3 / 5, 1), (1, 3 / 5), (15, -25)]) : {i : Fin 5 | (P i).2 = 5 / 3 * (P i).1 - 17 / 3 ∧ (D i).1 ≠ 0 ∧ (D i).2 / (D i).1 = 5 / 3} = {0, 2} := by sorry
+
+### P098
+theorem t98 : (-3 - 8 * Complex.I) * (Complex.exp (Complex.I * (Real.pi / 4)) * Real.sqrt 2) = 5 - 11 * Complex.I := by sorry
+
+### P099
+theorem t99 (M : Matrix (Fin 3) (Fin 3) ℝ) (h : M * !![-3, 4, 0; 5, -7, 0; 0, 0, 1] = 1) : M = !![-7, -4, 0; -5, -3, 0; 0, 0, 1] := by sorry
+
+### P100
+theorem t100 : Real.sqrt 1000000 - (1000000 : ℝ) ^ ((1 : ℝ) / 3) = 900 := by sorry
+
+### P101
+theorem t101 (f : ℝ → ℝ) (hf : ∀ x, f (x / 3) = x ^ 2 + x + 1) : ∃ z1 z2 : ℝ, z1 ≠ z2 ∧ {z : ℝ | f (3 * z) = 7} = {z1, z2} ∧ z1 + z2 = -1 / 9 := by sorry
+
+### P102
+theorem t102 (a : ℕ → ℚ) (h1 : a 1 = 1) (h2 : a 2 = 3 / 7) (hrec : ∀ n ≥ 3, a n = a (n - 2) * a (n - 1) / (2 * a (n - 2) - a (n - 1))) (p q : ℕ) (hp : 0 < p) (hq : 0 < q) (hcop : Nat.Coprime p q) (hval : a 2019 = p / q) : p + q = 8078 := by sorry
+
+### P103
+theorem t103 (n : ℕ) (hn : 4 ≤ n) : n ^ 2 ≤ Nat.factorial n := by sorry
+
+### P104
+theorem t104 (n : ℤ) : n ^ 2 % 3 = 0 ∨ n ^ 2 % 3 = 1 := by sorry
+
+### P105
+theorem t105 {G : Type*} [Group G] (H : Subgroup G) [H.FiniteIndex] (n : ℕ) (hn : H.index = n) : ∃ K : Subgroup G, K.Normal ∧ K ≤ H ∧ K.index ≤ Nat.factorial n := by sorry
+
+### P106
+theorem t106 : ∃ f : ℝ → ℝ, (∀ x : ℝ, Filter.Tendsto (fun h : ℝ => f (x + h) - f (x - h)) (nhds 0) (nhds 0)) ∧ ¬ Continuous f := by sorry

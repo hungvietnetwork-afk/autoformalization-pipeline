@@ -1,0 +1,155 @@
+<title>Lean Corpus Explorer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a proof-assistant notebook on graph paper — problem left, formal statement right, verdicts in the margin chips */
+:root{
+  --paper:#f6f8fb; --sheet:#ffffff; --ink:#15213a; --muted:#59637a; --rule:#dfe4ee;
+  --grid:rgba(31,95,191,.06); --accent:#1f5fbf; --accent-soft:rgba(31,95,191,.10);
+  --ok:#17733a; --ok-soft:rgba(23,115,58,.11); --err:#b3261e; --err-soft:rgba(179,38,30,.09);
+  --warn:#9a5800; --warn-soft:rgba(154,88,0,.11); --code-bg:#f1f4f9;
+  --f-display:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-code:"JetBrains Mono","DejaVu Sans Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#0d131f; --sheet:#121a29; --ink:#e4e9f4; --muted:#9ba6bd; --rule:#243049;
+  --grid:rgba(127,168,255,.05); --accent:#86adff; --accent-soft:rgba(134,173,255,.13);
+  --ok:#5fcf8a; --ok-soft:rgba(95,207,138,.12); --err:#ff8a80; --err-soft:rgba(255,138,128,.11);
+  --warn:#e9ad4c; --warn-soft:rgba(233,173,76,.12); --code-bg:#0f1624; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --paper:#0d131f; --sheet:#121a29; --ink:#e4e9f4; --muted:#9ba6bd; --rule:#243049;
+  --grid:rgba(127,168,255,.05); --accent:#86adff; --accent-soft:rgba(134,173,255,.13);
+  --ok:#5fcf8a; --ok-soft:rgba(95,207,138,.12); --err:#ff8a80; --err-soft:rgba(255,138,128,.11);
+  --warn:#e9ad4c; --warn-soft:rgba(233,173,76,.12); --code-bg:#0f1624; color-scheme:dark }
+body{background:var(--paper);color:var(--ink);font:15px/1.55 var(--f-body);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px}
+.wrap{max-width:1180px;margin:0 auto;padding-block:28px 64px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;gap:22px}
+header h1{font:600 clamp(26px,4vw,36px)/1.1 var(--f-display);letter-spacing:.01em;margin:0;text-wrap:balance}
+header p{margin:6px 0 0;color:var(--muted);max-width:72ch}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.tile{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;display:grid;gap:6px}
+.tile .lab{font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.tile .val{font:600 26px/1.1 var(--f-display)}
+.bars{display:grid;gap:7px}
+.bar{display:grid;grid-template-columns:76px 1fr 46px;gap:8px;align-items:center;font-size:13px}
+.track{height:8px;border-radius:4px;background:var(--accent-soft);overflow:hidden}
+.fill{display:block;height:100%;background:var(--accent);border-radius:4px}
+.num{font-variant-numeric:tabular-nums;text-align:right;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--sheet);border:1px solid var(--rule);
+  border-radius:10px;padding:12px}
+.filters input,.filters select{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--rule);
+  border-radius:8px;padding:7px 10px;min-width:0}
+.filters input{flex:1 1 220px}
+.filters label{font-size:12px;color:var(--muted);display:grid;gap:3px}
+.count{margin-left:auto;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.list{display:grid;gap:12px}
+.card{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.card-h{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--rule)}
+.pid{font:500 13px var(--f-code);color:var(--muted);word-break:break-all}
+.chip{font-size:12px;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--ink);white-space:nowrap}
+.st{font-weight:600}
+.st.ok{background:var(--ok-soft);color:var(--ok)} .st.err{background:var(--err-soft);color:var(--err)}
+.sem.flag{background:var(--warn-soft);color:var(--warn)} .sem.good{background:var(--ok-soft);color:var(--ok)}
+.ms{margin-left:auto;font:12px var(--f-code);color:var(--muted)}
+.card-b{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+.nl{padding:12px 14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.lean{padding:12px 14px;background:var(--code-bg);border-left:1px solid var(--rule);min-width:0}
+.lean pre{margin:0;font:13px/1.55 var(--f-code);white-space:pre-wrap;overflow-wrap:anywhere}
+.msg{margin-top:10px;padding-top:8px;border-top:1px dashed var(--rule);font:12px/1.5 var(--f-code);color:var(--err);white-space:pre-wrap;overflow-wrap:anywhere}
+.more{justify-self:center;font:inherit;color:var(--accent);background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:8px 16px;cursor:pointer}
+.more:hover{background:var(--accent-soft)}
+.empty{padding:28px;text-align:center;color:var(--muted);background:var(--sheet);border:1px dashed var(--rule);border-radius:10px}
+@media (max-width:760px){.card-b{grid-template-columns:minmax(0,1fr)} .lean{border-left:0;border-top:1px solid var(--rule)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<div class="wrap">
+  <header>
+    <h1>Lean Corpus Explorer</h1>
+    <p>Tầng T1K (1.000 đề) của Nhóm 5: phát biểu Lean 4 do Claude Haiku sinh zero-shot, kiểm chứng bằng Lean 4.35 + Mathlib v4.35, kèm kết luận kiểm tra ngữ nghĩa tự động và nhãn của hai LLM chấm thử trên 100 mẫu audit.</p>
+  </header>
+  <section class="summary" id="summary"></section>
+  <section class="filters" aria-label="Bộ lọc">
+    <input id="q" type="search" placeholder="Tìm trong đề, mã Lean hoặc mã bài…" aria-label="Tìm kiếm">
+    <label>Nguồn<select id="src"></select></label>
+    <label>Trạng thái Lean<select id="st"></select></label>
+    <label>Kiểm tra ngữ nghĩa<select id="sem"></select></label>
+    <label>Audit<select id="aud"><option value="">Tất cả</option><option value="in">Trong mẫu audit</option><option value="sai">Có người chấm SAI</option><option value="diff">Hai người chấm khác nhau</option></select></label>
+    <span class="count" id="count"></span>
+  </section>
+  <section class="list" id="list"></section>
+  <button class="more" id="more" type="button" hidden>Hiện thêm 40 bài</button>
+</div>
+<script>
+const DATA = /*__DATA__*/[];
+const SRC = {proofnet:"ProofNet", minif2f:"miniF2F", math:"MATH", gsm8k:"GSM8K"};
+const FLAG = new Set(["VACUOUS","FALSE","TRIVIAL","ANSWER_MISSING","ARITHMETIC_ONLY"]);
+const GOOD = new Set(["EQUIV_GOLD","PROVED_CONSISTENT"]);
+const LAB = {DUNG:"ĐÚNG", GAN_DUNG:"GẦN ĐÚNG", SAI:"SAI"};
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let shown = 40;
+
+function opts(sel, values, label){
+  sel.innerHTML = `<option value="">${label}</option>` + values.map(v => `<option value="${esc(v)}">${esc(SRC[v] || v)}</option>`).join("");
+}
+function count(arr, key){ const m = new Map(); arr.forEach(r => m.set(r[key], (m.get(r[key]) || 0) + 1)); return m; }
+
+function summary(){
+  const ok = DATA.filter(r => r.st === "COMPILE_OK").length;
+  const bySrc = [...new Set(DATA.map(r => r.src))];
+  const bars = bySrc.map(s => { const rs = DATA.filter(r => r.src === s), k = rs.filter(r => r.st === "COMPILE_OK").length;
+    const p = rs.length ? Math.round(100 * k / rs.length) : 0;
+    return `<div class="bar"><span>${esc(SRC[s] || s)}</span><span class="track"><span class="fill" style="width:${p}%"></span></span><span class="num">${p} %</span></div>`; }).join("");
+  const flagged = DATA.filter(r => FLAG.has(r.sem)).length, checked = DATA.filter(r => r.sem && r.sem !== "NOT_CHECKED_SLOW").length;
+  const audited = DATA.filter(r => r.aud), bothOk = audited.filter(r => r.aud.a === "DUNG" && r.aud.b === "DUNG").length,
+    anySai = audited.filter(r => r.aud.a === "SAI" || r.aud.b === "SAI").length;
+  $("summary").innerHTML =
+    `<div class="tile"><span class="lab">Compile được</span><span class="val">${ok.toLocaleString("vi-VN")} / ${DATA.length.toLocaleString("vi-VN")}</span><span class="num" style="text-align:left">${(100 * ok / Math.max(1, DATA.length)).toFixed(1).replace('.', ',')} % ứng viên</span></div>` +
+    `<div class="tile"><span class="lab">Compile theo nguồn</span><div class="bars">${bars}</div></div>` +
+    `<div class="tile"><span class="lab">Compile nhưng bị gắn cờ sai nghĩa</span><span class="val">${flagged.toLocaleString("vi-VN")}</span><span class="num" style="text-align:left">trên ${checked.toLocaleString("vi-VN")} ứng viên đã kiểm tra ngữ nghĩa</span></div>` +
+    (audited.length ? `<div class="tile"><span class="lab">Audit thử, 2 LLM chấm độc lập</span><span class="val">${bothOk} / ${audited.length}</span><span class="num" style="text-align:left">cả hai chấm ĐÚNG · ${anySai} mẫu có người chấm SAI</span></div>` : "");
+}
+
+function filtered(){
+  const q = $("q").value.trim().toLowerCase(), s = $("src").value, st = $("st").value, sem = $("sem").value, aud = $("aud").value;
+  const audOk = r => !aud || (r.aud && (aud === "in" || (aud === "sai" && (r.aud.a === "SAI" || r.aud.b === "SAI")) ||
+    (aud === "diff" && r.aud.a !== r.aud.b)));
+  return DATA.filter(r => (!s || r.src === s) && (!st || r.st === st) && (!sem || r.sem === sem) && audOk(r) &&
+    (!q || r.id.toLowerCase().includes(q) || r.nl.toLowerCase().includes(q) || r.lean.toLowerCase().includes(q)));
+}
+
+function card(r){
+  const ok = r.st === "COMPILE_OK";
+  const semCls = FLAG.has(r.sem) ? "flag" : GOOD.has(r.sem) ? "good" : "";
+  return `<article class="card"><div class="card-h"><span class="pid">${esc(r.id)}</span>
+    <span class="chip">${esc(SRC[r.src] || r.src)} · ${esc(r.dom)}${r.diff ? " · " + esc(r.diff) : ""}</span>
+    <span class="chip st ${ok ? "ok" : "err"}">${esc(r.st)}</span>
+    ${r.sem ? `<span class="chip sem ${semCls}">${esc(r.sem)}</span>` : ""}
+    ${r.aud ? `<span class="chip" title="Hai LLM chấm độc lập (chạy thử audit)">${esc(r.aud.id)} · A ${esc(LAB[r.aud.a] || r.aud.a)} · B ${esc(LAB[r.aud.b] || r.aud.b)}</span>` : ""}
+    <span class="ms">${r.ms ? r.ms.toFixed(0) + " ms" : ""}</span></div>
+    <div class="card-b"><div class="nl">${esc(r.nl)}</div>
+    <div class="lean"><pre>${esc(r.lean || "(model không trả về khai báo)")}</pre>${r.msg ? `<div class="msg">${esc(r.msg)}</div>` : ""}</div></div></article>`;
+}
+
+function render(){
+  const rs = filtered();
+  $("count").textContent = `${rs.length.toLocaleString("vi-VN")} bài`;
+  $("list").innerHTML = rs.length ? rs.slice(0, shown).map(card).join("") :
+    `<div class="empty">Không có bài nào khớp bộ lọc. Bỏ bớt điều kiện hoặc xoá ô tìm kiếm.</div>`;
+  $("more").hidden = rs.length <= shown;
+}
+
+opts($("src"), [...count(DATA, "src").keys()], "Tất cả");
+opts($("st"), [...count(DATA, "st").entries()].sort((a, b) => b[1] - a[1]).map(e => e[0]), "Tất cả");
+opts($("sem"), [...count(DATA, "sem").entries()].filter(e => e[0]).sort((a, b) => b[1] - a[1]).map(e => e[0]), "Tất cả");
+["q", "src", "st", "sem", "aud"].forEach(id => $(id).addEventListener("input", () => { shown = 40; render(); }));
+$("more").addEventListener("click", () => { shown += 40; render(); });
+summary();
+render();
+</script>

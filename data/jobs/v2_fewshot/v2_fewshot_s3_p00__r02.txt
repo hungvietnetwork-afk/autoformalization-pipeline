@@ -1,0 +1,42 @@
+### P091
+The matrix
+\[\begin{pmatrix} a & 3 \\ -8 & d \end{pmatrix}\]is its own inverse, for some real numbers $a$ and $d.$  Find the number of possible pairs $(a,d).$
+Answer: 2
+
+### P092
+The [[function]] f is defined on the [[set]] of [[integer]]s and satisfies $f(n)=\begin{cases}
+n-3&\mbox{if}\ n\ge 1000\\
+f(f(n+5))&\mbox{if}\ n<1000\end{cases}$
+
+Find $f(84)$. Show that it is 997.
+
+### P093
+The number $a=\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers, has the property that the sum of all real numbers $x$ satisfying
+$ \lfloor x \rfloor \cdot \{x\} = a \cdot x^2$
+is $420$, where $\lfloor x \rfloor$ denotes the greatest integer less than or equal to $x$ and $\{x\}=x- \lfloor x \rfloor$ denotes the fractional part of $x$. What is $p+q$?
+
+$\textbf{(A) } 245 \qquad \textbf{(B) } 593 \qquad \textbf{(C) } 929 \qquad \textbf{(D) } 1331 \qquad \textbf{(E) } 1332$ Show that it is \textbf{(C) } 929.
+
+### P094
+Show that for positive integer $n$, $(\prod_{k=1}^{n} (1 + 1/2^k)) < 5/2$.
+
+### P095
+Find $y$: $\sqrt{19+3y} = 7$. Show that it is 10.
+
+### P096
+A sequence of numbers is defined recursively by $a_1 = 1$, $a_2 = \frac{3}{7}$, and
+$a_n=\frac{a_{n-2} \cdot a_{n-1}}{2a_{n-2} - a_{n-1}}$for all $n \geq 3$ Then $a_{2019}$ can be written as $\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. What is $p+q ?$
+
+$\textbf{(A) } 2020 \qquad\textbf{(B) } 4039 \qquad\textbf{(C) } 6057 \qquad\textbf{(D) } 6061 \qquad\textbf{(E) } 8078$ Show that it is \textbf{(E) }8078.
+
+### P097
+Prove that $1^{k}+2^{k}+\cdots+(p-1)^{k} \equiv 0(p)$ if $p-1 \nmid k$ and $-1(p)$ if $p-1 \mid k$.
+
+### P098
+Let $p \colon X \rightarrow Y$ be an open map. Show that if $A$ is open in $X$, then the map $q \colon A \rightarrow p(A)$ obtained by restricting $p$ is an open map.
+
+### P099
+Show that if $\prod X_\alpha$ is Hausdorff, then so is $X_\alpha$. Assume that each $X_\alpha$ is nonempty.
+
+### P100
+Suppose $K$ and $F$ are disjoint sets in a metric space $X, K$ is compact, $F$ is closed. Prove that there exists $\delta>0$ such that $d(p, q)>\delta$ if $p \in K, q \in F$.

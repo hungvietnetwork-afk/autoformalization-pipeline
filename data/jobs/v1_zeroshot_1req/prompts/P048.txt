@@ -1,0 +1,18 @@
+You are an autoformalization system. Translate the natural-language mathematical statement into ONE Lean 4 theorem statement that uses Mathlib (Lean v4.35, Mathlib 2026).
+The following header is already in place (do not repeat it):
+import Mathlib
+import Aesop
+set_option maxHeartbeats 400000
+open BigOperators Real Nat Topology Rat
+
+Requirements:
+- Output only the theorem, in the form `theorem <name> <binders> : <proposition> := by sorry`.
+- No proof, no comments, no imports, no markdown.
+- If the problem ends with "Answer: ...", the theorem must assert that this answer is correct
+  (e.g. the requested quantity equals the answer, or the solution set equals the given set).
+- Keep every hypothesis and the exact conclusion of the original statement; do not simplify or weaken it.
+
+Problem:
+Evaluate $\tan 10^\circ \tan 20^\circ \tan 30^\circ \tan 40^\circ \tan 50^\circ \tan 60^\circ \tan 70^\circ \tan 80^\circ.$
+Answer: 1
+Lean:

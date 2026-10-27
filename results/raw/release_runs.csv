@@ -1,0 +1,7 @@
+run_id,release_on_restart,repeat,workers,batch,timeout_s,makespan_s,throughput_problems_per_s,throughput_candidates_per_s,steady_throughput_candidates_per_s,latency_ms_p50,latency_ms_p95,latency_ms_p99,compile_rate,pass_at_k,peak_pool_mb,peak_pool_anon_mb,peak_rss_sum_mb,peak_system_used_delta_mb,peak_swap_mb,mean_cpu_pct,retried_tasks,duplicate_result_rows,repl_timeouts,dead_letter,lean_busy_fraction,steady_window_s,latency_ms_mean,startup_s_mean,n_candidates,repl_restarts
+ab_release_on_T1K_B_r0,True,0,2,8,10.0,106.178,9.418,9.418,23.385,31.71,111.87,278.14,0.989,0.989,5008.2,940.3,9620.5,1458.4,0.0,67.3,0,0,1,0,0.633,42.762,54.18,61.77,1000,1
+ab_release_off_T1K_B_r0,False,0,2,8,10.0,149.323,6.697,6.697,11.777,31.5,127.92,265.2,0.989,0.989,4838.3,1045.2,9232.2,1527.2,0.0,62.4,0,0,1,0,0.324,84.908,55.02,62.14,1000,1
+ab_release_on_T1K_B_r1,True,1,2,8,10.0,105.935,9.44,9.44,22.921,32.48,121.4,238.14,0.989,0.989,4974.6,939.8,9286.1,1415.5,0.0,67.0,0,0,1,0,0.632,43.627,55.19,59.86,1000,1
+ab_release_off_T1K_B_r1,False,1,2,8,10.0,146.547,6.824,6.824,12.017,30.16,104.64,227.37,0.989,0.989,4847.6,1044.1,9271.5,1552.5,0.0,62.3,0,0,1,0,0.307,83.217,51.09,61.08,1000,1
+ab_release_on_T1K_B_r2,True,2,2,8,10.0,106.971,9.348,9.348,23.127,32.38,115.82,291.47,0.989,0.989,5011.4,941.7,9167.3,1470.7,0.0,68.7,0,0,1,0,0.637,43.239,55.04,61.3,1000,1
+ab_release_off_T1K_B_r2,False,2,2,8,10.0,147.42,6.783,6.783,11.532,28.74,107.48,243.98,0.989,0.989,4836.2,1044.5,9206.5,1494.3,0.0,63.0,0,0,1,0,0.294,86.716,50.95,58.39,1000,1

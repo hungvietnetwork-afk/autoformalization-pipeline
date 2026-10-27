@@ -1,0 +1,24 @@
+{
+ "ref_candidates": 1000,
+ "fault_candidates": 1000,
+ "same_status": 999,
+ "retried_tasks": 8,
+ "overwritten_results": 3,
+ "duplicate_result_rows": 0,
+ "dead_letter": 0,
+ "inference": {
+  "batches": 125,
+  "candidates": 1000,
+  "backend_stats": {
+   "cache_hits": 1000,
+   "cache_misses": 0
+  }
+ },
+ "fault": {
+  "worker": "lean-0",
+  "at_results": 302,
+  "ts": 1792160849.0826309
+ },
+ "makespan_ref_s": 98.122,
+ "makespan_fault_s": 85.314
+}

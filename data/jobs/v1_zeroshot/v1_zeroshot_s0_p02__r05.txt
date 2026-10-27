@@ -1,0 +1,17 @@
+### P126
+Evaluate $\left(\frac{i}{2}\right)^2$. Show that it is -\frac{1}{4}.
+
+### P127
+The sum of the first 5 terms of an arithmetic series is $70$.  The sum of the first 10 terms of this  arithmetic series is $210$.  What is the first term of the series? Show that it is \frac{42}{5}.
+
+### P128
+If $a$ and $b$ are real numbers, $a^2b^3=\frac{32}{27}$, and $\frac{a}{b^3}=\frac{27}{4}$, what is $a+b$? Show that it is \frac83.
+
+### P129
+Prove that $A \times B$ is an abelian group if and only if both $A$ and $B$ are abelian.
+
+### P130
+For $j \in\{1,2,3,4\}$, let $z_{j}$ be a complex number with $\left|z_{j}\right|=1$ and $z_{j} \neq 1$. Prove that $3-z_{1}-z_{2}-z_{3}-z_{4}+z_{1} z_{2} z_{3} z_{4} \neq 0 .$
+
+### P131
+Prove that if $f$ is holomorphic in the unit disc, bounded and not identically zero, and $z_{1}, z_{2}, \ldots, z_{n}, \ldots$ are its zeros $\left(\left|z_{k}\right|<1\right)$, then $\sum_{n}\left(1-\left|z_{n}\right|\right)<\infty$.

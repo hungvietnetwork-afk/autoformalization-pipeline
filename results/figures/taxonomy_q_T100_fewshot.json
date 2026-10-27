@@ -1,0 +1,158 @@
+{
+ "n": 400,
+ "status": {
+  "COMPILE_OK": 393,
+  "TYPE_MISMATCH": 5,
+  "OTHER_ERROR": 2
+ },
+ "first_error_kind": {
+  "none": 393,
+  "type_mismatch": 1,
+  "failed_to_synthesize": 4,
+  "other_error": 2
+ },
+ "by_source": {
+  "math": {
+   "COMPILE_OK": 317,
+   "TYPE_MISMATCH": 5,
+   "OTHER_ERROR": 2
+  },
+  "proofnet": {
+   "COMPILE_OK": 16
+  },
+  "gsm8k": {
+   "COMPILE_OK": 40
+  },
+  "minif2f": {
+   "COMPILE_OK": 20
+  }
+ },
+ "by_domain": {
+  "gsm8k/arithmetic_word_problem": {
+   "COMPILE_OK": 40
+  },
+  "math/algebra": {
+   "COMPILE_OK": 64
+  },
+  "math/counting_probability": {
+   "COMPILE_OK": 38,
+   "TYPE_MISMATCH": 2
+  },
+  "math/geometry": {
+   "COMPILE_OK": 35,
+   "TYPE_MISMATCH": 1
+  },
+  "math/intermediate_algebra": {
+   "COMPILE_OK": 82,
+   "TYPE_MISMATCH": 2
+  },
+  "math/number_theory": {
+   "COMPILE_OK": 20
+  },
+  "math/prealgebra": {
+   "COMPILE_OK": 44
+  },
+  "math/precalculus": {
+   "COMPILE_OK": 34,
+   "OTHER_ERROR": 2
+  },
+  "minif2f/algebra": {
+   "COMPILE_OK": 4
+  },
+  "minif2f/competition": {
+   "COMPILE_OK": 12
+  },
+  "minif2f/induction": {
+   "COMPILE_OK": 4
+  },
+  "proofnet/number_theory": {
+   "COMPILE_OK": 4
+  },
+  "proofnet/real_analysis": {
+   "COMPILE_OK": 4
+  },
+  "proofnet/topology": {
+   "COMPILE_OK": 8
+  }
+ },
+ "by_difficulty": {
+  "gsm8k/grade_school": {
+   "COMPILE_OK": 40
+  },
+  "math/L1": {
+   "COMPILE_OK": 40
+  },
+  "math/L2": {
+   "COMPILE_OK": 58,
+   "OTHER_ERROR": 2
+  },
+  "math/L3": {
+   "COMPILE_OK": 43,
+   "TYPE_MISMATCH": 1
+  },
+  "math/L4": {
+   "COMPILE_OK": 99,
+   "TYPE_MISMATCH": 1
+  },
+  "math/L5": {
+   "COMPILE_OK": 77,
+   "TYPE_MISMATCH": 3
+  },
+  "minif2f/AIME": {
+   "COMPILE_OK": 4
+  },
+  "minif2f/AMC12": {
+   "COMPILE_OK": 8
+  },
+  "minif2f/MATH": {
+   "COMPILE_OK": 4
+  },
+  "minif2f/custom": {
+   "COMPILE_OK": 4
+  },
+  "proofnet/undergraduate": {
+   "COMPILE_OK": 16
+  }
+ },
+ "top_unknown_identifiers": [],
+ "examples": {
+  "COMPILE_OK": [
+   {
+    "problem_id": "math:train/geometry/62",
+    "message": "declaration uses `sorry`"
+   },
+   {
+    "problem_id": "math:test/intermediate_algebra/859",
+    "message": "declaration uses `sorry`"
+   },
+   {
+    "problem_id": "math:train/algebra/2228",
+    "message": "declaration uses `sorry`"
+   }
+  ],
+  "TYPE_MISMATCH": [
+   {
+    "problem_id": "math:train/counting_and_probability/609",
+    "message": "Type mismatch\n  ↑k\nhas type\n  ℕ\nbut is expected to have type\n  Fin 9"
+   },
+   {
+    "problem_id": "math:train/counting_and_probability/784",
+    "message": "failed to synthesize instance of type class\n  DecidablePred fun P =>\n    (∀ B ∈ P, B.Nonempty) ∧ (∀ (x : Fin 4), ∃ B ∈ P, x ∈ B) ∧ (∀ B ∈ P, ∀ C ∈ P, ∀ x ∈ B, x ∈ C → B = C) ∧ P.card ≤ 3\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance tru"
+   },
+   {
+    "problem_id": "math:train/intermediate_algebra/1785",
+    "message": "failed to synthesize instance of type class\n  LocallyFiniteOrder ℝ\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command."
+   }
+  ],
+  "OTHER_ERROR": [
+   {
+    "problem_id": "math:train/precalculus/64",
+    "message": "elaboration function for `Mathlib.Tactic.subscriptTerm` has not been implemented\n  ᵥ"
+   },
+   {
+    "problem_id": "math:train/precalculus/301",
+    "message": "elaboration function for `Mathlib.Tactic.subscriptTerm` has not been implemented\n  ᵥ\n---\nelaboration function for `Mathlib.Tactic.subscriptTerm` has not been implemented\n  ᵥ\n---\nelaboration function for `Mathlib.Tactic.subscriptTerm` has not been implemented\n  ᵥ"
+   }
+  ]
+ }
+}

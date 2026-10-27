@@ -1,0 +1,125 @@
+### P041
+Simplify the fraction $\frac{27}{30}$.
+Answer: \frac{9}{10}
+
+### P042
+How many positive multiples of 13 are three-digit integers?
+Answer: 69
+
+### P043
+Let $\mathbf{A} = \begin{pmatrix} 15 & 25 \\ -9 & -15 \end{pmatrix}.$  Compute
+\[\mathbf{I} + 2 \mathbf{A} + 3 \mathbf{A}^2 + 4 \mathbf{A}^3 + \dotsb.\]
+Answer: \begin{pmatrix} 31 & 50 \\ -18 & -29 \end{pmatrix}
+
+### P044
+In right triangle $ABC$, we have $AB = 10$, $BC = 24$, and $\angle ABC = 90^\circ$. If $M$ is on $\overline{AC}$ such that $\overline{BM}$ is an angle bisector of $\triangle ABC$, then what is $\cos \angle ABM$?
+Answer: \frac{\sqrt{2}}{2}
+
+### P045
+Let $\ell$ be the line in space through the points $(0,0,1)$ and $(1,1,1).$  Let $d$ be the length of the shortest possible path that begins at the origin, travels to a point on $\ell,$ then ends at the point $(1,0,0).$  Enter $d^2.$
+Answer: 3 + \sqrt{6}
+
+### P046
+A graph is defined in polar coordinates by $r = \cos \theta + \frac{1}{2}.$  Find the smallest $x$-coordinate of any point on this graph.
+Answer: -\frac{1}{16}
+
+### P047
+Evaluate $\sin(1998^\circ+237^\circ)\sin(1998^\circ-1653^\circ)$.
+Answer: -\frac{1}{4}
+
+### P048
+Evaluate $\tan 10^\circ \tan 20^\circ \tan 30^\circ \tan 40^\circ \tan 50^\circ \tan 60^\circ \tan 70^\circ \tan 80^\circ.$
+Answer: 1
+
+### P049
+What is the area enclosed by the graph of $|3x|+|4y|=12$?
+Answer: 24
+
+### P050
+What is the sum of the roots of the equation $(x - 5)^2 = 9$?
+Answer: 10
+
+### P051
+Murtha has decided to start a pebble collection. She collects one pebble the first day and two pebbles on the second day. On each subsequent day she collects one more pebble than the previous day. How many pebbles will she have collected at the end of the twelfth day?
+Answer: 78
+
+### P052
+Three aluminum cans can be recycled to make a new can. How many new cans can eventually be made from 243 aluminum cans? (Remember that the first new cans that are made can then be recycled into even newer cans!)  Do not include the original 243 cans in your count.
+Answer: 121
+
+### P053
+How many terms are in the expansion of  \[(a+b+c)(d+e+f+g)?\]
+Answer: 12
+
+### P054
+Each letter represents a non-zero digit. What is the value of $t?$ \begin{align*}
+c + o &= u \\
+u + n &= t \\
+t + c &= s \\
+o + n + s &= 12
+\end{align*}
+Answer: 6
+
+### P055
+Suppose $p$ and $q$ are inversely proportional. If $p=25$ when $q=6$, find the value of $p$ when $q=15$.
+Answer: 10
+
+### P056
+Given two real numbers $p>1$ and $q>1$ so that $\frac{1}{p} + \frac{1}{q} = 1$ and $pq = 4$, what is $q$?
+Answer: 2
+
+### P057
+Each face of a cube is painted either  red or blue, each with probability 1/2. The color of each face is determined independently.  What is the probability that the painted cube can be placed on a horizontal surface so that the four vertical faces are all the same color?
+Answer: \frac{5}{16}
+
+### P058
+I have two 20-sided dice that each have 4 maroon sides, 7 teal sides, 8 cyan sides, and one sparkly side. If I roll both dice, what is the probability they come up the same?
+Answer: \dfrac{13}{40}
+
+### P059
+How many ways are there to put 5 balls in 2 boxes if the balls are distinguishable but the boxes are not?
+Answer: 16
+
+### P060
+Nine people sit down at random seats around a round table. Four of them are math majors, three others are physics majors, and the two remaining people are biology majors. What is the probability that all four math majors sit in consecutive seats?
+Answer: \frac{1}{14}
+
+### P061
+Suppose we want to divide the 10 dogs into three groups, one with 3 dogs, one with 5 dogs, and one with 2 dogs.  How many ways can we form the groups such that Fluffy is in the 3-dog group and Nipper is in the 5-dog group?
+Answer: 420
+
+### P062
+At the grocery store, I bought $4$ different items. I brought $3$ identical bags, and handed them to the cashier. How many ways are there for the cashier to put the items I bought in the $3$ identical bags, assuming he might leave some of the bags empty?
+Answer: 14
+
+### P063
+When the height of a cylinder is doubled and its radius is increased by $200\%$, the cylinder's volume is multiplied by a factor of $X$. What is the value of $X$?
+Answer: 18
+
+### P064
+In the staircase-shaped region below, all angles that look like right angles are right angles, and each of the eight congruent sides marked with a tick mark have length 1 foot.  If the region has area 53 square feet, what is the number of feet in the perimeter of the region? [asy]
+size(120);
+draw((5,7)--(0,7)--(0,0)--(9,0)--(9,3)--(8,3)--(8,4)--(7,4)--(7,5)--(6,5)--(6,6)--(5,6)--cycle);
+label("9 ft",(4.5,0),S);
+draw((7.85,3.5)--(8.15,3.5)); draw((6.85,4.5)--(7.15,4.5)); draw((5.85,5.5)--(6.15,5.5)); draw((4.85,6.5)--(5.15,6.5));
+draw((8.5,2.85)--(8.5,3.15)); draw((7.5,3.85)--(7.5,4.15)); draw((6.5,4.85)--(6.5,5.15)); draw((5.5,5.85)--(5.5,6.15));
+[/asy]
+Answer: 32
+
+### P065
+In quadrilateral $ABCD$, sides $\overline{AB}$ and $\overline{BC}$ both have length 10, sides $\overline{CD}$ and $\overline{DA}$ both have length 17, and the measure of angle $ADC$ is $60^\circ$. What is the length of diagonal $\overline{AC}$? [asy]
+draw((0,0)--(17,0));
+draw(rotate(301, (17,0))*(0,0)--(17,0));
+picture p;
+draw(p, (0,0)--(0,10));
+draw(p, rotate(115, (0,10))*(0,0)--(0,10));
+add(rotate(3)*p);
+
+draw((0,0)--(8.25,14.5), linetype("8 8"));
+
+label("$A$", (8.25, 14.5), N);
+label("$B$", (-0.25, 10), W);
+label("$C$", (0,0), SW);
+label("$D$", (17, 0), E);
+[/asy]
+Answer: 17

@@ -1,0 +1,172 @@
+{
+ "generated": "2026-10-26T20:42:43+0000",
+ "versioned_in_git": [
+  "data/tiers/",
+  "data/candidates.db",
+  "data/jobs/",
+  "data/formalized_corpus.jsonl",
+  "data/lake/formalized/",
+  "data_sample/"
+ ],
+ "rebuilt_by_scripts": {
+  "data/raw/": "bash scripts/download_data.sh",
+  "data/units/ + data/lake/units/ + data/tiers/": "python -m afp.ingest (seed 42)"
+ },
+ "raw_downloads": [
+  {
+   "path": "data/raw/proofnet_ds.jsonl",
+   "bytes": 245283,
+   "sha256": "4a4d4fd69f45d6180830f12a73adb8a7e04915f651f3fa44a2877082fe252132",
+   "lines": 371,
+   "source": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-Prover-V1.5/main/datasets/proofnet.jsonl",
+   "license": "MIT"
+  },
+  {
+   "path": "data/raw/minif2f_ds.jsonl",
+   "bytes": 320856,
+   "sha256": "d6654c88476ff14db19d57dea25bd955a240525fb52171e460f89d98f83d7dd5",
+   "lines": 488,
+   "source": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-Prover-V1.5/main/datasets/minif2f.jsonl",
+   "license": "MIT / Apache-2.0"
+  },
+  {
+   "path": "data/raw/proofnet_orig",
+   "source": "https://github.com/zhangir-azerbayev/ProofNet (git clone --depth 1)",
+   "license": "MIT",
+   "files": 313,
+   "tree_sha256": "0c24092b475fc6280ae66eea1ca3c9957a499f2c58474d4cb27c4df620f75702"
+  },
+  {
+   "path": "data/raw/math_train.jsonl",
+   "bytes": 10896985,
+   "sha256": "90d96daeac3fe343ebb1e22ce93dd99690f75983e957f88de42f87cffe1e8076",
+   "lines": 12000,
+   "source": "https://media.githubusercontent.com/media/openai/prm800k/main/prm800k/math_splits/train.jsonl",
+   "license": "MIT"
+  },
+  {
+   "path": "data/raw/math_test.jsonl",
+   "bytes": 446564,
+   "sha256": "35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132",
+   "lines": 500,
+   "source": "https://media.githubusercontent.com/media/openai/prm800k/main/prm800k/math_splits/test.jsonl",
+   "license": "MIT"
+  },
+  {
+   "path": "data/raw/gsm8k_train.jsonl",
+   "bytes": 4166206,
+   "sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+   "lines": 7473,
+   "source": "https://raw.githubusercontent.com/openai/grade-school-math/master/grade_school_math/data/train.jsonl",
+   "license": "MIT"
+  },
+  {
+   "path": "data/raw/gsm8k_test.jsonl",
+   "bytes": 749738,
+   "sha256": "3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14",
+   "lines": 1319,
+   "source": "https://raw.githubusercontent.com/openai/grade-school-math/master/grade_school_math/data/test.jsonl",
+   "license": "MIT"
+  }
+ ],
+ "units": {
+  "path": "data/units/all_units.jsonl",
+  "bytes": 19472514,
+  "sha256": "4c4f690762701d0fac109370006ff4434aa985832db83a33f4f3518368351a88",
+  "lines": 22150,
+  "records": 22150
+ },
+ "lake_units_parquet": {
+  "files": 19,
+  "tree_sha256": "4f190783abbf4ad7ab0df23b6feeb9a9953ad8f679a74ae1b26a38a199bfe410",
+  "layout": "data/lake/units/source=<s>/domain=<d>/part-0.parquet"
+ },
+ "tiers": [
+  {
+   "path": "data/tiers/GOLD.txt",
+   "bytes": 28670,
+   "sha256": "c1ea75d14e1c227f2a15fee8e47f2d8400258a41cc990056702bdc922767c066",
+   "lines": 859,
+   "seed": 42
+  },
+  {
+   "path": "data/tiers/T100.txt",
+   "bytes": 2873,
+   "sha256": "8fadf76fbc4d3e2773061bee312d11328d27f07f857f04aff0b5cafe495e2835",
+   "lines": 100,
+   "seed": 42
+  },
+  {
+   "path": "data/tiers/T10K.txt",
+   "bytes": 279916,
+   "sha256": "2de48d7a08858f856344a5486da6802e7d4c9911988cf7e685e4783621cf6684",
+   "lines": 10000,
+   "seed": 42
+  },
+  {
+   "path": "data/tiers/T1K.txt",
+   "bytes": 27990,
+   "sha256": "9ac33101e00f248de18e2703de3b266252335433cbfd3a77dce8706254274c66",
+   "lines": 1000,
+   "seed": 42
+  },
+  {
+   "path": "data/tiers/T20_1REQ.txt",
+   "bytes": 604,
+   "sha256": "a050808ec1cdc59d5f8dfbf061f91605ac2189d7fcd1eed1aa19bb02379b8f85",
+   "lines": 20,
+   "seed": 42
+  }
+ ],
+ "candidate_store": {
+  "path": "data/candidates.db",
+  "bytes": 1540096,
+  "sha256": "d74f77243991625d88c7fe79499806c248f086b96a246adfc5d88a154e0aa991",
+  "candidates_by_prompt_version": {
+   "gold": 859,
+   "v1_zeroshot": 1000,
+   "v1_zeroshot_1req": 20,
+   "v2_fewshot": 400
+  }
+ },
+ "inference_jobs": {
+  "files": 203,
+  "tree_sha256": "cff7f9e38569a20ba3b2cc637342a427a26975ff05b3ffaf50b0ab4521a9ef72"
+ },
+ "formalized_corpus": {
+  "path": "data/formalized_corpus.jsonl",
+  "bytes": 921269,
+  "sha256": "c0858f0b5df1c045036258b272d5575727f757620e26551ed938c83938c79f9a",
+  "lines": 1000
+ },
+ "formalized_corpus_parquet": {
+  "files": 19,
+  "tree_sha256": "fd08a1683799108c01c5b5915316d1fe4994ed44a3a87f8b2d619009d96f4ca6"
+ },
+ "data_sample": [
+  {
+   "path": "data_sample/units_T100.jsonl",
+   "bytes": 86484,
+   "sha256": "f449208b4a93accd6b6900e6d767a967dd2e745ad5e05fd01e2ea0ebebac93d2",
+   "lines": 100
+  },
+  {
+   "path": "data_sample/candidates_T100.jsonl",
+   "bytes": 355215,
+   "sha256": "9b2a114c1b2aa8359095ecea877621fe725198211319c70b6a63719d1e678c8b",
+   "lines": 520
+  },
+  {
+   "path": "data_sample/corpus_T100.jsonl",
+   "bytes": 91066,
+   "sha256": "2fcfb1e395954276611dfd318c24c31c3ad07b4a0176007c7f4592aec925c9c2",
+   "lines": 100
+  },
+  {
+   "path": "data_sample/units_demo.jsonl",
+   "bytes": 2111,
+   "sha256": "58049b23b946b138eeedcf28a3b8cdfda52b0ebdbb4e2d76b3a92b96d5b9d689",
+   "lines": 3
+  }
+ ]
+}

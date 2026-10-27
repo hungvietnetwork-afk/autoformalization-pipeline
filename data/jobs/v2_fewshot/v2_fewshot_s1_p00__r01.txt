@@ -1,0 +1,106 @@
+### P026
+The roots of $x^3 + Px^2 + Qx - 19 = 0$ are each one more than the roots of $x^3 - Ax^2 + Bx - C = 0.$  If $A,$ $B,$ $C,$ $P,$ and $Q$ are constants, compute $A + B + C.$
+Answer: 18
+
+### P027
+Let $x,$ $y,$ and $z$ be positive real numbers such that $xy + xz + yz = 1.$  Find the minimum value of $10x^2 + 10y^2 + z^2.$
+Answer: 4
+
+### P028
+Let $a,$ $b,$ $c,$ $d$ be nonnegative real numbers such that $a + b + c + d = 1.$  Find the maximum value of
+\[a^2 + b^2 + c^2 + d^2.\]
+Answer: 1
+
+### P029
+Let $k$ be a real number, such that both roots of
+\[x^2 - 2kx + k^2 + k - 5 = 0\]are real, and they are less than 5.  Find all possible values of $k.$
+Answer: (-\infty,4)
+
+### P030
+Let $a,$ $b,$ $c$ be positive real numbers such that $a + b + c = 1.$  Find the minimum value of $a^2 + 2b^2 + c^2.$
+Answer: \frac{2}{5}
+
+### P031
+Let $f_1$, $f_2$, $f_3$, $\dots$ be a sequence of numbers such that
+\[
+  f_n = f_{n - 1} + f_{n - 2}
+\]for every integer $n \ge 3$.  If $f_7 = 83$, what is the sum of the first 10 terms of the sequence?
+Answer: 913
+
+### P032
+The polynomial $x^2 + bx + b$ is a factor of $x^3 + 2x^2 + 2x + c.$  Enter all possible values of $b,$ separated by commas.
+Answer: 1,2
+
+### P033
+Which type of conic section is described by the equation \[x^2 = 2x + 2y - 3?\]Enter "C" for circle, "P" for parabola, "E" for ellipse, "H" for hyperbola, and "N" for none of the above.
+Answer: \text{(P)}
+
+### P034
+If
+\[\sqrt[3]{2} = a + \cfrac{1}{b + \cfrac{1}{c + \cfrac{1}{d + \dotsb}}},\]where $a,$ $b,$ $c,$ $d$ are positive integers, compute $b.$
+Answer: 3
+
+### P035
+A set $S$ is constructed as follows. To begin, $S = \{0,10\}$. Repeatedly, as long as possible, if $x$ is an integer root of some nonzero polynomial $a_{n}x^n + a_{n-1}x^{n-1} + \dots + a_{1}x + a_0$ for some $n\geq{1}$, all of whose coefficients $a_i$ are elements of $S$, then $x$ is put into $S$. When no more elements can be added to $S$, how many elements does $S$ have?
+Answer: 9
+
+### P036
+Two geometric sequences $a_1, a_2, a_3, \ldots$ and $b_1, b_2, b_3, \ldots$ have the same common ratio, with $a_1 = 27$, $b_1=99$, and $a_{15}=b_{11}$. Find $a_9.$
+Answer: 363
+
+### P037
+Find the least positive integer $k$ for which the equation $\left\lfloor\frac{2002}{n}\right\rfloor=k$ has no integer solutions for $n$. (The notation $\lfloor x\rfloor$ means the greatest integer less than or equal to $x$.)
+Answer: 49
+
+### P038
+February $1$, $2008$ is a Friday.  The last Friday of February $2008$ will be February $x$, $2008$.  If $2008$ is a leap year, what is the value of $x$?
+Answer: 29
+
+### P039
+An $\textit{emirp}$ is an integer that, when its digits are written in reverse order, is a prime number. For example, 73 is an emirp because 37 is prime. What is the smallest two-digit prime number that is NOT an emirp?
+Answer: 19
+
+### P040
+What is $(1 + 2 \cdot 3 \cdot 4 \cdot 5) \div 11$?
+Answer: 11
+
+### P041
+Simplify the fraction $\frac{27}{30}$.
+Answer: \frac{9}{10}
+
+### P042
+How many positive multiples of 13 are three-digit integers?
+Answer: 69
+
+### P043
+Let $\mathbf{A} = \begin{pmatrix} 15 & 25 \\ -9 & -15 \end{pmatrix}.$  Compute
+\[\mathbf{I} + 2 \mathbf{A} + 3 \mathbf{A}^2 + 4 \mathbf{A}^3 + \dotsb.\]
+Answer: \begin{pmatrix} 31 & 50 \\ -18 & -29 \end{pmatrix}
+
+### P044
+In right triangle $ABC$, we have $AB = 10$, $BC = 24$, and $\angle ABC = 90^\circ$. If $M$ is on $\overline{AC}$ such that $\overline{BM}$ is an angle bisector of $\triangle ABC$, then what is $\cos \angle ABM$?
+Answer: \frac{\sqrt{2}}{2}
+
+### P045
+Let $\ell$ be the line in space through the points $(0,0,1)$ and $(1,1,1).$  Let $d$ be the length of the shortest possible path that begins at the origin, travels to a point on $\ell,$ then ends at the point $(1,0,0).$  Enter $d^2.$
+Answer: 3 + \sqrt{6}
+
+### P046
+A graph is defined in polar coordinates by $r = \cos \theta + \frac{1}{2}.$  Find the smallest $x$-coordinate of any point on this graph.
+Answer: -\frac{1}{16}
+
+### P047
+Evaluate $\sin(1998^\circ+237^\circ)\sin(1998^\circ-1653^\circ)$.
+Answer: -\frac{1}{4}
+
+### P048
+Evaluate $\tan 10^\circ \tan 20^\circ \tan 30^\circ \tan 40^\circ \tan 50^\circ \tan 60^\circ \tan 70^\circ \tan 80^\circ.$
+Answer: 1
+
+### P049
+What is the area enclosed by the graph of $|3x|+|4y|=12$?
+Answer: 24
+
+### P050
+What is the sum of the roots of the equation $(x - 5)^2 = 9$?
+Answer: 10

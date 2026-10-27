@@ -1,0 +1,36 @@
+{
+ "runs": [
+  "mx_T1K_A_r0",
+  "mx_T1K_A_r1",
+  "mx_T1K_A_r2",
+  "mx_T1K_B_r0",
+  "mx_T1K_B_r1",
+  "mx_T1K_B_r2",
+  "mx_T1K_C_r0",
+  "mx_T1K_C_r1",
+  "mx_T1K_C_r2"
+ ],
+ "tasks": 1000,
+ "identical_within_config": {
+  "A": 1000,
+  "B": 1000,
+  "C": 1000
+ },
+ "identical_across_all_runs": 999,
+ "disagreements": [
+  {
+   "problem_id": "math:test/counting_and_probability/933",
+   "status_by_run": {
+    "mx_T1K_A_r0": "TYPE_MISMATCH",
+    "mx_T1K_A_r1": "TYPE_MISMATCH",
+    "mx_T1K_A_r2": "TYPE_MISMATCH",
+    "mx_T1K_B_r0": "TIMEOUT",
+    "mx_T1K_B_r1": "TIMEOUT",
+    "mx_T1K_B_r2": "TIMEOUT",
+    "mx_T1K_C_r0": "TIMEOUT",
+    "mx_T1K_C_r1": "TIMEOUT",
+    "mx_T1K_C_r2": "TIMEOUT"
+   }
+  }
+ ]
+}

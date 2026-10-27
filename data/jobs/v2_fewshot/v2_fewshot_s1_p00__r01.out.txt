@@ -1,0 +1,74 @@
+### P026
+theorem t26 (A B C P Q r₁ r₂ r₃ : ℂ) (h : ∀ x : ℂ, x ^ 3 - A * x ^ 2 + B * x - C = (x - r₁) * (x - r₂) * (x - r₃)) (h' : ∀ x : ℂ, x ^ 3 + P * x ^ 2 + Q * x - 19 = (x - (r₁ + 1)) * (x - (r₂ + 1)) * (x - (r₃ + 1))) : A + B + C = 18 := by sorry
+
+### P027
+theorem t27 : IsLeast {v : ℝ | ∃ x y z : ℝ, 0 < x ∧ 0 < y ∧ 0 < z ∧ x * y + x * z + y * z = 1 ∧ v = 10 * x ^ 2 + 10 * y ^ 2 + z ^ 2} 4 := by sorry
+
+### P028
+theorem t28 : IsGreatest {v : ℝ | ∃ a b c d : ℝ, 0 ≤ a ∧ 0 ≤ b ∧ 0 ≤ c ∧ 0 ≤ d ∧ a + b + c + d = 1 ∧ v = a ^ 2 + b ^ 2 + c ^ 2 + d ^ 2} 1 := by sorry
+
+### P029
+theorem t29 : {k : ℝ | ∀ x : ℂ, x ^ 2 - 2 * (k : ℂ) * x + ((k : ℂ) ^ 2 + (k : ℂ) - 5) = 0 → x.im = 0 ∧ x.re < 5} = Set.Iio 4 := by sorry
+
+### P030
+theorem t30 : IsLeast {v : ℝ | ∃ a b c : ℝ, 0 < a ∧ 0 < b ∧ 0 < c ∧ a + b + c = 1 ∧ v = a ^ 2 + 2 * b ^ 2 + c ^ 2} (2 / 5) := by sorry
+
+### P031
+theorem t31 (f : ℕ → ℝ) (hf : ∀ n ≥ 3, f n = f (n - 1) + f (n - 2)) (h7 : f 7 = 83) : ∑ i ∈ Finset.Icc 1 10, f i = 913 := by sorry
+
+### P032
+theorem t32 : {b : ℝ | ∃ c : ℝ, (Polynomial.X ^ 2 + Polynomial.C b * Polynomial.X + Polynomial.C b) ∣ (Polynomial.X ^ 3 + 2 * Polynomial.X ^ 2 + 2 * Polynomial.X + Polynomial.C c)} = ({1, 2} : Set ℝ) := by sorry
+
+### P033
+theorem t33 : ∃ a h k : ℝ, a ≠ 0 ∧ {p : ℝ × ℝ | p.1 ^ 2 = 2 * p.1 + 2 * p.2 - 3} = {p : ℝ × ℝ | p.2 = a * (p.1 - h) ^ 2 + k} := by sorry
+
+### P034
+theorem t34 (a b : ℕ) (ha : a = ⌊(2 : ℝ) ^ ((1 : ℝ) / 3)⌋₊) (hb : b = ⌊1 / ((2 : ℝ) ^ ((1 : ℝ) / 3) - a)⌋₊) : b = 3 := by sorry
+
+### P035
+theorem t35 (S : Set ℤ) (hS : IsLeast {T : Set ℤ | ({0, 10} : Set ℤ) ⊆ T ∧ ∀ (n : ℕ) (a : ℕ → ℤ) (x : ℤ), 1 ≤ n → (∀ i ≤ n, a i ∈ T) → (∃ i ≤ n, a i ≠ 0) → ∑ i ∈ Finset.range (n + 1), a i * x ^ i = 0 → x ∈ T} S) : S.ncard = 9 := by sorry
+
+### P036
+theorem t36 (a b : ℕ → ℝ) (r : ℝ) (hr : r ≠ 0) (ha : ∀ n ≥ 1, a (n + 1) = r * a n) (hb : ∀ n ≥ 1, b (n + 1) = r * b n) (ha1 : a 1 = 27) (hb1 : b 1 = 99) (h : a 15 = b 11) : a 9 = 363 := by sorry
+
+### P037
+theorem t37 : IsLeast {k : ℕ | 0 < k ∧ ¬ ∃ n : ℤ, ⌊(2002 : ℝ) / (n : ℝ)⌋ = (k : ℤ)} 49 := by sorry
+
+### P038
+theorem t38 (x : ℕ) (h1 : 1 ≤ x) (h2 : x ≤ 29) (hfri : (x - 1) % 7 = 0) (hmax : ∀ y : ℕ, 1 ≤ y → y ≤ 29 → (y - 1) % 7 = 0 → y ≤ x) : x = 29 := by sorry
+
+### P039
+theorem t39 : IsLeast {p : ℕ | Nat.Prime p ∧ 10 ≤ p ∧ p < 100 ∧ ¬ Nat.Prime (Nat.ofDigits 10 (Nat.digits 10 p).reverse)} 19 := by sorry
+
+### P040
+theorem t40 : ((1 : ℚ) + 2 * 3 * 4 * 5) / 11 = 11 := by sorry
+
+### P041
+theorem t41 : (27 : ℚ) / 30 = 9 / 10 := by sorry
+
+### P042
+theorem t42 : (Finset.filter (fun n : ℕ => 13 ∣ n) (Finset.Icc 100 999)).card = 69 := by sorry
+
+### P043
+theorem t43 : Filter.Tendsto (fun N : ℕ => ∑ n ∈ Finset.range N, ((n : ℝ) + 1) • (!![15, 25; -9, -15] : Matrix (Fin 2) (Fin 2) ℝ) ^ n) Filter.atTop (nhds !![31, 50; -18, -29]) := by sorry
+
+### P044
+theorem t44 (x y : ℝ) (hline : x / 24 + y / 10 = 1) (hx : 0 ≤ x) (hy : 0 ≤ y) (hbis : 10 * y / (10 * Real.sqrt (x ^ 2 + y ^ 2)) = 24 * x / (24 * Real.sqrt (x ^ 2 + y ^ 2))) : 10 * y / (10 * Real.sqrt (x ^ 2 + y ^ 2)) = Real.sqrt 2 / 2 := by sorry
+
+### P045
+theorem t45 : ∃ d : ℝ, IsLeast {L : ℝ | ∃ t : ℝ, L = Real.sqrt (t ^ 2 + t ^ 2 + 1) + Real.sqrt ((1 - t) ^ 2 + (0 - t) ^ 2 + (0 - 1) ^ 2)} d ∧ d ^ 2 = 3 + Real.sqrt 6 := by sorry
+
+### P046
+theorem t46 : IsLeast {x : ℝ | ∃ θ : ℝ, x = (Real.cos θ + 1 / 2) * Real.cos θ} (-1 / 16) := by sorry
+
+### P047
+theorem t47 : Real.sin ((1998 + 237) * Real.pi / 180) * Real.sin ((1998 - 1653) * Real.pi / 180) = -1 / 4 := by sorry
+
+### P048
+theorem t48 : ∏ k ∈ Finset.Icc (1 : ℕ) 8, Real.tan ((k : ℝ) * 10 * Real.pi / 180) = 1 := by sorry
+
+### P049
+theorem t49 : (MeasureTheory.volume {p : ℝ × ℝ | |3 * p.1| + |4 * p.2| ≤ 12}).toReal = 24 := by sorry
+
+### P050
+theorem t50 (S : Finset ℝ) (hS : ∀ x : ℝ, x ∈ S ↔ (x - 5) ^ 2 = 9) : ∑ x ∈ S, x = 10 := by sorry

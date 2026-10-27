@@ -1,0 +1,74 @@
+### P051
+theorem t51 (a : ℕ → ℕ) (h1 : a 1 = 1) (hs : ∀ n ≥ 1, a (n + 1) = a n + 1) : ∑ i ∈ Finset.Icc 1 12, a i = 78 := by sorry
+
+### P052
+theorem t52 (f : ℕ → ℕ) (h0 : ∀ n < 3, f n = 0) (hrec : ∀ n ≥ 3, f n = n / 3 + f (n / 3 + n % 3)) : f 243 = 121 := by sorry
+
+### P053
+theorem t53 : ((MvPolynomial.X 0 + MvPolynomial.X 1 + MvPolynomial.X 2) * (MvPolynomial.X 3 + MvPolynomial.X 4 + MvPolynomial.X 5 + MvPolynomial.X 6) : MvPolynomial (Fin 7) ℤ).support.card = 12 := by sorry
+
+### P054
+theorem t54 (c o u n t s : ℕ) (hc : 1 ≤ c ∧ c ≤ 9) (ho : 1 ≤ o ∧ o ≤ 9) (hu : 1 ≤ u ∧ u ≤ 9) (hn : 1 ≤ n ∧ n ≤ 9) (ht : 1 ≤ t ∧ t ≤ 9) (hs : 1 ≤ s ∧ s ≤ 9) (h1 : c + o = u) (h2 : u + n = t) (h3 : t + c = s) (h4 : o + n + s = 12) : t = 6 := by sorry
+
+### P055
+theorem t55 (p : ℝ → ℝ) (k : ℝ) (hk : ∀ q : ℝ, q ≠ 0 → p q = k / q) (h1 : p 6 = 25) : p 15 = 10 := by sorry
+
+### P056
+theorem t56 (p q : ℝ) (hp : 1 < p) (hq : 1 < q) (h1 : 1 / p + 1 / q = 1) (h2 : p * q = 4) : q = 2 := by sorry
+
+### P057
+theorem t57 : (((Finset.univ : Finset (Fin 6 → Bool)).filter (fun c => (∀ x ∈ ({2, 3, 4, 5} : Finset (Fin 6)), c x = c 2) ∨ (∀ x ∈ ({0, 1, 4, 5} : Finset (Fin 6)), c x = c 0) ∨ (∀ x ∈ ({0, 1, 2, 3} : Finset (Fin 6)), c x = c 0))).card : ℚ) / 2 ^ 6 = 5 / 16 := by sorry
+
+### P058
+theorem t58 (c d : Fin 20 → Fin 4) (hc : (Finset.univ.filter (fun i => c i = 0)).card = 4 ∧ (Finset.univ.filter (fun i => c i = 1)).card = 7 ∧ (Finset.univ.filter (fun i => c i = 2)).card = 8 ∧ (Finset.univ.filter (fun i => c i = 3)).card = 1) (hd : (Finset.univ.filter (fun i => d i = 0)).card = 4 ∧ (Finset.univ.filter (fun i => d i = 1)).card = 7 ∧ (Finset.univ.filter (fun i => d i = 2)).card = 8 ∧ (Finset.univ.filter (fun i => d i = 3)).card = 1) : ((Finset.univ.filter (fun p : Fin 20 × Fin 20 => c p.1 = d p.2)).card : ℚ) / (Fintype.card (Fin 20 × Fin 20) : ℚ) = 13 / 40 := by sorry
+
+### P059
+theorem t59 : Nat.card {P : Finpartition (Finset.univ : Finset (Fin 5)) // P.parts.card ≤ 2} = 16 := by sorry
+
+### P060
+theorem t60 : ((Finset.univ.filter (fun σ : Equiv.Perm (Fin 9) => ∃ s : Fin 9, ∀ p : Fin 9, p.val < 4 → (σ p - s).val < 4)).card : ℚ) / (Fintype.card (Equiv.Perm (Fin 9)) : ℚ) = 1 / 14 := by sorry
+
+### P061
+theorem t61 : ((Finset.univ : Finset (Fin 10 → Fin 3)).filter (fun f => (Finset.univ.filter (fun i => f i = 0)).card = 3 ∧ (Finset.univ.filter (fun i => f i = 1)).card = 5 ∧ (Finset.univ.filter (fun i => f i = 2)).card = 2 ∧ f 0 = 0 ∧ f 1 = 1)).card = 420 := by sorry
+
+### P062
+theorem t62 : Nat.card {P : Finpartition (Finset.univ : Finset (Fin 4)) // P.parts.card ≤ 3} = 14 := by sorry
+
+### P063
+theorem t63 (r h X : ℝ) (hr : 0 < r) (hh : 0 < h) (hX : Real.pi * (r * (1 + 200 / 100)) ^ 2 * (2 * h) = X * (Real.pi * r ^ 2 * h)) : X = 18 := by sorry
+
+### P064
+theorem t64 (x y : Fin 12 → ℝ) (hx : x = ![5, 0, 0, 9, 9, 8, 8, 7, 7, 6, 6, 5]) (hy : y = ![7, 7, 0, 0, 3, 3, 4, 4, 5, 5, 6, 6]) (harea : |∑ i : Fin 12, (x i * y (i + 1) - x (i + 1) * y i)| / 2 = 53) : ∑ i : Fin 12, Real.sqrt ((x (i + 1) - x i) ^ 2 + (y (i + 1) - y i) ^ 2) = 32 := by sorry
+
+### P065
+theorem t65 (A B C D : EuclideanSpace ℝ (Fin 2)) (hAB : dist A B = 10) (hBC : dist B C = 10) (hCD : dist C D = 17) (hDA : dist D A = 17) (hD : EuclideanGeometry.angle A D C = Real.pi / 3) : dist A C = 17 := by sorry
+
+### P066
+theorem t66 : ∃ m n : ℕ, 1 < m ∧ 1 < n ∧ (∏ k ∈ Finset.Icc (1 : ℕ) 45, (1 / Real.sin ((2 * (k : ℝ) - 1) * Real.pi / 180)) ^ 2) = (m : ℝ) ^ n ∧ m + n = 91 := by sorry
+
+### P067
+theorem t67 (d h V : ℝ) (hd : d = 10) (hh : h = 6) (hV : V = 1 / 3 * Real.pi * (d / 2) ^ 2 * h) : V = 50 * Real.pi := by sorry
+
+### P068
+theorem t68 (t : ℝ) (ht : 0 < t) (ht2 : t < 1 / 2) (hcross : 1 - (1 - 2 * t) ^ 2 = 36 / 100) : 2 * t ^ 2 * 100 = 2 := by sorry
+
+### P069
+theorem t69 (L W : ℝ) (hL : 0 < L) (hW : 0 < W) (hBCE : Real.tan (Real.pi / 6) = 6 / W) (hFCD : Real.tan (Real.pi / 6) = (W - 2) / L) : L * W = 108 * Real.sqrt 3 - 36 := by sorry
+
+### P070
+theorem t70 : {z : ℂ | z ^ 4 = -4} = {1 + Complex.I, 1 - Complex.I, -1 + Complex.I, -1 - Complex.I} := by sorry
+
+### P071
+theorem t71 : ∑ n ∈ Finset.Icc (1 : ℕ) 1000, (1 : ℝ) / ((n : ℝ) ^ 2 + (n : ℝ)) = 1000 / 1001 := by sorry
+
+### P072
+theorem t72 : IsGreatest {n : ℕ | 0 < n ∧ ∀ x : ℝ, Real.sin x ^ n + Real.cos x ^ n ≥ 1 / (n : ℝ)} 8 := by sorry
+
+### P073
+theorem t73 : IsLeast {y : ℝ | ∃ x : ℝ, 1 < x ∧ y = (x + 8) / Real.sqrt (x - 1)} 6 := by sorry
+
+### P074
+theorem t74 : IsGreatest {n : ℤ | (n : ℝ) < ∑ k ∈ Finset.Icc (2 : ℕ) 2010, Real.logb 2 ((k : ℝ) / ((k : ℝ) - 1))} 10 := by sorry
+
+### P075
+theorem t75 (b c : ℚ) (h1 : (3 - Real.sqrt 7) ^ 3 + (b : ℝ) * (3 - Real.sqrt 7) + (c : ℝ) = 0) (r : ℤ) (h2 : (r : ℝ) ^ 3 + (b : ℝ) * (r : ℝ) + (c : ℝ) = 0) : r = -6 := by sorry

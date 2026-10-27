@@ -1,0 +1,217 @@
+{
+ "n": 859,
+ "status": {
+  "COMPILE_OK": 729,
+  "OTHER_ERROR": 20,
+  "PARSE_ERROR": 81,
+  "TYPE_MISMATCH": 11,
+  "TIMEOUT": 1,
+  "UNKNOWN_IDENTIFIER": 17
+ },
+ "first_error_kind": {
+  "none": 729,
+  "other_error": 10,
+  "parse_error": 81,
+  "failed_to_synthesize": 9,
+  "ambiguous": 9,
+  "placeholder": 1,
+  "wall_timeout": 1,
+  "unknown_identifier": 15,
+  "type_mismatch": 2,
+  "invalid_field": 2
+ },
+ "by_source": {
+  "proofnet": {
+   "COMPILE_OK": 306,
+   "OTHER_ERROR": 20,
+   "PARSE_ERROR": 17,
+   "TYPE_MISMATCH": 11,
+   "TIMEOUT": 1,
+   "UNKNOWN_IDENTIFIER": 16
+  },
+  "minif2f": {
+   "COMPILE_OK": 423,
+   "PARSE_ERROR": 64,
+   "UNKNOWN_IDENTIFIER": 1
+  }
+ },
+ "by_domain": {
+  "minif2f/algebra": {
+   "COMPILE_OK": 169,
+   "PARSE_ERROR": 7
+  },
+  "minif2f/competition": {
+   "COMPILE_OK": 131,
+   "PARSE_ERROR": 28,
+   "UNKNOWN_IDENTIFIER": 1
+  },
+  "minif2f/induction": {
+   "COMPILE_OK": 10,
+   "PARSE_ERROR": 6
+  },
+  "minif2f/number_theory": {
+   "COMPILE_OK": 113,
+   "PARSE_ERROR": 23
+  },
+  "proofnet/abstract_algebra": {
+   "COMPILE_OK": 145,
+   "OTHER_ERROR": 8,
+   "PARSE_ERROR": 6,
+   "TYPE_MISMATCH": 1,
+   "UNKNOWN_IDENTIFIER": 2
+  },
+  "proofnet/competition": {
+   "COMPILE_OK": 12
+  },
+  "proofnet/complex_analysis": {
+   "PARSE_ERROR": 5,
+   "COMPILE_OK": 10,
+   "TYPE_MISMATCH": 1
+  },
+  "proofnet/linear_algebra": {
+   "COMPILE_OK": 25,
+   "OTHER_ERROR": 3
+  },
+  "proofnet/number_theory": {
+   "COMPILE_OK": 20,
+   "OTHER_ERROR": 1
+  },
+  "proofnet/real_analysis": {
+   "COMPILE_OK": 56,
+   "PARSE_ERROR": 6,
+   "OTHER_ERROR": 5,
+   "TYPE_MISMATCH": 4,
+   "UNKNOWN_IDENTIFIER": 1
+  },
+  "proofnet/topology": {
+   "COMPILE_OK": 38,
+   "TYPE_MISMATCH": 5,
+   "TIMEOUT": 1,
+   "UNKNOWN_IDENTIFIER": 13,
+   "OTHER_ERROR": 3
+  }
+ },
+ "by_difficulty": {
+  "minif2f/AIME": {
+   "PARSE_ERROR": 7,
+   "COMPILE_OK": 23
+  },
+  "minif2f/AMC12": {
+   "COMPILE_OK": 75,
+   "PARSE_ERROR": 14,
+   "UNKNOWN_IDENTIFIER": 1
+  },
+  "minif2f/IMO": {
+   "COMPILE_OK": 33,
+   "PARSE_ERROR": 7
+  },
+  "minif2f/MATH": {
+   "COMPILE_OK": 234,
+   "PARSE_ERROR": 26
+  },
+  "minif2f/custom": {
+   "COMPILE_OK": 58,
+   "PARSE_ERROR": 10
+  },
+  "proofnet/undergraduate": {
+   "COMPILE_OK": 306,
+   "OTHER_ERROR": 20,
+   "PARSE_ERROR": 17,
+   "TYPE_MISMATCH": 11,
+   "TIMEOUT": 1,
+   "UNKNOWN_IDENTIFIER": 16
+  }
+ },
+ "top_unknown_identifiers": [
+  [
+   "Rl.IsOpen",
+   2
+  ],
+  [
+   "K_topology.IsOpen",
+   2
+  ],
+  [
+   "Complex.abs",
+   1
+  ]
+ ],
+ "examples": {
+  "COMPILE_OK": [
+   {
+    "problem_id": "proofnet:Herstein:exercise_5_2_20",
+    "message": "declaration uses `sorry`"
+   },
+   {
+    "problem_id": "minif2f:test:mathd_numbertheory_495",
+    "message": "declaration uses `sorry`"
+   },
+   {
+    "problem_id": "minif2f:valid:imo_1964_p1_2",
+    "message": "declaration uses `sorry`"
+   }
+  ],
+  "OTHER_ERROR": [
+   {
+    "problem_id": "proofnet:Dummit-Foote:exercise_3_4_5b",
+    "message": "invalid binder annotation, type is not a class instance\n  IsSolvable G\n\nNote: Use the command `set_option checkBinderAnnotations false` to disable the check"
+   },
+   {
+    "problem_id": "proofnet:Artin:exercise_6_4_2",
+    "message": "Ambiguous term\n  Prime\nPossible interpretations:\n  _root_.Prime p : Prop\n  \n  Nat.Prime p : Prop\n---\nAmbiguous term\n  Prime\nPossible interpretations:\n  _root_.Prime q : Prop\n  \n  Nat.Prime q : Prop"
+   },
+   {
+    "problem_id": "proofnet:Rudin:exercise_3_3",
+    "message": "typeclass instance problem is stuck\n  Preorder ?m.14\n\nNote: Lean will not try to resolve this typeclass instance problem because the type argument to `Preorder` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.\n\nHint: Adding type annotations and"
+   }
+  ],
+  "PARSE_ERROR": [
+   {
+    "problem_id": "minif2f:valid:amc12b_2021_p21",
+    "message": "unexpected token 'in'; expected ','"
+   },
+   {
+    "problem_id": "proofnet:Rudin:exercise_1_12",
+    "message": "unexpected token 'in'; expected ','"
+   },
+   {
+    "problem_id": "minif2f:valid:mathd_numbertheory_543",
+    "message": "unexpected token 'in'; expected ','"
+   }
+  ],
+  "TYPE_MISMATCH": [
+   {
+    "problem_id": "proofnet:Munkres:exercise_21_6a",
+    "message": "failed to synthesize instance of type class\n  HPow I ℕ ?m.6\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command."
+   },
+   {
+    "problem_id": "proofnet:Munkres:exercise_33_8",
+    "message": "failed to synthesize instance of type class\n  TopologicalSpace I\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\n---\nfailed to synthesize instance of type class\n  OfNat I 1\nnumerals are polymorphic in Lean, but the numeral "
+   },
+   {
+    "problem_id": "proofnet:Munkres:exercise_38_6",
+    "message": "failed to synthesize instance of type class\n  TopologicalSpace I\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\n---\nfailed to synthesize instance of type class\n  OfNat I 1\nnumerals are polymorphic in Lean, but the numeral "
+   }
+  ],
+  "TIMEOUT": [
+   {
+    "problem_id": "proofnet:Munkres:exercise_13_8b",
+    "message": "hard timeout after 10.0s (REPL killed and restarted)"
+   }
+  ],
+  "UNKNOWN_IDENTIFIER": [
+   {
+    "problem_id": "proofnet:Munkres:exercise_23_11",
+    "message": "Function expected at\n  QuotientMap\nbut this term has type\n  ?m.1\n\nNote: Expected a function because this term is being applied to the argument\n  p\n\nHint: The identifier `QuotientMap` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variab"
+   },
+   {
+    "problem_id": "proofnet:Munkres:exercise_13_4b1",
+    "message": "Function expected at\n  is_topology\nbut this term has type\n  ?m.1\n\nNote: Expected a function because this term is being applied to the argument\n  X\n\nHint: The identifier `is_topology` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variab"
+   },
+   {
+    "problem_id": "proofnet:Munkres:exercise_13_4b2",
+    "message": "Function expected at\n  is_topology\nbut this term has type\n  ?m.1\n\nNote: Expected a function because this term is being applied to the argument\n  X\n\nHint: The identifier `is_topology` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variab"
+   }
+  ]
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "cold_check_s": [
+  24.0,
+  16.7,
+  20.23
+ ],
+ "cold_method": "one `lake env lean <file>` process per candidate (imports Mathlib every time)",
+ "cold_check_s_median": 20.23,
+ "warm_method": "persistent REPL per worker, `import Mathlib` once, each candidate checked in env 0 (run q_T1K_zeroshot)",
+ "warm_repl_startup_s": [
+  52.17,
+  52.18
+ ],
+ "warm_check_ms_p50": 26.2,
+ "warm_check_ms_p95": 93.6,
+ "warm_check_ms_mean": 45.8,
+ "speedup_median_cold_over_mean_warm": 442.0,
+ "cpu_time_10k_cold_h": 56.2,
+ "cpu_time_10k_warm_min": 7.6
+}

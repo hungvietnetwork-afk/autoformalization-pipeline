@@ -1,0 +1,104 @@
+{
+ "run_id": "mx_T10K_C_r1",
+ "timestamp": "2026-10-16T12:57:52+0000",
+ "git_commit": {
+  "commit": null,
+  "code_dirty": null,
+  "note": "run of 16/10/2026, before the repository used Git; closest code: commit c031d89 (changes of that day: docs/CHANGELOG.md)"
+ },
+ "data_version": {
+  "tier": "T1K",
+  "tier_file": "data/tiers/T1K.txt",
+  "tier_sha256": "9ac33101e00f248de18e2703de3b266252335433cbfd3a77dce8706254274c66",
+  "replicas": 10,
+  "candidates_db_sha256": null,
+  "note": "candidates are keyed by TaskHash and were not changed since; the store gained 20 v1_zeroshot_1req candidates on 26/10, so its file hash differs"
+ },
+ "machine": {
+  "cpu": null,
+  "vcpus": 2,
+  "ram_gb": 7.8,
+  "swap_gb": null,
+  "gpu": null,
+  "os": "Linux (cloud VM, Ubuntu)",
+  "note": "same machine for every run of 16/10"
+ },
+ "software": {
+  "python": "3.13.16",
+  "packages": null,
+  "lean": "4.35.0",
+  "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "mathlib_tag": "v4.35.0",
+  "repl": "58bdde1ff173117960083cc5a052a11d51c49ff1"
+ },
+ "parameters": {
+  "run_id": "mx_T10K_C_r1",
+  "tier": "T1K",
+  "workers": 4,
+  "batch": 32,
+  "partitions": 16,
+  "timeout_s": 10.0,
+  "lease_s": 60.0,
+  "prompt_version": "v1_zeroshot",
+  "k": 1,
+  "replicas": 10,
+  "backend": {
+   "kind": "cache",
+   "db": "/home/claude/af/autoformalization-pipeline/data/candidates.db"
+  },
+  "broker": {
+   "kind": "sqlite"
+  },
+  "n_problems": 10000
+ },
+ "seed_timeout": {
+  "tier_seed": 42,
+  "llm_sampling_seed": null,
+  "wall_timeout_s": 10.0,
+  "max_heartbeats": 400000,
+  "lease_s": 60.0
+ },
+ "metrics": {
+  "n_problems": 10000,
+  "n_candidates": 10000,
+  "makespan_s": 602.617,
+  "throughput_problems_per_s": 16.594,
+  "steady_throughput_candidates_per_s": 19.476,
+  "latency_ms_p50": 47.17,
+  "latency_ms_p95": 183.31,
+  "latency_ms_p99": 376.51,
+  "compile_rate": 0.983,
+  "pass_at_k": 0.983,
+  "status_counts": {
+   "COMPILE_OK": 9830,
+   "PARSE_ERROR": 100,
+   "TYPE_MISMATCH": 40,
+   "OTHER_ERROR": 10,
+   "UNKNOWN_IDENTIFIER": 10,
+   "TIMEOUT": 10
+  },
+  "peak_pool_mb": 5194.3,
+  "peak_rss_sum_mb": 17603.1,
+  "repl_timeouts": 10,
+  "repl_restarts": 10,
+  "retried_tasks": 0,
+  "duplicate_result_rows": 0,
+  "dead_letter": 0,
+  "lean_busy_fraction": 0.373
+ },
+ "status": "ok",
+ "logs": {
+  "raw_results.csv": "results/raw/runs/mx_T10K_C_r1/raw_results.csv",
+  "events.jsonl": "results/raw/runs/mx_T10K_C_r1/events.jsonl",
+  "memory.csv": "results/raw/runs/mx_T10K_C_r1/memory.csv",
+  "metrics.json": "results/raw/runs/mx_T10K_C_r1/metrics.json",
+  "config.json": "results/raw/runs/mx_T10K_C_r1/config.json"
+ },
+ "backfilled": true,
+ "backfilled_fields": [
+  "git_commit",
+  "machine",
+  "software",
+  "data_version.candidates_db_sha256"
+ ]
+}

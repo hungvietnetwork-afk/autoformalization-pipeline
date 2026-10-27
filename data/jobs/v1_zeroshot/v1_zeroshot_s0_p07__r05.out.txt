@@ -1,0 +1,14 @@
+### P126
+theorem t126 : letI : TopologicalSpace (ℝ × ℝ) := TopologicalSpace.generateFrom {S | ∃ p q : ℝ × ℝ, S = {r : ℝ × ℝ | toLex p < toLex r ∧ toLex r < toLex q}}; MetrizableSpace (ℝ × ℝ) := by sorry
+
+### P127
+theorem t127 (X Y : Type*) [TopologicalSpace X] [TopologicalSpace Y] (hX : IsConnected (Set.univ : Set X)) (hY : IsConnected (Set.univ : Set Y)) (A : Set X) (B : Set Y) (hA : A ⊂ Set.univ) (hB : B ⊂ Set.univ) : IsConnected ((Set.univ : Set (X × Y)) \ (A ×ˢ B)) := by sorry
+
+### P128
+theorem t128 (f : ℝ → ℝ) (hf : ContDiff ℝ 3 f) : ∃ a : ℝ, f a * deriv f a * deriv (deriv f) a * deriv (deriv (deriv f)) a ≥ 0 := by sorry
+
+### P129
+theorem t129 (X : Type*) [MetricSpace X] (K F : Set X) (hK : IsCompact K) (hF : IsClosed F) (hKF : Disjoint K F) : ∃ δ > 0, ∀ p ∈ K, ∀ q ∈ F, δ < dist p q := by sorry
+
+### P130
+theorem t130 : ∫ x in (0 : ℝ)..1, Real.log (Real.sin (Real.pi * x)) = -Real.log 2 := by sorry

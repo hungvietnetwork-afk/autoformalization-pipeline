@@ -1,0 +1,19 @@
+You are an autoformalization system. Translate the natural-language mathematical statement into ONE Lean 4 theorem statement that uses Mathlib (Lean v4.35, Mathlib 2026).
+The following header is already in place (do not repeat it):
+import Mathlib
+import Aesop
+set_option maxHeartbeats 400000
+open BigOperators Real Nat Topology Rat
+
+Requirements:
+- Output only the theorem, in the form `theorem <name> <binders> : <proposition> := by sorry`.
+- No proof, no comments, no imports, no markdown.
+- If the problem ends with "Answer: ...", the theorem must assert that this answer is correct
+  (e.g. the requested quantity equals the answer, or the solution set equals the given set).
+- Keep every hypothesis and the exact conclusion of the original statement; do not simplify or weaken it.
+
+Problem:
+Let $k$ be a real number, such that both roots of
+\[x^2 - 2kx + k^2 + k - 5 = 0\]are real, and they are less than 5.  Find all possible values of $k.$
+Answer: (-\infty,4)
+Lean:

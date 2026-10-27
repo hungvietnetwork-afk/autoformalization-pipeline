@@ -1,0 +1,4 @@
+[
+ {"key": "P057", "agent_id": "aa144e3fe3bcc8690", "subagent_tokens": 101207, "tool_uses": 1, "duration_ms": 120193,
+  "raw_output": "theorem cube_painting_probability :\n    (Finset.card (Finset.filter (fun c : Fin 6 → Bool =>\n        ∃ b : Fin 6, ∃ col : Bool, ∀ f : Fin 6,\n          f ≠ b → f ≠ (![1, 0, 3, 2, 5, 4] : Fin 6 → Fin 6) b → c f = col)\n        (Finset.univ : Finset (Fin 6 → Bool))) : ℝ) /\n      (Fintype.card (Fin 6 → Bool) : ℝ) = 5 / 16 := by sorry"}
+]

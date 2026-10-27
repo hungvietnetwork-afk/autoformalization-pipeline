@@ -1,0 +1,27 @@
+{"ts": 1793036019.472806, "run_id": "base_T20_batchjob_A", "worker_id": "orchestrator", "kind": "run_start", "detail": "{\"n_problems\": 20}"}
+{"ts": 1793036019.474233, "run_id": "base_T20_batchjob_A", "worker_id": "orchestrator", "kind": "problems_enqueued", "detail": "{\"partition_sizes\": {\"0\": 1, \"2\": 1, \"3\": 1, \"4\": 1, \"5\": 1, \"6\": 1, \"8\": 1, \"9\": 2, \"10\": 3, \"11\": 2, \"12\": 1, \"13\": 1, \"14\": 2, \"15\": 2}}"}
+{"ts": 1793036019.7462664, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_start", "detail": "{\"pid\": 1344, \"backend\": \"cache\"}"}
+{"ts": 1793036019.7472653, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.21}"}
+{"ts": 1793036019.7476351, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.05}"}
+{"ts": 1793036019.7479303, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.04}"}
+{"ts": 1793036019.748236, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.04}"}
+{"ts": 1793036019.7485301, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.03}"}
+{"ts": 1793036019.7487628, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.07}"}
+{"ts": 1793036019.7490191, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.04}"}
+{"ts": 1793036019.7492867, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.05}"}
+{"ts": 1793036019.7495294, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.04}"}
+{"ts": 1793036019.7497027, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.03}"}
+{"ts": 1793036019.7499166, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.02}"}
+{"ts": 1793036019.7502704, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.03}"}
+{"ts": 1793036019.7505233, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.04}"}
+{"ts": 1793036019.7509305, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.07}"}
+{"ts": 1793036019.75123, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.04}"}
+{"ts": 1793036019.7515614, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.03}"}
+{"ts": 1793036019.7521615, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.17}"}
+{"ts": 1793036019.7524676, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.08}"}
+{"ts": 1793036019.7527757, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.04}"}
+{"ts": 1793036019.7531848, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 1, \"n_candidates\": 1, \"ms\": 0.08}"}
+{"ts": 1793036019.7534554, "run_id": "base_T20_batchjob_A", "worker_id": "inf-0", "kind": "inference_done", "detail": "{\"batches\": 20, \"candidates\": 20, \"backend_stats\": {\"cache_hits\": 20, \"cache_misses\": 0}}"}
+{"ts": 1793036056.446391, "run_id": "base_T20_batchjob_A", "worker_id": "lean-0", "kind": "worker_ready", "detail": "{\"pid\": 1343, \"repl_pid\": 1392, \"startup_s\": 34.91, \"mem\": {\"VmHWM\": 5014.7578125, \"VmRSS\": 4999.984375, \"RssAnon\": 439.68359375, \"RssFile\": 4560.30078125, \"Pss\": 4998.15625}}"}
+{"ts": 1793036057.3735104, "run_id": "base_T20_batchjob_A", "worker_id": "lean-0", "kind": "worker_exit", "detail": "{\"processed\": 20, \"restarts\": 0, \"mem\": {\"VmHWM\": 5014.7578125, \"VmRSS\": 4992.6640625, \"RssAnon\": 443.17578125, \"RssFile\": 4549.48828125, \"Pss\": 4990.8359375}}"}
+{"ts": 1793036057.8178835, "run_id": "base_T20_batchjob_A", "worker_id": "orchestrator", "kind": "run_end", "detail": "{\"exitcodes\": {\"lean-0\": 0, \"inf-0\": 0}}"}

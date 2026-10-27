@@ -1,0 +1,18 @@
+{
+ "run_id": "gold_check",
+ "db": "/home/claude/af/autoformalization-pipeline/runs/gold_check/run.db",
+ "tier": "GOLD",
+ "workers": 2,
+ "batch": 8,
+ "partitions": 16,
+ "timeout_s": 10.0,
+ "lease_s": 60.0,
+ "prompt_version": "gold",
+ "k": 1,
+ "replicas": 1,
+ "backend": {
+  "kind": "cache",
+  "db": "/home/claude/af/autoformalization-pipeline/data/candidates.db"
+ },
+ "n_problems": 859
+}

@@ -1,0 +1,60 @@
+{
+ "run": "q_T1K_zeroshot",
+ "compiled_checked": 989,
+ "verdicts": {
+  "NO_EVIDENCE_OF_ERROR": 513,
+  "PROVED_CONSISTENT": 262,
+  "ANSWER_MISSING": 143,
+  "ARITHMETIC_ONLY": 40,
+  "EQUIV_GOLD": 29,
+  "TRIVIAL": 2
+ },
+ "flagged": {
+  "lean": 2,
+  "heuristic": 183,
+  "lean_confirmed_correct": 291
+ },
+ "vs_audit": {
+  "llm_A": {
+   "lean": {
+    "flagged": 2,
+    "true_pos": 1,
+    "precision": 0.5,
+    "recall": 0.053
+   },
+   "heuristic": {
+    "flagged": 13,
+    "true_pos": 10,
+    "precision": 0.769,
+    "recall": 0.526
+   },
+   "both": {
+    "flagged": 15,
+    "true_pos": 11,
+    "precision": 0.733,
+    "recall": 0.579
+   }
+  },
+  "llm_B": {
+   "lean": {
+    "flagged": 2,
+    "true_pos": 0,
+    "precision": 0.0,
+    "recall": 0.0
+   },
+   "heuristic": {
+    "flagged": 13,
+    "true_pos": 10,
+    "precision": 0.769,
+    "recall": 0.556
+   },
+   "both": {
+    "flagged": 15,
+    "true_pos": 10,
+    "precision": 0.667,
+    "recall": 0.556
+   }
+  }
+ },
+ "note": "positive = rater did not label DUNG (SAI or GAN_DUNG); llm_* are the pilot raters"
+}

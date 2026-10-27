@@ -1,0 +1,22 @@
+{"ts": 1793041664.606768, "run_id": "bs_T100_b8_r1", "worker_id": "orchestrator", "kind": "run_start", "detail": "{\"n_problems\": 100}"}
+{"ts": 1793041664.6101117, "run_id": "bs_T100_b8_r1", "worker_id": "orchestrator", "kind": "problems_enqueued", "detail": "{\"partition_sizes\": {\"0\": 4, \"1\": 4, \"2\": 5, \"3\": 7, \"4\": 7, \"5\": 5, \"6\": 5, \"7\": 2, \"8\": 10, \"9\": 12, \"10\": 8, \"11\": 8, \"12\": 7, \"13\": 5, \"14\": 3, \"15\": 8}}"}
+{"ts": 1793041664.9419816, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_start", "detail": "{\"pid\": 8969, \"backend\": \"cache\"}"}
+{"ts": 1793041664.9433022, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.25}"}
+{"ts": 1793041664.9440563, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1793041664.9447286, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1793041664.9454052, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1793041664.9461, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1793041664.9468489, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1793041664.9474957, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.18}"}
+{"ts": 1793041664.9480824, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1793041664.948717, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1793041664.9496078, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1793041664.9503257, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1793041664.950964, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1793041664.9515, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 4, \"n_candidates\": 4, \"ms\": 0.08}"}
+{"ts": 1793041664.9516118, "run_id": "bs_T100_b8_r1", "worker_id": "inf-0", "kind": "inference_done", "detail": "{\"batches\": 13, \"candidates\": 100, \"backend_stats\": {\"cache_hits\": 100, \"cache_misses\": 0}}"}
+{"ts": 1793041726.8045084, "run_id": "bs_T100_b8_r1", "worker_id": "lean-1", "kind": "worker_ready", "detail": "{\"pid\": 8968, \"repl_pid\": 9067, \"startup_s\": 59.97, \"mem\": {\"VmHWM\": 4607.88671875, \"VmRSS\": 4355.60546875, \"RssAnon\": 439.109375, \"RssFile\": 3916.49609375, \"Pss\": 2407.1298828125}}"}
+{"ts": 1793041726.804512, "run_id": "bs_T100_b8_r1", "worker_id": "lean-0", "kind": "worker_ready", "detail": "{\"pid\": 8967, \"repl_pid\": 9065, \"startup_s\": 59.97, \"mem\": {\"VmHWM\": 4608.625, \"VmRSS\": 4355.23046875, \"RssAnon\": 439.109375, \"RssFile\": 3916.12109375, \"Pss\": 2406.76171875}}"}
+{"ts": 1793041728.6729891, "run_id": "bs_T100_b8_r1", "worker_id": "lean-0", "kind": "worker_exit", "detail": "{\"processed\": 52, \"restarts\": 0, \"mem\": {\"VmHWM\": 4608.625, \"VmRSS\": 4319.671875, \"RssAnon\": 448.81640625, \"RssFile\": 3870.85546875, \"Pss\": 2398.951171875}}"}
+{"ts": 1793041728.6975188, "run_id": "bs_T100_b8_r1", "worker_id": "lean-1", "kind": "worker_exit", "detail": "{\"processed\": 48, \"restarts\": 0, \"mem\": {\"VmHWM\": 4607.88671875, \"VmRSS\": 4319.8125, \"RssAnon\": 448.66015625, \"RssFile\": 3871.15234375, \"Pss\": 2399.0205078125}}"}
+{"ts": 1793041729.1489155, "run_id": "bs_T100_b8_r1", "worker_id": "orchestrator", "kind": "run_end", "detail": "{\"exitcodes\": {\"lean-0\": 0, \"lean-1\": 0, \"inf-0\": 0}}"}

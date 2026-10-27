@@ -1,0 +1,27 @@
+{
+ "sqlite": {
+  "makespan_s": 75.801,
+  "steady_throughput_candidates_per_s": 28.982,
+  "latency_ms_p95": 95.23,
+  "compile_rate": 0.983,
+  "duplicate_result_rows": 0,
+  "retried_tasks": 0
+ },
+ "redis": {
+  "makespan_s": 77.36,
+  "steady_throughput_candidates_per_s": 27.542,
+  "latency_ms_p95": 101.11,
+  "compile_rate": 0.983,
+  "duplicate_result_rows": 0,
+  "retried_tasks": 0
+ },
+ "remote_join": {
+  "makespan_s": 81.733,
+  "results_per_worker": {
+   "lean-1": 376,
+   "lean-0": 624
+  },
+  "duplicate_result_rows": 0,
+  "n_candidates": 1000
+ }
+}

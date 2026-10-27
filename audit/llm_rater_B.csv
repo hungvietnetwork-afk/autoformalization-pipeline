@@ -1,0 +1,101 @@
+audit_id,label,reason
+A001,DUNG,All hypotheses and ordering captured; representation is unique so the sum 13 is well defined
+A002,DUNG,Both step sequences modeled exactly with no Nat truncation; common count 10 correct
+A003,DUNG,All durations encoded as hypotheses; total minutes over 60 equals 6 hours
+A004,DUNG,Two distinct points on both curves; their distance equals sqrt 10
+A005,DUNG,Set of positive m admitting positive n with mn <= m+n is infinite; matches choice E
+A006,GAN_DUNG,Vieta pre-applied as n = 2r+1 and m = r(r+1); equivalent but quadratic not modeled
+A007,DUNG,Exact transcription with unit modulus and each z_j different from 1
+A008,DUNG,Topology axioms spelled out; nonempty family matches Munkres convention for intersections
+A009,DUNG,Integral domain as CommRing plus IsDomain; conclusion x = 1 or x = -1
+A010,DUNG,c_s expanded correctly over Int; prime and size conditions present; positivity matches IMO naturals
+A011,DUNG,Exact trigonometric expression in radians asserted equal to 1
+A012,DUNG,Equation with x nonzero implies x = 2
+A013,DUNG,Direct rational computation matching the answer
+A014,DUNG,Planted trees equal three times total chopped which is 1500
+A015,GAN_DUNG,Uses positive cubes and a <= b rather than distinct integral cubes; equivalent taxicab statement
+A016,DUNG,Integer square mod 3 is 0 or 1
+A017,DUNG,IsGreatest of a^2+b^2 over all valid a b; answer 40
+A018,DUNG,Commutativity of product group iff both factors commutative
+A019,DUNG,Product over 1..n below 5/2 for positive n over Real
+A020,GAN_DUNG,Bare arithmetic identity but transparently encodes the word problem computation
+A021,DUNG,Natural a > 1 so subtraction exact; n divides totient of a^n - 1
+A022,DUNG,Complex linear system with stated solution
+A023,SAI,Counting stack orders reduced to bare identity 4! = 24; orderings not modeled
+A024,DUNG,Cyclic sum via finRotate; set of n >= 3 with the property has two elements
+A025,DUNG,Direct rational simplification
+A026,DUNG,Restriction from A to p(A) with subspace topology is an open map
+A027,DUNG,IsLeast with four-digit range divisibility by 9 and digit parity counts
+A028,DUNG,All prices and weights encoded; total equals 40
+A029,DUNG,Sum in ZMod p equals -1 or 0 according to whether p-1 divides k
+A030,DUNG,Unique residue below 1000 inverting 11 is 91; standard answer form
+A031,DUNG,Series reindexed from n = 17 has sum 272
+A032,DUNG,Counts n in 1..25 with prime divisor sum; equals 5
+A033,DUNG,Even positive n with product twenty times sum gives sum 24
+A034,DUNG,Substitution evaluation equals 19
+A035,DUNG,Discontinuous f with symmetric difference limit zero exists; nhds 0 harmless since value at 0 is 0
+A036,GAN_DUNG,Diagram encoded as injectivity facts plus product of labels; reasonable but indirect modeling
+A037,SAI,No real a b satisfy both equations so the statement over Real is vacuous; needs complex
+A038,DUNG,Direct modular computation
+A039,DUNG,Chain of equal ratios with nonzero denominators forces k = 18
+A040,DUNG,Hausdorff product with nonempty factors implies each factor Hausdorff
+A041,DUNG,Midpoint coordinates computed by definition match the answer
+A042,DUNG,Matrix determined by images of standard basis vectors
+A043,DUNG,Given cos theta = 4/7 the expression equals 49/8
+A044,GAN_DUNG,Bare arithmetic identity with exact Nat division; transparent encoding of the word problem
+A045,DUNG,No real eigenvalues and invariant subspace imply even finrank
+A046,DUNG,Matches Putnam 1998 A3 and reference although the problem text is truncated
+A047,DUNG,Sqrt junk values create no extra solutions; x = 25
+A048,DUNG,Right inverse of bijective f is its inverse; equation gives 47/24
+A049,DUNG,Earnings and spending encoded; shortfall 2000
+A050,DUNG,Nat subtraction and division exact under hypotheses; difference 14238
+A051,DUNG,Indices match; over Real without nonnegativity still true and the text states none
+A052,GAN_DUNG,Area given by precomputed cross product formula; correct but the geometry is not modeled
+A053,DUNG,Rates encoded as hypotheses; 120 minutes gives 600 ounces
+A054,DUNG,Nat subtraction exact here; uncertain = 32 - 9 - 18 = 5
+A055,DUNG,Ellipse from diagram encoded as set equality with positive semi-axes; sum 6
+A056,DUNG,Median of five-element multiset characterized correctly; greatest value 5
+A057,GAN_DUNG,Bare arithmetic identity with exact Nat division; reads 2 132 as two 132-page contracts
+A058,DUNG,Nonzero denominators assumed; target expression equals 2
+A059,DUNG,Any integer representation a/b of the harmonic sum has p dividing a
+A060,DUNG,Bernoulli inequality for x > -1 and every natural n
+A061,DUNG,Solution set equals {a b} with nonzero a b which forces (1 -2)
+A062,DUNG,Sqrt junk value cannot equal 7 so y = 10
+A063,GAN_DUNG,Pythagorean relation of height half-diagonal and edge pre-applied; equivalent but geometry not modeled
+A064,DUNG,Additive subgroup of Q closed under reciprocals is bot or top
+A065,DUNG,Absolute value equation has unique solution 3
+A066,DUNG,Piecewise function encoded with if; f(3) = -1
+A067,DUNG,Lattice points with x^2+y^2 <= 25 inside covering box; count 81
+A068,DUNG,Divisors of 30^4 excluding 1 and itself; count 123
+A069,DUNG,Zeros enumerated with multiplicity; bounded nonzero holomorphic on disc; Blaschke sum summable
+A070,DUNG,Given complex products; modulus of x+y+z equals sqrt 74
+A071,DUNG,Tens digit 1..9 with B6 a positive square; two values
+A072,GAN_DUNG,Bare arithmetic identity transparently encoding weeks ovens rate and hours
+A073,GAN_DUNG,Bare arithmetic identity of cans needed times price
+A074,DUNG,Summable series; junk terms at k = 0 and 1 are zero and irrelevant
+A075,DUNG,Cubic with f(2) = 9 forces c = 3
+A076,DUNG,Average defined in problem as sum over count; direct computation
+A077,DUNG,Direct lcm computation
+A078,SAI,K.index is 0 for infinite index so K = bot trivially works for infinite G
+A079,DUNG,Class sizes encoded as hypotheses; end count 120
+A080,DUNG,Radius tripled and height doubled; factor X = 18
+A081,DUNG,Direct gcd computation
+A082,DUNG,Lebesgue measure of favorable region in unit square over its area; ties negligible
+A083,DUNG,floor(10^43/13) mod 10 is exactly the 43rd decimal digit
+A084,DUNG,Nat subtraction and halving exact since n^2-n is even; n = 11
+A085,DUNG,Solution set is two distinct reals summing to -1/9
+A086,DUNG,Normal subgroup of order 3 is a normal Sylow 3-subgroup; G commutative
+A087,GAN_DUNG,Bare arithmetic identity with exact Nat division; transparent encoding
+A088,DUNG,New room twice bedroom plus bath equals 918
+A089,DUNG,Reversal via ofDigits of reversed digits; least non-emirp two-digit prime is 19
+A090,DUNG,Equal common differences give y = 9
+A091,GAN_DUNG,Adds connectedness of Omega which is needed for truth; otherwise faithful
+A092,DUNG,Permutations of positive naturals form an infinite type
+A093,SAI,Probability reduced to bare binomial arithmetic; coin flips and probability not modeled
+A094,DUNG,Integer powers of 100/101 multiply to 1
+A095,DUNG,Logarithm relations force k = 6
+A096,DUNG,Solution set of b + ceil b = 17.8 equals {8.8}
+A097,GAN_DUNG,Domain conditions pre-derived by formalizer; set equality then nearly trivial
+A098,GAN_DUNG,Bare arithmetic identity of weight times reps times sets
+A099,DUNG,Solution set of the quadratic inequality equals [-2 7]
+A100,DUNG,IsGreatest card count with cost <= 7.50 is 8

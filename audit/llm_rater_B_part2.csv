@@ -1,0 +1,51 @@
+audit_id,label,reason
+A051,DUNG,Indices match; over Real without nonnegativity still true and the text states none
+A052,GAN_DUNG,Area given by precomputed cross product formula; correct but the geometry is not modeled
+A053,DUNG,Rates encoded as hypotheses; 120 minutes gives 600 ounces
+A054,DUNG,Nat subtraction exact here; uncertain = 32 - 9 - 18 = 5
+A055,DUNG,Ellipse from diagram encoded as set equality with positive semi-axes; sum 6
+A056,DUNG,Median of five-element multiset characterized correctly; greatest value 5
+A057,GAN_DUNG,Bare arithmetic identity with exact Nat division; reads 2 132 as two 132-page contracts
+A058,DUNG,Nonzero denominators assumed; target expression equals 2
+A059,DUNG,Any integer representation a/b of the harmonic sum has p dividing a
+A060,DUNG,Bernoulli inequality for x > -1 and every natural n
+A061,DUNG,Solution set equals {a b} with nonzero a b which forces (1 -2)
+A062,DUNG,Sqrt junk value cannot equal 7 so y = 10
+A063,GAN_DUNG,Pythagorean relation of height half-diagonal and edge pre-applied; equivalent but geometry not modeled
+A064,DUNG,Additive subgroup of Q closed under reciprocals is bot or top
+A065,DUNG,Absolute value equation has unique solution 3
+A066,DUNG,Piecewise function encoded with if; f(3) = -1
+A067,DUNG,Lattice points with x^2+y^2 <= 25 inside covering box; count 81
+A068,DUNG,Divisors of 30^4 excluding 1 and itself; count 123
+A069,DUNG,Zeros enumerated with multiplicity; bounded nonzero holomorphic on disc; Blaschke sum summable
+A070,DUNG,Given complex products; modulus of x+y+z equals sqrt 74
+A071,DUNG,Tens digit 1..9 with B6 a positive square; two values
+A072,GAN_DUNG,Bare arithmetic identity transparently encoding weeks ovens rate and hours
+A073,GAN_DUNG,Bare arithmetic identity of cans needed times price
+A074,DUNG,Summable series; junk terms at k = 0 and 1 are zero and irrelevant
+A075,DUNG,Cubic with f(2) = 9 forces c = 3
+A076,DUNG,Average defined in problem as sum over count; direct computation
+A077,DUNG,Direct lcm computation
+A078,SAI,K.index is 0 for infinite index so K = bot trivially works for infinite G
+A079,DUNG,Class sizes encoded as hypotheses; end count 120
+A080,DUNG,Radius tripled and height doubled; factor X = 18
+A081,DUNG,Direct gcd computation
+A082,DUNG,Lebesgue measure of favorable region in unit square over its area; ties negligible
+A083,DUNG,floor(10^43/13) mod 10 is exactly the 43rd decimal digit
+A084,DUNG,Nat subtraction and halving exact since n^2-n is even; n = 11
+A085,DUNG,Solution set is two distinct reals summing to -1/9
+A086,DUNG,Normal subgroup of order 3 is a normal Sylow 3-subgroup; G commutative
+A087,GAN_DUNG,Bare arithmetic identity with exact Nat division; transparent encoding
+A088,DUNG,New room twice bedroom plus bath equals 918
+A089,DUNG,Reversal via ofDigits of reversed digits; least non-emirp two-digit prime is 19
+A090,DUNG,Equal common differences give y = 9
+A091,GAN_DUNG,Adds connectedness of Omega which is needed for truth; otherwise faithful
+A092,DUNG,Permutations of positive naturals form an infinite type
+A093,SAI,Probability reduced to bare binomial arithmetic; coin flips and probability not modeled
+A094,DUNG,Integer powers of 100/101 multiply to 1
+A095,DUNG,Logarithm relations force k = 6
+A096,DUNG,Solution set of b + ceil b = 17.8 equals {8.8}
+A097,GAN_DUNG,Domain conditions pre-derived by formalizer; set equality then nearly trivial
+A098,GAN_DUNG,Bare arithmetic identity of weight times reps times sets
+A099,DUNG,Solution set of the quadratic inequality equals [-2 7]
+A100,DUNG,IsGreatest card count with cost <= 7.50 is 8

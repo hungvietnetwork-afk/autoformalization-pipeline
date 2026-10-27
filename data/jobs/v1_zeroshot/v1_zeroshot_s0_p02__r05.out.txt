@@ -1,0 +1,17 @@
+### P126
+theorem t126 : (Complex.I / 2) ^ 2 = -1 / 4 := by sorry
+
+### P127
+theorem t127 (a d : ℝ) (h5 : ∑ i ∈ Finset.range 5, (a + (i : ℝ) * d) = 70) (h10 : ∑ i ∈ Finset.range 10, (a + (i : ℝ) * d) = 210) : a = 42 / 5 := by sorry
+
+### P128
+theorem t128 (a b : ℝ) (h1 : a ^ 2 * b ^ 3 = 32 / 27) (h2 : a / b ^ 3 = 27 / 4) : a + b = 8 / 3 := by sorry
+
+### P129
+theorem t129 (G H : Type*) [Group G] [Group H] : (∀ x y : G × H, x * y = y * x) ↔ ((∀ a b : G, a * b = b * a) ∧ (∀ c d : H, c * d = d * c)) := by sorry
+
+### P130
+theorem t130 (z1 z2 z3 z4 : ℂ) (h1 : ‖z1‖ = 1) (h2 : ‖z2‖ = 1) (h3 : ‖z3‖ = 1) (h4 : ‖z4‖ = 1) (g1 : z1 ≠ 1) (g2 : z2 ≠ 1) (g3 : z3 ≠ 1) (g4 : z4 ≠ 1) : 3 - z1 - z2 - z3 - z4 + z1 * z2 * z3 * z4 ≠ 0 := by sorry
+
+### P131
+theorem t131 (f : ℂ → ℂ) (hf : DifferentiableOn ℂ f (Metric.ball (0 : ℂ) 1)) (hb : ∃ M : ℝ, ∀ w ∈ Metric.ball (0 : ℂ) 1, ‖f w‖ ≤ M) (hnz : ∃ w ∈ Metric.ball (0 : ℂ) 1, f w ≠ 0) (z : ℕ → ℂ) (hz : ∀ n, z n ∈ Metric.ball (0 : ℂ) 1) (hmult : ∀ w ∈ Metric.ball (0 : ℂ) 1, Set.encard {n : ℕ | z n = w} = analyticOrderAt f w) : Summable (fun n : ℕ => 1 - ‖z n‖) := by sorry

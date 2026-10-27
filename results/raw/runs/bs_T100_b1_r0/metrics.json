@@ -1,0 +1,61 @@
+{
+ "run_id": "bs_T100_b1_r0",
+ "tier": "T100",
+ "workers": 2,
+ "batch": 1,
+ "replicas": 1,
+ "prompt_version": "v1_zeroshot",
+ "k": 1,
+ "n_problems": 100,
+ "n_candidates": 100,
+ "n_problems_with_result": 100,
+ "makespan_s": 60.167,
+ "throughput_problems_per_s": 1.662,
+ "throughput_candidates_per_s": 1.662,
+ "steady_window_s": 1.715,
+ "steady_throughput_candidates_per_s": 58.294,
+ "latency_ms_p50": 22.74,
+ "latency_ms_p95": 106.76,
+ "latency_ms_p99": 128.18,
+ "latency_ms_max": 150.92,
+ "latency_ms_mean": 32.85,
+ "lean_busy_s": 3.28,
+ "lean_busy_fraction": 0.957,
+ "compile_rate": 0.99,
+ "pass_at_k": 0.99,
+ "status_counts": {
+  "COMPILE_OK": 99,
+  "TYPE_MISMATCH": 1
+ },
+ "worker_startup_s": [
+  56.31,
+  56.31
+ ],
+ "peak_pool_mb": 4890.6,
+ "peak_pool_anon_mb": 895.9,
+ "peak_rss_sum_mb": 9238.5,
+ "peak_system_used_mb": 2203.5,
+ "peak_system_used_delta_mb": 1299.0,
+ "peak_swap_mb": 0.0,
+ "mean_cpu_pct": 66.1,
+ "peak_worker_rss_mb": 4621.6,
+ "queue_final": {
+  "DONE": 100
+ },
+ "dead_letter": 0,
+ "retried_tasks": 0,
+ "duplicate_result_rows": 0,
+ "overwritten_results": 0,
+ "repl_timeouts": 0,
+ "repl_crashes": 0,
+ "repl_restarts": 0,
+ "inference": {
+  "batches": 100,
+  "candidates": 100,
+  "backend_stats": {
+   "cache_hits": 100,
+   "cache_misses": 0
+  }
+ },
+ "fault": null
+}

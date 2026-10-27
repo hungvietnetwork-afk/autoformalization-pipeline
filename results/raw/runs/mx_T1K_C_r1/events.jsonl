@@ -1,0 +1,47 @@
+{"ts": 1792152380.8184412, "run_id": "mx_T1K_C_r1", "worker_id": "orchestrator", "kind": "run_start", "detail": "{\"n_problems\": 1000}"}
+{"ts": 1792152380.838017, "run_id": "mx_T1K_C_r1", "worker_id": "orchestrator", "kind": "problems_enqueued", "detail": "{\"partition_sizes\": {\"0\": 57, \"1\": 69, \"2\": 60, \"3\": 60, \"4\": 56, \"5\": 54, \"6\": 70, \"7\": 61, \"8\": 57, \"9\": 70, \"10\": 71, \"11\": 65, \"12\": 50, \"13\": 59, \"14\": 72, \"15\": 69}}"}
+{"ts": 1792152381.3213942, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_start", "detail": "{\"pid\": 18365, \"backend\": \"cache\"}"}
+{"ts": 1792152381.3303561, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 4.76}"}
+{"ts": 1792152381.3369682, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 2.34}"}
+{"ts": 1792152381.3472857, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 2.33}"}
+{"ts": 1792152381.3536823, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 1.9}"}
+{"ts": 1792152381.3579853, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 1.16}"}
+{"ts": 1792152381.3606362, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.42}"}
+{"ts": 1792152381.3638833, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.67}"}
+{"ts": 1792152381.383762, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.53}"}
+{"ts": 1792152381.386722, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.8}"}
+{"ts": 1792152381.3901045, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 1.13}"}
+{"ts": 1792152381.3925495, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.54}"}
+{"ts": 1792152381.3954046, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.55}"}
+{"ts": 1792152381.400029, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 2.59}"}
+{"ts": 1792152381.4023447, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.44}"}
+{"ts": 1792152381.4042754, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.36}"}
+{"ts": 1792152381.4062073, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.29}"}
+{"ts": 1792152381.4253047, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 1.08}"}
+{"ts": 1792152381.4333282, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 1.6}"}
+{"ts": 1792152381.435999, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.43}"}
+{"ts": 1792152381.4379938, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.46}"}
+{"ts": 1792152381.4398465, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.4}"}
+{"ts": 1792152381.4417274, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.39}"}
+{"ts": 1792152381.4436212, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.4}"}
+{"ts": 1792152381.4455547, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.34}"}
+{"ts": 1792152381.4592512, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.39}"}
+{"ts": 1792152381.4611797, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.38}"}
+{"ts": 1792152381.4673855, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 3.76}"}
+{"ts": 1792152381.4694335, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.36}"}
+{"ts": 1792152381.4712508, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.37}"}
+{"ts": 1792152381.4729648, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.37}"}
+{"ts": 1792152381.474613, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 32, \"n_candidates\": 32, \"ms\": 0.38}"}
+{"ts": 1792152381.4753458, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.12}"}
+{"ts": 1792152381.475505, "run_id": "mx_T1K_C_r1", "worker_id": "inf-0", "kind": "inference_done", "detail": "{\"batches\": 32, \"candidates\": 1000, \"backend_stats\": {\"cache_hits\": 1000, \"cache_misses\": 0}}"}
+{"ts": 1792152462.3022625, "run_id": "mx_T1K_C_r1", "worker_id": "lean-2", "kind": "worker_ready", "detail": "{\"pid\": 18363, \"repl_pid\": 18559, \"startup_s\": 78.67, \"mem\": {\"VmHWM\": 4500.57421875, \"VmRSS\": 3593.328125, \"RssAnon\": 322.55859375, \"RssFile\": 3270.76953125, \"Pss\": 1144.689453125}}"}
+{"ts": 1792152462.3025656, "run_id": "mx_T1K_C_r1", "worker_id": "lean-1", "kind": "worker_ready", "detail": "{\"pid\": 18362, \"repl_pid\": 18551, \"startup_s\": 78.69, \"mem\": {\"VmHWM\": 4501.26171875, \"VmRSS\": 3592.98046875, \"RssAnon\": 322.453125, \"RssFile\": 3270.52734375, \"Pss\": 1143.9453125}}"}
+{"ts": 1792152462.307523, "run_id": "mx_T1K_C_r1", "worker_id": "lean-3", "kind": "worker_ready", "detail": "{\"pid\": 18364, \"repl_pid\": 18554, \"startup_s\": 78.69, \"mem\": {\"VmHWM\": 4500.80859375, \"VmRSS\": 3591.890625, \"RssAnon\": 321.19140625, \"RssFile\": 3270.69921875, \"Pss\": 1142.5673828125}}"}
+{"ts": 1792152462.3086975, "run_id": "mx_T1K_C_r1", "worker_id": "lean-0", "kind": "worker_ready", "detail": "{\"pid\": 18361, \"repl_pid\": 18556, \"startup_s\": 78.69, \"mem\": {\"VmHWM\": 4509.29296875, \"VmRSS\": 3592.1171875, \"RssAnon\": 323.61328125, \"RssFile\": 3268.50390625, \"Pss\": 1146.98828125}}"}
+{"ts": 1792152473.4100246, "run_id": "mx_T1K_C_r1", "worker_id": "lean-2", "kind": "repl_timeout", "detail": "{\"task_hash\": \"04c29651cc1e229d8dfd0c3bfc860fa6aac6ec1e7c20484fcc92c3f2a478638d\"}"}
+{"ts": 1792152484.333762, "run_id": "mx_T1K_C_r1", "worker_id": "lean-1", "kind": "worker_exit", "detail": "{\"processed\": 352, \"restarts\": 0, \"mem\": {\"VmHWM\": 4501.26171875, \"VmRSS\": 2003.31640625, \"RssAnon\": 338.546875, \"RssFile\": 1664.76953125, \"Pss\": 823.9677734375}}"}
+{"ts": 1792152484.3404582, "run_id": "mx_T1K_C_r1", "worker_id": "lean-0", "kind": "worker_exit", "detail": "{\"processed\": 292, \"restarts\": 0, \"mem\": {\"VmHWM\": 4509.29296875, \"VmRSS\": 1982.83984375, \"RssAnon\": 330.72265625, \"RssFile\": 1652.1171875, \"Pss\": 809.51171875}}"}
+{"ts": 1792152484.3437548, "run_id": "mx_T1K_C_r1", "worker_id": "lean-3", "kind": "worker_exit", "detail": "{\"processed\": 352, \"restarts\": 0, \"mem\": {\"VmHWM\": 4500.80859375, \"VmRSS\": 2014.3359375, \"RssAnon\": 340.4765625, \"RssFile\": 1673.859375, \"Pss\": 831.1533203125}}"}
+{"ts": 1792152510.0705576, "run_id": "mx_T1K_C_r1", "worker_id": "lean-2", "kind": "repl_restarted", "detail": "{\"startup_s\": 36.65, \"repl_pid\": 18613, \"released\": 28}"}
+{"ts": 1792152510.2623577, "run_id": "mx_T1K_C_r1", "worker_id": "lean-2", "kind": "worker_exit", "detail": "{\"processed\": 4, \"restarts\": 1, \"mem\": {\"VmHWM\": 5231.25, \"VmRSS\": 5106.7734375, \"RssAnon\": 393.96484375, \"RssFile\": 4712.80859375, \"Pss\": 5104.8857421875}}"}
+{"ts": 1792152510.8475745, "run_id": "mx_T1K_C_r1", "worker_id": "orchestrator", "kind": "run_end", "detail": "{\"exitcodes\": {\"lean-0\": 0, \"lean-1\": 0, \"lean-2\": 0, \"lean-3\": 0, \"inf-0\": 0}}"}

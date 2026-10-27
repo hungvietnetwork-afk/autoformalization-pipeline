@@ -1,0 +1,74 @@
+### P076
+theorem t76 (P Q center : ℝ × ℝ) (hP : P = (-1, -4)) (hQ : Q = (-7, 6)) (h : center = ((P.1 + Q.1) / 2, (P.2 + Q.2) / 2)) : center = (-4, 1) := by sorry
+
+### P077
+theorem t77 : Real.sin (240 * π / 180) = -(Real.sqrt 3 / 2) := by sorry
+
+### P078
+theorem t78 (m n p : ℕ) (hm : 0 < m) (hn : 0 < n) (hp : 0 < p) (hmn : Nat.Coprime m n) (hp2 : Squarefree p) (h : (MeasureTheory.volume {q : ℝ × ℝ × ℝ | 0 ≤ Real.sqrt (q.2.1 ^ 2 + q.2.2 ^ 2) ∧ Real.sqrt (q.2.1 ^ 2 + q.2.2 ^ 2) * (7 * Real.sqrt 10 / 5) ≤ 7 / Real.sqrt 10 * q.1 ∧ Real.sqrt (q.2.1 ^ 2 + q.2.2 ^ 2) * (7 * Real.sqrt 10 / 4 - 7 * Real.sqrt 10 / 5) ≤ 7 / Real.sqrt 10 * (7 * Real.sqrt 10 / 4 - q.1)}).toReal = m * π / (n * Real.sqrt p)) : m + n + p = 365 := by sorry
+
+### P079
+theorem t79 (B E C : ℝ × ℝ) (hE : E = (4, 4)) (hC : C = (8, 0)) (hB : B.1 = 0 ∧ B.2 - E.2 = -2 * (B.1 - E.1)) : (1 / 2 : ℝ) * |(0 * B.2 - B.1 * 0) + (B.1 * E.2 - E.1 * B.2) + (E.1 * C.2 - C.1 * E.2) + (C.1 * 0 - 0 * C.2)| = 40 := by sorry
+
+### P080
+theorem t80 (a b : ℕ) (ha : 0 < a) (hb : 0 < b) (hcube : ∀ k : ℕ, 1 < k → ¬ k ^ 3 ∣ b) (r : ℝ) (hr : 0 < r) (hvol : 4 / 3 * π * r ^ 3 = 2 * (4 / 3 * π * 9 ^ 3)) (hdiam : 2 * r = (a : ℝ) * (b : ℝ) ^ ((1 : ℝ) / 3)) : a + b = 20 := by sorry
+
+### P081
+theorem t81 (V₁ V₂ : ℝ) (hV₁ : V₁ = π * (5 / (2 * π)) ^ 2 * 8) (hV₂ : V₂ = π * (8 / (2 * π)) ^ 2 * 5) : max V₁ V₂ / min V₁ V₂ = 8 / 5 := by sorry
+
+### P082
+theorem t82 : ∃ r : ℝ, ∀ x : ℝ, 8 * x ^ 3 + 16 * x ^ 2 - 7 * x + 4 = (2 * x + 5) * (4 * x ^ 2 - 2 * x + 3 / 2) + r := by sorry
+
+### P083
+theorem t83 (P : ℝ → ℝ) (k : ℝ) (hP : ∃ a b c d : ℝ, a ≠ 0 ∧ ∀ x, P x = a * x ^ 3 + b * x ^ 2 + c * x + d) (h0 : P 0 = k) (h1 : P 1 = 2 * k) (h2 : P (-1) = 3 * k) : P 2 + P (-2) = 14 * k := by sorry
+
+### P084
+theorem t84 : IsGreatest {k : ℕ | ∃ p : Fin k → Polynomial ℝ, (∀ i, 0 < (p i).natDegree) ∧ ∏ i, p i = Polynomial.X ^ 8 - 1} 5 := by sorry
+
+### P085
+theorem t85 (ω : ℂ) (hω : ω = 9 + 2 * Complex.I) : ‖ω ^ 2 + 6 * ω + 58‖ = 195 := by sorry
+
+### P086
+theorem t86 (b : ℝ) (hb : 0 < b) (hpass : ((7 : ℝ) + 1) ^ 2 / 10 ^ 2 + (7 - 4) ^ 2 / b ^ 2 = 1) : (MeasureTheory.volume {p : ℝ × ℝ | ((p.1 + 1) / 10) ^ 2 + ((p.2 - 4) / b) ^ 2 ≤ 1}).toReal = 50 * π := by sorry
+
+### P087
+theorem t87 (x y z k : ℝ) (hxy : x + y ≠ 0) (hxz : x + z ≠ 0) (hzy : z - y ≠ 0) (h1 : 7 / (x + y) = k / (x + z)) (h2 : k / (x + z) = 11 / (z - y)) : k = 18 := by sorry
+
+### P088
+theorem t88 : {x : ℝ | 0 < x ∧ 1 / 2 * (3 * x ^ 2 - 1) = (x ^ 2 - 50 * x - 10) * (x ^ 2 + 25 * x + 5)} = {25 + 2 * Real.sqrt 159} := by sorry
+
+### P089
+theorem t89 (a b c : ℝ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hAM : (a + b + c) / 3 = 8) (hGM : (a * b * c) ^ ((1 : ℝ) / 3) = 5) (hHM : 3 / (1 / a + 1 / b + 1 / c) = 3) : a ^ 2 + b ^ 2 + c ^ 2 = 326 := by sorry
+
+### P090
+theorem t90 (a b : ℝ) (hb : 0 ≤ b) (h1 : (a + Real.sqrt b) + (a - Real.sqrt b) = -4) (h2 : (a + Real.sqrt b) * (a - Real.sqrt b) = 1) : a + b = 1 := by sorry
+
+### P091
+theorem t91 : IsLeast {x : ℝ | ∃ a : ℕ → ℝ, a 1 = x ∧ (∀ n : ℕ, 1 < n → a n = 11 * a (n - 1) - (n : ℝ)) ∧ (∀ n : ℕ, 1 ≤ n → 0 < a n)} (21 / 100) := by sorry
+
+### P092
+theorem t92 : IsLeast {p : ℕ | p.Prime ∧ ∃ n : ℕ, 0 < n ∧ (∀ k : ℕ, n ≤ k → k ≤ n + 4 → ¬ k.Prime) ∧ n + 4 < p} 29 := by sorry
+
+### P093
+theorem t93 (n : ℕ) (h : n % 6 = 1) : (n + 2010) % 6 = 1 := by sorry
+
+### P094
+theorem t94 : ∃ S : Finset ℕ, (∀ N : ℕ, N ∈ S ↔ ∃ a b c : ℕ, 0 < a ∧ 0 < b ∧ 0 < c ∧ c = a + b ∧ N = a * b * c ∧ N = 6 * (a + b + c)) ∧ ∑ N ∈ S, N = 336 := by sorry
+
+### P095
+theorem t95 : (1734 * 5389 * 80607) % 10 = 2 := by sorry
+
+### P096
+theorem t96 : Nat.choose 10 2 = 45 := by sorry
+
+### P097
+theorem t97 : (2 : ℚ) ^ 16 / 16 ^ 2 = 256 := by sorry
+
+### P098
+theorem t98 : IsGreatest {m : ℤ | ∃ x : ℤ, m ∈ ({x, 2 * x, 3, 2, 5} : Multiset ℤ) ∧ 3 ≤ Multiset.card (Multiset.filter (fun y => y ≤ m) ({x, 2 * x, 3, 2, 5} : Multiset ℤ)) ∧ 3 ≤ Multiset.card (Multiset.filter (fun y => m ≤ y) ({x, 2 * x, 3, 2, 5} : Multiset ℤ))} 5 := by sorry
+
+### P099
+theorem t99 (x : ℝ) (h : (5 * 75 + 3 * 90 + x) / 9 = 85) : x = 120 := by sorry
+
+### P100
+theorem t100 (b c : ℝ) (h1 : 7 * b = 3 * c) (h2 : c = 28) : b = 12 := by sorry

@@ -1,0 +1,26 @@
+You are an autoformalization system. Translate the natural-language mathematical statement into ONE Lean 4 theorem statement that uses Mathlib (Lean v4.35, Mathlib 2026).
+The following header is already in place (do not repeat it):
+import Mathlib
+import Aesop
+set_option maxHeartbeats 400000
+open BigOperators Real Nat Topology Rat
+
+Requirements:
+- Output only the theorem, in the form `theorem <name> <binders> : <proposition> := by sorry`.
+- No proof, no comments, no imports, no markdown.
+- If the problem ends with "Answer: ...", the theorem must assert that this answer is correct
+  (e.g. the requested quantity equals the answer, or the solution set equals the given set).
+- Keep every hypothesis and the exact conclusion of the original statement; do not simplify or weaken it.
+
+Problem:
+In rectangle $ABCD$, angle $C$ is trisected by $\overline{CF}$ and $\overline{CE}$, where $E$ is on $\overline{AB}$, $F$ is on $\overline{AD}$, $BE=6$, and $AF=2$. Find the area of $ABCD$.
+
+[asy]
+import olympiad; import geometry; size(150); defaultpen(linewidth(0.8)); dotfactor=4;
+real length = 2 * (6*sqrt(3) - 2), width = 6*sqrt(3);
+draw(origin--(length,0)--(length,width)--(0,width)--cycle);
+draw((length,width)--(0,2)^^(length,width)--(length - 6,0));
+dot("$A$",origin,SW); dot("$B$",(length,0),SE); dot("$C$",(length,width),NE); dot("$D$",(0,width),NW); dot("$F$",(0,2),W); dot("$E$",(length - 6,0),S);
+[/asy]
+Answer: 108\sqrt{3}-36
+Lean:

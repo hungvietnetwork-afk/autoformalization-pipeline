@@ -1,0 +1,58 @@
+{
+ "run": "q_T1K_zeroshot",
+ "n": 1000,
+ "n_failed": 11,
+ "by_owner": {
+  "model": 9,
+  "resource": 1,
+  "environment": 1
+ },
+ "causes": [
+  {
+   "cause": "types_coercions_instances",
+   "owner": "model",
+   "n": 4,
+   "problem_ids": [
+    "math:train/intermediate_algebra/1280",
+    "math:train/geometry/6142",
+    "math:train/precalculus/199",
+    "math:train/counting_and_probability/842"
+   ]
+  },
+  {
+   "cause": "missing_namespace_or_notation",
+   "owner": "model",
+   "n": 3,
+   "problem_ids": [
+    "math:test/precalculus/968",
+    "proofnet:Munkres:exercise_20_2",
+    "proofnet:Munkres:exercise_16_6"
+   ]
+  },
+  {
+   "cause": "lean4_syntax",
+   "owner": "model",
+   "n": 2,
+   "problem_ids": [
+    "math:test/counting_and_probability/1010",
+    "math:test/counting_and_probability/477"
+   ]
+  },
+  {
+   "cause": "timeout",
+   "owner": "resource",
+   "n": 1,
+   "problem_ids": [
+    "math:test/counting_and_probability/933"
+   ]
+  },
+  {
+   "cause": "header_notation",
+   "owner": "environment",
+   "n": 1,
+   "problem_ids": [
+    "math:train/precalculus/592"
+   ]
+  }
+ ]
+}

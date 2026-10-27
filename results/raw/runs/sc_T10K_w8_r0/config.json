@@ -1,0 +1,21 @@
+{
+ "run_id": "sc_T10K_w8_r0",
+ "db": "/home/claude/af/autoformalization-pipeline/runs/sc_T10K_w8_r0/run.db",
+ "tier": "T1K",
+ "workers": 8,
+ "batch": 8,
+ "partitions": 16,
+ "timeout_s": 30.0,
+ "lease_s": 60.0,
+ "prompt_version": "v1_zeroshot",
+ "k": 1,
+ "replicas": 10,
+ "backend": {
+  "kind": "cache",
+  "db": "/home/claude/af/autoformalization-pipeline/data/candidates.db"
+ },
+ "broker": {
+  "kind": "sqlite"
+ },
+ "n_problems": 10000
+}

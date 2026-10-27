@@ -1,0 +1,36 @@
+You are an autoformalization system. Translate the natural-language mathematical statement into ONE Lean 4 theorem statement that uses Mathlib (Lean v4.35, Mathlib 2026).
+The following header is already in place (do not repeat it):
+import Mathlib
+import Aesop
+set_option maxHeartbeats 400000
+open BigOperators Real Nat Topology Rat
+
+Requirements:
+- Output only the theorem, in the form `theorem <name> <binders> : <proposition> := by sorry`.
+- No proof, no comments, no imports, no markdown.
+- If the problem ends with "Answer: ...", the theorem must assert that this answer is correct
+  (e.g. the requested quantity equals the answer, or the solution set equals the given set).
+- Keep every hypothesis and the exact conclusion of the original statement; do not simplify or weaken it.
+
+Problem:
+Points $E$ and $F$ are located on square $ABCD$ so that $\triangle BEF$ is equilateral. What is the ratio of the area of $\triangle DEF$ to that of $\triangle ABE$?
+
+[asy]
+pair A,B,C,D,I,F;
+A=(0,0);
+B=(10,0);
+C=(10,10);
+D=(0,10);
+F=(7.4,10);
+I=(0,2.6);
+draw(B--I--F--cycle,linewidth(0.7));
+draw(A--B--C--D--cycle,linewidth(0.7));
+label("$A$",A,S);
+label("$B$",B,S);
+label("$C$",C,N);
+label("$D$",D,N);
+label("$E$",I,W);
+label("$F$",F,N);
+[/asy]
+Answer: 2
+Lean:

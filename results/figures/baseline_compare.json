@@ -1,0 +1,74 @@
+{
+ "problems": 20,
+ "by_mode": {
+  "v1_zeroshot_1req": {
+   "run": "base_T20_1req_A",
+   "status": {
+    "COMPILE_OK": 20
+   },
+   "compile_rate": 1.0,
+   "semantic_verdicts": {
+    "NO_EVIDENCE_OF_ERROR": 15,
+    "EQUIV_GOLD": 1,
+    "PROVED_CONSISTENT": 2,
+    "ANSWER_MISSING": 2
+   },
+   "flagged": 2,
+   "lean_confirmed": 3,
+   "mean_statement_chars": 194.8
+  },
+  "v1_zeroshot": {
+   "run": "base_T20_batchjob_A",
+   "status": {
+    "COMPILE_OK": 20
+   },
+   "compile_rate": 1.0,
+   "semantic_verdicts": {
+    "NO_EVIDENCE_OF_ERROR": 14,
+    "ANSWER_MISSING": 2,
+    "PROVED_CONSISTENT": 3,
+    "EQUIV_GOLD": 1
+   },
+   "flagged": 2,
+   "lean_confirmed": 4,
+   "mean_statement_chars": 161.7
+  }
+ },
+ "identical_statements_after_renaming": 4,
+ "cost": {
+  "one_problem_per_request": {
+   "requests": 20,
+   "requests_ok": 20,
+   "requests_partial": 0,
+   "requests_failed": 0,
+   "problems_answered": 20,
+   "zeroshot_tokens": 1751216,
+   "zeroshot_problems": 20,
+   "zeroshot_wall_s": 1256.255,
+   "all_tokens": 1751216,
+   "all_problems": 20,
+   "tokens_per_request_median": 86236.5,
+   "wall_s_per_request_median": 57.6,
+   "zeroshot_tokens_per_problem": 87561,
+   "zeroshot_wall_s_per_problem": 62.81,
+   "tokens_per_problem_all_prompts": 87561,
+   "request_failure_share": 0.0
+  },
+  "batch_jobs_100_142": {
+   "requests": 12,
+   "requests_ok": 5,
+   "requests_partial": 3,
+   "requests_failed": 4,
+   "problems_answered": 784,
+   "zeroshot_tokens": 1075506,
+   "zeroshot_problems": 614,
+   "zeroshot_wall_s": 6130.3,
+   "all_tokens": 1075506,
+   "all_problems": 614,
+   "zeroshot_tokens_per_problem": 1752,
+   "zeroshot_wall_s_per_problem": 9.98,
+   "tokens_per_problem_all_prompts": 1752,
+   "request_failure_share": 0.583
+  }
+ }
+}

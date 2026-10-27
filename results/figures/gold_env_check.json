@@ -1,0 +1,59 @@
+{
+ "mathlib": "v4.35.0",
+ "lean": "v4.35.0",
+ "raw_gold": {
+  "total": 859,
+  "compile_ok": 729,
+  "compile_rate": 0.8487,
+  "by_source": {
+   "proofnet": {
+    "total": 371,
+    "compile_ok": 306
+   },
+   "minif2f": {
+    "total": 488,
+    "compile_ok": 423
+   }
+  },
+  "status": {
+   "COMPILE_OK": 729,
+   "PARSE_ERROR": 81,
+   "OTHER_ERROR": 20,
+   "UNKNOWN_IDENTIFIER": 17,
+   "TYPE_MISMATCH": 11,
+   "TIMEOUT": 1
+  },
+  "parse_error_causes": {
+   "deprecated `∑ x in s` big-operator syntax": 77,
+   "`φ` token clashes with Nat.totient notation": 4
+  }
+ },
+ "after_bigop_migration": {
+  "total": 859,
+  "compile_ok": 798,
+  "compile_rate": 0.929,
+  "by_source": {
+   "minif2f": {
+    "total": 488,
+    "compile_ok": 485,
+    "status": {
+     "COMPILE_OK": 485,
+     "TYPE_MISMATCH": 2,
+     "UNKNOWN_IDENTIFIER": 1
+    }
+   },
+   "proofnet": {
+    "total": 371,
+    "compile_ok": 313,
+    "status": {
+     "COMPILE_OK": 313,
+     "OTHER_ERROR": 21,
+     "TYPE_MISMATCH": 15,
+     "UNKNOWN_IDENTIFIER": 17,
+     "PARSE_ERROR": 4,
+     "TIMEOUT": 1
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,42 @@
+<section id="takeaways" data-transition="fade" style="background:#F3F0E8;color:#15212C;font-family:'Be Vietnam Pro', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#2B5FC4">Kết luận</p>
+<h2 style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:60px;font-weight:700;line-height:1.15;letter-spacing:-1px;color:#15212C">Trả lời hai câu hỏi của đề bài</h2>
+</div>
+<div style="display:flex;flex-direction:column">
+<div style="display:flex;gap:40px;border-top:1px solid #DCD6C8;padding:18px 0">
+<p style="width:96px;font-size:44px;font-weight:700;line-height:1.1;color:#2B5FC4">Q1</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<p style="font-size:36px;font-weight:700;line-height:1.2;color:#15212C">Batching có lợi ở inference, gần như trung tính ở kiểm chứng</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">Gom 20–26 bài mỗi request rẻ hơn 42 lần; lô kiểm chứng 1, 8, 32 cho throughput như nhau; 4 candidate nâng Pass@k lên 100 % nhưng không làm phát biểu đúng nghĩa hơn.</p>
+</div>
+</div>
+<div style="display:flex;gap:40px;border-top:1px solid #DCD6C8;padding:18px 0">
+<p style="width:96px;font-size:44px;font-weight:700;line-height:1.1;color:#2B5FC4">Q2</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<p style="font-size:36px;font-weight:700;line-height:1.2;color:#15212C">Compile được chưa phải đúng nghĩa</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">98,9 % compile nhưng 18,7 % bị gắn cờ. Có gold thì bắt mọi lỗi cài sẵn; so với người chấm thử, kiểm tra tự động chỉ bắt 58 % phát biểu không được chấm ĐÚNG.</p>
+</div>
+</div>
+<div style="display:flex;gap:40px;border-top:1px solid #DCD6C8;border-bottom:1px solid #DCD6C8;padding:18px 0">
+<p style="width:96px;font-size:44px;font-weight:700;line-height:1.1;color:#2B5FC4">BD</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<p style="font-size:36px;font-weight:700;line-height:1.2;color:#15212C">Ở 10.000 task, sự kiện hiếm và số nhân là điểm nghẽn</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">Mỗi timeout kéo theo khởi động lại REPL; vượt số nhân thì phải thêm máy qua Redis. TaskHash + lease + UPSERT cho kết quả đúng một lần dù worker chết.</p>
+</div>
+</div>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FBFAF6;border:1px solid #DCD6C8;border-radius:16px;padding:24px 28px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5E6976">Bàn giao</p>
+<p style="font-size:24px;line-height:1.4;color:#15212C">Mã nguồn + 26 test · corpus 990 bài · data card, system card, AI-use · 98 run record · demo NL → Lean → checker</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#FBFAF6;border:1px solid #DCD6C8;border-radius:16px;padding:24px 28px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5E6976">Giới hạn và việc tiếp theo</p>
+<p style="font-size:24px;line-height:1.4;color:#15212C">Audit 100 mẫu chờ hai thành viên chấm · máy đợt 26/10 chậm hơn 16/10, chỉ so trong cùng đợt · chưa chạy nhiều máy thật</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1450px;font-size:24px;color:#5E6976">Chi tiết: báo cáo mục 8 · H1, H2 đúng; H3 đúng, nhưng ở tầng kiểm chứng lợi ích quá nhỏ để đổi throughput</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;text-align:right;color:#5E6976">15 / 17</p>
+<aside>Trả lời hai câu hỏi. Câu một: batching có lợi lớn ở tầng inference, gom 20 đến 26 bài mỗi request rẻ hơn 42 lần; nhưng ở tầng kiểm chứng, lô 1, 8 hay 32 task cho throughput như nhau vì thời gian nằm ở khởi động REPL và timeout. Thêm candidate nâng Pass@k lên 100 % với gấp 4 lần token mà không làm phát biểu đúng nghĩa hơn. Câu hai: compile gần như bão hoà, 98,9 %, nhưng 18,7 % phát biểu compile được bị gắn cờ sai nghĩa. Có phát biểu gold thì kiểm tra tự động bắt mọi lỗi cài sẵn; so với người chấm thử, nó chỉ bắt 58 % số phát biểu không được chấm đúng hoàn toàn và bỏ sót lỗi cần hiểu toán, nên vẫn cần người chấm. Về Big Data: ở 10.000 task, điểm nghẽn là giá của sự kiện hiếm, vì mỗi timeout kéo theo khởi động lại REPL, và số nhân CPU; muốn nhanh hơn phải thêm máy qua Redis. TaskHash, lease và UPSERT cho kết quả đúng một lần dù worker chết. Giới hạn: số audit hiện là của hai LLM chấm thử, hai thành viên còn phải chấm; máy đợt 26/10 chậm hơn đợt 16/10 nên chỉ so trong cùng đợt; con số 6 máy là ngoại suy từ một máy.</aside>
+</section>

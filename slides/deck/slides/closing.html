@@ -1,0 +1,13 @@
+<section id="closing" data-transition="fade" style="background:#15212C;color:#F3F0E8;font-family:'Be Vietnam Pro', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#8FB3F5">Nhóm 5 · INT4418</p>
+<h1 style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:104px;font-weight:700;line-height:1.05;letter-spacing:-2px;color:#F3F0E8">Cảm ơn thầy cô và các bạn đã lắng nghe</h1>
+<p style="font-size:40px;line-height:1.3;color:#BCC6CF">Hỏi đáp · demo</p>
+<div style="display:flex;flex-direction:column;gap:12px;border-left:4px solid #2B5FC4;padding:4px 0 4px 24px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.45;color:#E8E4D8">python -m afp.demo_one --problem gsm8k:train:04141</p>
+<p style="font-size:24px;line-height:1.4;color:#BCC6CF">NL → Lean → checker cho một bài: ứng viên đã lưu, Lean kiểm trong REPL nóng, kết luận ngữ nghĩa</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.45;color:#E8E4D8">python -m afp.demo --n 20 --workers 2 --kill-after 8</p>
+<p style="font-size:24px;line-height:1.4;color:#BCC6CF">20 bài, giết 1 worker giữa chừng: task được giao lại, không mất, không trùng</p>
+</div>
+<p style="font-size:24px;line-height:1.4;color:#8C98A4">Bàn giao: mã nguồn có test · configs · data sample + manifest · corpus 990 bài · log thô và run record mọi lần chạy · báo cáo · kịch bản demo docs/DEMO_SCRIPT.md</p>
+<aside>Cảm ơn và mời đặt câu hỏi. Demo theo docs/DEMO_SCRIPT.md, bảy phút. Lệnh thứ nhất chạy đúng luồng NL → Lean → checker cho một bài GSM8K: lấy ứng viên đã lưu theo TaskHash, kiểm bằng REPL Lean đã nạp sẵn Mathlib, rồi chạy bộ kiểm tra ngữ nghĩa; bài này compile được nhưng bị gắn cờ chỉ còn phép tính. Lệnh thứ hai kiểm chứng 20 bài với 2 worker và giết một worker sau 8 kết quả, để thấy lease hết hạn và task được giao lại mà không mất, không trùng. Nếu máy không có Lean, mở demo/explorer.html để duyệt 1.000 phát biểu theo nguồn, trạng thái Lean và kết luận ngữ nghĩa.</aside>
+</section>

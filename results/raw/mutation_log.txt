@@ -1,0 +1,133 @@
+483 compiled mutants/controls, 2415 checks
+TIMEOUT check=gold_to_cand key=proofnet:Dummit-Foote:exercise_9_4_2d|DROP_HYP
+TIMEOUT check=cand_to_gold key=minif2f:test:aime_1997_p9|FLIP_REL
+TIMEOUT check=gold_to_cand key=minif2f:valid:mathd_algebra_251|ANSWER_CHANGE
+  250/2415 checks, 3 wall timeouts, 191s
+TIMEOUT check=gold_to_cand key=minif2f:valid:mathd_algebra_251|FLIP_REL
+TIMEOUT check=gold_to_cand key=proofnet:Dummit-Foote:exercise_2_4_16a|DROP_HYP
+TIMEOUT check=cand_to_gold key=proofnet:Dummit-Foote:exercise_2_4_16a|FLIP_REL
+TIMEOUT check=cand_to_gold key=proofnet:Dummit-Foote:exercise_2_4_16a|TRIVIAL
+TIMEOUT check=gold_to_cand key=proofnet:Herstein:exercise_2_5_30|DROP_HYP
+/usr/lib/python3.13/multiprocessing/resource_tracker.py:479: UserWarning: resource_tracker: There appear to be 3 leaked semaphore objects to clean up at shutdown: {'/mp-bv19xzb9', '/mp-ruocmuj0', '/mp-rjp8c0g0'}
+  warnings.warn(
+483 compiled mutants/controls, 2415 checks
+TIMEOUT check=gold_to_cand key=proofnet:Dummit-Foote:exercise_9_4_2d|DROP_HYP
+TIMEOUT check=cand_to_gold key=minif2f:test:mathd_algebra_270|FLIP_REL
+TIMEOUT check=cand_to_gold key=minif2f:valid:mathd_algebra_251|FLIP_REL
+TIMEOUT check=gold_to_cand key=minif2f:valid:mathd_algebra_251|FLIP_REL
+TIMEOUT check=cand_to_gold key=minif2f:test:aime_1997_p9|FLIP_REL
+TIMEOUT check=gold_to_cand key=proofnet:Herstein:exercise_2_5_30|DROP_HYP
+  250/2415 checks, 6 wall timeouts, 255s
+TIMEOUT check=cand_to_gold key=proofnet:Dummit-Foote:exercise_3_4_4|FLIP_REL
+TIMEOUT check=auto_prove key=proofnet:Dummit-Foote:exercise_2_4_16a|DROP_HYP
+TIMEOUT check=gold_to_cand key=proofnet:Dummit-Foote:exercise_2_4_16a|FLIP_REL
+TIMEOUT check=auto_prove key=proofnet:Dummit-Foote:exercise_2_4_16a|CONTROL
+TIMEOUT check=gold_to_cand key=proofnet:Dummit-Foote:exercise_2_4_16a|DROP_HYP
+TIMEOUT check=cand_to_gold key=proofnet:Dummit-Foote:exercise_2_4_16a|VACUOUS
+TIMEOUT check=cand_to_gold key=proofnet:Dummit-Foote:exercise_2_4_16a|FLIP_REL
+TIMEOUT check=cand_to_gold key=proofnet:Dummit-Foote:exercise_3_2_8|FLIP_REL
+TIMEOUT check=cand_to_gold key=proofnet:Dummit-Foote:exercise_2_4_16a|TRIVIAL
+  500/2415 checks, 15 wall timeouts, 593s
+TIMEOUT check=gold_to_cand key=minif2f:test:mathd_algebra_388|ANSWER_CHANGE
+TIMEOUT check=cand_to_gold key=minif2f:test:mathd_algebra_388|ANSWER_CHANGE
+TIMEOUT check=gold_to_cand key=minif2f:test:mathd_algebra_388|FLIP_REL
+TIMEOUT check=gold_to_cand key=minif2f:test:mathd_algebra_388|DROP_HYP
+TIMEOUT check=cand_to_gold key=minif2f:test:mathd_algebra_388|VACUOUS
+TIMEOUT check=cand_to_gold key=minif2f:valid:mathd_algebra_480|FLIP_REL
+TIMEOUT check=cand_to_gold key=minif2f:test:mathd_algebra_392|FLIP_REL
+TIMEOUT check=cand_to_gold key=minif2f:test:algebra_2varlineareq_fp3zeq11_3tfm1m5zeqn68_feq
+TIMEOUT check=gold_to_cand key=minif2f:test:algebra_2varlineareq_fp3zeq11_3tfm1m5zeqn68_feq
+TIMEOUT check=gold_to_cand key=minif2f:test:algebra_2varlineareq_fp3zeq11_3tfm1m5zeqn68_feq
+TIMEOUT check=gold_to_cand key=minif2f:test:algebra_2varlineareq_fp3zeq11_3tfm1m5zeqn68_feq
+TIMEOUT check=cand_to_gold key=minif2f:test:algebra_2varlineareq_fp3zeq11_3tfm1m5zeqn68_feq
+TIMEOUT check=cand_to_gold key=minif2f:test:algebra_2varlineareq_fp3zeq11_3tfm1m5zeqn68_feq
+  750/2415 checks, 28 wall timeouts, 1080s
+TIMEOUT check=cand_to_gold key=minif2f:valid:numbertheory_xsqpysqintdenomeq|FLIP_REL
+TIMEOUT check=gold_to_cand key=proofnet:Munkres:exercise_29_10|DROP_HYP
+  1000/2415 checks, 30 wall timeouts, 1198s
+TIMEOUT check=gold_to_cand key=minif2f:valid:mathd_algebra_451|DROP_HYP
+TIMEOUT check=gold_to_cand key=proofnet:Herstein:exercise_2_11_22|DROP_HYP
+TIMEOUT check=cand_to_gold key=minif2f:valid:mathd_algebra_451|FLIP_REL
+  1250/2415 checks, 33 wall timeouts, 1312s
+TIMEOUT check=cand_to_gold key=minif2f:valid:mathd_algebra_455|FLIP_REL
+TIMEOUT check=cand_to_gold key=minif2f:valid:mathd_algebra_451|TRIVIAL
+TIMEOUT check=cand_to_gold key=minif2f:valid:mathd_algebra_510|FLIP_REL
+TIMEOUT check=gold_to_cand key=minif2f:valid:mathd_algebra_132|FLIP_REL
+TIMEOUT check=cand_to_gold key=minif2f:test:mathd_algebra_289|FLIP_REL
+  1500/2415 checks, 38 wall timeouts, 1546s
+TIMEOUT check=gold_to_cand key=proofnet:Shakarchi:exercise_1_13b|DROP_HYP
+TIMEOUT check=auto_prove key=minif2f:valid:mathd_algebra_451|DROP_HYP
+  1750/2415 checks, 40 wall timeouts, 1673s
+TIMEOUT check=cand_to_gold key=minif2f:valid:mathd_algebra_451|VACUOUS
+TIMEOUT check=cand_to_gold key=minif2f:valid:amc12a_2009_p15|FLIP_REL
+TIMEOUT check=gold_to_cand key=minif2f:test:imo_1984_p6|ANSWER_CHANGE
+TIMEOUT check=gold_to_cand key=minif2f:valid:mathd_algebra_132|DROP_HYP
+TIMEOUT check=gold_to_cand key=minif2f:test:imo_1984_p6|FLIP_REL
+TIMEOUT check=cand_to_gold key=minif2f:valid:mathd_algebra_132|FLIP_REL
+TIMEOUT check=gold_to_cand key=minif2f:valid:amc12a_2013_p8|ANSWER_CHANGE
+  2000/2415 checks, 47 wall timeouts, 1919s
+TIMEOUT check=gold_to_cand key=minif2f:valid:amc12a_2013_p8|FLIP_REL
+  2250/2415 checks, 48 wall timeouts, 2045s
+TIMEOUT check=cand_to_gold key=minif2f:test:amc12b_2002_p4|FLIP_REL
+TIMEOUT check=cand_to_gold key=minif2f:test:imo_1984_p6|ANSWER_CHANGE
+TIMEOUT check=gold_to_cand key=minif2f:test:imo_1984_p6|DROP_HYP
+TIMEOUT check=cand_to_gold key=minif2f:valid:mathd_numbertheory_110|FLIP_REL
+TIMEOUT check=cand_to_gold key=minif2f:valid:amc12a_2013_p8|ANSWER_CHANGE
+TIMEOUT check=cand_to_gold key=minif2f:valid:amc12a_2013_p8|FLIP_REL
+{
+ "CONTROL": {
+  "n": 100,
+  "strong_flag_rate": 0.01,
+  "flagged_any_rate": 0.02,
+  "verdicts": {
+   "EQUIV_GOLD": 98,
+   "NO_EVIDENCE_OF_ERROR": 1,
+   "TRIVIAL": 1
+  }
+ },
+ "ANSWER_CHANGE": {
+  "n": 39,
+  "strong_flag_rate": 0.256,
+  "flagged_any_rate": 1.0,
+  "verdicts": {
+   "NO_EVIDENCE_OF_ERROR": 29,
+   "FALSE": 10
+  }
+ },
+ "DROP_HYP": {
+  "n": 76,
+  "strong_flag_rate": 0.0,
+  "flagged_any_rate": 1.0,
+  "verdicts": {
+   "NO_EVIDENCE_OF_ERROR": 76
+  }
+ },
+ "FLIP_REL": {
+  "n": 68,
+  "strong_flag_rate": 0.147,
+  "flagged_any_rate": 1.0,
+  "verdicts": {
+   "NO_EVIDENCE_OF_ERROR": 58,
+   "FALSE": 9,
+   "TRIVIAL": 1
+  }
+ },
+ "VACUOUS": {
+  "n": 100,
+  "strong_flag_rate": 0.99,
+  "flagged_any_rate": 1.0,
+  "verdicts": {
+   "VACUOUS": 99,
+   "NO_EVIDENCE_OF_ERROR": 1
+  }
+ },
+ "TRIVIAL": {
+  "n": 100,
+  "strong_flag_rate": 1.0,
+  "flagged_any_rate": 1.0,
+  "verdicts": {
+   "TRIVIAL": 100
+  }
+ }
+}
+2356s

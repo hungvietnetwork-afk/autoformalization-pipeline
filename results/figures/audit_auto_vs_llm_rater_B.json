@@ -1,0 +1,40 @@
+{
+ "rater": "llm_rater_B.csv",
+ "auto_error_verdicts": [
+  "ANSWER_MISSING",
+  "ARITHMETIC_ONLY",
+  "FALSE",
+  "TRIVIAL",
+  "VACUOUS"
+ ],
+ "verdicts_on_sample": {
+  "NO_EVIDENCE_OF_ERROR": 56,
+  "PROVED_CONSISTENT": 19,
+  "EQUIV_GOLD": 10,
+  "TRIVIAL": 2,
+  "ARITHMETIC_ONLY": 7,
+  "ANSWER_MISSING": 6
+ },
+ "vs_SAI": {
+  "n": 100,
+  "auto_flagged": 15,
+  "rater_positive": 4,
+  "tp": 0,
+  "fp": 15,
+  "fn": 4,
+  "tn": 81,
+  "precision": 0.0,
+  "recall": 0.0
+ },
+ "vs_not_DUNG": {
+  "n": 100,
+  "auto_flagged": 15,
+  "rater_positive": 18,
+  "tp": 10,
+  "fp": 5,
+  "fn": 8,
+  "tn": 77,
+  "precision": 0.667,
+  "recall": 0.556
+ }
+}

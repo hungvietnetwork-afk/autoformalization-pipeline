@@ -1,0 +1,119 @@
+{"ts": 1792147687.2756824, "run_id": "gold_check", "worker_id": "orchestrator", "kind": "run_start", "detail": "{\"n_problems\": 859}"}
+{"ts": 1792147687.2887607, "run_id": "gold_check", "worker_id": "orchestrator", "kind": "problems_enqueued", "detail": "{\"partition_sizes\": {\"0\": 61, \"1\": 52, \"2\": 50, \"3\": 49, \"4\": 57, \"5\": 61, \"6\": 54, \"7\": 50, \"8\": 64, \"9\": 55, \"10\": 53, \"11\": 55, \"12\": 51, \"13\": 55, \"14\": 44, \"15\": 48}}"}
+{"ts": 1792147687.6153698, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_start", "detail": "{\"pid\": 12229, \"backend\": \"cache\"}"}
+{"ts": 1792147687.6175585, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.32}"}
+{"ts": 1792147687.619145, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.18}"}
+{"ts": 1792147687.6205366, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.18}"}
+{"ts": 1792147687.6219418, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.17}"}
+{"ts": 1792147687.6233215, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1792147687.6246307, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1792147687.6261585, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1792147687.6275513, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.22}"}
+{"ts": 1792147687.6288967, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6303165, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.631573, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.63279, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6341183, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.635388, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1792147687.6366928, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6381152, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.639432, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.2}"}
+{"ts": 1792147687.6407657, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.17}"}
+{"ts": 1792147687.6423056, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.643596, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1792147687.6449125, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6463184, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6476254, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1792147687.6488595, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6501753, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1792147687.651512, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.2}"}
+{"ts": 1792147687.6634386, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.21}"}
+{"ts": 1792147687.6647367, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6659517, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6671658, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6682336, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6692772, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6704001, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.26}"}
+{"ts": 1792147687.671596, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.672578, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6735952, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6746984, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6758187, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.6768026, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.6777918, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6788602, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.67986, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6808589, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.682071, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6830618, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.6840684, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6850548, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6860678, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6870694, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6881037, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.17}"}
+{"ts": 1792147687.6890821, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.6902175, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.691279, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.7034662, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.26}"}
+{"ts": 1792147687.7045736, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.17}"}
+{"ts": 1792147687.7055666, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.706642, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7076023, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.7085342, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7094526, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.19}"}
+{"ts": 1792147687.7104347, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.24}"}
+{"ts": 1792147687.7113674, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.19}"}
+{"ts": 1792147687.7122676, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7131755, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.714194, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7150803, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.7159498, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.7168386, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.717754, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.718725, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7196016, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.7205532, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.721497, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.19}"}
+{"ts": 1792147687.722461, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.18}"}
+{"ts": 1792147687.7233782, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7242894, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7252285, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7262173, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7270966, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7369428, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.7379549, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1792147687.7389057, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7398505, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.740773, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.741683, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7426336, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7436278, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1792147687.7445397, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7453992, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.2}"}
+{"ts": 1792147687.7463276, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.2}"}
+{"ts": 1792147687.7471797, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.747969, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.748791, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.7496076, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.7504754, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.18}"}
+{"ts": 1792147687.7513306, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.7521474, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7528965, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.7536855, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7545018, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.7552786, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.7562692, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.29}"}
+{"ts": 1792147687.7571225, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.14}"}
+{"ts": 1792147687.7578468, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.15}"}
+{"ts": 1792147687.7686212, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.13}"}
+{"ts": 1792147687.7697058, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.5}"}
+{"ts": 1792147687.7703602, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 8, \"n_candidates\": 8, \"ms\": 0.16}"}
+{"ts": 1792147687.7707212, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_batch", "detail": "{\"n_problems\": 3, \"n_candidates\": 3, \"ms\": 0.05}"}
+{"ts": 1792147687.7708437, "run_id": "gold_check", "worker_id": "inf-0", "kind": "inference_done", "detail": "{\"batches\": 108, \"candidates\": 859, \"backend_stats\": {\"cache_hits\": 859, \"cache_misses\": 0}}"}
+{"ts": 1792147726.656201, "run_id": "gold_check", "worker_id": "lean-0", "kind": "worker_ready", "detail": "{\"pid\": 12227, \"repl_pid\": 12327, \"startup_s\": 37.69, \"mem\": {\"VmHWM\": 4839.72265625, \"VmRSS\": 4684.82421875, \"RssAnon\": 350.12109375, \"RssFile\": 4334.703125, \"Pss\": 2521.3212890625}}"}
+{"ts": 1792147726.6876907, "run_id": "gold_check", "worker_id": "lean-1", "kind": "worker_ready", "detail": "{\"pid\": 12228, \"repl_pid\": 12323, \"startup_s\": 37.73, \"mem\": {\"VmHWM\": 4846.1875, \"VmRSS\": 4681.80859375, \"RssAnon\": 348.35546875, \"RssFile\": 4333.453125, \"Pss\": 2521.0390625}}"}
+{"ts": 1792147741.5463161, "run_id": "gold_check", "worker_id": "lean-1", "kind": "repl_timeout", "detail": "{\"task_hash\": \"29585d7762ffbf6bffa767710c642bbb2c790214a0e9853242f44b4582ae410b\"}"}
+{"ts": 1792147775.7281346, "run_id": "gold_check", "worker_id": "lean-1", "kind": "repl_restarted", "detail": "{\"startup_s\": 34.18, \"repl_pid\": 12356}"}
+{"ts": 1792147775.9420042, "run_id": "gold_check", "worker_id": "lean-0", "kind": "worker_exit", "detail": "{\"processed\": 707, \"restarts\": 0, \"mem\": {\"VmHWM\": 4839.72265625, \"VmRSS\": 92.875, \"RssAnon\": 0.0, \"RssFile\": 92.875, \"Pss\": 45.6162109375}}"}
+{"ts": 1792147776.0198505, "run_id": "gold_check", "worker_id": "lean-1", "kind": "worker_exit", "detail": "{\"processed\": 152, \"restarts\": 1, \"mem\": {\"VmHWM\": 4833.15625, \"VmRSS\": 4803.05078125, \"RssAnon\": 412.9765625, \"RssFile\": 4390.07421875, \"Pss\": 4765.587890625}}"}
+{"ts": 1792147776.6634114, "run_id": "gold_check", "worker_id": "orchestrator", "kind": "run_end", "detail": "{\"exitcodes\": {\"lean-0\": 0, \"lean-1\": 0, \"inf-0\": 0}}"}

@@ -1,0 +1,41 @@
+<section id="scale" data-transition="fade" style="background:#F3F0E8;color:#15212C;font-family:'Be Vietnam Pro', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#2B5FC4">Khả năng mở rộng · vai trò Big Data</p>
+<h2 style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:60px;font-weight:700;line-height:1.15;letter-spacing:-1px;color:#15212C">Ở 10.000 task, kết luận khác hẳn ở 100 task</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px 32px">
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #DCD6C8;border-radius:16px;padding:24px 28px">
+<p style="font-size:60px;font-weight:700;line-height:1.1;color:#2B5FC4">442×</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">REPL nóng so với chạy lạnh: 45,8 ms so với 20,2 s mỗi ứng viên</p>
+<p style="font-size:24px;font-weight:600;line-height:1.4;color:#15212C">→ worker phải giữ trạng thái</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #DCD6C8;border-radius:16px;padding:24px 28px">
+<p style="font-size:60px;font-weight:700;line-height:1.1;color:#2B5FC4">2,8 → 22,3</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">bài/s của 1 worker khi tăng 100 → 1K → 10K task</p>
+<p style="font-size:24px;font-weight:600;line-height:1.4;color:#15212C">→ khởi động chỉ khấu hao ở quy mô lớn</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #DCD6C8;border-radius:16px;padding:24px 28px">
+<p style="font-size:60px;font-weight:700;line-height:1.1;color:#2B5FC4">0,1 %</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">10 ứng viên bệnh lý gây 7–10 lần khởi động lại REPL mỗi lần chạy 10K với 2–4 worker</p>
+<p style="font-size:24px;font-weight:600;line-height:1.4;color:#15212C">→ sự kiện hiếm thành chắc chắn</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #DCD6C8;border-radius:16px;padding:24px 28px">
+<p style="font-size:60px;font-weight:700;line-height:1.1;color:#2B5FC4">26 %</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">thời gian Lean dồn vào 1 % task chậm nhất; 8 worker: chia tĩnh 14,7 s, work stealing 10,0 s</p>
+<p style="font-size:24px;font-weight:600;line-height:1.4;color:#15212C">→ cần work stealing</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #DCD6C8;border-radius:16px;padding:24px 28px">
+<p style="font-size:60px;font-weight:700;line-height:1.1;color:#2B5FC4">45 %</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">thời gian worker dành cho khởi động lại REPL ở 10.000 task, 2 worker, timeout 10 s; kiểm chứng thật chỉ 46 %</p>
+<p style="font-size:24px;font-weight:600;line-height:1.4;color:#15212C">→ giả thuyết H1 đúng</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBFAF6;border:1px solid #DCD6C8;border-radius:16px;padding:24px 28px">
+<p style="font-size:60px;font-weight:700;line-height:1.1;color:#2B5FC4">97 → 0,06 ms</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">mỗi lần lease ở 100K task chờ: hàng đợi thiếu index so với có index</p>
+<p style="font-size:24px;font-weight:600;line-height:1.4;color:#15212C">→ hàng đợi nghẽn trước cả Lean</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1450px;font-size:24px;color:#5E6976">Số liệu: results/figures/matrix_median.csv · time_budget_T10K.json · cold_vs_warm.json · skew_*.json</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;text-align:right;color:#5E6976">10 / 17</p>
+<aside>Vai trò Big Data được chứng minh bằng những thí nghiệm mà kết luận thay đổi theo quy mô. Ở 100 bài, một tiến trình là đủ và nhanh nhất. Ở 10.000 task thì khác. Chi phí nạp Mathlib phải trả một lần cho mỗi worker: REPL nóng nhanh hơn chạy lạnh 442 lần, 10.000 ứng viên giảm từ 56 giờ CPU xuống 7,6 phút. Throughput của 1 worker tăng từ 2,8 lên 22,3 bài/s khi chi phí khởi động được khấu hao. 10 ứng viên bệnh lý, chỉ 0,1 %, chắc chắn xuất hiện và mỗi lần gây khởi động lại REPL. Tải lệch nặng: 1 % task chậm nhất chiếm 26 % thời gian Lean, nên cần work stealing. Hàng đợi thiếu index thành điểm nghẽn trước cả Lean khi backlog lên 100.000 task. Giả thuyết H1 đúng: ở 10.000 task với 2 worker và timeout 10 giây, 45 % thời gian worker dành cho khởi động lại REPL sau timeout, kiểm chứng thật chỉ còn 46 %.</aside>
+</section>

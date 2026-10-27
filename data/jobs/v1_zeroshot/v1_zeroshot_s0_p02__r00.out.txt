@@ -1,0 +1,26 @@
+### P081
+theorem t81 (a d : ℝ) (hd : 0 ≤ d) (hsum : a + (a + d) + (a + 2 * d) + (a + 3 * d) = 360) (hmax : a + 3 * d = 120) : a = 60 := by sorry
+
+### P082
+theorem t82 (x : ℝ) (A B : ℝ × ℝ) (hA : A = (x, 6)) (hB : B = (-A.1, A.2)) : A.1 + A.2 + B.1 + B.2 = 12 := by sorry
+
+### P083
+theorem t83 (S : Set (ℝ × ℝ)) (hS : S = {P : ℝ × ℝ | ∃ H : ℝ × ℝ, (H.1 = 0 ∨ H.2 = 0) ∧ (|H.1| + |H.2|) / 50 + Real.sqrt ((P.1 - H.1) ^ 2 + (P.2 - H.2) ^ 2) / 14 ≤ 6 / 60}) (m n : ℕ) (hm : 0 < m) (hn : 0 < n) (hmn : Nat.Coprime m n) (harea : MeasureTheory.volume S = ENNReal.ofReal ((m : ℝ) / n)) : m + n = 731 := by sorry
+
+### P084
+theorem t84 (AD : ℝ) (hAD : 0 < AD) (A B C D E : ℝ × ℝ) (hA : A = (0, 0)) (hB : B = (100, 0)) (hC : C = (100, AD)) (hD : D = (0, AD)) (hE : E = ((A.1 + D.1) / 2, (A.2 + D.2) / 2)) (hperp : (C.1 - A.1) * (E.1 - B.1) + (C.2 - A.2) * (E.2 - B.2) = 0) : ⌈AD⌉ - 1 = 141 := by sorry
+
+### P085
+theorem t85 (d₁ d₂ : ℝ) (hd₁ : 0 < d₁) (hd₂ : 0 < d₂) (hside : Real.sqrt ((d₁ / 2) ^ 2 + (d₂ / 2) ^ 2) = Real.sqrt 89) (hdiff : |d₁ - d₂| = 6) : d₁ * d₂ / 2 = 80 := by sorry
+
+### P086
+theorem t86 (s : ℝ) (hs : 0 < s) (hreg : s - 2 = Real.sqrt (1 ^ 2 + 1 ^ 2)) : s ^ 2 - 4 * (1 / 2 * 1 * 1) = 4 + 4 * Real.sqrt 2 := by sorry
+
+### P087
+theorem t87 : Set.ncard {t : ℕ × ℕ × ℕ | t.1 ≤ t.2.1 ∧ t.2.1 ≤ t.2.2 ∧ 0 < t.1 ∧ t.1 + t.2.1 + t.2.2 = 23 ∧ t.2.2 < t.1 + t.2.1 ∧ (t.1 = t.2.1 ∨ t.2.1 = t.2.2)} = 6 := by sorry
+
+### P088
+theorem t88 (s r t : ℝ) (hs : 0 < s) (hcube : 6 * s ^ 2 = 24) (hr : r = s / 2) (ht : 0 < t) (hinner : 3 * t ^ 2 = (2 * r) ^ 2) : 6 * t ^ 2 = 8 := by sorry
+
+### P089
+theorem t89 : IsGreatest {k : ℕ | ∃ a b : Fin k → ℕ, (∀ i, 1 ≤ a i ∧ a i < b i ∧ b i ≤ 2009) ∧ (∀ i j, i ≠ j → a i ≠ a j ∧ a i ≠ b j ∧ b i ≠ a j ∧ b i ≠ b j) ∧ (∀ i j, i ≠ j → a i + b i ≠ a j + b j) ∧ (∀ i, a i + b i ≤ 2009)} 803 := by sorry

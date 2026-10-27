@@ -1,0 +1,38 @@
+<section id="q2-method" data-transition="fade" style="background:#F3F0E8;color:#15212C;font-family:'Be Vietnam Pro', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#2B5FC4">Câu hỏi 2 · Lean chấp nhận nhưng sai nghĩa</p>
+<h2 style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:60px;font-weight:700;line-height:1.15;letter-spacing:-1px;color:#15212C">Phát hiện sai nghĩa bằng ba lớp kiểm tra</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#15212C;border-radius:16px;padding:28px 32px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#F2B880">GSM8K · chỉ còn phép tính</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.45;color:#E8E4D8"><span style="color:#8FB3F5">theorem</span> cand_1ea9da26c3e8 :<br>&#160;&#160;(18 : ℝ) - (5 + 7) = 6 := <span style="color:#F2B880">by sorry</span></p>
+<p style="font-size:24px;line-height:1.4;color:#BCC6CF">Bài bán kẹo chỉ còn một phép trừ: đúng, compile được, nhưng mất hết biến và giả thiết của đề.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#15212C;border-radius:16px;padding:28px 32px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#F2B880">MATH · giả thiết vô nghiệm trên ℝ</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.45;color:#E8E4D8">(a b : ℝ) (h1 : a + b = 7)<br>&#160;&#160;(h2 : a ^ 3 + b ^ 3 = 42) :<br>&#160;&#160;1 / a + 1 / b = 21 / 43</p>
+<p style="font-size:24px;line-height:1.4;color:#BCC6CF">Không có a, b thực nào thoả giả thiết nên định lý đúng một cách rỗng. Kiểm tra tự động bỏ sót, audit thử bắt được.</p>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px;border-top:4px solid #2B5FC4;padding:20px 0 0 0">
+<p style="font-size:28px;font-weight:700;color:#15212C">1 · Lean tự kiểm tra</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">Giả thiết mâu thuẫn? Phản chứng được kết luận? Tự suy ra đáp án? Tương đương phát biểu gold?</p>
+<p style="font-size:24px;font-weight:600;line-height:1.4;color:#2B5FC4">Cờ do Lean chứng minh là chắc chắn</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;border-top:4px solid #2B5FC4;padding:20px 0 0 0">
+<p style="font-size:28px;font-weight:700;color:#15212C">2 · Heuristic rẻ</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">Đáp án có nằm trong phát biểu? Bài lời văn còn biến không? Đáp án âm mà phát biểu chỉ dùng ℕ?</p>
+<p style="font-size:24px;font-weight:600;line-height:1.4;color:#2B5FC4">Bộ lọc ưu tiên, precision 0,77</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;border-top:4px solid #2B5FC4;padding:20px 0 0 0">
+<p style="font-size:28px;font-weight:700;color:#15212C">3 · Người chấm</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">100 mẫu phân tầng theo nguồn, 3 nhãn ĐÚNG / GẦN ĐÚNG / SAI, hai người chấm độc lập</p>
+<p style="font-size:24px;font-weight:600;line-height:1.4;color:#2B5FC4">Độ tin cậy đo bằng Cohen’s κ</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1450px;font-size:24px;color:#5E6976">Ví dụ thật: gsm8k:train:04141 · math:test/algebra/2167</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;text-align:right;color:#5E6976">12 / 17</p>
+<aside>Hai ví dụ thật, đều compile được nhưng sai nghĩa. Bài GSM8K bị rút thành một phép trừ: đúng về số học nhưng không còn là bài toán. Bài MATH có giả thiết vô nghiệm trên số thực: từ a + b = 7 và a³ + b³ = 42 suy ra ab = 43/3, lớn hơn 49/4 nên không có a, b thực; mọi kết luận khi đó đều đúng một cách rỗng. Bộ kiểm tra tự động bỏ sót bài này, còn hai LLM chấm thử đều bắt được. Vì vậy hệ thống dùng ba lớp chồng nhau. Lớp 1: Lean tự kiểm tra, chạy trong cùng REPL nóng; chứng minh được là chắc chắn, chứng minh không được thì chưa nói lên điều gì. Lớp 2: heuristic rẻ về đáp án và cấu trúc phát biểu, dùng để ưu tiên. Lớp 3: người chấm trên mẫu phân tầng, độ tin cậy đo bằng Cohen's κ.</aside>
+</section>

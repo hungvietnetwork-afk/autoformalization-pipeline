@@ -1,0 +1,68 @@
+{
+ "max_attempts_1": {
+  "results": [
+   995.0,
+   995.0,
+   995.0
+  ],
+  "dead_letter": [
+   8.0,
+   8.0,
+   8.0
+  ],
+  "retried_tasks": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "overwritten_results": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "duplicate_result_rows": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "makespan_s": [
+   86.585,
+   87.976,
+   89.815
+  ],
+  "runs": 3
+ },
+ "max_attempts_3": {
+  "results": [
+   1000.0,
+   1000.0,
+   1000.0
+  ],
+  "dead_letter": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "retried_tasks": [
+   8.0,
+   8.0,
+   8.0
+  ],
+  "overwritten_results": [
+   3.0,
+   3.0,
+   3.0
+  ],
+  "duplicate_result_rows": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "makespan_s": [
+   99.732,
+   104.565,
+   97.985
+  ],
+  "runs": 3
+ }
+}

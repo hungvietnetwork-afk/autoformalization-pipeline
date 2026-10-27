@@ -1,0 +1,16 @@
+{
+ "_doc": "Defaults of one run (python -m afp.pipeline ...). The values live in the code; tests/test_configs.py checks that this file matches it.",
+ "partitions": 16,
+ "workers": 1,
+ "batch": 1,
+ "prompt_version": "v1_zeroshot",
+ "k": 1,
+ "timeout_s": 10.0,
+ "lease_s": 60.0,
+ "max_attempts": 3,
+ "max_heartbeats": 400000,
+ "recycle_every": 5000,
+ "release_on_restart": true,
+ "broker": "sqlite",
+ "tier_seed": 42
+}

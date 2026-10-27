@@ -1,0 +1,78 @@
+{
+ "by_problems_per_request": {
+  "1": {
+   "requests": 20,
+   "requests_ok": 20,
+   "requests_partial": 0,
+   "requests_failed": 0,
+   "problems_answered": 20,
+   "zeroshot_tokens": 1751216,
+   "zeroshot_problems": 20,
+   "zeroshot_wall_s": 1256.255,
+   "all_tokens": 1751216,
+   "all_problems": 20,
+   "tokens_per_request_median": 86236.5,
+   "wall_s_per_request_median": 57.6,
+   "zeroshot_tokens_per_problem": 87561,
+   "zeroshot_wall_s_per_problem": 62.81,
+   "tokens_per_problem_all_prompts": 87561,
+   "request_failure_share": 0.0
+  },
+  "9": {
+   "requests": 6,
+   "requests_ok": 6,
+   "requests_partial": 0,
+   "requests_failed": 0,
+   "problems_answered": 51,
+   "zeroshot_tokens": 285182,
+   "zeroshot_problems": 51,
+   "zeroshot_wall_s": 548.6,
+   "all_tokens": 285182,
+   "all_problems": 51,
+   "zeroshot_tokens_per_problem": 5592,
+   "zeroshot_wall_s_per_problem": 10.76,
+   "tokens_per_problem_all_prompts": 5592,
+   "request_failure_share": 0.0
+  },
+  "20-26": {
+   "requests": 26,
+   "requests_ok": 24,
+   "requests_partial": 0,
+   "requests_failed": 2,
+   "problems_answered": 565,
+   "zeroshot_tokens": 530518,
+   "zeroshot_problems": 255,
+   "zeroshot_wall_s": 1323.1999999999998,
+   "all_tokens": 1388867,
+   "all_problems": 565,
+   "zeroshot_tokens_per_problem": 2080,
+   "zeroshot_wall_s_per_problem": 5.19,
+   "tokens_per_problem_all_prompts": 2458,
+   "request_failure_share": 0.077
+  },
+  "100-142": {
+   "requests": 12,
+   "requests_ok": 5,
+   "requests_partial": 3,
+   "requests_failed": 4,
+   "problems_answered": 784,
+   "zeroshot_tokens": 1075506,
+   "zeroshot_problems": 614,
+   "zeroshot_wall_s": 6130.3,
+   "all_tokens": 1075506,
+   "all_problems": 614,
+   "zeroshot_tokens_per_problem": 1752,
+   "zeroshot_wall_s_per_problem": 9.98,
+   "tokens_per_problem_all_prompts": 1752,
+   "request_failure_share": 0.583
+  }
+ },
+ "retry": {
+  "planned_candidates": 1400,
+  "answered_by_first_requests": 784,
+  "share_without_retry": 0.56,
+  "answered_with_retry": 1400,
+  "retry_mechanism": "missing keys re-sent in smaller sub-jobs keyed by TaskHash (afp.inference.batchfile resume)"
+ },
+ "note": "tokens are the agent's total tokens (its fixed context is ~80K per request); wall time is the agent's time for the whole request, problems inside a request are answered one after another; the 9-problem requests had an extra 'think briefly' line; unmatched log entries: none"
+}

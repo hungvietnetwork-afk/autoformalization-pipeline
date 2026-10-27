@@ -1,0 +1,40 @@
+{
+ "_doc": "Experiment grids read by src/afp/experiments.py (python -m afp.experiments <name>). Each run also writes its full parameters to results/raw/runs/<run_id>/config.json and run_record.json. Tiers T100 and T1K use the real candidates; T10K replays the 1,000 T1K candidates 10 times under new task ids (trace replay, no model call).",
+ "tiers": {
+  "T100": {"tier": "T100", "replicas": 1},
+  "T1K": {"tier": "T1K", "replicas": 1},
+  "T10K": {"tier": "T1K", "replicas": 10}
+ },
+ "matrix": {
+  "_doc": "3 tiers x 3 configurations x 3 repeats; wall timeout of the week-2 design",
+  "repeats": 3, "timeout_s": 10.0,
+  "configs": {"A": {"workers": 1, "batch": 1}, "B": {"workers": 2, "batch": 8}, "C": {"workers": 4, "batch": 32}}
+ },
+ "scaling": {
+  "_doc": "Lean worker curve on 10,000 tasks; 30 s wall timeout so heartbeats (400k) stay the primary limit",
+  "tier": "T10K", "workers": [1, 2, 4, 8], "repeats": 2, "batch": 8, "timeout_s": 30.0
+ },
+ "batch_sweep": {
+  "_doc": "verification batch size at a fixed worker count; b1_idx = batch 1 with the indexed queue",
+  "tiers": ["T100", "T1K", "T10K"], "repeats": 3, "workers": 2, "timeout_s": 30.0,
+  "configs": {"b1": {"batch": 1}, "b1_idx": {"batch": 1, "indexed": true}, "b8": {"batch": 8}, "b32": {"batch": 32}}
+ },
+ "baseline": {
+  "_doc": "required baseline: zero-shot, one problem per request, one candidate, one Lean worker, no repair",
+  "tier": "T20_1REQ", "workers": 1, "batch": 1, "timeout_s": 10.0,
+  "runs": {"base_T20_1req_A": "v1_zeroshot_1req", "base_T20_batchjob_A": "v1_zeroshot"}
+ },
+ "fault": {"tier": "T1K", "workers": 2, "batch": 8, "kill_after_results": 300, "kill_worker": 0, "lease_s": 30.0},
+ "retry": {
+  "_doc": "same worker kill as fault; max_attempts 1 = no re-delivery (expired lease -> dead-letter)",
+  "tier": "T1K", "workers": 2, "batch": 8, "repeats": 3, "max_attempts": [1, 3], "kill_after_results": 300,
+  "kill_worker": 0, "lease_s": 30.0
+ },
+ "release": {
+  "_doc": "ablation of release_on_restart (hand the rest of a batch back before a REPL restart)",
+  "tier": "T1K", "workers": 2, "batch": 8, "repeats": 3, "timeout_s": 10.0
+ },
+ "repro": {"_doc": "matrix cell T1K/A again on the machine of 26/10", "tier": "T1K", "workers": 1, "batch": 1,
+           "repeats": 3, "timeout_s": 10.0},
+ "broker": {"tier": "T1K", "workers": 2, "batch": 8, "redis_url": "redis://localhost:6390/0"}
+}

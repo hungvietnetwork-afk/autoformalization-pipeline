@@ -1,0 +1,74 @@
+### P001
+theorem t1 (good bad neutral firstGood secondBad thirdNeutral nextGood nextNeutral : ℕ) (h₁ : good = 12) (h₂ : bad = 8) (h₃ : good + bad + neutral = 30) (h₄ : firstGood = 8) (h₅ : secondBad = 8) (h₆ : thirdNeutral = 8) (h₇ : nextGood = 2) (h₈ : nextNeutral = 1) : good - firstGood - nextGood = 2 := by sorry
+
+### P002
+theorem t2 (credit paidTuesday paidThursday owed : ℝ) (h₁ : credit = 100) (h₂ : paidTuesday = 15) (h₃ : paidThursday = 23) (h₄ : owed = credit - paidTuesday - paidThursday) : owed = 62 := by sorry
+
+### P003
+theorem t3 (firstHalf secondHalf planted : ℕ) (h₁ : firstHalf = 200) (h₂ : secondHalf = 300) (h₃ : planted = 3 * (firstHalf + secondHalf)) : planted = 1500 := by sorry
+
+### P004
+theorem t4 (sandwichPrice salami brie olivePrice oliveWeight fetaPrice fetaWeight bread total : ℝ) (h₁ : sandwichPrice = 7.75) (h₂ : salami = 4) (h₃ : brie = 3 * salami) (h₄ : olivePrice = 10) (h₅ : oliveWeight = 1 / 4) (h₆ : fetaPrice = 8) (h₇ : fetaWeight = 1 / 2) (h₈ : bread = 2) (h₉ : total = 2 * sandwichPrice + salami + brie + olivePrice * oliveWeight + fetaPrice * fetaWeight + bread) : total = 40 := by sorry
+
+### P005
+theorem t5 (firstPart secondPart thirdPart total remaining : ℝ) (h₁ : firstPart = 2 * (30 / 10)) (h₂ : secondPart = 2 * (30 / 10)) (h₃ : thirdPart = 4 * (60 / 10)) (h₄ : total = firstPart + secondPart + thirdPart) (h₅ : remaining = total / 2) : remaining = 18 := by sorry
+
+### P006
+theorem t6 (sugar : ℕ → ℝ) (h₁ : sugar 1 = 24) (h₂ : ∀ n : ℕ, 1 ≤ n → sugar (n + 1) = sugar n / 2) : sugar 4 = 3 := by sorry
+
+### P007
+theorem t7 (threshold book1 book2 book3 book4 discount spent needed : ℝ) (h₁ : threshold = 50) (h₂ : book1 = 13) (h₃ : book2 = 15) (h₄ : book3 = 10) (h₅ : book4 = 10) (h₆ : discount = 1 / 4) (h₇ : spent = (1 - discount) * book1 + (1 - discount) * book2 + book3 + book4) (h₈ : needed = threshold - spent) : needed = 9 := by sorry
+
+### P008
+theorem t8 (bedroom bath newRoom : ℝ) (h₁ : bedroom = 309) (h₂ : bath = 150) (h₃ : newRoom = 2 * (bedroom + bath)) : newRoom = 918 := by sorry
+
+### P009
+theorem t9 (inheritance carPrice downPayment monthly : ℝ) (h₁ : inheritance = 20000) (h₂ : carPrice = 18000) (h₃ : downPayment = 3000) (h₄ : monthly = (carPrice - downPayment) / 6) : monthly = 2500 := by sorry
+
+### P010
+theorem t10 (dropsPerMinute dropVolume capacity time : ℝ) (h₁ : dropsPerMinute = 3) (h₂ : dropVolume = 20) (h₃ : capacity = 3000) (h₄ : time = capacity / (dropsPerMinute * dropVolume)) : time = 50 := by sorry
+
+### P011
+theorem t11 (total firstPeriod secondPeriod remaining : ℕ) (h₁ : total = 75) (h₂ : firstPeriod = 10) (h₃ : secondPeriod = 2 * firstPeriod) (h₄ : remaining = total - (firstPeriod + secondPeriod)) : remaining = 45 := by sorry
+
+### P012
+theorem t12 (horses days oatsPerMeal mealsPerDay grain pounds : ℕ) (h₁ : horses = 4) (h₂ : days = 3) (h₃ : oatsPerMeal = 4) (h₄ : mealsPerDay = 2) (h₅ : grain = 3) (h₆ : pounds = horses * days * (oatsPerMeal * mealsPerDay + grain)) : pounds = 132 := by sorry
+
+### P013
+theorem t13 (total safe poisonous uncertain : ℕ) (h₁ : total = 32) (h₂ : safe = 9) (h₃ : poisonous = 2 * safe) (h₄ : uncertain = total - safe - poisonous) : uncertain = 5 := by sorry
+
+### P014
+theorem t14 (alex joe ben : ℕ) (h₁ : joe = alex + 3) (h₂ : ben = joe + 8) (h₃ : ben = 15) : alex = 4 := by sorry
+
+### P015
+theorem t15 (d e : ℝ) (hd : 2 * d ^ 2 + 3 * d - 5 = 0) (he : 2 * e ^ 2 + 3 * e - 5 = 0) (hde : d ≠ e) : (d - 1) * (e - 1) = 0 := by sorry
+
+### P016
+theorem t16 : IsLeast {d : ℝ | ∃ x : ℝ, d = Real.sqrt ((x - 6) ^ 2 + ((2 * x - 2) - 0) ^ 2)} (2 * Real.sqrt 5) := by sorry
+
+### P017
+theorem t17 (w h : ℝ) (hw : w = 24) (hh : h = 16) : ((1.2 * w) * (1.2 * h) - w * h) / (w * h) * 100 = 44 := by sorry
+
+### P018
+theorem t18 : |(∑ i ∈ Finset.Icc (1 : ℤ) 20, 5 * i) - (∑ i ∈ Finset.Icc (1 : ℤ) 20, 2 * i)| = 630 := by sorry
+
+### P019
+theorem t19 (a : Fin 8 → ℕ) (s : ℕ) (ha : Function.Injective a) (hrange : ∀ i, a i ∈ Finset.Icc 2 9) (h₁ : a 0 + a 1 = s) (h₂ : a 2 + a 3 = s) (h₃ : a 4 + a 5 = s) (h₄ : a 6 + a 7 = s) : s = 11 := by sorry
+
+### P020
+theorem t20 (q r : ℝ) : (q - 5) * (3 * r + 6) = 3 * q * r + 6 * q - 15 * r - 30 := by sorry
+
+### P021
+theorem t21 : Set.ncard {m : ℤ | ∃ r s : ℤ, 0 < r ∧ 0 < s ∧ r * s = 28 ∧ m = -(r + s)} = 3 := by sorry
+
+### P022
+theorem t22 : (33 : ℝ) / Real.sqrt 33 = Real.sqrt 33 := by sorry
+
+### P023
+theorem t23 (p1 p2 p3 p4 : ℕ) (h₀ : p1 + p2 + p3 + p4 = 20) (h₁ : p1 + 3 = p2) (h₂ : p2 = p3 + 2) (h₃ : p4 = 2 * p2) : p4 = 10 := by sorry
+
+### P024
+theorem t24 (pRedRemoved pWhiteRemoved pRedIfRedRemoved pRedIfWhiteRemoved pRed : ℚ) (h₁ : pRedRemoved = 4 / 6) (h₂ : pWhiteRemoved = 2 / 6) (h₃ : pRedIfRedRemoved = 3 / 6) (h₄ : pRedIfWhiteRemoved = 5 / 6) (h₅ : pRed = pRedRemoved * pRedIfRedRemoved + pWhiteRemoved * pRedIfWhiteRemoved) : pRed = 11 / 18 := by sorry
+
+### P025
+theorem t25 : Set.ncard {n : ℕ | 100 ≤ n ∧ n ≤ 999 ∧ 5 < n / 100 ∧ 4 < n / 10 % 10 ∧ n / 10 % 10 < 8 ∧ Nat.Prime (n % 10) ∧ ∀ p : ℕ, Nat.Prime p → n % 10 ≤ p} = 12 := by sorry

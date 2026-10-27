@@ -1,0 +1,101 @@
+{
+ "run_id": "mx_T100_A_r0",
+ "timestamp": "2026-10-16T11:52:58+0000",
+ "git_commit": {
+  "commit": null,
+  "code_dirty": null,
+  "note": "run of 16/10/2026, before the repository used Git; closest code: commit c031d89 (changes of that day: docs/CHANGELOG.md)"
+ },
+ "data_version": {
+  "tier": "T100",
+  "tier_file": "data/tiers/T100.txt",
+  "tier_sha256": "8fadf76fbc4d3e2773061bee312d11328d27f07f857f04aff0b5cafe495e2835",
+  "replicas": 1,
+  "candidates_db_sha256": null,
+  "note": "candidates are keyed by TaskHash and were not changed since; the store gained 20 v1_zeroshot_1req candidates on 26/10, so its file hash differs"
+ },
+ "machine": {
+  "cpu": null,
+  "vcpus": 2,
+  "ram_gb": 7.8,
+  "swap_gb": null,
+  "gpu": null,
+  "os": "Linux (cloud VM, Ubuntu)",
+  "note": "same machine for every run of 16/10"
+ },
+ "software": {
+  "python": "3.13.16",
+  "packages": null,
+  "lean": "4.35.0",
+  "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "mathlib_tag": "v4.35.0",
+  "repl": "58bdde1ff173117960083cc5a052a11d51c49ff1"
+ },
+ "parameters": {
+  "run_id": "mx_T100_A_r0",
+  "tier": "T100",
+  "workers": 1,
+  "batch": 1,
+  "partitions": 16,
+  "timeout_s": 10.0,
+  "lease_s": 60.0,
+  "prompt_version": "v1_zeroshot",
+  "k": 1,
+  "replicas": 1,
+  "backend": {
+   "kind": "cache",
+   "db": "/home/claude/af/autoformalization-pipeline/data/candidates.db"
+  },
+  "broker": {
+   "kind": "sqlite"
+  },
+  "n_problems": 100
+ },
+ "seed_timeout": {
+  "tier_seed": 42,
+  "llm_sampling_seed": null,
+  "wall_timeout_s": 10.0,
+  "max_heartbeats": 400000,
+  "lease_s": 60.0
+ },
+ "metrics": {
+  "n_problems": 100,
+  "n_candidates": 100,
+  "makespan_s": 37.255,
+  "throughput_problems_per_s": 2.684,
+  "steady_throughput_candidates_per_s": 31.542,
+  "latency_ms_p50": 22.13,
+  "latency_ms_p95": 73.2,
+  "latency_ms_p99": 117.25,
+  "compile_rate": 0.98,
+  "pass_at_k": 0.98,
+  "status_counts": {
+   "COMPILE_OK": 98,
+   "PARSE_ERROR": 1,
+   "TYPE_MISMATCH": 1
+  },
+  "peak_pool_mb": 5038.8,
+  "peak_rss_sum_mb": 5038.8,
+  "repl_timeouts": 0,
+  "repl_restarts": 0,
+  "retried_tasks": 0,
+  "duplicate_result_rows": 0,
+  "dead_letter": 0,
+  "lean_busy_fraction": 0.951
+ },
+ "status": "ok",
+ "logs": {
+  "raw_results.csv": "results/raw/runs/mx_T100_A_r0/raw_results.csv",
+  "events.jsonl": "results/raw/runs/mx_T100_A_r0/events.jsonl",
+  "memory.csv": "results/raw/runs/mx_T100_A_r0/memory.csv",
+  "metrics.json": "results/raw/runs/mx_T100_A_r0/metrics.json",
+  "config.json": "results/raw/runs/mx_T100_A_r0/config.json"
+ },
+ "backfilled": true,
+ "backfilled_fields": [
+  "git_commit",
+  "machine",
+  "software",
+  "data_version.candidates_db_sha256"
+ ]
+}

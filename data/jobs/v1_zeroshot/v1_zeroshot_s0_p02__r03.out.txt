@@ -1,0 +1,26 @@
+### P108
+theorem t108 : ((Finset.Icc 1 149).image (fun i : ℕ => (i : ℚ) / 150) ∪ (Finset.Icc 1 323).image (fun j : ℕ => (j : ℚ) / 324) ∪ (Finset.Icc 1 374).image (fun k : ℕ => (k : ℚ) / 375)).card + 1 = 768 := by sorry
+
+### P109
+theorem t109 : IsGreatest {d : ℕ | ∀ x : ℤ, Odd x → (d : ℤ) ∣ (10 * x + 2) * (10 * x + 6) * (5 * x + 5)} 960 := by sorry
+
+### P110
+theorem t110 : IsLeast {b : ℕ | ∃ a : ℕ, 0 < a ∧ 0 < b ∧ (Nat.divisors a).card = 3 ∧ (Nat.divisors b).card = a ∧ a ∣ b} 8 := by sorry
+
+### P111
+theorem t111 : Nat.gcd 91 72 = 1 := by sorry
+
+### P112
+theorem t112 : (Finset.univ.filter (fun p : Fin 52 × Fin 52 => p.1 ≠ p.2)).card = 2652 := by sorry
+
+### P113
+theorem t113 : ((4 : ℚ) ^ 4 / 4 ^ 3) * 2 ^ 8 = 1024 := by sorry
+
+### P114
+theorem t114 : (1 + ∑' n : ℕ, (27 : ℝ) / 100 ^ (n + 1)) = 14 / 11 ∧ Nat.Coprime 14 11 := by sorry
+
+### P115
+theorem t115 : (100 : ℝ) / 2.4 * 3 = 125 := by sorry
+
+### P116
+theorem t116 : IsGreatest {d : ℝ | ∃ u : Fin 3 → ℝ, u 0 ^ 2 + u 1 ^ 2 + u 2 ^ 2 = 1 ∧ d = Matrix.det !![u 0, 2, 1; u 1, 1, 0; u 2, -1, 3]} (Real.sqrt 59) := by sorry

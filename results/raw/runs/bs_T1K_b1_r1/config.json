@@ -1,0 +1,21 @@
+{
+ "run_id": "bs_T1K_b1_r1",
+ "db": "/home/claude/af/autoformalization-pipeline/results/raw/runs/bs_T1K_b1_r1/run.db",
+ "tier": "T1K",
+ "workers": 2,
+ "batch": 1,
+ "partitions": 16,
+ "timeout_s": 30.0,
+ "lease_s": 60.0,
+ "prompt_version": "v1_zeroshot",
+ "k": 1,
+ "replicas": 1,
+ "backend": {
+  "kind": "cache",
+  "db": "/home/claude/af/autoformalization-pipeline/data/candidates.db"
+ },
+ "broker": {
+  "kind": "sqlite"
+ },
+ "n_problems": 1000
+}

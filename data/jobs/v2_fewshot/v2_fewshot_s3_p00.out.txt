@@ -1,0 +1,119 @@
+### P001
+theorem t1 (x : ℝ) (h : (x - x / 3) - (1 / 4) * (x - x / 3) = 15) : x = 30 := by sorry
+
+### P002
+theorem t2 (rate words : ℝ) (h₀ : rate = 60) (h₁ : words = 10800) : words / rate / 60 = 3 := by sorry
+
+### P003
+theorem t3 (weight reps sets total : ℕ) (h₀ : weight = 15) (h₁ : reps = 10) (h₂ : sets = 3) (h₃ : total = weight * reps * sets) : total = 450 := by sorry
+
+### P004
+theorem t4 (needed can_size can_price cans cost : ℝ) (h₀ : needed = 80) (h₁ : can_size = 8) (h₂ : can_price = 0.5) (h₃ : cans = needed / can_size) (h₄ : cost = cans * can_price) : cost = 5 := by sorry
+
+### P005
+theorem t5 (contracts pages : ℕ) (h₀ : contracts = 2) (h₁ : pages = 132) : contracts * pages / 6 = 44 := by sorry
+
+### P006
+theorem t6 (old_price new_price lens_price discount total : ℝ) (h₀ : old_price = 4000) (h₁ : new_price = old_price * (1 + 30 / 100)) (h₂ : lens_price = 400) (h₃ : discount = 200) (h₄ : total = new_price + (lens_price - discount)) : total = 5400 := by sorry
+
+### P007
+theorem t7 (d1 d2 d3 d4 : ℕ) (h₁ : d1 = 45) (h₂ : d2 = d1 + 20) (h₃ : d3 = 2 * d2 - 10) (h₄ : d1 + d2 + d3 + d4 = 350) : d4 = 120 := by sorry
+
+### P008
+theorem t8 (total zenny andrea kept : ℕ) (h₀ : total = 60) (h₁ : zenny = 18) (h₂ : andrea = 6) (h₃ : kept = total - zenny - andrea) : kept = 36 := by sorry
+
+### P009
+theorem t9 (songs added duration total : ℕ) (h₀ : songs = 25) (h₁ : added = 10) (h₂ : duration = 3) (h₃ : total = (songs + added) * duration) : total = 105 := by sorry
+
+### P010
+theorem t10 (children spoons_each decorative large teaspoons total : ℕ) (h₀ : children = 4) (h₁ : spoons_each = 3) (h₂ : decorative = 2) (h₃ : large = 10) (h₄ : teaspoons = 15) (h₅ : total = children * spoons_each + decorative + large + teaspoons) : total = 39 := by sorry
+
+### P011
+theorem t11 (x y : ℝ) (hx : x = 4) (hy : y = 3) : 24 - (2 * x - y) = 19 := by sorry
+
+### P012
+theorem t12 (x : ℤ) (h : (2 : ℝ) ^ (x + 2) = 32) : x = 3 := by sorry
+
+### P013
+theorem t13 (d : ℝ) (h : ∑ i ∈ Finset.range 15, (7 + (i : ℝ) * d) = -210) : d = 3 := by sorry
+
+### P014
+theorem t14 (l w : ℝ) (hl : l = 24) (hw : w = 16) : ((l * 1.2) * (w * 1.2) - l * w) / (l * w) * 100 = 44 := by sorry
+
+### P015
+theorem t15 (f : ℝ → ℝ) (hf : ∀ x : ℝ, x ≠ 2 → f x = (3 * x - 2) / (x - 2)) : f (-2) + f (-1) + f 0 = 14 / 3 := by sorry
+
+### P016
+theorem t16 : (115 : ℕ) ^ 2 = 13225 := by sorry
+
+### P017
+theorem t17 (a d : ℝ) (h₇ : a + 6 * d = 30) (h₁₁ : a + 10 * d = 60) : a + 20 * d = 135 := by sorry
+
+### P018
+theorem t18 (a : ℝ) (f finv : ℝ → ℝ) (hf : ∀ x : ℝ, f x = a / (x + 2)) (hinv : ∀ y : ℝ, f (finv y) = y) (h : f 0 = finv (3 * a)) : a = -10 / 3 := by sorry
+
+### P019
+theorem t19 : (((Finset.range 1000000).filter (fun n => (Nat.digits 10 n).Perm [1, 2, 3, 4, 5, 6] ∧ 5 ∣ n ∧ 500000 < n)).card : ℚ) / (((Finset.range 1000000).filter (fun n => (Nat.digits 10 n).Perm [1, 2, 3, 4, 5, 6] ∧ 5 ∣ n)).card : ℚ) = 1 / 5 := by sorry
+
+### P020
+theorem t20 : (∑ i ∈ Finset.Icc (1 : ℕ) 8, ∑ j ∈ Finset.Icc (1 : ℕ) 8, ((i : ℝ) + (j : ℝ))) / 64 = 9 := by sorry
+
+### P021
+theorem t21 (m : ℕ) (h : 4 + 3 + 2 + 2 + 2 + m = Nat.choose 6 2) : m = 2 := by sorry
+
+### P022
+theorem t22 (S : Finset (ℤ × ℤ × ℤ)) (hS : S = {(0, 0, 0), (1, 0, 0), (2, 0, 0), (3, 0, 0), (0, 1, 0), (3, 1, 0), (0, 0, -1), (3, 0, -1), (0, 0, -2), (1, 0, -2), (2, 0, -2), (3, 0, -2), (0, 1, -2), (3, 1, -2)}) : (S.filter (fun p => 6 - (S.filter (fun q => |q.1 - p.1| + |q.2.1 - p.2.1| + |q.2.2 - p.2.2| = 1)).card = 4)).card = 6 := by sorry
+
+### P023
+theorem t23 (A B C : ℝ × ℝ) (hA : A.2 = -2 * A.1 + 8 ∧ A.2 = 1 / 2 * A.1 - 2) (hB : B.1 = -2 ∧ B.2 = -2 * B.1 + 8) (hC : C.1 = -2 ∧ C.2 = 1 / 2 * C.1 - 2) : 1 / 2 * |(B.1 - A.1) * (C.2 - A.2) - (B.2 - A.2) * (C.1 - A.1)| = 45 := by sorry
+
+### P024
+theorem t24 (e f : ℝ) (he : 0 ≤ e ∧ e ≤ 10) (hf : 0 ≤ f ∧ f ≤ 10) (h₁ : (10 - 0) ^ 2 + (0 - e) ^ 2 = (10 - f) ^ 2 + (0 - 10) ^ 2) (h₂ : (10 - 0) ^ 2 + (0 - e) ^ 2 = (f - 0) ^ 2 + (e - 10) ^ 2) : ((10 - e) * f / 2) / (10 * e / 2) = 2 := by sorry
+
+### P025
+theorem t25 (S : Finset (ℂ × ℂ)) (hS : ∀ p : ℂ × ℂ, p ∈ S ↔ (p.1 ^ 2 + p.2 ^ 2 ≠ 0 ∧ p.1 + 10 * p.2 / (p.1 ^ 2 + p.2 ^ 2) = 5 ∧ p.2 + 10 * p.1 / (p.1 ^ 2 + p.2 ^ 2) = 4)) : ∑ p ∈ S, (p.1 + p.2) = 18 := by sorry
+
+### P026
+theorem t26 (A B C P Q r₁ r₂ r₃ : ℂ) (h₁ : ∀ x : ℂ, x ^ 3 - A * x ^ 2 + B * x - C = (x - r₁) * (x - r₂) * (x - r₃)) (h₂ : ∀ x : ℂ, x ^ 3 + P * x ^ 2 + Q * x - 19 = (x - (r₁ + 1)) * (x - (r₂ + 1)) * (x - (r₃ + 1))) : A + B + C = 18 := by sorry
+
+### P027
+theorem t27 : IsLeast {v : ℝ | ∃ x y z : ℝ, 0 < x ∧ 0 < y ∧ 0 < z ∧ x * y + x * z + y * z = 1 ∧ v = 10 * x ^ 2 + 10 * y ^ 2 + z ^ 2} 4 := by sorry
+
+### P028
+theorem t28 : IsGreatest {v : ℝ | ∃ a b c d : ℝ, 0 ≤ a ∧ 0 ≤ b ∧ 0 ≤ c ∧ 0 ≤ d ∧ a + b + c + d = 1 ∧ v = a ^ 2 + b ^ 2 + c ^ 2 + d ^ 2} 1 := by sorry
+
+### P029
+theorem t29 : {k : ℝ | ∀ z : ℂ, z ^ 2 - 2 * (k : ℂ) * z + ((k : ℂ) ^ 2 + (k : ℂ) - 5) = 0 → z.im = 0 ∧ z.re < 5} = Set.Iio 4 := by sorry
+
+### P030
+theorem t30 : IsLeast {v : ℝ | ∃ a b c : ℝ, 0 < a ∧ 0 < b ∧ 0 < c ∧ a + b + c = 1 ∧ v = a ^ 2 + 2 * b ^ 2 + c ^ 2} (2 / 5) := by sorry
+
+### P031
+theorem t31 (f : ℕ → ℝ) (hrec : ∀ n ≥ 3, f n = f (n - 1) + f (n - 2)) (h7 : f 7 = 83) : ∑ i ∈ Finset.Icc 1 10, f i = 913 := by sorry
+
+### P032
+theorem t32 : {b : ℝ | ∃ c d : ℝ, ∀ x : ℝ, x ^ 3 + 2 * x ^ 2 + 2 * x + c = (x ^ 2 + b * x + b) * (x + d)} = {1, 2} := by sorry
+
+### P033
+theorem t33 : ∃ a h k : ℝ, a ≠ 0 ∧ {p : ℝ × ℝ | p.1 ^ 2 = 2 * p.1 + 2 * p.2 - 3} = {p : ℝ × ℝ | p.2 = a * (p.1 - h) ^ 2 + k} := by sorry
+
+### P034
+theorem t34 (x : ℕ → ℝ) (hx0 : x 0 = (2 : ℝ) ^ ((1 : ℝ) / 3)) (hx : ∀ n, x (n + 1) = 1 / (x n - (⌊x n⌋ : ℝ))) : ⌊x 1⌋ = 3 := by sorry
+
+### P035
+theorem t35 (S : Set ℤ) (h0 : (0 : ℤ) ∈ S) (h10 : (10 : ℤ) ∈ S) (hcl : ∀ p : Polynomial ℤ, p ≠ 0 → (∀ i, p.coeff i ∈ S) → ∀ x : ℤ, p.eval x = 0 → x ∈ S) (hmin : ∀ T : Set ℤ, (0 : ℤ) ∈ T → (10 : ℤ) ∈ T → (∀ p : Polynomial ℤ, p ≠ 0 → (∀ i, p.coeff i ∈ T) → ∀ x : ℤ, p.eval x = 0 → x ∈ T) → S ⊆ T) : S.ncard = 9 := by sorry
+
+### P036
+theorem t36 (a b : ℕ → ℝ) (r : ℝ) (hr : r ≠ 0) (ha1 : a 1 = 27) (hb1 : b 1 = 99) (ha : ∀ n, a (n + 1) = a n * r) (hb : ∀ n, b (n + 1) = b n * r) (h : a 15 = b 11) : a 9 = 363 := by sorry
+
+### P037
+theorem t37 : IsLeast {k : ℕ | 0 < k ∧ ∀ n : ℤ, n ≠ 0 → ⌊(2002 : ℝ) / (n : ℝ)⌋ ≠ (k : ℤ)} 49 := by sorry
+
+### P038
+theorem t38 : IsGreatest {d : ℕ | 1 ≤ d ∧ d ≤ 29 ∧ (d - 1) % 7 = 0} 29 := by sorry
+
+### P039
+theorem t39 : IsLeast {p : ℕ | Nat.Prime p ∧ 10 ≤ p ∧ p < 100 ∧ ¬ Nat.Prime (Nat.ofDigits 10 (Nat.digits 10 p).reverse)} 19 := by sorry
+
+### P040
+theorem t40 : (1 + 2 * 3 * 4 * 5 : ℝ) / 11 = 11 := by sorry

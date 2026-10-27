@@ -1,0 +1,164 @@
+[
+ {
+  "depth": 1000,
+  "indexed": false,
+  "batch": 1,
+  "leases": 300,
+  "ms_per_lease_median": 0.264,
+  "ms_per_lease_p95": 0.443,
+  "ms_per_task_median": 0.264
+ },
+ {
+  "depth": 1000,
+  "indexed": false,
+  "batch": 8,
+  "leases": 300,
+  "ms_per_lease_median": 0.022,
+  "ms_per_lease_p95": 0.512,
+  "ms_per_task_median": 0.003
+ },
+ {
+  "depth": 1000,
+  "indexed": false,
+  "batch": 32,
+  "leases": 300,
+  "ms_per_lease_median": 0.017,
+  "ms_per_lease_p95": 0.933,
+  "ms_per_task_median": 0.001
+ },
+ {
+  "depth": 1000,
+  "indexed": true,
+  "batch": 1,
+  "leases": 300,
+  "ms_per_lease_median": 0.055,
+  "ms_per_lease_p95": 0.119,
+  "ms_per_task_median": 0.055
+ },
+ {
+  "depth": 1000,
+  "indexed": true,
+  "batch": 8,
+  "leases": 300,
+  "ms_per_lease_median": 0.016,
+  "ms_per_lease_p95": 0.481,
+  "ms_per_task_median": 0.002
+ },
+ {
+  "depth": 1000,
+  "indexed": true,
+  "batch": 32,
+  "leases": 300,
+  "ms_per_lease_median": 0.01,
+  "ms_per_lease_p95": 1.245,
+  "ms_per_task_median": 0.0
+ },
+ {
+  "depth": 10000,
+  "indexed": false,
+  "batch": 1,
+  "leases": 300,
+  "ms_per_lease_median": 2.543,
+  "ms_per_lease_p95": 3.598,
+  "ms_per_task_median": 2.543
+ },
+ {
+  "depth": 10000,
+  "indexed": false,
+  "batch": 8,
+  "leases": 300,
+  "ms_per_lease_median": 2.88,
+  "ms_per_lease_p95": 3.781,
+  "ms_per_task_median": 0.36
+ },
+ {
+  "depth": 10000,
+  "indexed": false,
+  "batch": 32,
+  "leases": 300,
+  "ms_per_lease_median": 3.642,
+  "ms_per_lease_p95": 15.368,
+  "ms_per_task_median": 0.114
+ },
+ {
+  "depth": 10000,
+  "indexed": true,
+  "batch": 1,
+  "leases": 300,
+  "ms_per_lease_median": 0.055,
+  "ms_per_lease_p95": 0.127,
+  "ms_per_task_median": 0.055
+ },
+ {
+  "depth": 10000,
+  "indexed": true,
+  "batch": 8,
+  "leases": 300,
+  "ms_per_lease_median": 0.353,
+  "ms_per_lease_p95": 9.559,
+  "ms_per_task_median": 0.044
+ },
+ {
+  "depth": 10000,
+  "indexed": true,
+  "batch": 32,
+  "leases": 300,
+  "ms_per_lease_median": 1.38,
+  "ms_per_lease_p95": 12.088,
+  "ms_per_task_median": 0.043
+ },
+ {
+  "depth": 100000,
+  "indexed": false,
+  "batch": 1,
+  "leases": 300,
+  "ms_per_lease_median": 96.789,
+  "ms_per_lease_p95": 116.982,
+  "ms_per_task_median": 96.789
+ },
+ {
+  "depth": 100000,
+  "indexed": false,
+  "batch": 8,
+  "leases": 300,
+  "ms_per_lease_median": 92.292,
+  "ms_per_lease_p95": 109.871,
+  "ms_per_task_median": 11.536
+ },
+ {
+  "depth": 100000,
+  "indexed": false,
+  "batch": 32,
+  "leases": 300,
+  "ms_per_lease_median": 90.12,
+  "ms_per_lease_p95": 112.157,
+  "ms_per_task_median": 2.816
+ },
+ {
+  "depth": 100000,
+  "indexed": true,
+  "batch": 1,
+  "leases": 300,
+  "ms_per_lease_median": 0.064,
+  "ms_per_lease_p95": 0.17,
+  "ms_per_task_median": 0.064
+ },
+ {
+  "depth": 100000,
+  "indexed": true,
+  "batch": 8,
+  "leases": 300,
+  "ms_per_lease_median": 0.322,
+  "ms_per_lease_p95": 0.934,
+  "ms_per_task_median": 0.04
+ },
+ {
+  "depth": 100000,
+  "indexed": true,
+  "batch": 32,
+  "leases": 300,
+  "ms_per_lease_median": 1.161,
+  "ms_per_lease_p95": 11.844,
+  "ms_per_task_median": 0.036
+ }
+]

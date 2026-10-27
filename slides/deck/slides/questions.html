@@ -1,0 +1,19 @@
+<section id="questions" data-transition="fade" style="background:#2B5FC4;color:#F3F0E8;font-family:'Be Vietnam Pro', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:56px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#DCE6FA">Hai câu hỏi nghiên cứu của đề bài</p>
+<div style="display:flex;gap:40px">
+<p style="width:96px;font-size:104px;font-weight:700;line-height:1;color:#F3F0E8">1</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h2 style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:60px;font-weight:700;line-height:1.15;letter-spacing:-1px;color:#F3F0E8">Batching và số candidate ảnh hưởng thế nào tới throughput, chi phí và compile rate?</h2>
+<p style="font-size:28px;line-height:1.4;color:#DCE6FA">Gom bài ở tầng LLM, batch size ở tầng Lean, 1 so với 4 candidate · slide 7–9</p>
+</div>
+</div>
+<div style="display:flex;gap:40px">
+<p style="width:96px;font-size:104px;font-weight:700;line-height:1;color:#F3F0E8">2</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<h2 style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:60px;font-weight:700;line-height:1.15;letter-spacing:-1px;color:#F3F0E8">Lean chấp nhận nhưng phát biểu sai ý đề: phát hiện thế nào?</h2>
+<p style="font-size:28px;line-height:1.4;color:#DCE6FA">Ba lớp kiểm tra, audit 100 mẫu, mutation test · slide 12–13</p>
+</div>
+</div>
+<p style="font-size:28px;line-height:1.4;color:#DCE6FA;border-top:1px solid #6E8FD6;padding:24px 0 0 0">Câu hỏi của slide môn học, "vai trò Big Data được chứng minh bằng thí nghiệm nào?", trả lời bằng ma trận 100 → 10.000 task, đường cong worker và thí nghiệm chịu lỗi · slide 10, 11, 14</p>
+<aside>Đây là hai câu hỏi nghiên cứu mà hướng dẫn bài tập lớn đặt cho Nhóm 5, và cũng là khung cho phần còn lại. Câu 1 hỏi về batching và số candidate: nhóm đo ở cả hai tầng, gom bao nhiêu bài vào một request tới mô hình, và lô bao nhiêu task cho mỗi lần Lean worker lấy việc; cùng với 1 so với 4 candidate mỗi bài. Câu 2 hỏi cách phát hiện phát biểu Lean chấp nhận nhưng sai nghĩa: ba lớp kiểm tra, mỗi lớp đều được đo độ tin cậy. Câu hỏi trên slide môn học về vai trò Big Data được trả lời bằng các thí nghiệm mà kết luận thay đổi khi dữ liệu tăng từ 100 lên 10.000 task.</aside>
+</section>

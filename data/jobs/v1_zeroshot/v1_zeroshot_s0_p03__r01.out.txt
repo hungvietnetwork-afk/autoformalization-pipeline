@@ -1,0 +1,74 @@
+### P026
+theorem t26 : Nat.lcm (Nat.factorial 6) (Nat.factorial 4 ^ 2) = 2880 := by sorry
+
+### P027
+theorem t27 : (Nat.choose 16 4 : ℤ) - (Nat.choose 16 12 : ℤ) = 0 := by sorry
+
+### P028
+theorem t28 (v : Fin 8 → ℕ) (hv : v = ![1, 1, 5, 5, 10, 10, 20, 20]) : ((Finset.univ.filter (fun p : Fin 8 × Fin 8 => p.1 < p.2 ∧ 20 ≤ v p.1 + v p.2)).card : ℚ) / ((Finset.univ.filter (fun p : Fin 8 × Fin 8 => p.1 < p.2)).card : ℚ) = 1 / 2 := by sorry
+
+### P029
+theorem t29 (M N C A B P : ℂ) (hMN : M ≠ N) (hC : C = (M + N) / 2) (hA : ‖A - C‖ = ‖N - C‖) (hB : ‖B - C‖ = ‖N - C‖) (hAup : 0 ≤ ((A - C) / (N - C)).im) (hBup : 0 ≤ ((B - C) / (N - C)).im) (hAB : A ≠ B) (hP : P ∈ segment ℝ C N) (hMCA : EuclideanGeometry.angle M C A = 40 * π / 180) (hCAP : EuclideanGeometry.angle C A P = 10 * π / 180) (hCBP : EuclideanGeometry.angle C B P = 10 * π / 180) : EuclideanGeometry.angle B C N = 20 * π / 180 := by sorry
+
+### P030
+theorem t30 (a b : ℤ) (h : (MeasureTheory.volume {p : ℝ × ℝ | 0 ≤ p.1 ∧ p.1 ≤ 6 ∧ 0 ≤ p.2 ∧ p.2 ≤ 6 ∧ 9 < p.1 ^ 2 + p.2 ^ 2 ∧ 9 < (p.1 - 6) ^ 2 + p.2 ^ 2 ∧ 9 < p.1 ^ 2 + (p.2 - 6) ^ 2 ∧ 9 < (p.1 - 6) ^ 2 + (p.2 - 6) ^ 2}).toReal = a - b * π) : a + b = 45 := by sorry
+
+### P031
+theorem t31 (a b c : ℂ) (hab : a ≠ b) (hbc : b ≠ c) (hac : a ≠ c) (ha : a ^ 3 - 3 * a - 5 = 0) (hb : b ^ 3 - 3 * b - 5 = 0) (hc : c ^ 3 - 3 * c - 5 = 0) : a * b * c = 5 := by sorry
+
+### P032
+theorem t32 : IsGreatest {v : ℝ | ∃ x y z : ℝ, 0 < x ∧ 0 < y ∧ 0 < z ∧ x + y + z = 9 ∧ 0 ≤ 16 - x ^ 2 ∧ 0 ≤ 25 - y ^ 2 ∧ 0 ≤ 36 - z ^ 2 ∧ v = Real.sqrt (16 - x ^ 2) + Real.sqrt (25 - y ^ 2) + Real.sqrt (36 - z ^ 2)} 12 := by sorry
+
+### P033
+theorem t33 (f : ℕ → ℝ) (hrec : ∀ n ≥ 1, f (n + 1) = (-1) ^ (n + 1) * (n : ℝ) - 2 * f n) (h1986 : f 1 = f 1986) : ∑ k ∈ Finset.Icc 1 1985, f k = 331 := by sorry
+
+### P034
+theorem t34 (P Q A B C r₁ r₂ r₃ : ℂ) (h₁ : ∀ x : ℂ, x ^ 3 - A * x ^ 2 + B * x - C = (x - r₁) * (x - r₂) * (x - r₃)) (h₂ : ∀ x : ℂ, x ^ 3 + P * x ^ 2 + Q * x - 19 = (x - (r₁ + 1)) * (x - (r₂ + 1)) * (x - (r₃ + 1))) : A + B + C = 18 := by sorry
+
+### P035
+theorem t35 : IsGreatest {v : ℝ | ∃ a b c d : ℝ, 0 ≤ a ∧ 0 ≤ b ∧ 0 ≤ c ∧ 0 ≤ d ∧ a + b + c + d = 1 ∧ v = a ^ 2 + b ^ 2 + c ^ 2 + d ^ 2} 1 := by sorry
+
+### P036
+theorem t36 : {x : ℝ | x ^ 3 - 7 * x ^ 2 - 2 * x + 6 ≠ 0 ∧ (2 * x - 6) / (x ^ 3 - 7 * x ^ 2 - 2 * x + 6) = 0} = {3} := by sorry
+
+### P037
+theorem t37 (a : ℕ → ℝ) (h1 : a 1 = 3) (h2 : a 2 = 3) (hrec : ∀ n ≥ 2, a (n + 1) * a (n - 1) = a n ^ 2 + 2007) : ⌊(a 2007 ^ 2 + a 2006 ^ 2) / (a 2007 * a 2006)⌋ = 224 := by sorry
+
+### P038
+theorem t38 : Set.ncard {(x, y, z, w) : ℝ × ℝ × ℝ × ℝ | x ≠ 0 ∧ y ≠ 0 ∧ z ≠ 0 ∧ w ≠ 0 ∧ 2 * y = x + 17 / x ∧ 2 * z = y + 17 / y ∧ 2 * w = z + 17 / z ∧ 2 * x = w + 17 / w} = 2 := by sorry
+
+### P039
+theorem t39 (f : ℝ → ℝ) (hf : ∀ x, f x = if -3 ≤ x ∧ x ≤ 0 then -2 - x else if 0 ≤ x ∧ x ≤ 2 then Real.sqrt (4 - (x - 2) ^ 2) - 2 else 2 * (x - 2)) : ∀ x ∈ Set.Icc (-3 : ℝ) 3, -f x = (if -3 ≤ x ∧ x ≤ 0 then 2 + x else if 0 ≤ x ∧ x ≤ 2 then 2 - Real.sqrt (4 - (x - 2) ^ 2) else 4 - 2 * x) := by sorry
+
+### P040
+theorem t40 : {x : ℝ | x + 2 ≠ 0 ∧ x - 4 ≠ 0 ∧ x + 4 ≠ 0 ∧ x - 6 ≠ 0 ∧ x + 6 ≠ 0 ∧ x - 8 ≠ 0 ∧ (x + 1) * (x - 3) / (5 * (x + 2) * (x - 4)) + (x + 3) * (x - 5) / (9 * (x + 4) * (x - 6)) - 2 * (x + 5) * (x - 7) / (13 * (x + 6) * (x - 8)) = 92 / 585} = {1 + Real.sqrt 19, 1 - Real.sqrt 19} := by sorry
+
+### P041
+theorem t41 : IsLeast {v : ℕ | ∃ f : ℕ → ℕ, (∀ n, 0 < n → 0 < f n) ∧ (∀ m n, 0 < m → 0 < n → f (m * f n) = n * f m) ∧ f 2007 = v} 18 := by sorry
+
+### P042
+theorem t42 (m n : ℕ) (hm : 0 < m) (hmn : m < n) (h : ∑ k ∈ Finset.Ico m n, (1 : ℚ) / ((k : ℚ) ^ 2 + (k : ℚ)) = 1 / 29) : m + n = 840 := by sorry
+
+### P043
+theorem t43 : (Nat.digits 6 682).head! * (Nat.digits 6 682).getLast! = 12 := by sorry
+
+### P044
+theorem t44 : IsLeast {w : ℝ | 0 ≤ w ∧ ∃ k : ℤ, (8 : ℝ) + 13 + w = 16 * k} 11 := by sorry
+
+### P045
+theorem t45 : IsLeast {N : ℕ | 0 < N ∧ ∃ x : ℕ, 0 < x ∧ Nat.gcd 40 N = x + 3 ∧ Nat.lcm 40 N = x * (x + 3)} 8 := by sorry
+
+### P046
+theorem t46 : IsLeast {n : ℕ | 1 < n ∧ (∃ a : ℕ, a ^ 3 = n) ∧ (∃ b : ℕ, b ^ 4 = n)} 4096 := by sorry
+
+### P047
+theorem t47 : ∃ k : ℕ, ⌊(141 / 400 : ℚ) * 10 ^ k⌋ % 10 ≠ 0 ∧ (∀ j > k, ⌊(141 / 400 : ℚ) * 10 ^ j⌋ % 10 = 0) ∧ ⌊(141 / 400 : ℚ) * 10 ^ k⌋ % 10 = 5 := by sorry
+
+### P048
+theorem t48 : {s : ℤ | ∃ n : ℤ, s = n + (n + 1) + (n + 2) ∧ (89 : ℤ) ∣ s ∧ 600 < s ∧ s < 900} = {801} := by sorry
+
+### P049
+theorem t49 (total french spanish both neither : ℕ) (h1 : total = 30) (h2 : french = 8) (h3 : spanish = 12) (h4 : both = 3) (h5 : neither = total - (french + spanish - both)) : neither = 13 := by sorry
+
+### P050
+theorem t50 : max (max (max (0.78 : ℝ) 0.12) 1.33) 1.328 - min (min (min (0.78 : ℝ) 0.12) 1.33) 1.328 = 1.21 := by sorry

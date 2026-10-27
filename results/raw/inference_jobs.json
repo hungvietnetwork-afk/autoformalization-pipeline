@@ -1,0 +1,154 @@
+{
+ "model": "claude-haiku (Claude Haiku 5.5) via batch agents",
+ "note": "first launch (10:19 UTC) was killed by a user interrupt and produced nothing; relaunched 10:50 UTC",
+ "jobs": [
+  {
+   "job": "v1_zeroshot_s0_p00",
+   "status": "completed",
+   "problems": 114,
+   "subagent_tokens": 236448,
+   "duration_s": 1031.5
+  },
+  {
+   "job": "v1_zeroshot_s0_p01",
+   "status": "completed",
+   "problems": 139,
+   "subagent_tokens": 253703,
+   "duration_s": 1107.8
+  },
+  {
+   "job": "v1_zeroshot_s0_p05",
+   "status": "completed",
+   "problems": 113,
+   "subagent_tokens": 190832,
+   "duration_s": 1119.5
+  },
+  {
+   "job": "v1_zeroshot_s0_p03",
+   "status": "failed: max_output_tokens (64k) - rerun as 5 sub-jobs",
+   "problems": 0
+  },
+  {
+   "job": "v1_zeroshot_s0_p07",
+   "status": "failed: max_output_tokens (64k) - rerun as 6 sub-jobs",
+   "problems": 0
+  },
+  {
+   "job": "v2_fewshot_s1_p00",
+   "status": "failed: max_output_tokens (64k) - rerun as 4 sub-jobs",
+   "problems": 0
+  },
+  {
+   "job": "v2_fewshot_s2_p00",
+   "status": "failed: max_output_tokens (64k) - rerun as 4 sub-jobs",
+   "problems": 0
+  },
+  {
+   "job": "v1_zeroshot_s0_p06",
+   "status": "completed",
+   "problems": 142,
+   "subagent_tokens": 223487,
+   "duration_s": 1373.2
+  },
+  {
+   "job": "v1_zeroshot_s0_p04",
+   "status": "completed",
+   "problems": 106,
+   "subagent_tokens": 171036,
+   "duration_s": 1498.3
+  },
+  {
+   "job": "v2_fewshot_s0_p00",
+   "status": "failed after 50/100: max_output_tokens - rest rerun as 2 sub-jobs",
+   "problems": 50
+  },
+  {
+   "job": "v1_zeroshot_s0_p07 (resume, 6 sub-jobs)",
+   "status": "completed",
+   "problems": 130,
+   "subagent_tokens": 240060,
+   "duration_s": 569.3
+  },
+  {
+   "job": "v2_fewshot_s3_p00",
+   "status": "failed after 40/100: max_output_tokens - rest rerun as sub-jobs",
+   "problems": 40
+  },
+  {
+   "job": "v1_zeroshot_s0_p02",
+   "status": "stopped after 80/131 (slow, same failure pattern) - rest rerun as 2 sub-jobs",
+   "problems": 80
+  },
+  {
+   "job": "v1_zeroshot_s0_p03 (resume, 5 sub-jobs)",
+   "status": "completed",
+   "problems": 125,
+   "subagent_tokens": 290458,
+   "duration_s": 753.9
+  },
+  {
+   "job": "v2_fewshot_s2_p00 (resume, 4 sub-jobs)",
+   "status": "completed",
+   "problems": 100,
+   "subagent_tokens": 287751,
+   "duration_s": 769.3,
+   "worker_notes": "P013: reference answer (d=3) contradicts the data (d=-3) - statement asserted as instructed, so it is false; P005: garbled source text"
+  },
+  {
+   "job": "v2_fewshot_s1_p00 (resume, 4 sub-jobs)",
+   "status": "completed",
+   "problems": 100,
+   "subagent_tokens": 229705,
+   "duration_s": 792.3,
+   "worker_notes": "P013: chose d=-3 (data) over the reference answer 3; P036 added r != 0"
+  },
+  {
+   "job": "v2_fewshot_s0_p00 (resume, 2 sub-jobs)",
+   "status": "completed",
+   "problems": 50,
+   "subagent_tokens": 144821,
+   "duration_s": 507.9
+  },
+  {
+   "job": "v2_fewshot_s3_p00 (resume, 3 sub-jobs)",
+   "status": "completed",
+   "problems": 60,
+   "subagent_tokens": 196072,
+   "duration_s": 441.0
+  },
+  {
+   "job": "v1_zeroshot_s0_p02 resume (2 sub-jobs of 26/25)",
+   "status": "failed: max_output_tokens - rerun as 6 sub-jobs of 9",
+   "problems": 0
+  },
+  {
+   "job": "v1_zeroshot_s0_p02 resume B (3 sub-jobs of 9, 'think briefly')",
+   "status": "completed",
+   "problems": 24,
+   "subagent_tokens": 116805,
+   "duration_s": 175.3
+  },
+  {
+   "job": "v1_zeroshot_s0_p02 resume A (3 sub-jobs of 9, 'think briefly')",
+   "status": "completed",
+   "problems": 27,
+   "subagent_tokens": 168377,
+   "duration_s": 373.3
+  }
+ ],
+ "data_quality_findings": [
+  "math:test/algebra/1730 - PRM800K 'answer' is 3 but the official solution derives d = -3 ('3 is also accepted'); a faithful statement with the reference answer is FALSE",
+  "math:train/intermediate_algebra/1964 - reference answer is 9, but |z-3| = 2|z+3| is the circle (x+5)^2+y^2 = 16 and |z| = k touches it exactly once for k = 1 (at z = -1) and k = 9 (at z = -9); the model formalized {1, 9} instead of the given label (found by the generating agent, checked by hand)"
+ ],
+ "totals": {
+  "candidates_generated": 1400,
+  "jobs_launched": 21,
+  "jobs_failed_or_stopped": 8,
+  "jobs_with_reported_usage": 13,
+  "candidates_in_jobs_with_reported_usage": 1230,
+  "subagent_tokens_reported": 2749555,
+  "subagent_tokens_per_candidate": 2235.0,
+  "agent_wall_s_reported": 10512.6,
+  "note": "usage is reported only by agents that finished; 170 candidates came from jobs that hit the 64k output cap after writing part of their answers (usage not reported)"
+ }
+}

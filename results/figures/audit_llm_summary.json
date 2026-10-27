@@ -1,0 +1,89 @@
+{
+ "raters": "two LLM annotators (A: Claude Sonnet, B: Claude Opus), independent, same guide audit/LLM_RATER_INSTRUCTIONS.md",
+ "by_source": {
+  "math": {
+   "n": 45,
+   "both_DUNG": 35,
+   "any_SAI": 3,
+   "both_SAI": 3,
+   "agree": 41
+  },
+  "gsm8k": {
+   "n": 15,
+   "both_DUNG": 8,
+   "any_SAI": 7,
+   "both_SAI": 0,
+   "agree": 8
+  },
+  "minif2f": {
+   "n": 20,
+   "both_DUNG": 20,
+   "any_SAI": 0,
+   "both_SAI": 0,
+   "agree": 20
+  },
+  "proofnet": {
+   "n": 20,
+   "both_DUNG": 16,
+   "any_SAI": 1,
+   "both_SAI": 0,
+   "agree": 18
+  }
+ },
+ "total": {
+  "n": 100,
+  "both_DUNG": 79,
+  "any_SAI": 11,
+  "both_SAI": 3,
+  "agree": 87
+ },
+ "kappa": {
+  "n_items": 100,
+  "observed_agreement_3class": 0.87,
+  "kappa_3class": 0.5927,
+  "kappa_3class_linear_weighted": 0.7002,
+  "kappa_binary_DUNG_vs_rest": 0.8342,
+  "kappa_binary_SAI_vs_rest": 0.3939,
+  "label_dist_a": {
+   "DUNG": 81,
+   "GAN_DUNG": 9,
+   "SAI": 10
+  },
+  "label_dist_b": {
+   "DUNG": 82,
+   "GAN_DUNG": 14,
+   "SAI": 4
+  },
+  "confusion_3class(rows=a, cols=b)": [
+   [
+    79,
+    2,
+    0
+   ],
+   [
+    3,
+    5,
+    1
+   ],
+   [
+    0,
+    7,
+    3
+   ]
+  ]
+ },
+ "rater_runs": {
+  "A": {
+   "model": "Claude Sonnet",
+   "subagent_tokens": 181427,
+   "duration_s": 537.9,
+   "guide": "audit/LLM_RATER_INSTRUCTIONS.md v1"
+  },
+  "B": {
+   "model": "Claude Opus",
+   "subagent_tokens": 177443,
+   "duration_s": 691.5,
+   "guide": "audit/LLM_RATER_INSTRUCTIONS.md v1"
+  }
+ }
+}

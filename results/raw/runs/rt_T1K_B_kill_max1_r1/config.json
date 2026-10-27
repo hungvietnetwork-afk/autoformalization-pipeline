@@ -1,0 +1,22 @@
+{
+ "run_id": "rt_T1K_B_kill_max1_r1",
+ "db": "/home/claude/af/autoformalization-pipeline/results/raw/runs/rt_T1K_B_kill_max1_r1/run.db",
+ "tier": "T1K",
+ "workers": 2,
+ "batch": 8,
+ "partitions": 16,
+ "timeout_s": 10.0,
+ "lease_s": 30,
+ "prompt_version": "v1_zeroshot",
+ "k": 1,
+ "replicas": 1,
+ "backend": {
+  "kind": "cache",
+  "db": "/home/claude/af/autoformalization-pipeline/data/candidates.db"
+ },
+ "broker": {
+  "kind": "sqlite",
+  "max_attempts": 1
+ },
+ "n_problems": 1000
+}

@@ -1,0 +1,140 @@
+### P076
+Twenty five of King Arthur's knights are seated at their customary round table. Three of them are chosen - all choices being equally likely - and are sent off to slay a troublesome dragon. Let $P$ be the probability that at least two of the three had been sitting next to each other. If $P$ is written as a fraction in lowest terms, what is the sum of the numerator and denominator?
+Answer: 57
+
+### P077
+Dave arrives at an airport which has twelve gates arranged in a straight line with exactly $100$ feet between adjacent gates. His departure gate is assigned at random. After waiting at that gate, Dave is told the departure gate has been changed to a different gate, again at random. Let the probability that Dave walks $400$ feet or less to the new gate be a fraction $\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.
+Answer: 52
+
+### P078
+For what value of $n$ is $5 \times 8 \times 2 \times n = 7!$?
+Answer: 63
+
+### P079
+Bob rolls a fair six-sided die each morning. If Bob rolls a composite number, he eats sweetened cereal. If he rolls a prime number, he eats unsweetened cereal. If he rolls a 1, then he rolls again. In a non-leap year, what is the expected number of times Bob will roll his die?
+Answer: 438
+
+### P080
+Suppose we want to divide the 10 dogs into three groups, one with 3 dogs, one with 5 dogs, and one with 2 dogs.  How many ways can we form the groups such that Fluffy is in the 3-dog group and Nipper is in the 5-dog group?
+Answer: 420
+
+### P081
+Cybil and Ronda are sisters. The 10 letters from their names are placed on identical cards so that each of 10 cards contains one letter. Without replacement, two cards are selected at random from the 10 cards. What is the probability that one letter is from each sister's name? Express your answer as a common fraction.
+Answer: \frac{5}{9}
+
+### P082
+Two distinct numbers are selected simultaneously and at random from the set $\{1, 2, 3, 4, 5\}$. What is the probability that the smaller one divides the larger one? Express your answer as a common fraction.
+Answer: \frac{1}{2}
+
+### P083
+The number 121 is a palindrome, because it reads the same backwards as forward. How many integer palindromes are between 100 and 500?
+Answer: 40
+
+### P084
+Circle $T$ has its center at point $T(-2,6)$. Circle $T$ is reflected across the $y$-axis and then translated 8 units down. What are the coordinates of the image of the center of circle $T$?
+Answer: (2, -2)
+
+### P085
+A frustum of a right circular cone is formed by cutting a small cone off of the top of a larger cone. If a particular frustum has an altitude of $24$ centimeters, the area of its lower base is $225\pi$ sq cm and the area of its upper base is $25\pi$ sq cm, what is the altitude of the small cone that was cut off? [asy]size(200);
+import three; defaultpen(linewidth(1)); currentprojection = orthographic(0,-3,0.5); pen dots = linetype("0 3") + linewidth(1);
+real h = 2.3, ratio = (91-24)/(171-24);
+picture p1, p2; /* p1 is left-hand picture */
+triple A = (0,0,0), B = (0,0,h); draw(p1,(-1,0,0)..(0,-1,0)..(1,0,0)); draw(p1,(-1,0,0)..(0,1,0)..(1,0,0),dots); draw(p1,(-1,0,0)--B--(1,0,0));
+add(p1);
+
+triple vlift = (0,0,0.5);
+
+path3 toparc1 = shift((0,0,h*(1-ratio)))*scale3(ratio)*((-1,0,0)..(0,1,0)..(1,0,0)), toparc2 = shift((0,0,h*(1-ratio)))*scale3(ratio)*((1,0,0)..(0,-1,0)..(-1,0,0));
+draw(p2,(-1,0,0)..(0,-1,0)..(1,0,0)); draw(p2,(-1,0,0)..(0,1,0)..(1,0,0),dots);
+
+draw(p2,(-1,0,0)--ratio*(-1,0,0)+(1-ratio)*B^^ratio*(1,0,0)+(1-ratio)*B--(1,0,0));
+
+draw(p2,shift(vlift)*(ratio*(-1,0,0)+(1-ratio)*B--B--ratio*(1,0,0)+(1-ratio)*B));
+
+draw(p2,toparc1--toparc2); draw(p2,shift(vlift)*toparc1,dots); draw(p2,shift(vlift)*toparc2);
+
+draw(p2,shift(vlift)*((1-ratio)*B--B),linewidth(0.7)); dot(p2,shift(vlift)*((1-ratio)*B),linewidth(1.5));
+label(p2,"frustum",(0,0,h/4)); label(p2,"$x$",(1-ratio/2)*B+vlift,SW);
+add(shift((3.4,0,0))*p2);
+
+[/asy]
+Answer: 12
+
+### P086
+Three circles, each of radius $3$, are drawn with centers at $(14, 92)$, $(17, 76)$, and $(19, 84)$. A line passing through $(17,76)$ is such that the total area of the parts of the three circles to one side of the line is equal to the total area of the parts of the three circles to the other side of it. What is the absolute value of the slope of this line?
+Answer: 24
+
+### P087
+Euler's formula states that for a convex polyhedron with $V$ vertices, $E$ edges, and $F$ faces, $V-E+F=2$. A particular convex polyhedron has 32 faces, each of which is either a triangle or a pentagon. At each of its $V$ vertices, $T$ triangular faces and $P$ pentagonal faces meet. What is the value of $100P+10T+V$?
+Answer: 250
+
+### P088
+How many cubic centimeters are in the volume of a cone having a diameter of 10cm and a height of 6cm? Express your answer in terms of $\pi$.
+Answer: 50 \pi
+
+### P089
+Triangle $ABC$ has vertices $A(0, 8)$, $B(2, 0)$, $C(8, 0)$.  A horizontal line with equation $y=t$ intersects line segment $ \overline{AB} $ at $T$ and line segment $ \overline{AC} $ at $U$, forming $\triangle ATU$ with area 13.5.  Compute $t$.
+Answer: 2
+
+### P090
+Let $m$ be the largest real solution to the equation
+\[\dfrac{3}{x-3} + \dfrac{5}{x-5} + \dfrac{17}{x-17} + \dfrac{19}{x-19} = x^2 - 11x - 4\]There are positive integers $a, b,$ and $c$ such that $m = a + \sqrt{b + \sqrt{c}}$. Find $a+b+c$.
+Answer: 263
+
+### P091
+In the graph of $\frac{x^2+3x+2}{x^3+x^2-2x}$, let $a$ be the number of holes in the graph, $b$ be the number of vertical asympotes, $c$ be the number of horizontal asymptotes, and $d$ be the number of oblique asymptotes. Find $a+2b+3c+4d$.
+Answer: 8
+
+### P092
+There exist integers $a,$ $b,$ and $c$ such that
+\[(x - a)(x - 10) + 1 = (x + b)(x + c).\]Enter all possible values of $a,$ separated by commas.
+Answer: 8,12
+
+### P093
+Compute \[\sum_{n=1}^{1000} \frac{1}{n^2 + n}.\]
+Answer: \frac{1000}{1001}
+
+### P094
+Let $f(x)$ and $g(x)$ be nonzero polynomials such that
+\[f(g(x)) = f(x) g(x).\]If $g(2) = 37,$ find $g(x).$
+Answer: x^2 + 33x - 33
+
+### P095
+Evaluate
+\[\sum_{m = 1}^\infty \sum_{n = 1}^\infty \frac{1}{mn(m + n + 1)}.\]
+Answer: 2
+
+### P096
+Given that $2+\sqrt{3}$ is a root of the equation \[x^3 + ax^2 + bx + 10 = 0\]and that $a$ and $b$ are rational numbers, compute $b.$
+Answer: -39
+
+### P097
+The function $f(x)$ satisfies
+\[f(xy) = xf(y)\]for all real numbers $x$ and $y.$  If $f(1) = 25,$ find $f(79).$
+Answer: 1975
+
+### P098
+The graph of the function $y=f(x)$ is shown below. For all $x > 4$, it is true that $f(x) > 0.4$. If $f(x) = \frac{x^2}{Ax^2 + Bx + C}$, where $A,B,$ and $C$ are integers, then find $A+B+C$. [asy]
+import graph; size(10.9cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-5.29,xmax=5.61,ymin=-2.42,ymax=4.34;
+
+Label laxis; laxis.p=fontsize(10);
+
+xaxis("$x$",xmin,xmax,defaultpen+black,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true); yaxis("$y$",ymin,ymax,defaultpen+black,Ticks(laxis,Step=1.0,Size=2,NoZero),Arrows(6),above=true); real f1(real x){return x^2/(2*x^2-2*x-12);} draw(graph(f1,xmin,-2.1),linewidth(1.2),Arrows(4)); draw(graph(f1,-1.84,2.67),linewidth(1.2),Arrows(4)); draw(graph(f1,3.24,xmax),linewidth(1.2),Arrows(4));
+label("$f$",(-5.2,1),NE*lsf);
+
+// clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);
+draw((-2,-2.2)--(-2,4.2),dashed);
+draw((3,-2.2)--(3,4.2),dashed);
+draw((-5,1/2)--(5.5,1/2),dashed);
+[/asy]
+Answer: -12
+
+### P099
+Let $S$ denote the value of the sum
+\[\sum_{n = 1}^{9800} \frac{1}{\sqrt{n + \sqrt{n^2 - 1}}}\]
+$S$ can be expressed as $p + q \sqrt{r}$, where $p, q,$ and $r$ are positive integers and $r$ is not divisible by the square of any prime. Determine $p + q + r$.
+Answer: 121
+
+### P100
+Evaluate $\left|\frac12 - \frac38i\right|$.
+Answer: \frac58

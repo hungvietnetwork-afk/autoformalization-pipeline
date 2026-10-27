@@ -1,0 +1,63 @@
+### P090
+Find all values of $z$ such that $z^4 - 4z^2 + 3 = 0$.  Enter all the solutions, separated by commas.
+Answer: -\sqrt{3},-1,1,\sqrt{3}
+
+### P091
+For certain ordered pairs $(a,b)\,$ of real numbers, the system of equations
+\[\begin{aligned} ax+by&=1 \\ x^2 + y^2 &= 50  \end{aligned}\]has at least one solution, and each solution is an ordered pair $(x,y)\,$ of integers. How many such ordered pairs $(a,b)\,$ are there?
+Answer: 72
+
+### P092
+Solve the inequality
+\[-4x^2 + 7x + 2 < 0.\]
+Answer: \left( -\infty, -\frac{1}{4} \right) \cup (2,\infty)
+
+### P093
+If $(x,y)$ is a solution to the system
+\begin{align*}
+xy &= 6, \\
+x^2 y + xy^2 + x + y &= 63,
+\end{align*}find $x^2 + y^2.$
+Answer: 69
+
+### P094
+What is the smallest possible value of the sum $\lvert x + 2\rvert + \lvert x + 4\rvert + \lvert x + 5\rvert$?
+Answer: 3
+
+### P095
+The equation of the ellipse shown below can be written as
+\[\frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1.\]Find $h + k + a + b.$
+
+[asy]
+unitsize(0.3 cm);
+
+int i, n = 10;
+
+for (i = -n; i <= n; ++i) {
+  draw((i,-n)--(i,n),gray(0.7));
+  draw((-n,i)--(n,i),gray(0.7));
+}
+
+draw((0,-n)--(0,n));
+draw((-n,0)--(n,0));
+
+draw(shift((-4,2))*xscale(5)*yscale(3)*Circle((0,0),1),red);
+
+dot((-4,2));
+[/asy]
+Answer: 6
+
+### P096
+What is the largest integer less than $\log_2 \frac{2}{1} + \log_2 \frac{3}{2} + \cdots + \log_2 \frac{2009}{2008} + \log_2 \frac{2010}{2009}$?
+Answer: 10
+
+### P097
+Find the number of permutations $(a_1, a_2, a_3, a_4, a_5, a_6)$ of $(1,2,3,4,5,6)$ that satisfy
+\[\frac{a_1 + 1}{2} \cdot \frac{a_2 + 2}{2} \cdot \frac{a_3 + 3}{2} \cdot \frac{a_4 + 4}{2} \cdot \frac{a_5 + 5}{2} \cdot \frac{a_6 + 6}{2} > 6!.\]
+Answer: 719
+
+### P098
+In the complex plane, the graph of $|z - 3| = 2|z + 3|$ intersects the graph of $|z| = k$ in exactly one point.  Find all possible values of $k.$
+
+Enter all possible values, separated by commas.
+Answer: 9

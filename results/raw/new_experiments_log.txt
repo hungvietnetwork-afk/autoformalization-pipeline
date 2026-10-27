@@ -1,0 +1,265 @@
+== 2026-10-26T17:32:54+00:00 baseline
+base_T20_1req_A {"run_id": "base_T20_1req_A", "n_candidates": 20, "compile_rate": 1.0, "pass_at_k": 1.0, "status_counts": {"COMPILE_OK": 20}, "latency_ms_p50": 35.52, "latency_ms_p95": 99.32, "makespan_s": 42.743}
+base_T20_batchjob_A {"run_id": "base_T20_batchjob_A", "n_candidates": 20, "compile_rate": 1.0, "pass_at_k": 1.0, "status_counts": {"COMPILE_OK": 20}, "latency_ms_p50": 31.01, "latency_ms_p95": 90.83, "makespan_s": 37.765}
+== 2026-10-26T17:34:18+00:00 semantic-baseline
+20 compiled candidates, 68 checks in 184s -> /home/claude/af/autoformalization-pipeline/results/raw/runs/base_T20_1req_A/semantic.jsonl
+20 compiled candidates, 68 checks in 191s -> /home/claude/af/autoformalization-pipeline/results/raw/runs/base_T20_batchjob_A/semantic.jsonl
+== 2026-10-26T17:40:34+00:00 repro
+{
+ "throughput_problems_per_s": 8.589,
+ "steady_throughput_candidates_per_s": 12.413,
+ "latency_ms_p50": 23.64,
+ "latency_ms_p95": 79.44,
+ "compile_rate": 0.989,
+ "makespan_s": 116.422
+}
+== 2026-10-26T17:42:32+00:00 retry
+{"run_id": "rt_T1K_B_kill_max1_r0", "max_attempts": 1, "repeat": 0, "n_problems": 1000, "results": 995, "dead_letter": 8, "retried_tasks": 0, "overwritten_results": 0, "duplicate_result_rows": 0, "makespan_s": 86.585, "killed_at_results": 300}
+{"run_id": "rt_T1K_B_kill_max3_r0", "max_attempts": 3, "repeat": 0, "n_problems": 1000, "results": 1000, "dead_letter": 0, "retried_tasks": 8, "overwritten_results": 3, "duplicate_result_rows": 0, "makespan_s": 99.732, "killed_at_results": 300}
+{"run_id": "rt_T1K_B_kill_max1_r1", "max_attempts": 1, "repeat": 1, "n_problems": 1000, "results": 995, "dead_letter": 8, "retried_tasks": 0, "overwritten_results": 0, "duplicate_result_rows": 0, "makespan_s": 87.976, "killed_at_results": 301}
+{"run_id": "rt_T1K_B_kill_max3_r1", "max_attempts": 3, "repeat": 1, "n_problems": 1000, "results": 1000, "dead_letter": 0, "retried_tasks": 8, "overwritten_results": 3, "duplicate_result_rows": 0, "makespan_s": 104.565, "killed_at_results": 301}
+{"run_id": "rt_T1K_B_kill_max1_r2", "max_attempts": 1, "repeat": 2, "n_problems": 1000, "results": 995, "dead_letter": 8, "retried_tasks": 0, "overwritten_results": 0, "duplicate_result_rows": 0, "makespan_s": 89.815, "killed_at_results": 301}
+{"run_id": "rt_T1K_B_kill_max3_r2", "max_attempts": 3, "repeat": 2, "n_problems": 1000, "results": 1000, "dead_letter": 0, "retried_tasks": 8, "overwritten_results": 3, "duplicate_result_rows": 0, "makespan_s": 97.985, "killed_at_results": 300}
+{
+ "max_attempts_1": {
+  "results": [
+   995.0,
+   995.0,
+   995.0
+  ],
+  "dead_letter": [
+   8.0,
+   8.0,
+   8.0
+  ],
+  "retried_tasks": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "overwritten_results": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "duplicate_result_rows": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "makespan_s": [
+   86.585,
+   87.976,
+   89.815
+  ],
+  "runs": 3
+ },
+ "max_attempts_3": {
+  "results": [
+   1000.0,
+   1000.0,
+   1000.0
+  ],
+  "dead_letter": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "retried_tasks": [
+   8.0,
+   8.0,
+   8.0
+  ],
+  "overwritten_results": [
+   3.0,
+   3.0,
+   3.0
+  ],
+  "duplicate_result_rows": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "makespan_s": [
+   99.732,
+   104.565,
+   97.985
+  ],
+  "runs": 3
+ }
+}
+== 2026-10-26T17:52:14+00:00 batch
+bs_T100_b1_r0: 62s thr=1.662 steady=58.294
+bs_T100_b1_idx_r0: 62s thr=1.626 steady=59.208
+bs_T100_b8_r0: 62s thr=1.628 steady=59.453
+bs_T100_b32_r0: 63s thr=1.605 steady=44.486
+bs_T1K_b1_r0: 93s thr=10.83 steady=31.971
+bs_T1K_b1_idx_r0: 90s thr=11.166 steady=32.558
+bs_T1K_b8_r0: 92s thr=10.994 steady=31.405
+bs_T1K_b32_r0: 92s thr=10.961 steady=31.523
+bs_T10K_b1_r0: 667s thr=15.985 steady=18.13
+bs_T10K_b1_idx_r0: 613s thr=16.348 steady=18.317
+bs_T10K_b8_r0: 693s thr=14.732 steady=16.257
+bs_T10K_b32_r0: 663s thr=15.757 steady=17.556
+bs_T100_b1_r1: 64s thr=1.579 steady=58.086
+== 2026-10-26T18:48:42+00:00 release
+== 2026-10-26T18:49:08+00:00 release
+ab_release_on_T1K_B_r0: steady_window=42.762s makespan=106.178s timeouts=1
+ab_release_off_T1K_B_r0: steady_window=84.908s makespan=149.323s timeouts=1
+ab_release_on_T1K_B_r1: steady_window=43.627s makespan=105.935s timeouts=1
+ab_release_off_T1K_B_r1: steady_window=83.217s makespan=146.547s timeouts=1
+ab_release_on_T1K_B_r2: steady_window=43.239s makespan=106.971s timeouts=1
+ab_release_off_T1K_B_r2: steady_window=86.716s makespan=147.42s timeouts=1
+{
+ "release_on": {
+  "runs": 3,
+  "steady_window_s": {
+   "median": 43.239,
+   "min": 42.762,
+   "max": 43.627
+  },
+  "makespan_s": {
+   "median": 106.178,
+   "min": 105.935,
+   "max": 106.971
+  },
+  "steady_throughput_candidates_per_s": {
+   "median": 23.127,
+   "min": 22.921,
+   "max": 23.385
+  },
+  "throughput_problems_per_s": {
+   "median": 9.418,
+   "min": 9.348,
+   "max": 9.44
+  },
+  "latency_ms_p95": {
+   "median": 115.82,
+   "min": 111.87,
+   "max": 121.4
+  },
+  "repl_timeouts": {
+   "median": 1.0,
+   "min": 1.0,
+   "max": 1.0
+  },
+  "retried_tasks": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "duplicate_result_rows": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dead_letter": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  }
+ },
+ "release_off": {
+  "runs": 3,
+  "steady_window_s": {
+   "median": 84.908,
+   "min": 83.217,
+   "max": 86.716
+  },
+  "makespan_s": {
+   "median": 147.42,
+   "min": 146.547,
+   "max": 149.323
+  },
+  "steady_throughput_candidates_per_s": {
+   "median": 11.777,
+   "min": 11.532,
+   "max": 12.017
+  },
+  "throughput_problems_per_s": {
+   "median": 6.783,
+   "min": 6.697,
+   "max": 6.824
+  },
+  "latency_ms_p95": {
+   "median": 107.48,
+   "min": 104.64,
+   "max": 127.92
+  },
+  "repl_timeouts": {
+   "median": 1.0,
+   "min": 1.0,
+   "max": 1.0
+  },
+  "retried_tasks": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "duplicate_result_rows": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  },
+  "dead_letter": {
+   "median": 0.0,
+   "min": 0.0,
+   "max": 0.0
+  }
+ }
+}
+== 2026-10-26T19:02:50+00:00 repro
+repro_T1K_A {"throughput_problems_per_s": 8.589, "steady_throughput_candidates_per_s": 12.413, "latency_ms_p50": 23.64, "latency_ms_p95": 79.44, "compile_rate": 0.989, "makespan_s": 116.422, "repl_timeouts": 1, "useful_check_time_s": 31.94, "timeouts": 1}
+repro_T1K_A_r1 {"throughput_problems_per_s": 7.794, "steady_throughput_candidates_per_s": 12.389, "latency_ms_p50": 23.65, "latency_ms_p95": 80.46, "compile_rate": 0.989, "makespan_s": 128.305, "repl_timeouts": 1, "useful_check_time_s": 31.98, "timeouts": 1}
+repro_T1K_A_r2 {"throughput_problems_per_s": 11.602, "steady_throughput_candidates_per_s": 22.867, "latency_ms_p50": 24.47, "latency_ms_p95": 85.69, "compile_rate": 0.989, "makespan_s": 86.191, "repl_timeouts": 0, "useful_check_time_s": 42.71, "timeouts": 0}
+{
+ "new": {
+  "throughput_problems_per_s": 8.589,
+  "steady_throughput_candidates_per_s": 12.413,
+  "latency_ms_p50": 23.65,
+  "latency_ms_p95": 80.46,
+  "compile_rate": 0.989,
+  "makespan_s": 116.422,
+  "repl_timeouts": 1,
+  "useful_check_time_s": 31.98,
+  "timeouts": 1
+ },
+ "matrix": {
+  "throughput_problems_per_s": 15.796,
+  "steady_throughput_candidates_per_s": 28.597,
+  "latency_ms_p50": 21.62,
+  "latency_ms_p95": 75.84,
+  "compile_rate": 0.983,
+  "makespan_s": 63.306,
+  "repl_timeouts": 0,
+  "useful_check_time_s": 33.99,
+  "timeouts": 0
+ }
+}
+== 2026-10-26T19:06:27+00:00 done-a
+== 2026-10-26T19:06:37+00:00 batch-resume
+bs_T100_b1_idx_r1: 67s thr=1.528 steady=54.038
+bs_T100_b8_r1: 65s thr=1.564 steady=57.767
+bs_T100_b32_r1: 64s thr=1.579 steady=37.881
+bs_T1K_b1_r1: 99s thr=10.184 steady=28.132
+bs_T1K_b1_idx_r1: 99s thr=10.196 steady=27.916
+bs_T1K_b8_r1: 96s thr=10.538 steady=30.029
+bs_T1K_b32_r1: 97s thr=10.409 steady=30.144
+bs_T10K_b1_r1: 669s thr=14.982 steady=17.144
+bs_T10K_b1_idx_r1: 535s thr=18.758 steady=21.286
+bs_T10K_b8_r1: 582s thr=17.227 steady=19.267
+bs_T10K_b32_r1: 588s thr=17.975 steady=20.168
+bs_T100_b1_r2: 62s thr=1.629 steady=59.206
+bs_T100_b1_idx_r2: 60s thr=1.704 steady=61.463
+bs_T100_b8_r2: 61s thr=1.661 steady=60.018
+bs_T100_b32_r2: 61s thr=1.664 steady=51.389
+bs_T1K_b1_r2: 90s thr=11.193 steady=32.596
+bs_T1K_b1_idx_r2: 88s thr=11.457 steady=31.868
+bs_T1K_b8_r2: 89s thr=11.353 steady=33.368
+bs_T1K_b32_r2: 91s thr=11.131 steady=30.893
+bs_T10K_b1_r2: 521s thr=19.235 steady=22.306
+bs_T10K_b1_idx_r2: 564s thr=18.78 steady=21.191
+bs_T10K_b8_r2: 515s thr=19.451 steady=22.022
+bs_T10K_b32_r2: 546s thr=19.302 steady=21.84
+wrote /home/claude/af/autoformalization-pipeline/results/figures/batch_median.csv
+== 2026-10-26T20:41:51+00:00 done-b

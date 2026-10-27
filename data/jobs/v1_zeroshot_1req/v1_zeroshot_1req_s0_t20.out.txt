@@ -1,0 +1,108 @@
+### P001
+theorem lucy_initial_money (x : ℝ) (h : (x - x / 3) - (x - x / 3) / 4 = 15) : x = 30 := by sorry
+
+result: Lean statement that Lucy's starting money is 30; checked that 30 - 10 - 5 = 15 and the hypothesis reduces to x/2 = 15, so 30 is the unique answer.
+
+### P002
+theorem emily_typing_hours (rate words hours : ℝ) (h_rate : rate = 60) (h_words : words = 10800) (h_hours : hours = words / rate / 60) : hours = 3 := by sorry
+
+result: Lean theorem stating that 10,800 words at 60 words per minute takes 3 hours (checked by hand: 10800/60 = 180 minutes, 180/60 = 3; not compiled, since tools were disallowed).
+
+### P011
+theorem expr_24_minus_2x_plus_y (x y : ℝ) (hx : x = 4) (hy : y = 3) : 24 - (2 * x - y) = 19 := by sorry
+
+### P015
+theorem f_sum_neg2_neg1_zero (f : ℝ → ℝ) (hf : ∀ x : ℝ, x ≠ 2 → f x = (3 * x - 2) / (x - 2)) : f (-2) + f (-1) + f 0 = 14 / 3 := by sorry
+result: Lean theorem f_sum_neg2_neg1_zero states f(-2)+f(-1)+f(0)=14/3 for f(x)=(3x-2)/(x-2) on x≠2; by hand, f(-2)=2, f(-1)=5/3, f(0)=1, which sum to 14/3.
+
+### P019
+theorem digits_multiple_of_five_probability :
+    ((Set.ncard {l : List ℕ | l.Perm [1, 2, 3, 4, 5, 6] ∧ 5 ∣ Nat.ofDigits (10 : ℕ) l.reverse ∧
+        500000 < Nat.ofDigits (10 : ℕ) l.reverse} : ℕ) : ℚ) /
+      ((Set.ncard {l : List ℕ | l.Perm [1, 2, 3, 4, 5, 6] ∧ 5 ∣ Nat.ofDigits (10 : ℕ) l.reverse} : ℕ) : ℚ) = 1 / 5 := by sorry
+
+Sanity check, by hand since tools are off and nothing was compiled: arrangements are the permutations of 1 to 6, and a multiple of 5 needs last digit 5. Exceeding 500,000 needs first digit 6, so 4! = 24 of 5! = 120 arrangements qualify, giving 1/5.
+
+result: Lean theorem that the fraction of digit arrangements of 1 to 6 exceeding 500,000, among those forming a multiple of 5, equals 1/5 (written, not compiled).
+
+### P025
+theorem complex_pairs_sum_eq_18 (S : Finset (ℂ × ℂ))
+    (hS : ∀ p : ℂ × ℂ, p ∈ S ↔ (p.1 ^ 2 + p.2 ^ 2 ≠ 0 ∧ p.1 + 10 * p.2 / (p.1 ^ 2 + p.2 ^ 2) = 5 ∧ p.2 + 10 * p.1 / (p.1 ^ 2 + p.2 ^ 2) = 4)) :
+    ∑ p ∈ S, (p.1 + p.2) = 18 := by sorry
+
+result: Lean theorem asserts the a+b sum over the finite solution set S equals 18; hand-checked that the four solutions (4,2), (1,2), (5/2, 2 ± 3i/2) have a+b values summing to 18.
+
+### P031
+theorem seq_first_ten_sum (f : ℕ → ℝ) (hrec : ∀ n : ℕ, 3 ≤ n → f n = f (n - 1) + f (n - 2)) (h7 : f 7 = 83) : (∑ i ∈ Finset.Icc 1 10, f i) = 913 := by sorry
+
+Sanity check: I re-read the ask without tools. The recurrence for n ≥ 3 and f 7 = 83 are both kept, and the conclusion states that the sum of terms 1 through 10 equals 913. By hand, with f 1 = a and f 2 = b, the ten-term sum is 55a + 88b = 11(5a + 8b) = 11·f 7 = 913, so the stated answer is correct.
+
+result: Lean 4 theorem seq_first_ten_sum states that the first ten terms of the recurrence sequence with f 7 = 83 sum to 913 (proof left as sorry).
+
+### P043
+theorem matrix_series_value (A : Matrix (Fin 2) (Fin 2) ℝ) (hA : A = !![15, 25; -9, -15]) : ∑' n : ℕ, ((n : ℝ) + 1) • (A ^ n) = !![31, 50; -18, -29] := by sorry
+
+result: Lean statement that the sum of (n+1)·A^n over n ≥ 0 equals [[31, 50], [-18, -29]] for A = [[15, 25], [-9, -15]]; hand-checked that A^2 = 0 so the sum is I + 2A, matching the given answer (not compiled, no tools used).
+
+### P046
+theorem polar_graph_min_x_coord : IsLeast (Prod.fst '' {p : ℝ × ℝ | ∃ θ : ℝ, p = ((Real.cos θ + 1 / 2) * Real.cos θ, (Real.cos θ + 1 / 2) * Real.sin θ)}) (-1 / 16) := by sorry
+result: Lean theorem asserting -1/16 is the least x-coordinate of points on r = cos θ + 1/2; checked by hand (x = (cos θ + 1/2)cos θ, minimum at cos θ = -1/4), not compiled since no tools were used.
+
+### P051
+theorem pebble_collection_total (d : ℕ → ℕ) (h1 : d 1 = 1) (h2 : d 2 = 2) (hstep : ∀ n : ℕ, 2 ≤ n → d (n + 1) = d n + 1) : (∑ i ∈ Finset.Icc 1 12, d i) = 78 := by sorry
+
+### P053
+theorem expansion_term_count : (MvPolynomial.support ((MvPolynomial.X 0 + MvPolynomial.X 1 + MvPolynomial.X 2) * (MvPolynomial.X 3 + MvPolynomial.X 4 + MvPolynomial.X 5 + MvPolynomial.X 6) : MvPolynomial (Fin 7) ℤ)).card = 12 := by sorry
+
+result: Lean theorem expansion_term_count states the expansion of (a+b+c)(d+e+f+g) in seven variables has 12 terms, proof left as sorry; checked by hand (3 x 4 distinct monomials), not compiled.
+
+### P057
+theorem cube_painting_probability :
+    (Finset.card (Finset.filter (fun c : Fin 6 → Bool =>
+        ∃ b : Fin 6, ∃ col : Bool, ∀ f : Fin 6,
+          f ≠ b → f ≠ (![1, 0, 3, 2, 5, 4] : Fin 6 → Fin 6) b → c f = col)
+        (Finset.univ : Finset (Fin 6 → Bool))) : ℝ) /
+      (Fintype.card (Fin 6 → Bool) : ℝ) = 5 / 16 := by sorry
+
+### P075
+theorem cubic_integer_root_eq_neg_six (b c : ℚ) (h_root : (3 - Real.sqrt 7) ^ 3 + (b : ℝ) * (3 - Real.sqrt 7) + (c : ℝ) = 0) (h_int : ∃ n : ℤ, (n : ℝ) ^ 3 + (b : ℝ) * (n : ℝ) + (c : ℝ) = 0) : ∀ n : ℤ, (n : ℝ) ^ 3 + (b : ℝ) * (n : ℝ) + (c : ℝ) = 0 → n = -6 := by sorry
+
+### P076
+theorem sum_sq_roots_eq_zero : (((Polynomial.X ^ 2018 + 44 * Polynomial.X ^ 2015 + 3 * Polynomial.X ^ 3 + 404 : Polynomial ℂ).roots).map (fun r => r ^ 2)).sum = 0 := by sorry
+
+### P080
+theorem diagonal_interior_cubes :
+    Set.ncard {c : ℕ × ℕ × ℕ | c.1 < 150 ∧ c.2.1 < 324 ∧ c.2.2 < 375 ∧
+      ∃ t : ℝ, 0 ≤ t ∧ t ≤ 1 ∧
+        (c.1 : ℝ) < 150 * t ∧ 150 * t < (c.1 : ℝ) + 1 ∧
+        (c.2.1 : ℝ) < 324 * t ∧ 324 * t < (c.2.1 : ℝ) + 1 ∧
+        (c.2.2 : ℝ) < 375 * t ∧ 375 * t < (c.2.2 : ℝ) + 1} = 768 := by sorry
+
+### P089
+theorem matrix_mulVec_neg_two_v_add_w (M : Matrix (Fin 2) (Fin 2) ℝ) (v w : Fin 2 → ℝ)
+    (hv : M.mulVec v = ![1, -5]) (hw : M.mulVec w = ![7, 2]) :
+    M.mulVec ((-2 : ℝ) • v + w) = ![5, 12] := by sorry
+
+result: Lean theorem that M(-2v+w) = ![5, 12] given Mv = ![1, -5] and Mw = ![7, 2]; hand-checked since -2(1,-5)+(7,2) = (5,12), not compiled.
+
+### P093
+theorem amc_p_plus_q (p q : ℕ) (hp : 0 < p) (hq : 0 < q) (hpq : Nat.Coprime p q) (h : (∑ᶠ x ∈ {x : ℝ | ((⌊x⌋ : ℤ) : ℝ) * Int.fract x = ((p : ℝ) / (q : ℝ)) * x ^ 2}, x) = 420) : p + q = 929 := by sorry
+
+Checked by hand, since no tools were allowed, so the Lean was not compiled: for a = 29/900, the solutions are x = 0 and x = 30n/29 for n = 1, …, 28, which sum to 420. Solving the sum condition gives a = 29/900 uniquely (coprime), so p + q = 929, choice (C). The solution set is finite for every a > 0, so the finsum is the true sum.
+
+result: Lean theorem amc_p_plus_q formalizes the AMC problem and concludes p + q = 929 (choice C) from the solution-sum hypothesis, with the proof left as sorry.
+
+### P094
+theorem prod_one_add_half_pow_lt_five_halves (n : ℕ) (hn : 0 < n) : (∏ k ∈ Finset.Icc 1 n, (1 + (1 : ℝ) / 2 ^ k)) < 5 / 2 := by sorry
+
+result: Lean 4 theorem stating that the product of (1 + 1/2^k) for k = 1..n is less than 5/2 for every positive integer n, with no proof. Checked: the hypothesis n > 0 and the range 1..n are kept, and the bound holds (partial products rise from 1.5 to about 2.384, the infinite limit, below 2.5).
+
+### P097
+theorem sum_pow_Icc_mod_prime (p k : ℕ) (hp : p.Prime) : (¬ (p - 1 ∣ k) → (∑ i ∈ Finset.Icc 1 (p - 1), (i : ℤ) ^ k) ≡ 0 [ZMOD (p : ℤ)]) ∧ ((p - 1 ∣ k) → (∑ i ∈ Finset.Icc 1 (p - 1), (i : ℤ) ^ k) ≡ -1 [ZMOD (p : ℤ)]) := by sorry
+
+### P099
+theorem pi_hausdorff_factor {ι : Type*} (X : ι → Type*) [∀ α : ι, TopologicalSpace (X α)] (hne : ∀ α : ι, Nonempty (X α)) (hT2 : T2Space (∀ α : ι, X α)) : ∀ α : ι, T2Space (X α) := by sorry
+
+Checked the statement against the ask: the Hausdorff hypothesis on the product, the nonempty hypothesis on every factor, and the Hausdorff conclusion for each factor are all present, with the product topology from the Pi instance. No tools were used, so it was not compiled.
+
+result: Lean 4 theorem: if a product of nonempty spaces is Hausdorff, each factor is Hausdorff (statement only, not compiled).

@@ -1,0 +1,74 @@
+### P076
+theorem t76 : ((Polynomial.X ^ 2018 + 44 * Polynomial.X ^ 2015 + 3 * Polynomial.X ^ 3 + 404 : Polynomial ℂ).roots.map (fun r => r ^ 2)).sum = 0 := by sorry
+
+### P077
+theorem t77 : IsLeast {c : ℝ | 0 < c ∧ ∀ x y : ℝ, 0 ≤ x → 0 ≤ y → (x + y) / 2 ≤ Real.sqrt (x * y) + c * |x - y|} (1 / 2) := by sorry
+
+### P078
+theorem t78 (A B C : ℕ) (hA : 1 ≤ A ∧ A ≤ 5) (hB : 1 ≤ B ∧ B ≤ 5) (hC : 1 ≤ C ∧ C ≤ 5) (hAB : A ≠ B) (hBC : B ≠ C) (hAC : A ≠ C) (h : Nat.ofDigits (6 : ℕ) [C, B, A] + Nat.ofDigits (6 : ℕ) [A, C, B] + Nat.ofDigits (6 : ℕ) [B, A, C] = Nat.ofDigits (6 : ℕ) [0, A, A, A]) : B + C = 5 := by sorry
+
+### P079
+theorem t79 : IsLeast {n : ℕ | (Nat.digits 2 n).length = 5 ∧ (Nat.digits 2 n).reverse = Nat.digits 2 n ∧ ∃ b : ℕ, 2 ≤ b ∧ b ≠ 2 ∧ (Nat.digits b n).length = 3 ∧ (Nat.digits b n).reverse = Nat.digits b n} 0b10001 := by sorry
+
+### P080
+theorem t80 : Set.ncard {c : ℕ × ℕ × ℕ | ∃ t : ℝ, 0 < t ∧ t < 1 ∧ (c.1 : ℝ) < 150 * t ∧ 150 * t < (c.1 : ℝ) + 1 ∧ (c.2.1 : ℝ) < 324 * t ∧ 324 * t < (c.2.1 : ℝ) + 1 ∧ (c.2.2 : ℝ) < 375 * t ∧ 375 * t < (c.2.2 : ℝ) + 1} = 768 := by sorry
+
+### P081
+theorem t81 (h9901 : Nat.Prime 9901) : Set.ncard {n : ℕ | 1 < n ∧ ∀ i : ℕ, 1 ≤ i → (10 ^ i / n) % 10 = (10 ^ (i + 12) / n) % 10} = 255 := by sorry
+
+### P082
+theorem t82 : (9 : ℝ) * (1 / 13) * 26 = 18 := by sorry
+
+### P083
+theorem t83 : ∑ i ∈ Finset.Icc 1 40, (10 ^ i / 1111) % 10 = 90 := by sorry
+
+### P084
+theorem t84 (s : ℝ) (hs : 0 < s) (h : 2 * (s / 5 + s) = 36) : 4 * s = 60 := by sorry
+
+### P085
+theorem t85 (b c : ℝ) (h1 : 7 * b = 3 * c) (h2 : c = 28) : b = 12 := by sorry
+
+### P086
+theorem t86 : (Finset.powersetCard 2 (Finset.univ : Finset (Fin 10))).card = 45 := by sorry
+
+### P087
+theorem t87 (a : ℝ) (h : a + a / 3 = 8 / 3) : a = 2 := by sorry
+
+### P088
+theorem t88 : (3 : ℚ) * (11 / 4) * (16 / -55) = -12 / 5 := by sorry
+
+### P089
+theorem t89 (M : Matrix (Fin 2) (Fin 2) ℝ) (v w : Fin 2 → ℝ) (hv : M.mulVec v = ![1, -5]) (hw : M.mulVec w = ![7, 2]) : M.mulVec ((-2 : ℝ) • v + w) = ![5, 12] := by sorry
+
+### P090
+theorem t90 (M : Matrix (Fin 2) (Fin 2) ℝ) (h : ∀ v : Fin 2 → ℝ, M.mulVec v = (-3 : ℝ) • v) : M = !![-3, 0; 0, -3] := by sorry
+
+### P091
+theorem t91 : Set.ncard {p : ℝ × ℝ | !![p.1, 3; -8, p.2] * !![p.1, 3; -8, p.2] = 1} = 2 := by sorry
+
+### P092
+theorem t92 (f : ℤ → ℤ) (h1 : ∀ n : ℤ, 1000 ≤ n → f n = n - 3) (h2 : ∀ n : ℤ, n < 1000 → f n = f (f (n + 5))) : f 84 = 997 := by sorry
+
+### P093
+theorem t93 (p q : ℕ) (hp : 0 < p) (hq : 0 < q) (hcop : Nat.Coprime p q) (hsum : ∑ᶠ x ∈ {x : ℝ | (⌊x⌋ : ℝ) * (x - (⌊x⌋ : ℝ)) = ((p : ℝ) / q) * x ^ 2}, x = 420) : p + q = 929 := by sorry
+
+### P094
+theorem t94 (n : ℕ) (hn : 0 < n) : ∏ k ∈ Finset.Icc 1 n, (1 + (1 : ℝ) / 2 ^ k) < 5 / 2 := by sorry
+
+### P095
+theorem t95 (y : ℝ) (h : Real.sqrt (19 + 3 * y) = 7) : y = 10 := by sorry
+
+### P096
+theorem t96 (a : ℕ → ℚ) (h1 : a 1 = 1) (h2 : a 2 = 3 / 7) (hrec : ∀ n ≥ 3, a n = a (n - 2) * a (n - 1) / (2 * a (n - 2) - a (n - 1))) (p q : ℕ) (hp : 0 < p) (hq : 0 < q) (hcop : Nat.Coprime p q) (hpq : a 2019 = (p : ℚ) / q) : p + q = 8078 := by sorry
+
+### P097
+theorem t97 (p k : ℕ) (hp : p.Prime) : ((∑ i ∈ Finset.Icc 1 (p - 1), i ^ k : ℕ) : ZMod p) = if (p - 1) ∣ k then -1 else 0 := by sorry
+
+### P098
+theorem t98 {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] (p : X → Y) (hp : IsOpenMap p) (A : Set X) (hA : IsOpen A) : IsOpenMap (fun a : A => (⟨p a, Set.mem_image_of_mem p a.2⟩ : (p '' A : Set Y))) := by sorry
+
+### P099
+theorem t99 {ι : Type*} (X : ι → Type*) [∀ i, TopologicalSpace (X i)] [∀ i, Nonempty (X i)] (h : T2Space (∀ i, X i)) (i : ι) : T2Space (X i) := by sorry
+
+### P100
+theorem t100 {X : Type*} [MetricSpace X] (K F : Set X) (hK : IsCompact K) (hF : IsClosed F) (hKF : Disjoint K F) : ∃ δ > 0, ∀ p ∈ K, ∀ q ∈ F, δ < dist p q := by sorry

@@ -1,0 +1,14 @@
+### P126
+Show that $\mathbb{R} \times \mathbb{R}$ in the dictionary order topology is metrizable.
+
+### P127
+Let $A$ be a proper subset of $X$, and let $B$ be a proper subset of $Y$. If $X$ and $Y$ are connected, show that $(X \times Y)-(A \times B)$ is connected.
+
+### P128
+Let $f$ be a real function on the real line with continuous third derivative. Prove that there exists a point $a$ such that
+
+### P129
+Suppose $K$ and $F$ are disjoint sets in a metric space $X, K$ is compact, $F$ is closed. Prove that there exists $\delta>0$ such that $d(p, q)>\delta$ if $p \in K, q \in F$.
+
+### P130
+Show that $\int_0^1 \log(\sin \pi x) dx = - \log 2$.

@@ -1,0 +1,74 @@
+### P051
+theorem t51 : (24.1 : ℝ) ∈ ({25.0, 24.3, 24.1, 23.8, 23.4} : Finset ℝ) ∧ (({25.0, 24.3, 24.1, 23.8, 23.4} : Finset ℝ).filter (fun x => x < 24.1)).card = (({25.0, 24.3, 24.1, 23.8, 23.4} : Finset ℝ).filter (fun x => 24.1 < x)).card := by sorry
+
+### P052
+theorem t52 : IsLeast {p : ℕ | Nat.Prime p ∧ 10 ≤ p ∧ p ≤ 99 ∧ ¬ (Nat.ofDigits 10 (Nat.digits 10 p).reverse).Prime} 19 := by sorry
+
+### P053
+theorem t53 : (25 / 3 : ℚ) * (27 / 300) = 3 / 4 := by sorry
+
+### P054
+theorem t54 (s area : ℝ) (h₁ : s = 12) (h₂ : area = Real.sqrt 3 / 4 * s ^ 2) : area = 36 * Real.sqrt 3 := by sorry
+
+### P055
+theorem t55 : (3 : ℝ) ^ (-4 : ℤ) * (3 : ℝ) ^ (-8 : ℤ) * (3 : ℝ) ^ (14 : ℤ) = 9 := by sorry
+
+### P056
+theorem t56 (x : ℝ) (h₁ : Real.cos x ≠ 0) (h₂ : Real.sin x ≠ 0) (h₃ : 1 / Real.cos x + 1 ≠ 0) : Real.tan x / (1 / Real.cos x + 1) - (1 / Real.cos x - 1) / Real.tan x = 0 := by sorry
+
+### P057
+theorem t57 : Set.ncard {x : ℝ | Real.sin (6 * Real.pi * x) = x} = 11 := by sorry
+
+### P058
+theorem t58 : ∃ a b c : ℝ, a ≠ 0 ∧ ∀ t : ℝ, Real.cos (2 * t) = a * Real.cos t ^ 2 + b * Real.cos t + c := by sorry
+
+### P059
+theorem t59 : Set.ncard (Set.range (fun σ : Equiv.Perm (Fin 3) => {p : Fin 3 → ℝ | (∀ i, 0 ≤ p i ∧ p i ≤ 1) ∧ p (σ 0) < p (σ 1) ∧ p (σ 1) < p (σ 2)})) = 6 := by sorry
+
+### P060
+theorem t60 (v w : Fin 3 → ℝ) (hv : v = ![0, -4, 1]) (hw : w = ![2, 2, -1]) : ((∑ i, v i * w i) / (∑ i, w i * w i)) • w = ![-2, -2, 1] := by sorry
+
+### P061
+theorem t61 : {y : ℝ | ∃ x : ℝ, 0 < x ∧ x < 180 ∧ y = Real.logb 2 (Real.sqrt (Real.sin (x * Real.pi / 180)))} = Set.Iic 0 := by sorry
+
+### P062
+theorem t62 (θ : ℝ) (h : Real.sin θ ^ 2 + Real.sin θ = 1) : Real.cos θ ^ 4 + Real.cos θ ^ 2 = 1 := by sorry
+
+### P063
+theorem t63 : 1 / (2 * Real.sin (10 * Real.pi / 180)) - 2 * Real.sin (70 * Real.pi / 180) = 1 := by sorry
+
+### P064
+theorem t64 : IsGreatest {s : ℝ | ∃ x y : ℝ, x ^ 2 + y ^ 2 = 90 ∧ x * y = 27 ∧ s = x + y} 12 := by sorry
+
+### P065
+theorem t65 : (MeasureTheory.volume {p : ℝ × ℝ | 0 ≤ p.1 ∧ 0 ≤ p.2 ∧ 2 * p.1 + p.2 ≤ 6}).toReal = 9 := by sorry
+
+### P066
+theorem t66 (f : ℝ → ℝ) (hf : ∀ x, f x = if x < -2 then 2 * x + 9 else 5 - 2 * x) : f (-7) = -5 := by sorry
+
+### P067
+theorem t67 (p : ℕ → ℕ) (h₁ : p 1 = 1) (h₂ : p 2 = 2) (h₃ : ∀ n : ℕ, 1 ≤ n → p (n + 1) = p n + 1) : ∑ i ∈ Finset.Icc 1 12, p i = 78 := by sorry
+
+### P068
+theorem t68 : Fintype.card (Fin 3 × Fin 4) = 12 := by sorry
+
+### P069
+theorem t69 : [(3 : ℤ), 5, 1, 0, 2, -4, -3, -2].Nodup ∧ Function.Injective (fun x : ℝ => -Real.arctan x) ∧ Set.InjOn (fun x : ℝ => 4 / x) {x : ℝ | x ≠ 0} ∧ ¬ Set.InjOn (fun x : ℝ => x ^ 2 - 2 * x) (Set.Icc (-2 : ℝ) 4) ∧ (∏ n ∈ ({3, 4, 5} : Finset ℕ), n) = 60 := by sorry
+
+### P070
+theorem t70 (a b c : ℝ) (ha : a = 2 * 0 ^ 2 - 6 * 0 + 3) (hb : 0 = 2 * b ^ 2 - 6 * b + 3) (hc : 0 = 2 * c ^ 2 - 6 * c + 3) (hbc : b ≠ c) : a + b + c = 6 := by sorry
+
+### P071
+theorem t71 (f : Polynomial ℝ) (hmonic : f.Monic) (hdeg : f.natDegree = 2) (h0 : f.eval 0 = 4) (h1 : f.eval 1 = 10) : f = Polynomial.X ^ 2 + Polynomial.C 5 * Polynomial.X + Polynomial.C 4 := by sorry
+
+### P072
+theorem t72 : ∑' n : ℕ, (4 / 9 : ℝ) * (1 / 9) ^ n = 1 / 2 := by sorry
+
+### P073
+theorem t73 : ⌊(17.2 : ℝ)⌋ + ⌊(-17.2 : ℝ)⌋ = -1 := by sorry
+
+### P074
+theorem t74 : IsLeast {d : ℕ | ∃ f g h : Polynomial ℝ, 3 * f + 4 * g = h ∧ f.natDegree = 8 ∧ h.natDegree = 9 ∧ g.natDegree = d} 9 := by sorry
+
+### P075
+theorem t75 : (Finset.univ.filter (fun p : Nat.Partition 4 => Multiset.card p.parts ≤ 3)).card = 4 := by sorry

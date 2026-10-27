@@ -1,0 +1,74 @@
+### P101
+theorem t101 (total bp ht both neither : ℕ) (h1 : total = 120) (h2 : bp = 70) (h3 : ht = 40) (h4 : both = 20) (h5 : neither = total - (bp + ht - both)) : (neither : ℚ) / total * 100 = 25 := by sorry
+
+### P102
+theorem t102 (P Q R S T : ℂ) (hP : P = 6 * Complex.I) (hQ : Q = 3 + 6 * Complex.I) (hR : R = 3 + 3 * Complex.I) (hS : S = 7) (hT : T = 0) : dist P Q + dist Q R + dist R S + dist S T + dist T P = 24 := by sorry
+
+### P103
+theorem t103 (a : ℝ) (h : a + a / 3 = 8 / 3) : a = 2 := by sorry
+
+### P104
+theorem t104 : Fintype.card (Equiv.Perm (Fin 3)) = 6 := by sorry
+
+### P105
+theorem t105 (A E D F : ℂ) (hAE : A ≠ E) (hD : D - E = (A - E) * Complex.exp (((3 * π / 5 : ℝ) : ℂ) * Complex.I)) (hF : F - E = (A - E) * Complex.exp (((-(2 * π / 3) : ℝ) : ℂ) * Complex.I)) : EuclideanGeometry.angle D E F = 132 * π / 180 := by sorry
+
+### P106
+theorem t106 (r : ℝ) (hr : 0 < r) (harea : 22 / 7 * r ^ 2 = 154) : 2 * (22 / 7) * r + 2 = 46 := by sorry
+
+### P107
+theorem t107 (blue green white k : ℝ) (hblue : blue = 3 * k) (hgreen : green = 2 * k) (hwhite : white = 4 * k) (h12 : white = 12) : green = 6 := by sorry
+
+### P108
+theorem t108 : -(1 ^ 2004 : ℤ) + (-1) ^ 2005 + 1 ^ 2006 - 1 ^ 2007 = -2 := by sorry
+
+### P109
+theorem t109 : (1273 : ℚ) + 120 / 60 - 173 = 1102 := by sorry
+
+### P110
+theorem t110 (x : ℝ) (h : (10 + 18 + x + x) / 4 = 15) : x * x = 256 := by sorry
+
+### P111
+theorem t111 (a b : ℂ) (h : {z : ℂ | a * z + b * (starRingEnd ℂ) z = 10} = {z : ℂ | ∃ t : ℝ, z = (-2 + 3 * Complex.I) + (t : ℂ) * ((1 + Complex.I) - (-2 + 3 * Complex.I))}) : a * b = 13 := by sorry
+
+### P112
+theorem t112 (M : Matrix (Fin 2) (Fin 2) ℝ) (v w : Fin 2 → ℝ) (hv : Matrix.mulVec M v = ![1, -5]) (hw : Matrix.mulVec M w = ![7, 2]) : Matrix.mulVec M ((-2 : ℝ) • v + w) = ![5, 12] := by sorry
+
+### P113
+theorem t113 (x : ℝ) (h : 3 * Real.arctan (1 / 4) + Real.arctan (1 / 20) + Real.arctan (1 / x) = π / 4) : x = 1985 := by sorry
+
+### P114
+theorem t114 (a b c d : ℕ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) (hab : b ≤ a) (hbc : c ≤ b) (hcd : d ≤ c) (h : Real.tan (15 / 2 * π / 180) = Real.sqrt a - Real.sqrt b + Real.sqrt c - d) : a + b + c + d = 13 := by sorry
+
+### P115
+theorem t115 : Set.Infinite {m : ℕ | 0 < m ∧ ∃ n : ℕ, 0 < n ∧ m * n ≤ m + n} := by sorry
+
+### P116
+theorem t116 (p q : ℕ) (hp : 0 < p) (hq : 0 < q) (hpq : Nat.Coprime p q) (hsum : ∑ᶠ x ∈ {x : ℝ | (⌊x⌋ : ℝ) * (x - ⌊x⌋) = (p : ℝ) / q * x ^ 2}, x = 420) : p + q = 929 := by sorry
+
+### P117
+theorem t117 (n : ℕ) (hn : 0 < n) : ∏ k ∈ Finset.Icc 1 n, (1 + 1 / (2 : ℝ) ^ k) < 5 / 2 := by sorry
+
+### P118
+theorem t118 (y : ℝ) (h : Real.sqrt (19 + 3 * y) = 7) : y = 10 := by sorry
+
+### P119
+theorem t119 : (3491 : ℤ) * 3491 - (3491 - 60) * (3491 + 60) = 3600 := by sorry
+
+### P120
+theorem t120 (n : ℕ) (hn : 0 < n) (h : ∑ k ∈ Finset.Icc 1 n, ⌊Real.logb 2 (k : ℝ)⌋ = 1994) : n = 312 := by sorry
+
+### P121
+theorem t121 (op : ℕ → ℕ → ℕ) (h : ∀ a b : ℕ, 0 < a → 0 < b → op a b = a ^ b + b ^ a) : op 2 6 = 100 := by sorry
+
+### P122
+theorem t122 (x : ℝ) (hx : x ≠ 0) (h : 3 + 1 / x = 7 / x) : x = 2 := by sorry
+
+### P123
+theorem t123 (R : Type*) [CommRing R] [IsDomain R] (x : R) (hx : x ^ 2 = 1) : x = 1 ∨ x = -1 := by sorry
+
+### P124
+theorem t124 (p : ℕ) [Fact p.Prime] (hodd : p ≠ 2) (a : (ZMod p)ˣ) : orderOf a = p - 1 ↔ ∀ q : ℕ, q.Prime → q ∣ p - 1 → a ^ ((p - 1) / q) ≠ 1 := by sorry
+
+### P125
+theorem t125 {ι : Type*} (X : ι → Type*) [∀ i, TopologicalSpace (X i)] (hne : ∀ i, Nonempty (X i)) (hN : NormalSpace (∀ i, X i)) (i : ι) : NormalSpace (X i) := by sorry

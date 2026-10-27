@@ -1,0 +1,74 @@
+### P076
+theorem t76 : let P : ℚ := ((Finset.univ.filter (fun s : Finset (Fin 25) => s.card = 3 ∧ ∃ a ∈ s, ∃ b ∈ s, a + 1 = b)).card : ℚ) / (Nat.choose 25 3 : ℚ); P.num + (P.den : ℤ) = 57 := by sorry
+
+### P077
+theorem t77 : let P : ℚ := ((Finset.univ.filter (fun p : Fin 12 × Fin 12 => p.1 ≠ p.2 ∧ 100 * |((p.1 : ℕ) : ℤ) - ((p.2 : ℕ) : ℤ)| ≤ 400)).card : ℚ) / ((Finset.univ.filter (fun p : Fin 12 × Fin 12 => p.1 ≠ p.2)).card : ℚ); P.num + (P.den : ℤ) = 52 := by sorry
+
+### P078
+theorem t78 (n : ℕ) (h : 5 * 8 * 2 * n = Nat.factorial 7) : n = 63 := by sorry
+
+### P079
+theorem t79 (E : ℝ) (hE : E = 1 + 1 / 6 * E) : 365 * E = 438 := by sorry
+
+### P080
+theorem t80 : Nat.choose 8 2 * Nat.choose 6 4 = 420 := by sorry
+
+### P081
+theorem t81 (c r : ℕ) (hc : c = 5) (hr : r = 5) : ((c * r : ℕ) : ℚ) / (Nat.choose (c + r) 2 : ℚ) = 5 / 9 := by sorry
+
+### P082
+theorem t82 : ((((Finset.Icc 1 5) ×ˢ (Finset.Icc 1 5)).filter (fun p : ℕ × ℕ => p.1 < p.2 ∧ p.1 ∣ p.2)).card : ℚ) / ((((Finset.Icc 1 5) ×ˢ (Finset.Icc 1 5)).filter (fun p : ℕ × ℕ => p.1 < p.2)).card : ℚ) = 1 / 2 := by sorry
+
+### P083
+theorem t83 : ((Finset.Ioo 100 500).filter (fun n : ℕ => (Nat.digits 10 n).reverse = Nat.digits 10 n)).card = 40 := by sorry
+
+### P084
+theorem t84 (x y x' y' : ℝ) (hx : x = -2) (hy : y = 6) (hx' : x' = -x) (hy' : y' = y - 8) : (x', y') = (2, -2) := by sorry
+
+### P085
+theorem t85 (R r s L : ℝ) (hR : 0 < R) (hr : 0 < r) (hRarea : Real.pi * R ^ 2 = 225 * Real.pi) (hrarea : Real.pi * r ^ 2 = 25 * Real.pi) (hfrust : L - s = 24) (hsim : r / s = R / L) : s = 12 := by sorry
+
+### P086
+theorem t86 (m : ℝ) (hmid : (76 : ℝ) + m * ((14 + 19) / 2 - 17) = (92 + 84) / 2) : |m| = 24 := by sorry
+
+### P087
+theorem t87 (V E T P t p : ℤ) (hF : t + p = 32) (hT : 3 * t = V * T) (hP : 5 * p = V * P) (hE : 2 * E = 3 * t + 5 * p) (hEuler : V - E + 32 = 2) : 100 * P + 10 * T + V = 250 := by sorry
+
+### P088
+theorem t88 (r h V : ℝ) (hd : 2 * r = 10) (hh : h = 6) (hV : V = 1 / 3 * Real.pi * r ^ 2 * h) : V = 50 * Real.pi := by sorry
+
+### P089
+theorem t89 (t xT xU : ℝ) (ht0 : 0 ≤ t) (ht8 : t < 8) (hT : 4 * xT + t = 8) (hU : xU + t = 8) (harea : 1 / 2 * |(xT - 0) * (t - 8) - (xU - 0) * (t - 8)| = 27 / 2) : t = 2 := by sorry
+
+### P090
+theorem t90 (m : ℝ) (hm : IsGreatest {x : ℝ | 3 / (x - 3) + 5 / (x - 5) + 17 / (x - 17) + 19 / (x - 19) = x ^ 2 - 11 * x - 4} m) (a b c : ℕ) (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hmabc : m = (a : ℝ) + Real.sqrt ((b : ℝ) + Real.sqrt (c : ℝ))) : a + b + c = 263 := by sorry
+
+### P091
+theorem t91 : Set.ncard ({x : ℝ | x ^ 3 + x ^ 2 - 2 * x = 0} ∩ {x : ℝ | x ^ 2 + 3 * x + 2 = 0}) + 2 * Set.ncard ({x : ℝ | x ^ 3 + x ^ 2 - 2 * x = 0} \ {x : ℝ | x ^ 2 + 3 * x + 2 = 0}) + 3 * 1 + 4 * 0 = 8 := by sorry
+
+### P092
+theorem t92 : {a : ℤ | ∃ b c : ℤ, ∀ x : ℝ, (x - a) * (x - 10) + 1 = (x + b) * (x + c)} = {8, 12} := by sorry
+
+### P093
+theorem t93 : ∑ n ∈ Finset.Icc (1 : ℕ) 1000, (1 : ℚ) / ((n : ℚ) ^ 2 + (n : ℚ)) = 1000 / 1001 := by sorry
+
+### P094
+theorem t94 (f g : Polynomial ℝ) (hf : f ≠ 0) (hg : g ≠ 0) (h : f.comp g = f * g) (h2 : g.eval 2 = 37) : g = Polynomial.X ^ 2 + Polynomial.C 33 * Polynomial.X - Polynomial.C 33 := by sorry
+
+### P095
+theorem t95 : ∑' m : ℕ, ∑' n : ℕ, (1 : ℝ) / (((m : ℝ) + 1) * ((n : ℝ) + 1) * ((m : ℝ) + (n : ℝ) + 3)) = 2 := by sorry
+
+### P096
+theorem t96 (a b : ℚ) (h : ((2 : ℝ) + Real.sqrt 3) ^ 3 + (a : ℝ) * ((2 : ℝ) + Real.sqrt 3) ^ 2 + (b : ℝ) * ((2 : ℝ) + Real.sqrt 3) + 10 = 0) : b = -39 := by sorry
+
+### P097
+theorem t97 (f : ℝ → ℝ) (hf : ∀ x y : ℝ, f (x * y) = x * f y) (h1 : f 1 = 25) : f 79 = 1975 := by sorry
+
+### P098
+theorem t98 (A B C : ℤ) (h₁ : (A : ℝ) * (-2) ^ 2 + (B : ℝ) * (-2) + (C : ℝ) = 0) (h₂ : (A : ℝ) * 3 ^ 2 + (B : ℝ) * 3 + (C : ℝ) = 0) (h₃ : Filter.Tendsto (fun x : ℝ => x ^ 2 / ((A : ℝ) * x ^ 2 + (B : ℝ) * x + (C : ℝ))) Filter.atTop (nhds (1 / 2))) (h₄ : ∀ x : ℝ, 4 < x → (2 : ℝ) / 5 < x ^ 2 / ((A : ℝ) * x ^ 2 + (B : ℝ) * x + (C : ℝ))) : A + B + C = -12 := by sorry
+
+### P099
+theorem t99 (p q r : ℕ) (hp : 0 < p) (hq : 0 < q) (hr : 0 < r) (hsf : Squarefree r) (hS : ∑ n ∈ Finset.Icc (1 : ℕ) 9800, 1 / Real.sqrt ((n : ℝ) + Real.sqrt ((n : ℝ) ^ 2 - 1)) = (p : ℝ) + (q : ℝ) * Real.sqrt (r : ℝ)) : p + q + r = 121 := by sorry
+
+### P100
+theorem t100 : ‖(1 / 2 : ℂ) - (3 / 8 : ℂ) * Complex.I‖ = 5 / 8 := by sorry

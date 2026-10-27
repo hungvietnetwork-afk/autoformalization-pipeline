@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Full datasets are NOT versioned (guide: only legal samples, manifest, checksums and scripts).
+# Rebuild with: bash scripts/download_data.sh && python -m afp.ingest   (checksums: data/MANIFEST.json)
+data/raw
+data/units/
+data/lake/units/
+
+# Heavy per-run artefacts (queue databases, JSONL duplicates of raw_results.csv)
+runs/*/run.db
+runs/*/run.db-*
+runs/*/raw_results.jsonl
+results/raw/runs/*/run.db
+results/raw/runs/*/run.db-*
+results/raw/runs/*/raw_results.jsonl
+runs/debug_*/
+results/raw/runs/debug_*/
+
+# Build outputs
+*.zip
+
+# SQLite sidecar files (transient)
+*.db-shm
+*.db-wal

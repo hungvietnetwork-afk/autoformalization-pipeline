@@ -1,0 +1,162 @@
+### P101
+A survey of $120$ teachers determined the following:
+
+$70$ had high blood pressure
+
+$40$ had heart trouble
+
+$20$ had both high blood pressure and heart trouble
+
+What percent of the teachers surveyed had neither high blood pressure nor heart trouble?
+Answer: 25\%
+
+### P102
+In the diagram, what is the perimeter of polygon $PQRST$? [asy]
+
+import olympiad;
+
+size(6cm); // ADJUST
+
+pair p = (0, 6);
+pair q = (3, 6);
+
+pair r = (3, 3);
+pair t = (0, 0);
+pair s = (7, 0);
+
+draw(p--q--r--s--t--cycle);
+label("$P$", p, NW);
+label("$Q$", q, NE);
+label("$R$", r, E + NE);
+label("$S$", s, SE);
+label("$T$", t, SW);
+
+label("$6$", p / 2, W);
+label("$3$", p + (q - p) / 2, 2 * N);
+label("$7$", s / 2, S);
+
+draw(rightanglemark(p, t, s));
+draw(rightanglemark(t, p, q));
+draw(rightanglemark(p, q, r));
+add(pathticks(p--q, s=6));
+add(pathticks(q--r, s=6));
+[/asy]
+Answer: 24
+
+### P103
+If $a+\frac {a} {3}=\frac {8} {3}$, what is the value of $a$?
+Answer: 2
+
+### P104
+Jordan and his three best friends are on a relay team.  His relay team will run a race, where the first runner runs a lap, then the second, then the third, then the fourth.
+
+Jordan is the fastest so he will run the fourth lap.  How many different orders can the four team members run, assuming that Jordan runs the fourth lap?
+Answer: 6
+
+### P105
+Regular pentagon $ABCDE$ and regular hexagon $AEFGHI$ are drawn on opposite sides of line segment $AE$ such that they are coplanar. What is the degree measure of exterior angle $DEF$? [asy]
+draw((0,2.5)--(0,7.5)--(4,10)--(8,7.5)--(8,2.5)--(4,0)--cycle,linewidth(1));
+draw((8,2.5)--(11.5,-1)--(9,-5)--(5,-4.5)--(4,0),linewidth(1));
+dot((0,2.5)); dot((0,7.5)); dot ((4,10)); dot((8,7.5)); dot((8,2.5)); dot((4,0));
+
+label("I",(0,2.5),W); label("H",(0,7.5),W); label("G",(4,10),N);
+
+label("F",(8,7.5),E); label("E",(8,2.5),NW); label("A",(4,0),SW);
+dot((11.5,-1)); dot((9,-5)); dot((5,-4.5));
+label("D",(11.5,-1),E); label("C",(9,-5),SE); label("B",(5,-4.5),SW);
+[/asy]
+Answer: 132
+
+### P106
+The circular region of the sign (below, left) has an area of 154 square inches. Vanessa would like to place a tiny ribbon (shaded) around the circle's edge. To be sure she has enough ribbon, she decides to buy 2 inches more of the ribbon than the original circle's circumference. How many inches of ribbon will Vanessa need to buy if she estimates $\pi = \frac{22}{7}$?
+
+[asy]import graph;
+size(125,72.5);
+picture p;
+draw(p,unitsquare);
+filldraw(p,Circle((.5,.5),.3),white);
+label(p,"Enter",(.5,.5),ZapfChancery("m","n"));
+add(p);
+filldraw(Circle((2,.5),.4),gray(.6));
+add(shift(1.5*right)*p);
+draw((1.1,.5)--(1.4,.5),EndArrow(5,25));[/asy]
+Answer: 46
+
+### P107
+Giselle will combine blue paint, green paint, and white paint in the ratio $3:2:4$, respectively. If she uses $12$ quarts of white paint, how many quarts of green paint should she use?
+Answer: 6
+
+### P108
+What is the simplified value of the sum: $-1^{2004} + (-1)^{2005} + 1^{2006} -1^{2007}$?
+Answer: -2
+
+### P109
+Find $1273 + 120 \div 60 - 173$.
+Answer: 1102
+
+### P110
+The arithmetic mean of four numbers is 15. Two of the numbers are 10 and 18 and the other two are equal. What is the product of the two equal numbers?
+Answer: 256
+
+### P111
+The equation of the line joining the complex numbers $-2 + 3i$ and $1 + i$ can be expressed in the form
+\[az + b \overline{z} = 10\]for some complex numbers $a$ and $b$.  Find the product $ab$.
+Answer: 13
+
+### P112
+Let $\mathbf{M}$ be a matrix, and let $\mathbf{v}$ and $\mathbf{w}$ be vectors, such that
+\[\mathbf{M} \mathbf{v} = \begin{pmatrix} 1 \\ -5 \end{pmatrix} \quad \text{and} \quad \mathbf{M} \mathbf{w} = \begin{pmatrix} 7 \\ 2 \end{pmatrix}.\]Compute $\mathbf{M} (-2 \mathbf{v} + \mathbf{w}).$
+Answer: \begin{pmatrix} 5 \\ 12 \end{pmatrix}
+
+### P113
+Find $x$ if
+\[3 \arctan \frac{1}{4} + \arctan \frac{1}{20} + \arctan \frac{1}{x} = \frac{\pi}{4}.\]
+Answer: 1985
+
+### P114
+The quantity $\tan 7.5^\circ$ can be expressed in the form
+\[\tan 7.5^\circ = \sqrt{a} - \sqrt{b} + \sqrt{c} - d,\]where $a \ge b \ge c \ge d$ are positive integers.  Find $a + b + c + d.$
+Answer: 13
+
+### P115
+For how many positive integers $m$ does there exist at least one positive integer n such that $m \cdot n \le m + n$?
+
+$ \textbf{(A) } 4\qquad \textbf{(B) } 6\qquad \textbf{(C) } 9\qquad \textbf{(D) } 12\qquad \textbf{(E) } \text{infinitely many} $ Show that it is \textbf{(E) } \text{infinitely many}.
+
+### P116
+The number $a=\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers, has the property that the sum of all real numbers $x$ satisfying
+$ \lfloor x \rfloor \cdot \{x\} = a \cdot x^2$
+is $420$, where $\lfloor x \rfloor$ denotes the greatest integer less than or equal to $x$ and $\{x\}=x- \lfloor x \rfloor$ denotes the fractional part of $x$. What is $p+q$?
+
+$\textbf{(A) } 245 \qquad \textbf{(B) } 593 \qquad \textbf{(C) } 929 \qquad \textbf{(D) } 1331 \qquad \textbf{(E) } 1332$ Show that it is \textbf{(C) } 929.
+
+### P117
+Show that for positive integer $n$, $(\prod_{k=1}^{n} (1 + 1/2^k)) < 5/2$.
+
+### P118
+Find $y$: $\sqrt{19+3y} = 7$. Show that it is 10.
+
+### P119
+A $3491$ by $3491$ square has its length decreased by $60$ and its width increased by $60$.  By how much does its area change? Show that it is 3600.
+
+### P120
+Find the positive integer $n\,$ for which
+$
+\lfloor\log_2{1}\rfloor+\lfloor\log_2{2}\rfloor+\lfloor\log_2{3}\rfloor+\cdots+\lfloor\log_2{n}\rfloor=1994
+$
+(For real $x\,$, $\lfloor x\rfloor\,$ is the greatest integer $\le x.\,$) Show that it is 312.
+
+### P121
+If $a * b = a^b + b^a$, for all positive integer values of $a$ and $b$, then what is the value of $2 * 6$? Show that it is 100.
+
+### P122
+Three plus the reciprocal of a number equals 7 divided by that number.  What is the number? Show that it is 2.
+
+### P123
+Prove that if $R$ is an integral domain and $x^{2}=1$ for some $x \in R$ then $x=\pm 1$.
+
+### P124
+Let $p$ be an odd prime. Show that $a$ is a primitive root modulo $p$ iff $a^{(p-1) / q} \not \equiv 1(p)$ for all prime divisors $q$ of $p-1$.
+
+### P125
+Show that if $\prod X_\alpha$ is normal, then so is $X_\alpha$. Assume that each $X_\alpha$ is nonempty.

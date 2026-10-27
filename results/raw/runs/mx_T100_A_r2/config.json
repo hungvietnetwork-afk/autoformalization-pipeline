@@ -1,0 +1,21 @@
+{
+ "run_id": "mx_T100_A_r2",
+ "db": "/home/claude/af/autoformalization-pipeline/runs/mx_T100_A_r2/run.db",
+ "tier": "T100",
+ "workers": 1,
+ "batch": 1,
+ "partitions": 16,
+ "timeout_s": 10.0,
+ "lease_s": 60.0,
+ "prompt_version": "v1_zeroshot",
+ "k": 1,
+ "replicas": 1,
+ "backend": {
+  "kind": "cache",
+  "db": "/home/claude/af/autoformalization-pipeline/data/candidates.db"
+ },
+ "broker": {
+  "kind": "sqlite"
+ },
+ "n_problems": 100
+}

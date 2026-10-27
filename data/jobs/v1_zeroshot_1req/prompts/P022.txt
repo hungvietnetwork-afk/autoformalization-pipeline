@@ -1,0 +1,36 @@
+You are an autoformalization system. Translate the natural-language mathematical statement into ONE Lean 4 theorem statement that uses Mathlib (Lean v4.35, Mathlib 2026).
+The following header is already in place (do not repeat it):
+import Mathlib
+import Aesop
+set_option maxHeartbeats 400000
+open BigOperators Real Nat Topology Rat
+
+Requirements:
+- Output only the theorem, in the form `theorem <name> <binders> : <proposition> := by sorry`.
+- No proof, no comments, no imports, no markdown.
+- If the problem ends with "Answer: ...", the theorem must assert that this answer is correct
+  (e.g. the requested quantity equals the answer, or the solution set equals the given set).
+- Keep every hypothesis and the exact conclusion of the original statement; do not simplify or weaken it.
+
+Problem:
+Fourteen white cubes are put together to form the figure on the right.  The complete surface of the figure, including the bottom, is painted red.  The figure is then separated into individual cubes.  How many of the individual cubes have exactly four red faces?
+
+[asy]
+size(150);
+pair a=(1,0),b=(0,1),c=(0.45,0.4);
+
+void drawcube(pair loc){
+     filldraw(loc+b--loc--loc+a--loc+a+c--loc+a+b+c--loc+b+c--cycle,white);
+     draw(loc+b--loc+a+b--loc+a+b+c^^loc+a+b--loc+a);
+}
+
+pair location[]={origin,b,a,2a,3a,3a+b,-c,3a-c,-2c,-2c+b,-2c+a,-2c+2a,-2c+3a,-2c+3a+b};
+
+for(int i; i<14;++i){
+   drawcube(location[i]);
+}
+
+
+[/asy]
+Answer: 6
+Lean:

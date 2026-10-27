@@ -1,0 +1,709 @@
+{
+ "job_id": "v2_fewshot_s3_p00",
+ "prompt_version": "v2_fewshot",
+ "sample_index": 3,
+ "partition": 0,
+ "system_prompt": "You are an autoformalization system. Translate the natural-language mathematical statement into ONE Lean 4 theorem statement that uses Mathlib (Lean v4.35, Mathlib 2026).\nThe following header is already in place (do not repeat it):\nimport Mathlib\nimport Aesop\nset_option maxHeartbeats 400000\nopen BigOperators Real Nat Topology Rat\n\nRequirements:\n- Output only the theorem, in the form `theorem <name> <binders> : <proposition> := by sorry`.\n- No proof, no comments, no imports, no markdown.\n- If the problem ends with \"Answer: ...\", the theorem must assert that this answer is correct\n  (e.g. the requested quantity equals the answer, or the solution set equals the given set).\n- Keep every hypothesis and the exact conclusion of the original statement; do not simplify or weaken it.\n\nExamples:\n\nProblem:\nWhat is the sum of all real solutions of $x^2-5x+6=0$?\nAnswer: 5\nLean:\ntheorem ex1 (S : Finset ℝ) (hS : ∀ x : ℝ, x ∈ S ↔ x ^ 2 - 5 * x + 6 = 0) :\n    ∑ x ∈ S, x = 5 := by sorry\n\nProblem:\nHow many positive divisors does $36$ have?\nAnswer: 9\nLean:\ntheorem ex2 : (Nat.divisors 36).card = 9 := by sorry\n\nProblem:\nA shop sells pens at $3 each. Tom buys 7 pens and pays with a $50 bill. How much change does he get?\nAnswer: 29\nLean:\ntheorem ex3 (price n paid change : ℕ) (h₀ : price = 3) (h₁ : n = 7) (h₂ : paid = 50)\n    (h₃ : change = paid - price * n) : change = 29 := by sorry\n\nProblem:\nFind the real number $x$ such that $2^{x+1}=32$.\nAnswer: 4\nLean:\ntheorem ex4 (x : ℝ) (h : (2 : ℝ) ^ (x + 1) = 32) : x = 4 := by sorry\n\nProblem:\nProve that if every element $g$ of a group $G$ satisfies $g^2=1$, then $G$ is abelian.\nLean:\ntheorem ex5 {G : Type*} [Group G] (h : ∀ g : G, g ^ 2 = 1) :\n    ∀ a b : G, a * b = b * a := by sorry\n\nProblem:\nLet $f:\\mathbb{R}\\to\\mathbb{R}$ be continuous and satisfy $f(x)=f(x+1)$ for all $x$. Prove that $f$ is bounded.\nLean:\ntheorem ex6 (f : ℝ → ℝ) (hf : Continuous f) (hp : ∀ x, f x = f (x + 1)) :\n    ∃ M, ∀ x, |f x| ≤ M := by sorry\n",
+ "tasks": [
+  {
+   "key": "P001",
+   "task_hash": "7c03263bc6ef75a0747ae9b561d09ce2fee4e4fdd5eb5f0624ba9116cf6ee385",
+   "problem_id": "gsm8k:train:01484",
+   "candidate_index": 3,
+   "prompt_tokens": 612
+  },
+  {
+   "key": "P002",
+   "task_hash": "85eaef582ef8dceec7dd08676043e57b1a240cc2c2dfa46d6c17f3a4cee34a00",
+   "problem_id": "gsm8k:train:02960",
+   "candidate_index": 3,
+   "prompt_tokens": 595
+  },
+  {
+   "key": "P003",
+   "task_hash": "f03810aae0116e7fbfec09dcd43ae86615d8ba9b17b19d18ccf9833f0d179294",
+   "problem_id": "gsm8k:train:03013",
+   "candidate_index": 3,
+   "prompt_tokens": 603
+  },
+  {
+   "key": "P004",
+   "task_hash": "b9af829aea45c811780b33899f98328937bd3aa090703d4d4494ffbe71d549a9",
+   "problem_id": "gsm8k:train:03409",
+   "candidate_index": 3,
+   "prompt_tokens": 615
+  },
+  {
+   "key": "P005",
+   "task_hash": "17ebc6d3b0bf178cb12464dd89a152fb76c299ef9ce494e429483963e0181689",
+   "problem_id": "gsm8k:train:03489",
+   "candidate_index": 3,
+   "prompt_tokens": 629
+  },
+  {
+   "key": "P006",
+   "task_hash": "404990e5128fde8482b9cff649fa9ef17aa950859b8400133e52655aa3b5384c",
+   "problem_id": "gsm8k:train:03582",
+   "candidate_index": 3,
+   "prompt_tokens": 655
+  },
+  {
+   "key": "P007",
+   "task_hash": "94963b45d9a57f5551beaf90aa45af3e8bd01ed8a80f8827010e62b535a69a05",
+   "problem_id": "gsm8k:train:04127",
+   "candidate_index": 3,
+   "prompt_tokens": 665
+  },
+  {
+   "key": "P008",
+   "task_hash": "a52985b73f231ced539c403d9ca0d4287237cd679229c19febadf6305aad9c7d",
+   "problem_id": "gsm8k:train:05699",
+   "candidate_index": 3,
+   "prompt_tokens": 610
+  },
+  {
+   "key": "P009",
+   "task_hash": "416a7bfcbc60f94cf632a2bc0a924c3de97d6afc562f8e4419c1924cdc503f16",
+   "problem_id": "gsm8k:train:05830",
+   "candidate_index": 3,
+   "prompt_tokens": 635
+  },
+  {
+   "key": "P010",
+   "task_hash": "316742af9cd2d239146b1849a0fba931a9d35cb5e6d3295a97ee211a7eb73ad1",
+   "problem_id": "gsm8k:train:06508",
+   "candidate_index": 3,
+   "prompt_tokens": 694
+  },
+  {
+   "key": "P011",
+   "task_hash": "afcfdea3d9288c9dd09e8c0160eb600c8c580e21f1d345d7f0e20d5a8aa5bdd6",
+   "problem_id": "math:test/algebra/1264",
+   "candidate_index": 3,
+   "prompt_tokens": 581
+  },
+  {
+   "key": "P012",
+   "task_hash": "0388e69d2326911f8dfa8090f82f8087db31a4994b7256d53099c4315899f1eb",
+   "problem_id": "math:test/algebra/1624",
+   "candidate_index": 3,
+   "prompt_tokens": 586
+  },
+  {
+   "key": "P013",
+   "task_hash": "a270d11a3721e6087211bfe98aa20b89bd51c37649cac6386951397e1996c7a0",
+   "problem_id": "math:test/algebra/1730",
+   "candidate_index": 3,
+   "prompt_tokens": 598
+  },
+  {
+   "key": "P014",
+   "task_hash": "520bbf1aff0a7bb4e01ffb1f4c560a8931ec37ef070c419e289cfc4a19d71845",
+   "problem_id": "math:test/algebra/1820",
+   "candidate_index": 3,
+   "prompt_tokens": 604
+  },
+  {
+   "key": "P015",
+   "task_hash": "6b46ef9e7b047bd2ee868d0f9523d42a3262e650cf7b3218bcf9f1a6abcd5a5c",
+   "problem_id": "math:test/algebra/2584",
+   "candidate_index": 3,
+   "prompt_tokens": 605
+  },
+  {
+   "key": "P016",
+   "task_hash": "226abc17c95e2e4f9f97f52e9be9079d508e69d106ff31197439db8ebc59c9d2",
+   "problem_id": "math:test/algebra/2711",
+   "candidate_index": 3,
+   "prompt_tokens": 579
+  },
+  {
+   "key": "P017",
+   "task_hash": "bdba2327b987a073adfb7940348527de601749637a8414695d68a7511a621e5b",
+   "problem_id": "math:test/algebra/354",
+   "candidate_index": 3,
+   "prompt_tokens": 602
+  },
+  {
+   "key": "P018",
+   "task_hash": "58cd341bd33b7308688e463c479b94e4d8df15e65fc3488f649fe53e51f42f69",
+   "problem_id": "math:test/algebra/395",
+   "candidate_index": 3,
+   "prompt_tokens": 595
+  },
+  {
+   "key": "P019",
+   "task_hash": "8a2841ee47bf6a90f56640499a6c0848179162c242208c8f011b2475e6d3f9d1",
+   "problem_id": "math:test/counting_and_probability/148",
+   "candidate_index": 3,
+   "prompt_tokens": 623
+  },
+  {
+   "key": "P020",
+   "task_hash": "98b35763983aa806d93f53640e5ad10416768497ba97c9795deacdd419604117",
+   "problem_id": "math:test/counting_and_probability/64",
+   "candidate_index": 3,
+   "prompt_tokens": 606
+  },
+  {
+   "key": "P021",
+   "task_hash": "13e0e6ea8bd04f65c2602171c954c5d007af6019cb9d446f9972328a9af8d364",
+   "problem_id": "math:test/counting_and_probability/763",
+   "candidate_index": 3,
+   "prompt_tokens": 635
+  },
+  {
+   "key": "P022",
+   "task_hash": "9c4a1d71f1735e197ef814d0613e249e8abfe10543012aab2eb4b49f09f847b9",
+   "problem_id": "math:test/counting_and_probability/778",
+   "candidate_index": 3,
+   "prompt_tokens": 747
+  },
+  {
+   "key": "P023",
+   "task_hash": "94b4adcf99407a5c9014c4bfdff4738fef445d73e490b481121a0c028ef3f08a",
+   "problem_id": "math:test/geometry/530",
+   "candidate_index": 3,
+   "prompt_tokens": 745
+  },
+  {
+   "key": "P024",
+   "task_hash": "b909333c9799ca517d38cb26d4394b7a47616ccf53bf929ed80df8b9a2b2f1b5",
+   "problem_id": "math:test/geometry/621",
+   "candidate_index": 3,
+   "prompt_tokens": 696
+  },
+  {
+   "key": "P025",
+   "task_hash": "5545f789264b1be93f37157a124bb31d1ab7eb31c907528adffde2d6c7016778",
+   "problem_id": "math:test/intermediate_algebra/1079",
+   "candidate_index": 3,
+   "prompt_tokens": 641
+  },
+  {
+   "key": "P026",
+   "task_hash": "8bbfda335224c0084e381b257559e3ed4a6fb8f43fa8bdc6a3dfe24567dcf666",
+   "problem_id": "math:test/intermediate_algebra/147",
+   "candidate_index": 3,
+   "prompt_tokens": 618
+  },
+  {
+   "key": "P027",
+   "task_hash": "23a4bd8164e3f2805870d13b809d806a7657161df0b2453dd3ccf40c45affdac",
+   "problem_id": "math:test/intermediate_algebra/1519",
+   "candidate_index": 3,
+   "prompt_tokens": 605
+  },
+  {
+   "key": "P028",
+   "task_hash": "0f8a340082071ef4fa7b72ebc184be9000c49d1503c0695dbf1213fa56b52098",
+   "problem_id": "math:test/intermediate_algebra/1542",
+   "candidate_index": 3,
+   "prompt_tokens": 608
+  },
+  {
+   "key": "P029",
+   "task_hash": "5b31a6f60a8075887f71a8d0a44d082a34ec8f6b87109e66288b50723c3a7433",
+   "problem_id": "math:test/intermediate_algebra/1761",
+   "candidate_index": 3,
+   "prompt_tokens": 615
+  },
+  {
+   "key": "P030",
+   "task_hash": "401ab9f97373cf46e37aff16870e98bcc3648cc39cd14e023db3ae7210e97e44",
+   "problem_id": "math:test/intermediate_algebra/1948",
+   "candidate_index": 3,
+   "prompt_tokens": 605
+  },
+  {
+   "key": "P031",
+   "task_hash": "6f6e8e2d1aa4f3edd981f8683a0ec8b236b5bcb884029f5add5c33d2bcfc288a",
+   "problem_id": "math:test/intermediate_algebra/243",
+   "candidate_index": 3,
+   "prompt_tokens": 628
+  },
+  {
+   "key": "P032",
+   "task_hash": "c75d6a04b5562bf0d8cf824e35a1b909687a17cfbef8a03470eeace4203da10f",
+   "problem_id": "math:test/intermediate_algebra/295",
+   "candidate_index": 3,
+   "prompt_tokens": 605
+  },
+  {
+   "key": "P033",
+   "task_hash": "6317fad4e3689a5a43164804fb7cbd06ddbcdcda68eb2a454451431d8266cb3f",
+   "problem_id": "math:test/intermediate_algebra/68",
+   "candidate_index": 3,
+   "prompt_tokens": 625
+  },
+  {
+   "key": "P034",
+   "task_hash": "1a72db019daa567d93fc8ba2fef6cc8f3998d5f95958faa4d35a22434a546b85",
+   "problem_id": "math:test/intermediate_algebra/776",
+   "candidate_index": 3,
+   "prompt_tokens": 609
+  },
+  {
+   "key": "P035",
+   "task_hash": "d5aa57f0444ce4714cfa728c076ebe8c2b9629d6138fd5ee21092947535f3e6f",
+   "problem_id": "math:test/intermediate_algebra/827",
+   "candidate_index": 3,
+   "prompt_tokens": 677
+  },
+  {
+   "key": "P036",
+   "task_hash": "c91e8637ffd57e07ea27710ab1d8507168cdd98473a513a99fd16c11b7b9bbf0",
+   "problem_id": "math:test/intermediate_algebra/840",
+   "candidate_index": 3,
+   "prompt_tokens": 617
+  },
+  {
+   "key": "P037",
+   "task_hash": "ac1ab592ecefa9604b97ed74250c73fe2709bf21624238b81e380b42929057c0",
+   "problem_id": "math:test/intermediate_algebra/859",
+   "candidate_index": 3,
+   "prompt_tokens": 634
+  },
+  {
+   "key": "P038",
+   "task_hash": "b94873fce3f03791bafbc85384e5b7704401482a59320015a25c74e3e278b348",
+   "problem_id": "math:test/number_theory/59",
+   "candidate_index": 3,
+   "prompt_tokens": 613
+  },
+  {
+   "key": "P039",
+   "task_hash": "b934250e694ea66bdb4717e069468eac915bb39071a98b746b33138e60fe2faa",
+   "problem_id": "math:test/prealgebra/1775",
+   "candidate_index": 3,
+   "prompt_tokens": 632
+  },
+  {
+   "key": "P040",
+   "task_hash": "8d4d1dcbef6d546fa600d2d3a5aa26476c7d32a46257df8b421e37db8bca8edb",
+   "problem_id": "math:test/prealgebra/1894",
+   "candidate_index": 3,
+   "prompt_tokens": 584
+  },
+  {
+   "key": "P041",
+   "task_hash": "5ea7a5c07a75440d44723a88543877ebdb64dbb79fdaca0856b7768f28253bcb",
+   "problem_id": "math:test/prealgebra/2064",
+   "candidate_index": 3,
+   "prompt_tokens": 583
+  },
+  {
+   "key": "P042",
+   "task_hash": "671b9299781ad83e4e659d4306c0baa3d593cc7676401bf1262e59b2995beb74",
+   "problem_id": "math:test/prealgebra/927",
+   "candidate_index": 3,
+   "prompt_tokens": 587
+  },
+  {
+   "key": "P043",
+   "task_hash": "c774a2a3b74b2afe79c8bc407dfb9800da28c0a309e77a6fc4dc4e29537131e2",
+   "problem_id": "math:test/precalculus/1043",
+   "candidate_index": 3,
+   "prompt_tokens": 627
+  },
+  {
+   "key": "P044",
+   "task_hash": "c202d841d9340eaf1ee7754567a3e4aa41f16a068e71e4c324311b3edb430fdf",
+   "problem_id": "math:test/precalculus/1283",
+   "candidate_index": 3,
+   "prompt_tokens": 635
+  },
+  {
+   "key": "P045",
+   "task_hash": "182cde27bb231ab48d4efd051edbf1eb094be34231f0c57997c9d179e9b525cd",
+   "problem_id": "math:test/precalculus/419",
+   "candidate_index": 3,
+   "prompt_tokens": 639
+  },
+  {
+   "key": "P046",
+   "task_hash": "8b4528c59d317102a81ee91179cd68c0d056b95e10439689bcbfa5c318d4683e",
+   "problem_id": "math:test/precalculus/428",
+   "candidate_index": 3,
+   "prompt_tokens": 612
+  },
+  {
+   "key": "P047",
+   "task_hash": "86565e768b686903cce9f76bbb2b62b448ac29f35b59db610ab31b9d71c80cc5",
+   "problem_id": "math:test/precalculus/495",
+   "candidate_index": 3,
+   "prompt_tokens": 591
+  },
+  {
+   "key": "P048",
+   "task_hash": "5bf5513f50fa86fded42cd51494761997c427a1334872eb5e3f10e49a6043d7a",
+   "problem_id": "math:test/precalculus/595",
+   "candidate_index": 3,
+   "prompt_tokens": 605
+  },
+  {
+   "key": "P049",
+   "task_hash": "f1d34d3feddaa2ace2b38e22731c27f0709373f6791f059e632bf5f36226bd16",
+   "problem_id": "math:train/algebra/1756",
+   "candidate_index": 3,
+   "prompt_tokens": 586
+  },
+  {
+   "key": "P050",
+   "task_hash": "6bd4ac5b0646fbc2cf6b4cb29e78ed963557a7fc99e07d79ca1c9cf0f2ec4026",
+   "problem_id": "math:train/algebra/2029",
+   "candidate_index": 3,
+   "prompt_tokens": 587
+  },
+  {
+   "key": "P051",
+   "task_hash": "b7f27d50404c90081265bd74d89eb4769c511429b6644b0960fdee491cfd01be",
+   "problem_id": "math:train/algebra/2132",
+   "candidate_index": 3,
+   "prompt_tokens": 646
+  },
+  {
+   "key": "P052",
+   "task_hash": "a495bd5ed40ec45ab8e308df56fd9291892351e35be73bf7fdb11c8c06e30bbc",
+   "problem_id": "math:train/algebra/2228",
+   "candidate_index": 3,
+   "prompt_tokens": 645
+  },
+  {
+   "key": "P053",
+   "task_hash": "0d4e152cf929dfa001f5c5f5290c048aef416b25048f258c120280078c39d581",
+   "problem_id": "math:train/algebra/2234",
+   "candidate_index": 3,
+   "prompt_tokens": 587
+  },
+  {
+   "key": "P054",
+   "task_hash": "82a8286ad70e457f134d8c333212a55c8676ec194eaff94f9fc9ecfd51ebd621",
+   "problem_id": "math:train/algebra/264",
+   "candidate_index": 3,
+   "prompt_tokens": 613
+  },
+  {
+   "key": "P055",
+   "task_hash": "ab22c23f83535be6d586757c9cfaf76670aa16bf556f7168121d5ddc3bd06cfb",
+   "problem_id": "math:train/algebra/2758",
+   "candidate_index": 3,
+   "prompt_tokens": 599
+  },
+  {
+   "key": "P056",
+   "task_hash": "cffc1484fb9263ae84283fa7d0170a93b6aaaedde4762c004c23bea17eeb3f79",
+   "problem_id": "math:train/algebra/579",
+   "candidate_index": 3,
+   "prompt_tokens": 599
+  },
+  {
+   "key": "P057",
+   "task_hash": "d588a9ed77157f3e86e1045d5d12363b6b6e431acb69f00c204e5a8982b03162",
+   "problem_id": "math:train/counting_and_probability/177",
+   "candidate_index": 3,
+   "prompt_tokens": 650
+  },
+  {
+   "key": "P058",
+   "task_hash": "b8d7de21d96e95a3452ce982c4d1380dcb81fa0ae98a39e89fb16f16b877ed3c",
+   "problem_id": "math:train/counting_and_probability/253",
+   "candidate_index": 3,
+   "prompt_tokens": 623
+  },
+  {
+   "key": "P059",
+   "task_hash": "6ef469b1718045a0a0003ba658caab195b7bab90a58ec98f4a8c61847f719884",
+   "problem_id": "math:train/counting_and_probability/296",
+   "candidate_index": 3,
+   "prompt_tokens": 600
+  },
+  {
+   "key": "P060",
+   "task_hash": "1f49c8b3a171495a5c8a2999c11a22e824855ecac79f8e73f214df65780af07d",
+   "problem_id": "math:train/counting_and_probability/609",
+   "candidate_index": 3,
+   "prompt_tokens": 643
+  },
+  {
+   "key": "P061",
+   "task_hash": "e27b3fdf48564fcc832a0448e2ce2f0df6b26a8a3bf9c3a23c178701f32fa8ae",
+   "problem_id": "math:train/counting_and_probability/696",
+   "candidate_index": 3,
+   "prompt_tokens": 633
+  },
+  {
+   "key": "P062",
+   "task_hash": "148f753320a3dee8555a5d95cb0325ba30506bc4517c02f0eb4d8f902c174126",
+   "problem_id": "math:train/counting_and_probability/784",
+   "candidate_index": 3,
+   "prompt_tokens": 642
+  },
+  {
+   "key": "P063",
+   "task_hash": "a0a5a14f7d39472783470cf859a36e1667d9434e64ead4607c88e8f9616c143a",
+   "problem_id": "math:train/geometry/157",
+   "candidate_index": 3,
+   "prompt_tokens": 616
+  },
+  {
+   "key": "P064",
+   "task_hash": "522c115dce65f6bdac10c3e8b0e8ca3a15895fc7d3529d116116fd393e508988",
+   "problem_id": "math:train/geometry/470",
+   "candidate_index": 3,
+   "prompt_tokens": 759
+  },
+  {
+   "key": "P065",
+   "task_hash": "b224b5566338081f8fbeb39727b55b2fcbc10e6e51aea1dc6dc2504227b558bd",
+   "problem_id": "math:train/geometry/576",
+   "candidate_index": 3,
+   "prompt_tokens": 733
+  },
+  {
+   "key": "P066",
+   "task_hash": "12223cbdd3368425b426d515897580812549c0c1c34bdc1200c2e9e0386cadfb",
+   "problem_id": "math:train/geometry/6142",
+   "candidate_index": 3,
+   "prompt_tokens": 613
+  },
+  {
+   "key": "P067",
+   "task_hash": "13fe5ae6de7a1bb821edac7468d55a723ac137f2181c49bb7dcff10b748fda40",
+   "problem_id": "math:train/geometry/62",
+   "candidate_index": 3,
+   "prompt_tokens": 611
+  },
+  {
+   "key": "P068",
+   "task_hash": "097e986b70d0f46ba033c1e05a81293c968610e160d7f4399fcad532797e9d9b",
+   "problem_id": "math:train/geometry/6200",
+   "candidate_index": 3,
+   "prompt_tokens": 904
+  },
+  {
+   "key": "P069",
+   "task_hash": "74813c06eb38277a7a998054e4effe488a499885c502c004d6454a84959e2eb9",
+   "problem_id": "math:train/geometry/94",
+   "candidate_index": 3,
+   "prompt_tokens": 749
+  },
+  {
+   "key": "P070",
+   "task_hash": "2e8a198378a80f42c3b59ab6fb50f2022a7afe9c147632972413afa713d6f770",
+   "problem_id": "math:train/intermediate_algebra/1265",
+   "candidate_index": 3,
+   "prompt_tokens": 599
+  },
+  {
+   "key": "P071",
+   "task_hash": "3728fc1a5ef75313b5f25e48bb3a19dca6e1698fcf58738b0d14ee321babe5f0",
+   "problem_id": "math:train/intermediate_algebra/1278",
+   "candidate_index": 3,
+   "prompt_tokens": 588
+  },
+  {
+   "key": "P072",
+   "task_hash": "0abdb62c1c7d8826e27e68a79b0e65a7cbce71adbaa77941a55910be654209ea",
+   "problem_id": "math:train/intermediate_algebra/1476",
+   "candidate_index": 3,
+   "prompt_tokens": 601
+  },
+  {
+   "key": "P073",
+   "task_hash": "74af538b935bd82d60ee916e20000099a38c86fdc2d020abe590193f9af4ec1b",
+   "problem_id": "math:train/intermediate_algebra/1521",
+   "candidate_index": 3,
+   "prompt_tokens": 593
+  },
+  {
+   "key": "P074",
+   "task_hash": "96a767ac193034e7dc30621f3fd167a9926efaf0fee1cf9707c5b518ec5a5300",
+   "problem_id": "math:train/intermediate_algebra/1785",
+   "candidate_index": 3,
+   "prompt_tokens": 611
+  },
+  {
+   "key": "P075",
+   "task_hash": "91725c91f2552d00411ae936684030621900ffdaf8d2a435a834a8c5ebfa4fa9",
+   "problem_id": "math:train/intermediate_algebra/448",
+   "candidate_index": 3,
+   "prompt_tokens": 613
+  },
+  {
+   "key": "P076",
+   "task_hash": "828ed189164a93f19a9cfd59721f7520f6bd3b2b8cc5d4a67ec2b6c41788e11d",
+   "problem_id": "math:train/intermediate_algebra/471",
+   "candidate_index": 3,
+   "prompt_tokens": 599
+  },
+  {
+   "key": "P077",
+   "task_hash": "3a0ee108b3705c72a44ae72d52f60580fa07a12d6245565a181ab3da0727c1d5",
+   "problem_id": "math:train/intermediate_algebra/616",
+   "candidate_index": 3,
+   "prompt_tokens": 614
+  },
+  {
+   "key": "P078",
+   "task_hash": "bbd3e4d76f17e7b1652145f61541c54759220f73c5d2e94e49559fe2d9754d3b",
+   "problem_id": "math:train/number_theory/1266",
+   "candidate_index": 3,
+   "prompt_tokens": 617
+  },
+  {
+   "key": "P079",
+   "task_hash": "d66531b7b4fcc6efd21d286eb4472d341b6d46c1b13c1f6e1db9c3b7f4125782",
+   "problem_id": "math:train/number_theory/249",
+   "candidate_index": 3,
+   "prompt_tokens": 632
+  },
+  {
+   "key": "P080",
+   "task_hash": "ed79aca085a3415a6e504dcd687c67e8050f122c9876af92cb5760ed8696a927",
+   "problem_id": "math:train/number_theory/7029",
+   "candidate_index": 3,
+   "prompt_tokens": 630
+  },
+  {
+   "key": "P081",
+   "task_hash": "45e6632b8d0faa53d9432f52faad9a643226a40fa33c0cbd43e65484abdcdc3e",
+   "problem_id": "math:train/number_theory/7127",
+   "candidate_index": 3,
+   "prompt_tokens": 647
+  },
+  {
+   "key": "P082",
+   "task_hash": "a50ce3894e9a7186b4f9583724f2219d094ad8e0945fec96f8c21f373c60b528",
+   "problem_id": "math:train/prealgebra/1039",
+   "candidate_index": 3,
+   "prompt_tokens": 581
+  },
+  {
+   "key": "P083",
+   "task_hash": "c5716cc827ffcddcc81f62b578d232df8022860219853d3394483df7c523ada3",
+   "problem_id": "math:train/prealgebra/1267",
+   "candidate_index": 3,
+   "prompt_tokens": 602
+  },
+  {
+   "key": "P084",
+   "task_hash": "0dd9393c43bc1c48e4fa7c97515e3a1c112a958a1a2e8b4ef7686914a2ba1881",
+   "problem_id": "math:train/prealgebra/1398",
+   "candidate_index": 3,
+   "prompt_tokens": 658
+  },
+  {
+   "key": "P085",
+   "task_hash": "860873874376f2cd335b232df7295757f8307f8fd701d3f4e086b09944136e13",
+   "problem_id": "math:train/prealgebra/1481",
+   "candidate_index": 3,
+   "prompt_tokens": 619
+  },
+  {
+   "key": "P086",
+   "task_hash": "a772cc14b7cf27515dd6cf5c3e204b2a1f2a04e04c2c2e6241b9c0df77ebf2b3",
+   "problem_id": "math:train/prealgebra/24",
+   "candidate_index": 3,
+   "prompt_tokens": 659
+  },
+  {
+   "key": "P087",
+   "task_hash": "48856708af2bc5508a97c6ef182ab8940f331aeba36a2c1310d5427eb4d9b5d0",
+   "problem_id": "math:train/prealgebra/277",
+   "candidate_index": 3,
+   "prompt_tokens": 587
+  },
+  {
+   "key": "P088",
+   "task_hash": "057eb7e3bc4ab69caa8f7361ae1156f1a1f15cd7945afd514502bd92215ade84",
+   "problem_id": "math:train/prealgebra/769",
+   "candidate_index": 3,
+   "prompt_tokens": 587
+  },
+  {
+   "key": "P089",
+   "task_hash": "872295d18edeaa7afd955bbef5c69ecddd171c87e050960ad89ed6fdd39ea2d0",
+   "problem_id": "math:train/precalculus/301",
+   "candidate_index": 3,
+   "prompt_tokens": 663
+  },
+  {
+   "key": "P090",
+   "task_hash": "e5f6e4c37ba6f3630b2758c641e773056f04192906a6faa53530f8c31b349951",
+   "problem_id": "math:train/precalculus/64",
+   "candidate_index": 3,
+   "prompt_tokens": 609
+  },
+  {
+   "key": "P091",
+   "task_hash": "e8dec8516971de38a50ce55b00e72ddd4399c3c8032c4c78aa0b20371047cced",
+   "problem_id": "math:train/precalculus/73",
+   "candidate_index": 3,
+   "prompt_tokens": 615
+  },
+  {
+   "key": "P092",
+   "task_hash": "db0ccaf3ed7512066040716be8325ff3ec24183a13051a2557bb57c2b0ee11f6",
+   "problem_id": "minif2f:test:aime_1984_p7",
+   "candidate_index": 3,
+   "prompt_tokens": 623
+  },
+  {
+   "key": "P093",
+   "task_hash": "d11a12b5502585984fb17ca1a854da77058e4fd55fb1ae392d5625da6508cf2d",
+   "problem_id": "minif2f:test:amc12a_2020_p25",
+   "candidate_index": 3,
+   "prompt_tokens": 718
+  },
+  {
+   "key": "P094",
+   "task_hash": "27525d78b5e8c8e3b289c9e9261a5b688619e72e626ccee20b8e1b6965d058f9",
+   "problem_id": "minif2f:test:induction_pord1p1on2powklt5on2",
+   "candidate_index": 3,
+   "prompt_tokens": 588
+  },
+  {
+   "key": "P095",
+   "task_hash": "978cce22bd742d454c902e4f884ded5c1103771b0354c2dc3cb56690c1a0146c",
+   "problem_id": "minif2f:test:mathd_algebra_263",
+   "candidate_index": 3,
+   "prompt_tokens": 581
+  },
+  {
+   "key": "P096",
+   "task_hash": "38d1d81733991852a72655467e15781fdfeddfb70cc6b92382bbfab37f2b7726",
+   "problem_id": "minif2f:valid:amc12a_2019_p9",
+   "candidate_index": 3,
+   "prompt_tokens": 691
+  },
+  {
+   "key": "P097",
+   "task_hash": "0417841dd2c8c85a7caaa51cb07726f118447b63a8f17aee5e66bacbac60c132",
+   "problem_id": "proofnet:Ireland-Rosen:exercise_4_11",
+   "candidate_index": 3,
+   "prompt_tokens": 595
+  },
+  {
+   "key": "P098",
+   "task_hash": "79a0812e783777c70acbdcdcbf65fdbc7df387917b4a4729db66b2da0f9ad9f7",
+   "problem_id": "proofnet:Munkres:exercise_22_5",
+   "candidate_index": 3,
+   "prompt_tokens": 614
+  },
+  {
+   "key": "P099",
+   "task_hash": "1b2fe2aa3d3128c63e7e5748cd0174d7748d457326ab4f2c9575bb7ac83d3197",
+   "problem_id": "proofnet:Munkres:exercise_32_2a",
+   "candidate_index": 3,
+   "prompt_tokens": 597
+  },
+  {
+   "key": "P100",
+   "task_hash": "1449e583b6d016d7f72f0595196b1da527a75dafa70e662b42fc2c2a5b440752",
+   "problem_id": "proofnet:Rudin:exercise_4_21a",
+   "candidate_index": 3,
+   "prompt_tokens": 616
+  }
+ ]
+}

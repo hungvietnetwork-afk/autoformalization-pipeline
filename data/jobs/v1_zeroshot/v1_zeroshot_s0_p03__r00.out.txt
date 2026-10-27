@@ -1,0 +1,74 @@
+### P001
+theorem t1 : (10000 + 800 : ℝ) - (5000 + 200) = 5600 := by sorry
+
+### P002
+theorem t2 (rocks_bought rocks_sold : ℝ) (h₁ : rocks_bought = 100 / 5) (h₂ : rocks_sold = 60 / 100 * rocks_bought) : 100 - 7 * rocks_sold = 16 := by sorry
+
+### P003
+theorem t3 (kyle tasha : ℕ) (h₁ : 8 + kyle + tasha = 36) (h₂ : kyle = tasha) : kyle = 14 := by sorry
+
+### P004
+theorem t4 (c : ℝ) (h : 2 * 1.08 + 2 * (1.08 + c) = 4.60) : c * 100 = 14 := by sorry
+
+### P005
+theorem t5 (camera lens : ℝ) (h₁ : camera = 4000 * (1 + 30 / 100)) (h₂ : lens = 400 - 200) : camera + lens = 5400 := by sorry
+
+### P006
+theorem t6 (cars : ℝ) (h₁ : cars = 10 * 5) : cars - 2 * (1 / 5 * cars) = 30 := by sorry
+
+### P007
+theorem t7 (june july august : ℕ) (h₁ : june = 8) (h₂ : july = 2 * june) (h₃ : august = july - 3) : june + july + august = 37 := by sorry
+
+### P008
+theorem t8 (stickers_per_page pages : ℕ) (h₁ : stickers_per_page = 20) (h₂ : pages = 12 - 1) : stickers_per_page * pages = 220 := by sorry
+
+### P009
+theorem t9 (before_new after_new end_count : ℝ) (h₁ : before_new = 160) (h₂ : after_new = before_new + 20) (h₃ : end_count = after_new - 1 / 3 * after_new) : end_count = 120 := by sorry
+
+### P010
+theorem t10 (motor_dist rowboat_dist : ℝ) (h₁ : motor_dist = 25 * 1 + 20 * (1 / 2)) (h₂ : rowboat_dist = 10 * 3) : motor_dist - rowboat_dist = 5 := by sorry
+
+### P011
+theorem t11 (bought given_zenny given_andrea kept : ℕ) (h₁ : bought = 60) (h₂ : given_zenny = 18) (h₃ : given_andrea = 6) (h₄ : kept = bought - given_zenny - given_andrea) : kept = 36 := by sorry
+
+### P012
+theorem t12 (price daily_profit : ℝ) (h₁ : price = 1040) (h₂ : daily_profit = (40 * 2 + 6 * 12) - (20 + 2)) : price / daily_profit = 8 := by sorry
+
+### P013
+theorem t13 (sara jake : ℝ) (h₁ : sara = (1 * 12) * (2 * 12) * (2 * 12)) (h₂ : jake = 16 * 20 * 18) : |sara - jake| = 1152 := by sorry
+
+### P014
+theorem t14 (children spoons_each decorative new_large new_teaspoons total : ℕ) (h₁ : children = 4) (h₂ : spoons_each = 3) (h₃ : decorative = 2) (h₄ : new_large = 10) (h₅ : new_teaspoons = 15) (h₆ : total = children * spoons_each + decorative + new_large + new_teaspoons) : total = 39 := by sorry
+
+### P015
+theorem t15 : {x : ℝ | x ^ 2 - 5 * x - 4 ≤ 10} = Set.Icc (-2) 7 := by sorry
+
+### P016
+theorem t16 : Real.logb 2 (8 * Real.sqrt 2) = 7 / 2 := by sorry
+
+### P017
+theorem t17 (days : ℝ) (h : 6 * (3 / 2) = 15 * days) : days = 3 / 5 := by sorry
+
+### P018
+theorem t18 (x : ℤ) (h : (2 : ℝ) ^ (x + 2) = 32) : x = 3 := by sorry
+
+### P019
+theorem t19 (p q : ℝ → ℝ) (hp : ∃ a b : ℝ, ∀ x, p x = a * x + b) (hq : ∃ c d : ℝ, ∀ x, q x = c * x + d) (h1 : p 2 = 3) (h2 : ∀ x, p (q x) = 4 * x + 7) : q (-1) = 2 := by sorry
+
+### P020
+theorem t20 (d1 d2 d3 d4 : ℝ) (h1 : d1 + d2 = 26) (h2 : (d2 + d3) / 2 = 12) (h3 : d3 + d4 = 28) (h4 : d1 + d3 = 22) : d1 + d2 + d3 + d4 = 54 := by sorry
+
+### P021
+theorem t21 (e : ℕ → ℕ) (h1 : e 1 = 3) (h2 : ∀ n ≥ 1, e (n + 1) = 2 * e n) : e 5 = 48 := by sorry
+
+### P022
+theorem t22 (a : ℕ → ℝ) (d : ℝ) (h₀ : a 1 = 2) (h_arith : ∀ n ≥ 1, a (n + 1) = a n + d) (h_sum : a 3 + a 6 = 25) : a 4 = 11 := by sorry
+
+### P023
+theorem t23 (x y : ℝ) (h₁ : x + y = 25) (h₂ : |x - y| = 11) : min x y = 7 := by sorry
+
+### P024
+theorem t24 : Set.ncard {l : List ℕ | l.Perm [1, 2, 3, 4, 5, 6] ∧ ∀ i (hi : i < l.length), ∀ d ∈ Nat.properDivisors (l[i]), ∃ j (hj : j < l.length), j < i ∧ l[j] = d} = 25 := by sorry
+
+### P025
+theorem t25 : Nat.choose 5 3 = 10 := by sorry

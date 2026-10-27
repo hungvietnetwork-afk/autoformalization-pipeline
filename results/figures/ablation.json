@@ -1,0 +1,259 @@
+[
+ {
+  "component": "REPL nóng (import Mathlib một lần mỗi worker)",
+  "setting": "kiểm một ứng viên, Mathlib v4.35.0",
+  "metric": "thời gian kiểm một ứng viên",
+  "on": {
+   "warm_check_ms_mean": 45.8
+  },
+  "off": {
+   "cold_check_s_median": 20.23
+  },
+  "effect": {
+   "speedup": 442.0,
+   "cpu_10k_warm_min": 7.6,
+   "cpu_10k_cold_h": 56.2
+  },
+  "source": "results/raw/cold_vs_warm.json"
+ },
+ {
+  "component": "Heartbeat là giới hạn chính (wall timeout 30 s thay vì 10 s)",
+  "setting": "10.000 task, 2 worker, lô 8",
+  "metric": "throughput ổn định (ứng viên/s); số timeout",
+  "on": {
+   "steady_throughput_candidates_per_s": 51.9065,
+   "repl_timeouts": 0.0
+  },
+  "off": {
+   "steady_throughput_candidates_per_s": 24.17,
+   "repl_timeouts": 7.0
+  },
+  "source": "results/figures/scaling_median.csv (sc_T10K_w2), results/figures/matrix_median.csv (mx_T10K_B)"
+ },
+ {
+  "component": "Trả lại phần còn lại của lô trước khi khởi động lại REPL (release)",
+  "setting": "1.000 task, 2 worker, lô 8, timeout 10 s, 3 lần mỗi bên",
+  "metric": "thời gian ổn định (s, median); số timeout",
+  "on": {
+   "steady_window_s": 43.239,
+   "makespan_s": 106.178,
+   "repl_timeouts": 1.0,
+   "retried_tasks": 0.0,
+   "duplicate_result_rows": 0.0,
+   "runs": 3
+  },
+  "off": {
+   "steady_window_s": 84.908,
+   "makespan_s": 147.42,
+   "repl_timeouts": 1.0,
+   "retried_tasks": 0.0,
+   "duplicate_result_rows": 0.0,
+   "runs": 3
+  },
+  "source": "results/raw/release_runs.csv, results/figures/release_ablation.json"
+ },
+ {
+  "component": "Index phủ cho hàng đợi (chế độ indexed)",
+  "setting": "lease 1 task khi hàng đợi còn 100.000 task; đầu cuối: lô 1, 2 worker, timeout 30 s",
+  "metric": "ms mỗi lần lease; throughput đầu cuối (bài/s)",
+  "on": {
+   "ms_per_lease_100k": 0.064,
+   "end_to_end_problems_per_s": {
+    "T100": 1.626,
+    "T1K": 11.166,
+    "T10K": 18.758
+   }
+  },
+  "off": {
+   "ms_per_lease_100k": 96.789,
+   "end_to_end_problems_per_s": {
+    "T100": 1.629,
+    "T1K": 10.83,
+    "T10K": 15.985
+   }
+  },
+  "source": "results/raw/bench_queue.json, results/figures/batch_median.csv (bs_*_b1_idx vs bs_*_b1)"
+ },
+ {
+  "component": "Work stealing (worker rảnh lấy task của partition khác)",
+  "setting": "mô phỏng trên 1.000 latency thật của T1K zero-shot, 8 worker",
+  "metric": "makespan mô phỏng (s)",
+  "on": {
+   "makespan_s": 10.04,
+   "ideal_s": 5.94
+  },
+  "off": {
+   "makespan_s": 14.68
+  },
+  "effect": {
+   "share_of_time_in_slowest_1pct_tasks": 0.262
+  },
+  "source": "results/figures/skew_q_T1K_zeroshot.json"
+ },
+ {
+  "component": "Giao lại task khi lease hết hạn (retry hệ thống, tối đa 3 lần)",
+  "setting": "1.000 task, 2 worker, lô 8, giết 1 worker sau 300 kết quả, lease 30 s, 3 lần mỗi bên",
+  "metric": "số bài có kết quả; dead-letter; dòng trùng; makespan (s)",
+  "on": {
+   "results": 1000.0,
+   "dead_letter": 0.0,
+   "retried_tasks": 8.0,
+   "overwritten_results": 3.0,
+   "duplicate_result_rows": 0.0,
+   "makespan_s": 99.732,
+   "runs": 3
+  },
+  "off": {
+   "results": 995.0,
+   "dead_letter": 8.0,
+   "retried_tasks": 0.0,
+   "overwritten_results": 0.0,
+   "duplicate_result_rows": 0.0,
+   "makespan_s": 87.976,
+   "runs": 3
+  },
+  "source": "results/raw/retry_runs.csv, results/figures/retry_ablation.json"
+ },
+ {
+  "component": "Gửi lại phần thiếu của batch job (retry ở tầng inference)",
+  "setting": "1.400 ứng viên dự kiến (1.000 zero-shot + 400 few-shot)",
+  "metric": "số ứng viên nhận được",
+  "on": {
+   "answered": 1400,
+   "planned": 1400
+  },
+  "off": {
+   "answered": 784,
+   "share": 0.56
+  },
+  "source": "results/figures/inference_batching.json"
+ },
+ {
+  "component": "Gom nhiều bài vào một request LLM (20–26 bài)",
+  "setting": "cùng prompt zero-shot; token tính cả ngữ cảnh cố định khoảng 80K mỗi request",
+  "metric": "token mỗi bài; tỷ lệ request thất bại",
+  "on": {
+   "tokens_per_problem": 2080,
+   "request_failure_share": 0.077,
+   "requests": 26,
+   "size": "20-26"
+  },
+  "off": {
+   "tokens_per_problem": 87561,
+   "request_failure_share": 0.0,
+   "requests": 20,
+   "size": "1"
+  },
+  "extra": {
+   "9": {
+    "tokens_per_problem": 5592,
+    "request_failure_share": 0.0,
+    "requests": 6
+   },
+   "100-142": {
+    "tokens_per_problem": 1752,
+    "request_failure_share": 0.583,
+    "requests": 12
+   }
+  },
+  "source": "results/figures/inference_batching.json"
+ },
+ {
+  "component": "Few-shot (6 ví dụ) thay cho zero-shot",
+  "setting": "100 bài của T100, mẫu đầu tiên của mỗi bài",
+  "metric": "compile rate; tỷ lệ bị gắn cờ ngữ nghĩa trong số compile được; token ước tính mỗi bài",
+  "on": {
+   "candidates": 100,
+   "compile_rate": 1.0,
+   "flagged_share_of_compiled": 0.13,
+   "lean_confirmed_share_of_compiled": 0.26,
+   "est_tokens_per_problem": 672.3
+  },
+  "off": {
+   "candidates": 100,
+   "compile_rate": 0.99,
+   "flagged_share_of_compiled": 0.1717,
+   "lean_confirmed_share_of_compiled": 0.2929,
+   "est_tokens_per_problem": 329.6
+  },
+  "source": "results/raw/runs/q_T100_fewshot, results/raw/runs/q_T1K_zeroshot (lọc 100 bài T100), results/figures/passk_vs_cost.csv"
+ },
+ {
+  "component": "4 ứng viên mỗi bài thay cho 1",
+  "setting": "few-shot, 100 bài, 4 mẫu mỗi bài",
+  "metric": "Pass@k; token ước tính mỗi bài; tỷ lệ bị gắn cờ",
+  "on": {
+   "pass_at_k": 1.0,
+   "est_tokens_per_problem": 2689,
+   "flagged_share_of_compiled": 0.13
+  },
+  "off": {
+   "pass_at_k": 0.9825,
+   "est_tokens_per_problem": 672,
+   "flagged_share_of_compiled": 0.13
+  },
+  "source": "results/figures/candidates_retry.json"
+ },
+ {
+  "component": "Sanitizer v2 (không cắt `:=` của `let`/`have`)",
+  "setting": "1.000 ứng viên zero-shot T1K, cùng output thô",
+  "metric": "compile rate; số lỗi cú pháp",
+  "on": {
+   "compile_rate": 0.989,
+   "parse_errors": 3
+  },
+  "off": {
+   "compile_rate": 0.983,
+   "parse_errors": 10
+  },
+  "source": "results/raw/runs/q_T1K_zeroshot, results/raw/runs/q_T1K_zeroshot_sanitizer_v1"
+ },
+ {
+  "component": "Kết hợp hai lớp kiểm tra tự động (Lean + heuristic)",
+  "setting": "100 mẫu audit của T1K zero-shot; nhãn tham chiếu: người chấm thử A",
+  "metric": "precision / recall khi coi 'không ĐÚNG' là dương tính",
+  "on": {
+   "flagged": 15,
+   "true_pos": 11,
+   "precision": 0.733,
+   "recall": 0.579
+  },
+  "off": {
+   "heuristic_only": {
+    "flagged": 13,
+    "true_pos": 10,
+    "precision": 0.769,
+    "recall": 0.526
+   },
+   "lean_only": {
+    "flagged": 2,
+    "true_pos": 1,
+    "precision": 0.5,
+    "recall": 0.053
+   }
+  },
+  "source": "results/figures/semantic_layers.json"
+ },
+ {
+  "component": "Kiểm tra tương đương với phát biểu gold",
+  "setting": "mutation test trên phát biểu gold đã compile: 5 loại lỗi cài sẵn + mẫu đối chứng",
+  "metric": "tỷ lệ phát hiện theo loại lỗi; báo động nhầm trên mẫu đối chứng",
+  "on": {
+   "ANSWER_CHANGE": 1.0,
+   "FLIP_REL": 1.0,
+   "DROP_HYP": 1.0,
+   "VACUOUS": 1.0,
+   "TRIVIAL": 1.0,
+   "false_alarm": 0.02
+  },
+  "off": {
+   "ANSWER_CHANGE": 0.256,
+   "FLIP_REL": 0.147,
+   "DROP_HYP": 0.0,
+   "VACUOUS": 0.99,
+   "TRIVIAL": 1.0,
+   "false_alarm": 0.01
+  },
+  "source": "results/figures/mutation_summary.json"
+ }
+]

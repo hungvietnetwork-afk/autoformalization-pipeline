@@ -1,0 +1,101 @@
+audit_id,label,reason
+A001,DUNG,Hypotheses ordering and 7.5 degree conversion correct; asserts a+b+c+d=13.
+A002,DUNG,Ranges of 40 and 35 terms match both progressions; counts common steps equal 10.
+A003,DUNG,Quantities modeled by hypotheses; total minutes divided by 60 equals 6 hours.
+A004,DUNG,Two distinct common points of both curves; distance equals sqrt 10; matches reference.
+A005,DUNG,Infinite set of positive m admitting positive n; faithful to option E.
+A006,DUNG,Roots r and r+1 give n=2r+1 and m=r(r+1) divisible by 3; count 32.
+A007,DUNG,Unit modulus and z_j not 1 hypotheses with correct nonvanishing conclusion.
+A008,GAN_DUNG,All four topology axioms transferred to intersection; adds harmless Nonempty index assumption.
+A009,DUNG,Commutative domain with x^2=1 implies x=1 or x=-1.
+A010,DUNG,All hypotheses present; divisibility stated over integers avoiding truncation.
+A011,DUNG,Expression exactly as in problem equals 1.
+A012,DUNG,Nonzero x with 3+1/x=7/x gives x=2.
+A013,DUNG,Direct rational arithmetic which is the problem itself.
+A014,DUNG,Variables model chopped trees; planted equals 3 times 500 giving 1500.
+A015,GAN_DUNG,Positive cubes with a<=b instead of different cubes; two ways for 1729 and minimality captured.
+A016,DUNG,Integer square mod 3 is 0 or 1.
+A017,DUNG,IsGreatest of a^2+b^2 under nonnegativity for all x with value 40.
+A018,DUNG,Direct product abelian iff both factors abelian.
+A019,DUNG,Product bound for positive n correctly stated in reals.
+A020,SAI,Bare arithmetic identity 14-(2+4)=8 with no modeling of the story.
+A021,DUNG,n divides totient of a^n-1 for a>1; subtraction safe.
+A022,DUNG,Complex linear system yields e=11 and x=-4.
+A023,SAI,Only states 4!=24; stacking orders are not modeled.
+A024,DUNG,Cyclic sum via finRotate; qualifying n are 3 and 4 so ncard 2.
+A025,DUNG,Direct simplification 84/144=7/12.
+A026,DUNG,Restriction to image codomain of open map on open A is open map.
+A027,DUNG,IsLeast with digit parity counts and divisibility by 9; 1089 correct.
+A028,DUNG,All purchases modeled by hypotheses; total equals 40.
+A029,DUNG,Power sum in ZMod p equals -1 if p-1 divides k else 0.
+A030,DUNG,Inverse of 11 mod 1000 below 1000 is 91.
+A031,DUNG,HasSum with shift n=k+17 of binomial ratio equals 272.
+A032,DUNG,Counts n in 1..25 with prime divisor sum; equals 5.
+A033,DUNG,Even positive n with product condition gives sum 24.
+A034,DUNG,Substitution x=4 y=3 gives 19.
+A035,DUNG,Exists f with symmetric difference limit zero but not continuous; matches reference.
+A036,GAN_DUNG,Encodes injectivity facts from picture and product 60 but loosely links labels to answer.
+A037,SAI,No real a b satisfy hypotheses so statement is vacuous over reals.
+A038,DUNG,2^8 mod 5 = 1 stated directly.
+A039,DUNG,Nonzero denominators and chained ratios give k=18.
+A040,DUNG,Nonempty factors with Hausdorff product imply each factor Hausdorff.
+A041,GAN_DUNG,Midpoint written as coordinate averages in bare arithmetic; correct answer.
+A042,DUNG,Images of basis vectors determine matrix with those columns.
+A043,DUNG,cos=4/7 gives 2/cos^2=49/8.
+A044,SAI,Bare arithmetic identity encoding solution; rates and total not modeled.
+A045,DUNG,Finite dimensional real space without eigenvalues; invariant subspace has even finrank.
+A046,DUNG,Matches Putnam conclusion of product of f and derivatives nonnegative at some point; NL text truncated.
+A047,DUNG,Real sqrt ratio equal 7 forces x>24 and x=25.
+A048,DUNG,g right inverse of f with g x = f(x+1) gives 47/24.
+A049,DUNG,Earnings and spending modeled; shortfall equals 2000.
+A050,DUNG,Sum divisibility and quotient hypotheses give a-b=14238; no truncation since a>b.
+A051,DUNG,Cyclic sum bound over reals with sum of squares 1; indices match; real version stronger and true.
+A052,GAN_DUNG,Cross product area formula precomputed instead of using the points; minimization and value sqrt3/2 correct.
+A053,DUNG,Rates modeled by hypotheses; total over 120 minutes equals 600.
+A054,DUNG,Safe poisonous and uncertain modeled; natural subtraction is nonnegative; uncertain equals 5.
+A055,DUNG,Set equality pins h k a b from ellipse picture; sum equals 6.
+A056,DUNG,Median characterized by order counts in multiset; IsGreatest 5 correct.
+A057,SAI,Bare arithmetic identity 2*132/6=44 with natural division; story not modeled.
+A058,DUNG,Nonzero denominator hypotheses and given sum imply value 2.
+A059,DUNG,Harmonic sum a/b with nonzero b; p divides a for any representation.
+A060,DUNG,Bernoulli inequality for x>-1 and natural n.
+A061,DUNG,Solution set equals the pair a and b with nonzero a b forces a=1 b=-2.
+A062,DUNG,Real sqrt equation gives y=10; nonnegativity implied.
+A063,GAN_DUNG,Pythagorean relation with half diagonal precomputed; correct algebraic model of pyramid giving 3 sqrt 7.
+A064,DUNG,Additive subgroup of rationals closed under reciprocals is bottom or top.
+A065,DUNG,Absolute value equation gives y=3.
+A066,DUNG,Piecewise definition with correct branches; f 3 = -1.
+A067,DUNG,Lattice points in disc counted over covering box; equals 81.
+A068,DUNG,Divisors of 30^4 excluding 1 and itself counted; equals 123.
+A069,DUNG,Zeros enumerated with multiplicity and Blaschke summability conclusion; hypotheses faithful.
+A070,DUNG,Complex system with norm of sum equals sqrt 74.
+A071,DUNG,Digits B from 1 to 9 with 10B+6 square; count 2.
+A072,SAI,Closed arithmetic identity encoding solution; ovens hours and weeks not modeled.
+A073,SAI,Bare arithmetic identity (80/8)*(1/2)=5; purchase not modeled.
+A074,DUNG,Summability of 1/(k (log k)^p) for p>1; junk terms at 0 and 1 are zero.
+A075,DUNG,Polynomial evaluation at 2 gives c=3.
+A076,DUNG,Average defined as sum over count computed exactly.
+A077,DUNG,lcm of 6! and (4!)^2 equals 2880.
+A078,GAN_DUNG,Faithful for finite G but index 0 for infinite index lets K=bottom trivially satisfy bound when G infinite.
+A079,DUNG,Class sizes modeled by hypotheses; end count equals 120.
+A080,DUNG,Radius tripled and height doubled give volume factor 18.
+A081,DUNG,gcd 180 168 = 12 stated directly.
+A082,DUNG,Volume ratio over unit square models independent uniform choices; rounding condition correct; 3/4.
+A083,GAN_DUNG,Natural floor division encodes the 43rd digit; correct but closed arithmetic form.
+A084,DUNG,Natural subtraction and division are exact here since n^2>=n and n(n-1) even.
+A085,DUNG,Two distinct solutions with sum -1/9 stated correctly.
+A086,DUNG,Order 3 normal subgroup is normal Sylow 3-subgroup; conclusion commutativity.
+A087,SAI,Bare natural arithmetic identity; bowls per box not modeled.
+A088,DUNG,Areas modeled by hypotheses; new room equals 918.
+A089,DUNG,IsLeast of two-digit primes with nonprime reversal equals 19.
+A090,DUNG,Equal common differences in arithmetic sequence give y=9.
+A091,GAN_DUNG,Adds necessary connectedness of Omega not stated in the text; otherwise exact.
+A092,DUNG,Permutations of positive integers form an infinite type.
+A093,SAI,Binomial formula identity only; no coin flip model so reduced to arithmetic.
+A094,DUNG,Zpow product with exponents -3 and 3 equals 1.
+A095,DUNG,Logarithm relations give k=6.
+A096,DUNG,Solution set of b+ceil b=17.8 equals {8.8}.
+A097,DUNG,Domain conditions radicand nonnegative and denominator radicand positive give [2 5).
+A098,SAI,Bare arithmetic identity 15*10*3=450 with no modeling.
+A099,DUNG,Quadratic inequality solution set equals [-2 7].
+A100,DUNG,IsGreatest of n with 0.85n <= 7.50 equals 8.

@@ -1,0 +1,37 @@
+<section id="quality" data-transition="fade" style="background:#F3F0E8;color:#15212C;font-family:'Be Vietnam Pro', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#2B5FC4">Baseline và chất lượng sinh mã</p>
+<h2 style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:60px;font-weight:700;line-height:1.15;letter-spacing:-1px;color:#15212C">Compile gần như bão hòa: 98,9 % trên 1.000 bài</h2>
+</div>
+<div style="display:flex;gap:64px">
+<div style="flex:1;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:104px;font-weight:700;line-height:1;letter-spacing:-2px;color:#2B5FC4">98,9 %</p>
+<p style="font-size:28px;line-height:1.4;color:#3E4C5A">989/1.000 phát biểu zero-shot compile được; parse rate 99,7 %</p>
+</div>
+<table style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:24px;color:#15212C">
+<tr style="background:#E7E2D6"><th style="width:34%">Nguồn</th><th style="width:33%">Compile</th><th style="width:33%">Tỷ lệ</th></tr>
+<tr><td>ProofNet</td><td>35 / 37</td><td>94,6 %</td></tr>
+<tr><td>miniF2F</td><td>49 / 49</td><td>100 %</td></tr>
+<tr><td>MATH</td><td>805 / 814</td><td>98,9 %</td></tr>
+<tr><td>GSM8K</td><td>100 / 100</td><td>100 %</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.4;color:#5E6976">17 lỗi ban đầu, chỉ 8 do mô hình; 7 do sanitizer của nhóm, sửa trên output thô đã lưu: 98,3 → 98,9 %.</p>
+</div>
+<div style="flex:1.1;display:flex;flex-direction:column;gap:20px">
+<h3 style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:40px;font-weight:700;line-height:1.2;color:#15212C">Baseline trên cùng 20 bài</h3>
+<table style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:24px;color:#15212C">
+<tr style="background:#E7E2D6"><th style="width:40%"></th><th style="width:30%">1 bài mỗi request</th><th style="width:30%">Batch job</th></tr>
+<tr><td>Compile</td><td>20 / 20</td><td>20 / 20</td></tr>
+<tr><td>Bị gắn cờ ngữ nghĩa</td><td>2 / 20</td><td>2 / 20</td></tr>
+<tr><td>Lean xác nhận đúng</td><td>3 / 20</td><td>4 / 20</td></tr>
+<tr><td>Token mỗi bài</td><td><b>87.561</b></td><td><b>1.752–2.080</b></td></tr>
+<tr><td>Thời gian mỗi bài</td><td>63 s</td><td>5–10 s</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">Cùng chất lượng, khác chi phí. Compile không còn phân biệt được cấu hình tốt hay xấu: chất lượng thật phải đo bằng ngữ nghĩa.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1450px;font-size:24px;color:#5E6976">Số liệu: results/figures/quality_metrics.json · baseline_compare.json · failure_causes_*.json</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;text-align:right;color:#5E6976">7 / 17</p>
+<aside>Với Claude Haiku 5.5, compile gần như bão hòa: 98,9 % ngay ở mẫu đầu tiên, ProofNet thấp nhất vì toàn định lý đại học. Baseline bắt buộc, mỗi request một bài, chạy trên 20 bài phân tầng và được so với ứng viên batch job của chính 20 bài đó, cùng cấu hình kiểm chứng một worker: chất lượng như nhau, cả hai đều 20 trên 20 compile và 2 trên 20 bị gắn cờ, nhưng gửi riêng từng bài tốn hơn 87 nghìn token mỗi bài so với khoảng 2 nghìn khi gom. Phân loại lỗi theo nguyên nhân gốc cho thấy 7 trong 17 lỗi ban đầu là lỗi của chính sanitizer của nhóm; vì output thô của mô hình được lưu nguyên, sửa sanitizer chỉ cần chạy lại bước hậu xử lý, không gọi lại mô hình lần nào. Vì compile đã bão hòa, chất lượng thật phải đo bằng ngữ nghĩa, là câu hỏi thứ hai.</aside>
+</section>

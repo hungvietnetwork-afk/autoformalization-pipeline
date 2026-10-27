@@ -1,0 +1,102 @@
+{
+ "run_id": "bs_T10K_b1_r1",
+ "timestamp": "2026-10-26T19:16:24+0000",
+ "git_commit": {
+  "commit": "f0ecf006467a3841f518e459fc9d3586e04dd2a5",
+  "code_dirty": false
+ },
+ "data_version": {
+  "tier": "T1K",
+  "tier_file": "data/tiers/T1K.txt",
+  "tier_sha256": "9ac33101e00f248de18e2703de3b266252335433cbfd3a77dce8706254274c66",
+  "replicas": 10,
+  "units_file": "data/units/all_units.jsonl",
+  "candidates_db_sha256": "d74f77243991625d88c7fe79499806c248f086b96a246adfc5d88a154e0aa991"
+ },
+ "machine": {
+  "cpu": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+  "vcpus": 2,
+  "ram_gb": 7.84,
+  "swap_gb": 0.0,
+  "gpu": null,
+  "os": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39"
+ },
+ "software": {
+  "python": "3.13.16",
+  "packages": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.5",
+   "pyarrow": "26.0.0",
+   "duckdb": "1.5.6",
+   "psutil": "7.2.2",
+   "redis": "8.1.0"
+  },
+  "lean": "4.35.0",
+  "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "mathlib_tag": "v4.35.0",
+  "repl": "58bdde1ff173117960083cc5a052a11d51c49ff1"
+ },
+ "parameters": {
+  "run_id": "bs_T10K_b1_r1",
+  "tier": "T1K",
+  "workers": 2,
+  "batch": 1,
+  "partitions": 16,
+  "timeout_s": 30.0,
+  "lease_s": 60.0,
+  "prompt_version": "v1_zeroshot",
+  "k": 1,
+  "replicas": 10,
+  "backend": {
+   "kind": "cache",
+   "db": "/home/claude/af/autoformalization-pipeline/data/candidates.db"
+  },
+  "broker": {
+   "kind": "sqlite"
+  },
+  "n_problems": 10000
+ },
+ "seed_timeout": {
+  "tier_seed": 42,
+  "llm_sampling_seed": null,
+  "wall_timeout_s": 30.0,
+  "max_heartbeats": 400000,
+  "lease_s": 60.0
+ },
+ "metrics": {
+  "n_problems": 10000,
+  "n_candidates": 10000,
+  "makespan_s": 667.473,
+  "throughput_problems_per_s": 14.982,
+  "steady_throughput_candidates_per_s": 17.144,
+  "latency_ms_p50": 30.8,
+  "latency_ms_p95": 114.37,
+  "latency_ms_p99": 246.66,
+  "compile_rate": 0.989,
+  "pass_at_k": 0.989,
+  "status_counts": {
+   "COMPILE_OK": 9890,
+   "TYPE_MISMATCH": 46,
+   "UNKNOWN_IDENTIFIER": 20,
+   "PARSE_ERROR": 30,
+   "OTHER_ERROR": 10,
+   "TIMEOUT": 4
+  },
+  "peak_pool_mb": 4811.4,
+  "peak_rss_sum_mb": 9146.7,
+  "repl_timeouts": 4,
+  "repl_restarts": 4,
+  "retried_tasks": 0,
+  "duplicate_result_rows": 0,
+  "dead_letter": 0,
+  "lean_busy_fraction": 0.584
+ },
+ "status": "ok",
+ "logs": {
+  "raw_results.csv": "results/raw/runs/bs_T10K_b1_r1/raw_results.csv",
+  "events.jsonl": "results/raw/runs/bs_T10K_b1_r1/events.jsonl",
+  "memory.csv": "results/raw/runs/bs_T10K_b1_r1/memory.csv",
+  "metrics.json": "results/raw/runs/bs_T10K_b1_r1/metrics.json",
+  "config.json": "results/raw/runs/bs_T10K_b1_r1/config.json"
+ }
+}

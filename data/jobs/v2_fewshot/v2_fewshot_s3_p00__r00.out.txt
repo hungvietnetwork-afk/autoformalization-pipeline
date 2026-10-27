@@ -1,0 +1,91 @@
+### P041
+theorem t41 : (27 : ℚ) / 30 = 9 / 10 := by sorry
+
+### P042
+theorem t42 : ((Finset.Icc (100 : ℕ) 999).filter (fun n => 13 ∣ n)).card = 69 := by sorry
+
+### P043
+theorem t43 (A : Matrix (Fin 2) (Fin 2) ℝ) (hA : A = !![15, 25; -9, -15]) :
+    HasSum (fun n : ℕ => ((n : ℝ) + 1) • A ^ n) !![31, 50; -18, -29] := by sorry
+
+### P044
+theorem t44 (A B C M : EuclideanSpace ℝ (Fin 2)) (hAB : dist A B = 10) (hBC : dist B C = 24)
+    (hABC : EuclideanGeometry.angle A B C = π / 2) (hM : M ∈ segment ℝ A C)
+    (hbis : EuclideanGeometry.angle A B M = EuclideanGeometry.angle M B C) :
+    Real.cos (EuclideanGeometry.angle A B M) = Real.sqrt 2 / 2 := by sorry
+
+### P045
+theorem t45 (d : ℝ)
+    (hd : IsLeast {x : ℝ | ∃ t : ℝ, x = Real.sqrt (t ^ 2 + t ^ 2 + 1) + Real.sqrt ((t - 1) ^ 2 + t ^ 2 + 1)} d) :
+    d ^ 2 = 3 + Real.sqrt 6 := by sorry
+
+### P046
+theorem t46 : IsLeast {x : ℝ | ∃ θ : ℝ, x = (Real.cos θ + 1 / 2) * Real.cos θ} (-1 / 16) := by sorry
+
+### P047
+theorem t47 : Real.sin ((1998 + 237 : ℝ) * π / 180) * Real.sin ((1998 - 1653 : ℝ) * π / 180) = -1 / 4 := by sorry
+
+### P048
+theorem t48 : Real.tan (10 * π / 180) * Real.tan (20 * π / 180) * Real.tan (30 * π / 180) * Real.tan (40 * π / 180) * Real.tan (50 * π / 180) * Real.tan (60 * π / 180) * Real.tan (70 * π / 180) * Real.tan (80 * π / 180) = 1 := by sorry
+
+### P049
+theorem t49 : MeasureTheory.volume {p : ℝ × ℝ | |3 * p.1| + |4 * p.2| ≤ 12} = (24 : ENNReal) := by sorry
+
+### P050
+theorem t50 (S : Finset ℝ) (hS : ∀ x : ℝ, x ∈ S ↔ (x - 5) ^ 2 = 9) : ∑ x ∈ S, x = 10 := by sorry
+
+### P051
+theorem t51 (a : ℕ → ℕ) (h₁ : a 1 = 1) (h₂ : a 2 = 2) (h₃ : ∀ n ≥ 2, a (n + 1) = a n + 1) :
+    ∑ i ∈ Finset.Icc 1 12, a i = 78 := by sorry
+
+### P052
+theorem t52 (g : ℕ → ℕ) (h₀ : ∀ n < 3, g n = 0) (h₁ : ∀ n ≥ 3, g n = n / 3 + g (n / 3 + n % 3)) :
+    g 243 = 121 := by sorry
+
+### P053
+theorem t53 : ((MvPolynomial.X 0 + MvPolynomial.X 1 + MvPolynomial.X 2) * (MvPolynomial.X 3 + MvPolynomial.X 4 + MvPolynomial.X 5 + MvPolynomial.X 6) : MvPolynomial (Fin 7) ℤ).support.card = 12 := by sorry
+
+### P054
+theorem t54 (c o u n t s : ℕ) (hc : 1 ≤ c ∧ c ≤ 9) (ho : 1 ≤ o ∧ o ≤ 9) (hu : 1 ≤ u ∧ u ≤ 9)
+    (hn : 1 ≤ n ∧ n ≤ 9) (ht : 1 ≤ t ∧ t ≤ 9) (hs : 1 ≤ s ∧ s ≤ 9)
+    (h1 : c + o = u) (h2 : u + n = t) (h3 : t + c = s) (h4 : o + n + s = 12) : t = 6 := by sorry
+
+### P055
+theorem t55 (p₁ q₁ p₂ q₂ : ℝ) (hinv : p₁ * q₁ = p₂ * q₂) (h₁ : p₁ = 25) (h₂ : q₁ = 6) (h₃ : q₂ = 15) :
+    p₂ = 10 := by sorry
+
+### P056
+theorem t56 (p q : ℝ) (hp : 1 < p) (hq : 1 < q) (h1 : 1 / p + 1 / q = 1) (h2 : p * q = 4) : q = 2 := by sorry
+
+### P057
+theorem t57 : (((Finset.univ : Finset (Fin 6 → Bool)).filter (fun c => ∃ b : Fin 6, ∀ i j : Fin 6, i.val / 2 ≠ b.val / 2 → j.val / 2 ≠ b.val / 2 → c i = c j)).card : ℚ) / 2 ^ 6 = 5 / 16 := by sorry
+
+### P058
+theorem t58 (col : Fin 20 → Fin 4) (h₀ : ((Finset.univ : Finset (Fin 20)).filter (fun i => col i = 0)).card = 4) (h₁ : ((Finset.univ : Finset (Fin 20)).filter (fun i => col i = 1)).card = 7) (h₂ : ((Finset.univ : Finset (Fin 20)).filter (fun i => col i = 2)).card = 8) (h₃ : ((Finset.univ : Finset (Fin 20)).filter (fun i => col i = 3)).card = 1) :
+    (((Finset.univ : Finset (Fin 20 × Fin 20)).filter (fun p => col p.1 = col p.2)).card : ℚ) / 400 = 13 / 40 := by sorry
+
+### P059
+theorem t59 : ((Finset.univ : Finset (Finset (Fin 5))).image (fun A => ({A, Finset.univ \ A} : Finset (Finset (Fin 5))))).card = 16 := by sorry
+
+### P060
+theorem t60 : (((Finset.univ : Finset (Equiv.Perm (Fin 9))).filter (fun σ => ∃ s : Fin 9, ∀ i : Fin 9, i.val < 4 → ∃ k : Fin 4, σ i = s + (k.val : Fin 9))).card : ℚ) / (Fintype.card (Equiv.Perm (Fin 9)) : ℚ) = 1 / 14 := by sorry
+
+### P061
+theorem t61 : ((Finset.univ : Finset (Fin 10 → Fin 3)).filter (fun f => f 0 = 0 ∧ f 1 = 1 ∧ ((Finset.univ : Finset (Fin 10)).filter (fun i => f i = 0)).card = 3 ∧ ((Finset.univ : Finset (Fin 10)).filter (fun i => f i = 1)).card = 5 ∧ ((Finset.univ : Finset (Fin 10)).filter (fun i => f i = 2)).card = 2)).card = 420 := by sorry
+
+### P062
+theorem t62 : Set.ncard {P : Finpartition (Finset.univ : Finset (Fin 4)) | P.parts.card ≤ 3} = 14 := by sorry
+
+### P063
+theorem t63 (r h X : ℝ) (hr : 0 < r) (hh : 0 < h) (hX : π * (r + 2 * r) ^ 2 * (2 * h) = X * (π * r ^ 2 * h)) : X = 18 := by sorry
+
+### P064
+theorem t64 (H : ℝ) (x y : Fin 12 → ℝ) (hx : x = ![0, 9, 9, 8, 8, 7, 7, 6, 6, 5, 5, 0])
+    (hy : y = ![0, 0, H - 4, H - 4, H - 3, H - 3, H - 2, H - 2, H - 1, H - 1, H, H])
+    (harea : (1 / 2 : ℝ) * ∑ i : Fin 12, (x i * y (i + 1) - x (i + 1) * y i) = 53) :
+    ∑ i : Fin 12, Real.sqrt ((x (i + 1) - x i) ^ 2 + (y (i + 1) - y i) ^ 2) = 32 := by sorry
+
+### P065
+theorem t65 (A B C D : EuclideanSpace ℝ (Fin 2)) (hAB : dist A B = 10) (hBC : dist B C = 10)
+    (hCD : dist C D = 17) (hDA : dist D A = 17) (hADC : EuclideanGeometry.angle A D C = π / 3) :
+    dist A C = 17 := by sorry

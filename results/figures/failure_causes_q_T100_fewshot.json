@@ -1,0 +1,31 @@
+{
+ "run": "q_T100_fewshot",
+ "n": 400,
+ "n_failed": 7,
+ "by_owner": {
+  "model": 7
+ },
+ "causes": [
+  {
+   "cause": "types_coercions_instances",
+   "owner": "model",
+   "n": 5,
+   "problem_ids": [
+    "math:train/counting_and_probability/609",
+    "math:train/counting_and_probability/784",
+    "math:train/intermediate_algebra/1785",
+    "math:train/geometry/6142",
+    "math:train/intermediate_algebra/1278"
+   ]
+  },
+  {
+   "cause": "missing_namespace_or_notation",
+   "owner": "model",
+   "n": 2,
+   "problem_ids": [
+    "math:train/precalculus/64",
+    "math:train/precalculus/301"
+   ]
+  }
+ ]
+}

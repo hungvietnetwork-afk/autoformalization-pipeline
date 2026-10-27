@@ -1,0 +1,41 @@
+<section id="data" data-transition="fade" style="background:#F3F0E8;color:#15212C;font-family:'Be Vietnam Pro', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#2B5FC4">Dữ liệu</p>
+<h2 style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:60px;font-weight:700;line-height:1.15;letter-spacing:-1px;color:#15212C">22.150 đề thật từ bốn nguồn công khai</h2>
+</div>
+<div style="display:flex;gap:56px">
+<div style="flex:1.1;display:flex;flex-direction:column;gap:20px">
+<table style="font-family:'Be Vietnam Pro', Arial, sans-serif;font-size:28px;color:#15212C">
+<tr style="background:#E7E2D6"><th style="width:24%">Nguồn</th><th style="width:18%">Số đề</th><th style="width:36%">Loại bài</th><th style="width:22%">Có sẵn</th></tr>
+<tr><td>ProofNet</td><td>371</td><td>Định lý đại học</td><td>Lean gold</td></tr>
+<tr><td>miniF2F</td><td>488</td><td>Thi Olympic</td><td>Lean gold</td></tr>
+<tr><td>MATH</td><td>12.499</td><td>7 môn, mức 1–5</td><td>Đáp án</td></tr>
+<tr><td>GSM8K</td><td>8.792</td><td>Toán lời văn</td><td>Đáp án</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.4;color:#5E6976">Tải từ GitHub, chuẩn hóa về một schema, loại 1 bản ghi trùng. NuminaMath-CoT không tải được trong môi trường thí nghiệm, nên dùng MATH và GSM8K, hai nguồn con của nó. Gold viết cho Mathlib 2024: 84,9 % còn compile trên v4.35, 92,9 % sau một luật viết lại cú pháp.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5E6976">Đơn vị dữ liệu</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.45;color:#15212C">DataUnit = ⟨problem_id, source, natural_statement, domain, metadata⟩</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5E6976">Khoá phân vùng</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:28px;line-height:1.4;color:#2B5FC4">SHA256(problem_id) mod 16</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">Mọi máy tính ra cùng một partition, khác hash() của Python</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5E6976">Ba tầng thí nghiệm</p>
+<p style="font-size:28px;line-height:1.4;color:#15212C">T100 ⊂ T1K ⊂ T10K, cùng tỷ lệ nguồn, seed 42; T20 cho baseline</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#5E6976">Ứng viên Lean</p>
+<p style="font-size:28px;line-height:1.4;color:#15212C">1.420 phát biểu do Claude Haiku 5.5 sinh</p>
+<p style="font-size:24px;line-height:1.4;color:#3E4C5A">1.000 zero-shot + 100 × 4 few-shot + 20 baseline một request; tầng 10K phát lại 1.000 ứng viên thật 10 lần</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1450px;font-size:24px;color:#5E6976">Chi tiết: docs/DATA_CARD.md · data/MANIFEST.json (nguồn, giấy phép, SHA-256) · data_sample/</p>
+<p style="position:absolute;right:128px;bottom:64px;width:200px;font-size:24px;text-align:right;color:#5E6976">4 / 17</p>
+<aside>Bốn nguồn công khai, đều tải được từ GitHub. ProofNet và miniF2F có phát biểu Lean do người viết, dùng làm tham chiếu ngữ nghĩa; MATH và GSM8K có đáp án. Mỗi bài là một DataUnit. Khoá phân vùng dùng SHA-256 vì hash() của Python bị salt khác nhau giữa các tiến trình, nên hai máy sẽ tính ra hai partition khác nhau. Lưu lâu dài bằng Parquet phân vùng theo source và domain, truy vấn thẳng bằng DuckDB hoặc Spark. Ba tầng lồng nhau giữ cùng tỷ lệ nguồn. Theo yêu cầu tiết kiệm, nhóm chỉ sinh mã cho 1.000 bài; tầng 10K là trace replay: Lean kiểm chứng lại đủ 10.000 task nhưng không gọi lại model. Hướng dẫn gợi ý NuminaMath-CoT, nhưng HuggingFace không truy cập được từ môi trường thí nghiệm; MATH và GSM8K là hai nguồn con của nó, cùng vai trò: nhiều bài có đáp án, không có nhãn hình thức. Theo yêu cầu dữ liệu, Git chỉ giữ mẫu 100 bài, các split, manifest có SHA-256 và script tải lại.</aside>
+</section>

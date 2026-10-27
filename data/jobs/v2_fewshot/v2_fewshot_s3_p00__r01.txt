@@ -1,0 +1,121 @@
+### P066
+With all angles measured in degrees, the product $\prod_{k=1}^{45} \csc^2(2k-1)^\circ=m^n$, where $m$ and $n$ are integers greater than 1. Find $m+n$.
+Answer: 91
+
+### P067
+How many cubic centimeters are in the volume of a cone having a diameter of 10cm and a height of 6cm? Express your answer in terms of $\pi$.
+Answer: 50 \pi
+
+### P068
+A square flag has a red cross of uniform width with a blue square in the center on a white background as shown. (The cross is symmetric with respect to each of the diagonals of the square.) If the entire cross (both the red arms and the blue center) takes up 36% of the area of the flag, what percent of the area of the flag is blue?
+[asy] unitsize(2.5 cm);  pair[] A, B, C; real t = 0.2;  A[1] = (0,0); A[2] = (1,0); A[3] = (1,1); A[4] = (0,1); B[1] = (t,0); B[2] = (1 - t,0); B[3] = (1,t); B[4] = (1,1 - t); B[5] = (1 - t,1); B[6] = (t,1); B[7] = (0,1 - t); B[8] = (0,t); C[1] = extension(B[1],B[4],B[7],B[2]); C[2] = extension(B[3],B[6],B[1],B[4]); C[3] = extension(B[5],B[8],B[3],B[6]); C[4] = extension(B[7],B[2],B[5],B[8]);  fill(C[1]--C[2]--C[3]--C[4]--cycle,blue); fill(A[1]--B[1]--C[1]--C[4]--B[8]--cycle,red); fill(A[2]--B[3]--C[2]--C[1]--B[2]--cycle,red); fill(A[3]--B[5]--C[3]--C[2]--B[4]--cycle,red); fill(A[4]--B[7]--C[4]--C[3]--B[6]--cycle,red);  draw(A[1]--A[2]--A[3]--A[4]--cycle); draw(B[1]--B[4]); draw(B[2]--B[7]); draw(B[3]--B[6]); draw(B[5]--B[8]); [/asy]
+$\text{(A)}\ 0.5\qquad\text{(B)}\ 1\qquad\text{(C)}\ 2\qquad\text{(D)}\ 3\qquad\text{(E)}\ 6$
+Answer: 2
+
+### P069
+In rectangle $ABCD$, angle $C$ is trisected by $\overline{CF}$ and $\overline{CE}$, where $E$ is on $\overline{AB}$, $F$ is on $\overline{AD}$, $BE=6$, and $AF=2$. Find the area of $ABCD$.
+
+[asy]
+import olympiad; import geometry; size(150); defaultpen(linewidth(0.8)); dotfactor=4;
+real length = 2 * (6*sqrt(3) - 2), width = 6*sqrt(3);
+draw(origin--(length,0)--(length,width)--(0,width)--cycle);
+draw((length,width)--(0,2)^^(length,width)--(length - 6,0));
+dot("$A$",origin,SW); dot("$B$",(length,0),SE); dot("$C$",(length,width),NE); dot("$D$",(0,width),NW); dot("$F$",(0,2),W); dot("$E$",(length - 6,0),S);
+[/asy]
+Answer: 108\sqrt{3}-36
+
+### P070
+Find the solutions to $z^4 = -4.$  Enter the solutions, separated by commas.
+Answer: 1 + i, 1 - i, -1 + i, -1 - i
+
+### P071
+Compute \[\sum_{n=1}^{1000} \frac{1}{n^2 + n}.\]
+Answer: \frac{1000}{1001}
+
+### P072
+Find the largest positive integer $n$ such that
+\[\sin^n x + \cos^n x \ge \frac{1}{n}\]for all real numbers $x.$
+Answer: 8
+
+### P073
+For real numbers $x > 1,$ find the minimum value of
+\[\frac{x + 8}{\sqrt{x - 1}}.\]
+Answer: 6
+
+### P074
+What is the largest integer less than $\log_2 \frac{2}{1} + \log_2 \frac{3}{2} + \cdots + \log_2 \frac{2009}{2008} + \log_2 \frac{2010}{2009}$?
+Answer: 10
+
+### P075
+The polynomial equation \[x^3 + bx + c = 0,\]where $b$ and $c$ are rational numbers, has $3-\sqrt{7}$ as a root. It also has an integer root. What is it?
+Answer: -6
+
+### P076
+Compute the sum of the squares of the roots of the equation \[x^{2018} +44x^{2015} + 3x^3 + 404 = 0.\]
+Answer: 0
+
+### P077
+Find the smallest positive real number $c,$ such that for all nonnegative real numbers $x$ and $y,$
+\[\sqrt{xy} + c |x - y| \ge \frac{x + y}{2}.\]
+Answer: \frac{1}{2}
+
+### P078
+If $A,B$ and $C$ are non-zero distinct digits in base $6$ such that $\overline{ABC}_6 + \overline{BCA}_6+ \overline{CAB}_6 = \overline{AAA0}_6$, find $B+C$ in base $6$.
+Answer: 5
+
+### P079
+A palindrome is a number that reads the same forward and backward. What is the smallest 5-digit palindrome in base 2 that can be expressed as a 3-digit palindrome in a different base?  Give your response in base 2.
+Answer: 10001_2
+
+### P080
+A $150\times 324\times 375$ rectangular solid is made by gluing together $1\times 1\times 1$ cubes. An internal diagonal of this solid passes through the interiors of how many of the $1\times 1\times 1$ cubes?
+Answer: 768
+
+### P081
+Let $S$ be the set of integers $n > 1$ for which $\tfrac1n = 0.d_1d_2d_3d_4\ldots$, an infinite decimal that has the property that $d_i = d_{i+12}$ for all positive integers $i$. Given that $9901$ is prime, how many positive integers are in $S$? (The $d_i$ are digits.)
+Answer: 255
+
+### P082
+Compute: $9 \cdot \frac{1}{13} \cdot 26.$
+Answer: 18
+
+### P083
+When $\frac{1}{1111}$ is expressed as a decimal, what is the sum of the first 40 digits after the decimal point?
+Answer: 90
+
+### P084
+A square is divided into five congruent rectangles, as shown. If the perimeter of each of these five rectangles is 36 inches, what is the perimeter of the square, in inches?
+
+[asy]
+draw((0,0)--(0,5)--(5,5)--(5,0)--cycle);
+draw((1,0)--(1,5));
+draw((2,0)--(2,5));
+draw((3,0)--(3,5));
+draw((4,0)--(4,5));
+[/asy]
+Answer: 60
+
+### P085
+Seven identical bowling balls weigh the same as three identical canoes. If one of the canoes weighs a total of 28 pounds, how many pounds does one of the bowling balls weigh?
+Answer: 12
+
+### P086
+Fiona is people-watching again. She spies a group of ten high schoolers and starts playing a game by herself, in which she looks at a pair of people from the group of ten and tries to guess whether they like or dislike each other. How many pairs of friends can she observe before she runs out of pairs to evaluate?
+Answer: 45
+
+### P087
+If $a+\frac {a} {3}=\frac {8} {3}$, what is the value of $a$?
+Answer: 2
+
+### P088
+Simplify $3\cdot\frac{11}{4}\cdot \frac{16}{-55}$.
+Answer: -\frac{12}{5}
+
+### P089
+Let $\mathbf{M}$ be a matrix, and let $\mathbf{v}$ and $\mathbf{w}$ be vectors, such that
+\[\mathbf{M} \mathbf{v} = \begin{pmatrix} 1 \\ -5 \end{pmatrix} \quad \text{and} \quad \mathbf{M} \mathbf{w} = \begin{pmatrix} 7 \\ 2 \end{pmatrix}.\]Compute $\mathbf{M} (-2 \mathbf{v} + \mathbf{w}).$
+Answer: \begin{pmatrix} 5 \\ 12 \end{pmatrix}
+
+### P090
+Find the matrix that corresponds to a dilation centered at the origin with scale factor $-3.$
+Answer: \begin{pmatrix} -3 & 0 \\ 0 & -3 \end{pmatrix}

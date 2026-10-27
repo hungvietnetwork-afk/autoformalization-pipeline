@@ -1,0 +1,74 @@
+### P101
+theorem t101 : {x : ℝ | x ^ 3 - 10 * x ^ 2 > -25 * x} = Set.Ioo 0 5 ∪ Set.Ioi 5 := by sorry
+
+### P102
+theorem t102 : (10 ^ 43 / 13) % 10 = 0 := by sorry
+
+### P103
+theorem t103 : ((Finset.Icc 1 25).filter (fun n : ℕ => Nat.Prime (∑ d ∈ Nat.divisors n, d))).card = 5 := by sorry
+
+### P104
+theorem t104 : ∑ x ∈ (Finset.Icc 1 20).filter (fun x : ℕ => 13 * (3 * (x : ℤ) - 2) ≡ 26 [ZMOD 8]), x = 36 := by sorry
+
+### P105
+theorem t105 : (∏ k ∈ Finset.range 10, (2 + 10 * k)) % 5 = 4 := by sorry
+
+### P106
+theorem t106 : ∑ i ∈ Finset.range 40, (10 ^ (i + 1) / 1111) % 10 = 90 := by sorry
+
+### P107
+theorem t107 (hour minute : ℝ) (hh : hour = 5 * 30) (hm : minute = 0) : min |hour - minute| (360 - |hour - minute|) = 150 := by sorry
+
+### P108
+theorem t108 (mark carolyn total : ℝ) (h₁ : mark = 3 / 4) (h₂ : carolyn = 3 / 10) (h₃ : total = mark + carolyn) : total = 1.05 := by sorry
+
+### P109
+theorem t109 (n : ℝ) (h : Real.sqrt (5 + n) = 7) : n = 44 := by sorry
+
+### P110
+theorem t110 (s A : ℝ) (hs : s = 2) (hA : A = s * s * Real.sin (Real.pi / 3)) : A = 2 * Real.sqrt 3 := by sorry
+
+### P111
+theorem t111 (x : ℝ) (h : (6 + 13 + 18 + 4 + x) / 5 = 10) : x = 9 := by sorry
+
+### P112
+theorem t112 (L W s : ℝ) (hL : L = 40) (hW : W = 10) (hs : 4 * s = 2 * (L + W)) : s ^ 2 - L * W = 225 := by sorry
+
+### P113
+theorem t113 : (((5 : ℝ) - 2) * 180) / 5 = 108 := by sorry
+
+### P114
+theorem t114 : ∏ d ∈ (Finset.Icc (-105 : ℤ) 105).filter (fun d : ℤ => d ∣ 105 ∧ d ∣ 14), d = 49 := by sorry
+
+### P115
+theorem t115 (r A : ℝ) (hC : 2 * Real.pi * r = 18) (hA : A = Real.pi * r ^ 2) : A = 81 / Real.pi := by sorry
+
+### P116
+theorem t116 (a b : ℝ) (ha : 0 < a) (hb : 0 < b) (h : ∀ x : ℝ, Real.sin (b * x) ≠ 0 → Real.sin (x / 3) ≠ 0 → a / Real.sin (b * x) = 2 / Real.sin (x / 3)) : a = 2 := by sorry
+
+### P117
+theorem t117 (A B C D : Fin 3 → ℝ) (h₁ : ∑ i, (B i - A i) * (C i - A i) = 0) (h₂ : ∑ i, (C i - A i) * (D i - A i) = 0) (h₃ : ∑ i, (D i - A i) * (B i - A i) = 0) : let area : (Fin 3 → ℝ) → (Fin 3 → ℝ) → (Fin 3 → ℝ) → ℝ := fun P Q R => 1 / 2 * Real.sqrt ((∑ i, (Q i - P i) ^ 2) * (∑ i, (R i - P i) ^ 2) - (∑ i, (Q i - P i) * (R i - P i)) ^ 2); area B C D = Real.sqrt (area A B C ^ 2 + area A C D ^ 2 + area A D B ^ 2) := by sorry
+
+### P118
+theorem t118 (a b c : Fin 3 → ℝ) (ha : ∑ i, a i ^ 2 = 1) (hb : ∑ i, b i ^ 2 = 1) (hc : ∑ i, c i ^ 2 = 1) (hli : LinearIndependent ℝ ![a, b, c]) (h : crossProduct a (crossProduct b c) = (1 / Real.sqrt 2) • (b + c)) : Real.arccos (∑ i, a i * b i) * 180 / Real.pi = 135 := by sorry
+
+### P119
+theorem t119 : (5 ^ 100 / 100) % 10 + (5 ^ 100 / 10) % 10 + 5 ^ 100 % 10 = 13 := by sorry
+
+### P120
+theorem t120 (x e : ℂ) (h₁ : x + e = 7) (h₂ : 2 * x + e = 3) : e = 11 ∧ x = -4 := by sorry
+
+### P121
+theorem t121 (f g : ℝ → ℝ) (hf : ∀ y, f y = 5 * y - 12) (hg : ∀ y, f (g y) = y) (x : ℝ) (hx : g x = f (x + 1)) : x = 47 / 24 := by sorry
+
+### P122
+theorem t122 (a b : ℝ) (ha : a ≠ 0) (hb : b ≠ 0) (h : {x : ℝ | x ^ 2 + a * x + b = 0} = {a, b}) : (a, b) = (1, -2) := by sorry
+
+### P123
+theorem t123 : 2 ^ 8 % 5 = 1 := by sorry
+
+### P124
+theorem t124 (p : ℕ) (hp : p.Prime) (hodd : p ≠ 2) (a b : ℤ) (hb : b ≠ 0) (h : ∑ k ∈ Finset.Icc 1 (p - 1), (1 : ℚ) / (k : ℚ) = (a : ℚ) / (b : ℚ)) : (p : ℤ) ∣ a := by sorry
+
+### P125
+theorem t125 : let K : Set ℝ := {x : ℝ | ∃ n : ℕ, 0 < n ∧ x = 1 / (n : ℝ)}; let Tl : TopologicalSpace ℝ := TopologicalSpace.generateFrom {S | ∃ a b : ℝ, S = Set.Ico a b}; let TK : TopologicalSpace ℝ := TopologicalSpace.generateFrom ({S | ∃ a b : ℝ, S = Set.Ioo a b} ∪ {S | ∃ a b : ℝ, S = Set.Ioo a b \ K}); ¬ (Tl ≤ TK) ∧ ¬ (TK ≤ Tl) := by sorry

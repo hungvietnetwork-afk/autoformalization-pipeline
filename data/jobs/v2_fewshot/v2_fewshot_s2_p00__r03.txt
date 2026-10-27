@@ -1,0 +1,112 @@
+### P076
+Compute the sum of the squares of the roots of the equation \[x^{2018} +44x^{2015} + 3x^3 + 404 = 0.\]
+Answer: 0
+
+### P077
+Find the smallest positive real number $c,$ such that for all nonnegative real numbers $x$ and $y,$
+\[\sqrt{xy} + c |x - y| \ge \frac{x + y}{2}.\]
+Answer: \frac{1}{2}
+
+### P078
+If $A,B$ and $C$ are non-zero distinct digits in base $6$ such that $\overline{ABC}_6 + \overline{BCA}_6+ \overline{CAB}_6 = \overline{AAA0}_6$, find $B+C$ in base $6$.
+Answer: 5
+
+### P079
+A palindrome is a number that reads the same forward and backward. What is the smallest 5-digit palindrome in base 2 that can be expressed as a 3-digit palindrome in a different base?  Give your response in base 2.
+Answer: 10001_2
+
+### P080
+A $150\times 324\times 375$ rectangular solid is made by gluing together $1\times 1\times 1$ cubes. An internal diagonal of this solid passes through the interiors of how many of the $1\times 1\times 1$ cubes?
+Answer: 768
+
+### P081
+Let $S$ be the set of integers $n > 1$ for which $\tfrac1n = 0.d_1d_2d_3d_4\ldots$, an infinite decimal that has the property that $d_i = d_{i+12}$ for all positive integers $i$. Given that $9901$ is prime, how many positive integers are in $S$? (The $d_i$ are digits.)
+Answer: 255
+
+### P082
+Compute: $9 \cdot \frac{1}{13} \cdot 26.$
+Answer: 18
+
+### P083
+When $\frac{1}{1111}$ is expressed as a decimal, what is the sum of the first 40 digits after the decimal point?
+Answer: 90
+
+### P084
+A square is divided into five congruent rectangles, as shown. If the perimeter of each of these five rectangles is 36 inches, what is the perimeter of the square, in inches?
+
+[asy]
+draw((0,0)--(0,5)--(5,5)--(5,0)--cycle);
+draw((1,0)--(1,5));
+draw((2,0)--(2,5));
+draw((3,0)--(3,5));
+draw((4,0)--(4,5));
+[/asy]
+Answer: 60
+
+### P085
+Seven identical bowling balls weigh the same as three identical canoes. If one of the canoes weighs a total of 28 pounds, how many pounds does one of the bowling balls weigh?
+Answer: 12
+
+### P086
+Fiona is people-watching again. She spies a group of ten high schoolers and starts playing a game by herself, in which she looks at a pair of people from the group of ten and tries to guess whether they like or dislike each other. How many pairs of friends can she observe before she runs out of pairs to evaluate?
+Answer: 45
+
+### P087
+If $a+\frac {a} {3}=\frac {8} {3}$, what is the value of $a$?
+Answer: 2
+
+### P088
+Simplify $3\cdot\frac{11}{4}\cdot \frac{16}{-55}$.
+Answer: -\frac{12}{5}
+
+### P089
+Let $\mathbf{M}$ be a matrix, and let $\mathbf{v}$ and $\mathbf{w}$ be vectors, such that
+\[\mathbf{M} \mathbf{v} = \begin{pmatrix} 1 \\ -5 \end{pmatrix} \quad \text{and} \quad \mathbf{M} \mathbf{w} = \begin{pmatrix} 7 \\ 2 \end{pmatrix}.\]Compute $\mathbf{M} (-2 \mathbf{v} + \mathbf{w}).$
+Answer: \begin{pmatrix} 5 \\ 12 \end{pmatrix}
+
+### P090
+Find the matrix that corresponds to a dilation centered at the origin with scale factor $-3.$
+Answer: \begin{pmatrix} -3 & 0 \\ 0 & -3 \end{pmatrix}
+
+### P091
+The matrix
+\[\begin{pmatrix} a & 3 \\ -8 & d \end{pmatrix}\]is its own inverse, for some real numbers $a$ and $d.$  Find the number of possible pairs $(a,d).$
+Answer: 2
+
+### P092
+The [[function]] f is defined on the [[set]] of [[integer]]s and satisfies $f(n)=\begin{cases}
+n-3&\mbox{if}\ n\ge 1000\\
+f(f(n+5))&\mbox{if}\ n<1000\end{cases}$
+
+Find $f(84)$. Show that it is 997.
+
+### P093
+The number $a=\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers, has the property that the sum of all real numbers $x$ satisfying
+$ \lfloor x \rfloor \cdot \{x\} = a \cdot x^2$
+is $420$, where $\lfloor x \rfloor$ denotes the greatest integer less than or equal to $x$ and $\{x\}=x- \lfloor x \rfloor$ denotes the fractional part of $x$. What is $p+q$?
+
+$\textbf{(A) } 245 \qquad \textbf{(B) } 593 \qquad \textbf{(C) } 929 \qquad \textbf{(D) } 1331 \qquad \textbf{(E) } 1332$ Show that it is \textbf{(C) } 929.
+
+### P094
+Show that for positive integer $n$, $(\prod_{k=1}^{n} (1 + 1/2^k)) < 5/2$.
+
+### P095
+Find $y$: $\sqrt{19+3y} = 7$. Show that it is 10.
+
+### P096
+A sequence of numbers is defined recursively by $a_1 = 1$, $a_2 = \frac{3}{7}$, and
+$a_n=\frac{a_{n-2} \cdot a_{n-1}}{2a_{n-2} - a_{n-1}}$for all $n \geq 3$ Then $a_{2019}$ can be written as $\frac{p}{q}$, where $p$ and $q$ are relatively prime positive integers. What is $p+q ?$
+
+$\textbf{(A) } 2020 \qquad\textbf{(B) } 4039 \qquad\textbf{(C) } 6057 \qquad\textbf{(D) } 6061 \qquad\textbf{(E) } 8078$ Show that it is \textbf{(E) }8078.
+
+### P097
+Prove that $1^{k}+2^{k}+\cdots+(p-1)^{k} \equiv 0(p)$ if $p-1 \nmid k$ and $-1(p)$ if $p-1 \mid k$.
+
+### P098
+Let $p \colon X \rightarrow Y$ be an open map. Show that if $A$ is open in $X$, then the map $q \colon A \rightarrow p(A)$ obtained by restricting $p$ is an open map.
+
+### P099
+Show that if $\prod X_\alpha$ is Hausdorff, then so is $X_\alpha$. Assume that each $X_\alpha$ is nonempty.
+
+### P100
+Suppose $K$ and $F$ are disjoint sets in a metric space $X, K$ is compact, $F$ is closed. Prove that there exists $\delta>0$ such that $d(p, q)>\delta$ if $p \in K, q \in F$.

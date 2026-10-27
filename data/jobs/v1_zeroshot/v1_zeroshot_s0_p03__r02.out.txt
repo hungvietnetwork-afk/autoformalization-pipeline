@@ -1,0 +1,74 @@
+### P051
+theorem t51 (x : ℝ) (h : 3 * x + 7 = -8) : x = -5 := by sorry
+
+### P052
+theorem t52 (A B C P Q : ℂ) (hABC : AffineIndependent ℝ ![A, B, C]) (hscalene : dist A B ≠ dist B C ∧ dist B C ≠ dist C A ∧ dist C A ≠ dist A B) (hA : EuclideanGeometry.angle B A C = 39 * π / 180) (hPB : EuclideanGeometry.angle P B C = EuclideanGeometry.angle A B C / 3) (hQB : EuclideanGeometry.angle Q B C = 2 * EuclideanGeometry.angle A B C / 3) (hPC : EuclideanGeometry.angle P C B = EuclideanGeometry.angle A C B / 3) (hQC : EuclideanGeometry.angle Q C B = 2 * EuclideanGeometry.angle A C B / 3) (hQBP : EuclideanGeometry.angle Q B P = 14 * π / 180) : EuclideanGeometry.angle B P C = 133 * π / 180 := by sorry
+
+### P053
+theorem t53 : ((1 : ℚ) + 2 * 3 * 4 * 5) / 11 = 11 := by sorry
+
+### P054
+theorem t54 : (3 / 2 : ℚ) / (1 / 16) = 24 := by sorry
+
+### P055
+theorem t55 (shirts pants hats : ℕ) (h1 : shirts = 5) (h2 : pants = 6) (h3 : hats = 8) : shirts * pants * hats = 240 := by sorry
+
+### P056
+theorem t56 (n : ℝ) (h : 20 / 100 * n = 12) : 30 / 100 * n = 18 := by sorry
+
+### P057
+theorem t57 : ((4 : ℚ) / 10 + 8 / 90) + 37 / 99 = 427 / 495 := by sorry
+
+### P058
+theorem t58 (A B C O D : ℂ) (r s : ℝ) (hAB : dist A B = 2) (hBC : dist B C = 2) (hCA : dist C A = 2) (hOA : dist O A = 1 + s) (hOB : dist O B = 1 + s) (hOC : dist O C = 1 + s) (hs : 0 < s) (hr : 0 < r) (hDB : dist D B = 1 + r) (hDC : dist D C = 1 + r) (hDO : dist D O = s + r) (a b c d : ℕ) (ha : 0 < a) (hb : 0 < b) (hc : 1 < c) (hd : 0 < d) (hsq : Squarefree c) (hgcd : Nat.gcd (Nat.gcd a b) d = 1) (hform : r = ((a : ℝ) - (b : ℝ) * Real.sqrt (c : ℝ)) / (d : ℝ)) : a + b + c + d = 49 := by sorry
+
+### P059
+theorem t59 : Real.tan (10 * π / 180) * Real.tan (20 * π / 180) * Real.tan (30 * π / 180) * Real.tan (40 * π / 180) * Real.tan (50 * π / 180) * Real.tan (60 * π / 180) * Real.tan (70 * π / 180) * Real.tan (80 * π / 180) = 1 := by sorry
+
+### P060
+theorem t60 : Real.sqrt 2 / Real.sqrt 5 * (Real.sqrt 3 / Real.sqrt 6) * (Real.sqrt 4 / Real.sqrt 7) = 2 * Real.sqrt 35 / 35 := by sorry
+
+### P061
+theorem t61 (x : ℝ) : (x + 2) * (x + 5) = x ^ 2 + 7 * x + 10 := by sorry
+
+### P062
+theorem t62 (s t : ℝ) (h1 : 9 * s + 5 * t = 108) (h2 : s = t - 2) : t = 9 := by sorry
+
+### P063
+theorem t63 (k : ℝ) (h : (-2 - 6) * (4 - 8) = (-10 - 6) * (k - 8)) : k = 6 := by sorry
+
+### P064
+theorem t64 (x : ℝ) (h : Real.sqrt (x + 24) / Real.sqrt (x - 24) = 7) : x = 25 := by sorry
+
+### P065
+theorem t65 : (5 : ℝ) ^ ((1 : ℝ) / 3) / (5 : ℝ) ^ ((1 : ℝ) / 5) = (5 : ℝ) ^ ((2 : ℝ) / 15) := by sorry
+
+### P066
+theorem t66 (a : ℝ) (h : a = 3 / 2) : (5 * a ^ 2 - 13 * a + 4) * (2 * a - 3) = 0 := by sorry
+
+### P067
+theorem t67 (x y : ℝ) (h1 : x + y = 6) (h2 : x ^ 2 - y ^ 2 = 12) : |x - y| = 2 := by sorry
+
+### P068
+theorem t68 : IsLeast {x : ℕ | 0 < x ∧ 47 ∣ (2 * x) ^ 2 + 2 * 37 * (2 * x) + 37 ^ 2} 5 := by sorry
+
+### P069
+theorem t69 : IsLeast {k : ℕ | 243 * (2 / 3 : ℝ) ^ k < 30} 6 := by sorry
+
+### P070
+theorem t70 : {j : ℝ | ∃! x : ℝ, (2 * x + 7) * (x - 5) = -43 + j * x} = {5, -11} := by sorry
+
+### P071
+theorem t71 : Nat.choose 6 2 = 15 := by sorry
+
+### P072
+theorem t72 : Nat.choose 40 38 = 780 := by sorry
+
+### P073
+theorem t73 : ((Nat.factorial 6 : ℚ) + (Nat.factorial 7 : ℚ)) / (Nat.factorial 5 : ℚ) = 48 := by sorry
+
+### P074
+theorem t74 : (((Finset.univ : Finset (Fin 3 × Fin 2 × Fin 2)).powerset).filter (fun S => S.card = 6 ∧ (S.filter (fun p => p.2.1 = 0)).card = 3 ∧ (S.filter (fun p => p.2.1 = 1)).card = 3 ∧ ∀ i : Fin 3, (S.filter (fun p => p.1 = i)).card = 2)).card = 88 := by sorry
+
+### P075
+theorem t75 : Set.ncard {P : Finset (Finset (Fin 4)) | (∀ B ∈ P, B.Nonempty) ∧ (∀ x : Fin 4, ∃ B ∈ P, x ∈ B) ∧ (∀ B ∈ P, ∀ C ∈ P, B ≠ C → Disjoint B C) ∧ P.card ≤ 3} = 14 := by sorry

@@ -1,0 +1,218 @@
+{
+ "n": 1000,
+ "status": {
+  "COMPILE_OK": 989,
+  "TIMEOUT": 1,
+  "OTHER_ERROR": 1,
+  "TYPE_MISMATCH": 4,
+  "UNKNOWN_IDENTIFIER": 2,
+  "PARSE_ERROR": 3
+ },
+ "first_error_kind": {
+  "none": 989,
+  "wall_timeout": 1,
+  "other_error": 1,
+  "failed_to_synthesize": 4,
+  "unknown_identifier": 2,
+  "parse_error": 3
+ },
+ "by_source": {
+  "math": {
+   "COMPILE_OK": 805,
+   "TIMEOUT": 1,
+   "OTHER_ERROR": 1,
+   "TYPE_MISMATCH": 4,
+   "PARSE_ERROR": 3
+  },
+  "proofnet": {
+   "COMPILE_OK": 35,
+   "UNKNOWN_IDENTIFIER": 2
+  },
+  "gsm8k": {
+   "COMPILE_OK": 100
+  },
+  "minif2f": {
+   "COMPILE_OK": 49
+  }
+ },
+ "by_domain": {
+  "gsm8k/arithmetic_word_problem": {
+   "COMPILE_OK": 100
+  },
+  "math/algebra": {
+   "COMPILE_OK": 199
+  },
+  "math/counting_probability": {
+   "COMPILE_OK": 78,
+   "TIMEOUT": 1,
+   "PARSE_ERROR": 2,
+   "TYPE_MISMATCH": 1
+  },
+  "math/geometry": {
+   "COMPILE_OK": 76,
+   "TYPE_MISMATCH": 1
+  },
+  "math/intermediate_algebra": {
+   "COMPILE_OK": 144,
+   "TYPE_MISMATCH": 1
+  },
+  "math/number_theory": {
+   "COMPILE_OK": 88
+  },
+  "math/prealgebra": {
+   "COMPILE_OK": 135
+  },
+  "math/precalculus": {
+   "COMPILE_OK": 85,
+   "OTHER_ERROR": 1,
+   "TYPE_MISMATCH": 1,
+   "PARSE_ERROR": 1
+  },
+  "minif2f/algebra": {
+   "COMPILE_OK": 23
+  },
+  "minif2f/competition": {
+   "COMPILE_OK": 12
+  },
+  "minif2f/induction": {
+   "COMPILE_OK": 4
+  },
+  "minif2f/number_theory": {
+   "COMPILE_OK": 10
+  },
+  "proofnet/abstract_algebra": {
+   "COMPILE_OK": 13
+  },
+  "proofnet/competition": {
+   "COMPILE_OK": 3
+  },
+  "proofnet/complex_analysis": {
+   "COMPILE_OK": 3
+  },
+  "proofnet/linear_algebra": {
+   "COMPILE_OK": 1
+  },
+  "proofnet/number_theory": {
+   "COMPILE_OK": 3
+  },
+  "proofnet/real_analysis": {
+   "COMPILE_OK": 4
+  },
+  "proofnet/topology": {
+   "COMPILE_OK": 8,
+   "UNKNOWN_IDENTIFIER": 2
+  }
+ },
+ "by_difficulty": {
+  "gsm8k/grade_school": {
+   "COMPILE_OK": 100
+  },
+  "math/L1": {
+   "COMPILE_OK": 67
+  },
+  "math/L2": {
+   "COMPILE_OK": 161
+  },
+  "math/L3": {
+   "COMPILE_OK": 151,
+   "TYPE_MISMATCH": 2,
+   "PARSE_ERROR": 1
+  },
+  "math/L4": {
+   "COMPILE_OK": 188,
+   "TIMEOUT": 1,
+   "OTHER_ERROR": 1
+  },
+  "math/L5": {
+   "COMPILE_OK": 238,
+   "TYPE_MISMATCH": 2,
+   "PARSE_ERROR": 2
+  },
+  "minif2f/AIME": {
+   "COMPILE_OK": 2
+  },
+  "minif2f/AMC12": {
+   "COMPILE_OK": 8
+  },
+  "minif2f/IMO": {
+   "COMPILE_OK": 2
+  },
+  "minif2f/MATH": {
+   "COMPILE_OK": 30
+  },
+  "minif2f/custom": {
+   "COMPILE_OK": 7
+  },
+  "proofnet/undergraduate": {
+   "COMPILE_OK": 35,
+   "UNKNOWN_IDENTIFIER": 2
+  }
+ },
+ "top_unknown_identifiers": [],
+ "examples": {
+  "COMPILE_OK": [
+   {
+    "problem_id": "math:train/algebra/2698",
+    "message": "declaration uses `sorry`"
+   },
+   {
+    "problem_id": "math:test/precalculus/297",
+    "message": "declaration uses `sorry`"
+   },
+   {
+    "problem_id": "math:train/algebra/1496",
+    "message": "declaration uses `sorry`"
+   }
+  ],
+  "TIMEOUT": [
+   {
+    "problem_id": "math:test/counting_and_probability/933",
+    "message": "hard timeout after 10.0s (REPL killed and restarted)"
+   }
+  ],
+  "OTHER_ERROR": [
+   {
+    "problem_id": "math:test/precalculus/968",
+    "message": "elaboration function for `Mathlib.Tactic.subscriptTerm` has not been implemented\n  ᵥ"
+   }
+  ],
+  "TYPE_MISMATCH": [
+   {
+    "problem_id": "math:train/intermediate_algebra/1280",
+    "message": "failed to synthesize instance of type class\n  LocallyFiniteOrder ℝ\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\n---\nfailed to synthesize instance of type class\n  LocallyFiniteOrder ℝ\n\nHint: Type class instance resolution"
+   },
+   {
+    "problem_id": "math:train/geometry/6142",
+    "message": "failed to synthesize instance of type class\n  LocallyFiniteOrder ℝ\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command."
+   },
+   {
+    "problem_id": "math:train/precalculus/199",
+    "message": "failed to synthesize instance of type class\n  HDiv ℝ (Fin (succ 1) → ℝ) (Fin (succ 1) → ℝ)\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command."
+   }
+  ],
+  "UNKNOWN_IDENTIFIER": [
+   {
+    "problem_id": "proofnet:Munkres:exercise_20_2",
+    "message": "Function expected at\n  MetrizableSpace\nbut this term has type\n  ?m.1\n\nNote: Expected a function because this term is being applied to the argument\n  (ℝ × ℝ)\n\nHint: The identifier `MetrizableSpace` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitl"
+   },
+   {
+    "problem_id": "proofnet:Munkres:exercise_16_6",
+    "message": "Function expected at\n  IsTopologicalBasis\nbut this term has type\n  ?m.1\n\nNote: Expected a function because this term is being applied to the argument\n  {S : Set (ℝ × ℝ) | ∃ a b c d : ℚ, a < b ∧ c < d ∧ S = Set.Ioo (a : ℝ) b ×ˢ Set.Ioo (c : ℝ) d}\n\nHint: The identifier `IsTopologicalBasis` is unknown,"
+   }
+  ],
+  "PARSE_ERROR": [
+   {
+    "problem_id": "math:test/counting_and_probability/1010",
+    "message": "unexpected token '('; expected ',' or binderPred"
+   },
+   {
+    "problem_id": "math:test/counting_and_probability/477",
+    "message": "unexpected token ':='; expected ')', ',' or ':'"
+   },
+   {
+    "problem_id": "math:train/precalculus/592",
+    "message": "unexpected token 'φ'; expected '(', '[', '_', '{', '⦃' or identifier"
+   }
+  ]
+ }
+}

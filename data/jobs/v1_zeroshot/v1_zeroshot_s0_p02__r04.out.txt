@@ -1,0 +1,26 @@
+### P117
+theorem t117 (A B C : ℝ) (hA : 0 < A) (hB : 0 < B) (hC : 0 < C) (hsum : A + B + C = π) (h1 : (Real.cos A / Real.sin A) * (Real.cos C / Real.sin C) = 1 / 2) (h2 : (Real.cos B / Real.sin B) * (Real.cos C / Real.sin C) = 1 / 18) : Real.tan C = 4 := by sorry
+
+### P118
+theorem t118 : Set.ncard {z : ℂ | ‖z‖ < 30 ∧ z ≠ -1 ∧ Complex.exp z = (z - 1) / (z + 1)} = 10 := by sorry
+
+### P119
+theorem t119 (θ : ℝ) (h1 : 8 * Real.tan θ = 3 * Real.cos θ) (h2 : 0 < θ) (h3 : θ < π) (hcos : Real.cos θ ≠ 0) : Real.sin θ = 1 / 3 := by sorry
+
+### P120
+theorem t120 : MeasureTheory.volume (convexHull ℝ ({(0, 0), (5, -3), (11, -2), (16, -5)} : Set (ℝ × ℝ))) = ENNReal.ofReal 23 := by sorry
+
+### P121
+theorem t121 : (4 * Real.sin (π / 2) * Real.cos (5 * π / 3), 4 * Real.sin (π / 2) * Real.sin (5 * π / 3), 4 * Real.cos (π / 2)) = (2, -2 * Real.sqrt 3, 0) := by sorry
+
+### P122
+theorem t122 : Set.ncard {B : Matrix (Fin 2) (Fin 2) ℝ | ∃ A : Matrix (Fin 2) (Fin 2) ℝ, A ^ 3 = 0 ∧ A ^ 2 = B} = 1 := by sorry
+
+### P123
+theorem t123 (t : ℝ) (h1 : (1 + Real.sin t) * (1 + Real.cos t) = 5 / 4) (k m n : ℕ) (hk : 0 < k) (hm : 0 < m) (hn : 0 < n) (hmn : Nat.Coprime m n) (h2 : (1 - Real.sin t) * (1 - Real.cos t) = (m : ℝ) / (n : ℝ) - Real.sqrt (k : ℝ)) : k + m + n = 27 := by sorry
+
+### P124
+theorem t124 (R : Matrix (Fin 2) (Fin 2) ℝ) (hR : ∀ x : Fin 2 → ℝ, R.mulVec x = (2 * ((3 * x 0 + 1 * x 1) / 10)) • (![3, 1] : Fin 2 → ℝ) - x) : R ^ 2 = 1 := by sorry
+
+### P125
+theorem t125 : {x : ℤ | x ∈ ({22, 60, 119, 180, 231} : Set ℤ) ∧ ∃ p q : ℕ, p.Prime ∧ q.Prime ∧ 4 < p ∧ p < 18 ∧ 4 < q ∧ q < 18 ∧ p ≠ q ∧ x = (p : ℤ) * (q : ℤ) - ((p : ℤ) + (q : ℤ))} = {119} := by sorry

@@ -1,0 +1,26 @@
+### P099
+theorem t99 : (((Polynomial.X ^ 2018 + 44 * Polynomial.X ^ 2015 + 3 * Polynomial.X ^ 3 + 404 : Polynomial ℂ).roots).map (fun r : ℂ => r ^ 2)).sum = 0 := by sorry
+
+### P100
+theorem t100 : IsLeast {c : ℝ | 0 < c ∧ ∀ x y : ℝ, 0 ≤ x → 0 ≤ y → Real.sqrt (x * y) + c * |x - y| ≥ (x + y) / 2} (1 / 2) := by sorry
+
+### P101
+theorem t101 (p : Polynomial ℝ) (hp : p.natDegree = 3) (h2 : p.eval 2 = 1) (h7 : p.eval 7 = 19) (h15 : p.eval 15 = 11) (h20 : p.eval 20 = 29) : ∑ k ∈ Finset.Icc (1 : ℕ) 21, p.eval (k : ℝ) = 315 := by sorry
+
+### P102
+theorem t102 (u : ℕ → ℕ) (h1 : u 1 = 1) (hrule : ∀ k n : ℕ, 2 ≤ k → n * (n - 1) / 2 < k → k ≤ n * (n + 1) / 2 → (u (k - 1) < u k ∧ u k % 3 = n % 3 ∧ ∀ m : ℕ, u (k - 1) < m → m < u k → m % 3 ≠ n % 3)) : u 2008 = 5898 := by sorry
+
+### P103
+theorem t103 : Set.ncard {n : ℕ | 100 ≤ n ∧ n ≤ 999 ∧ IsSquare n ∧ (Nat.digits 10 n).reverse = Nat.digits 10 n} = 3 := by sorry
+
+### P104
+theorem t104 : (Nat.ofDigits 16 [3, 0, 10] : ℕ) = 2563 := by sorry
+
+### P105
+theorem t105 : IsLeast {n : ℕ | 1000 ≤ n ∧ n ≤ 9999 ∧ 9 ∣ n ∧ ((Nat.digits 10 n).filter (fun d => d % 2 = 0)).length = 2 ∧ ((Nat.digits 10 n).filter (fun d => d % 2 = 1)).length = 2} 1089 := by sorry
+
+### P106
+theorem t106 : IsLeast {n : ℕ | (Nat.digits 2 n).length = 5 ∧ (Nat.digits 2 n).reverse = Nat.digits 2 n ∧ ∃ b : ℕ, 2 ≤ b ∧ b ≠ 2 ∧ (Nat.digits b n).length = 3 ∧ (Nat.digits b n).reverse = Nat.digits b n} (Nat.ofDigits 2 [1, 0, 0, 0, 1]) := by sorry
+
+### P107
+theorem t107 (q : ℚ) (hq : (q : ℝ) = ∑' k : ℕ, (3 : ℝ) / 10 ^ (k + 1)) : q.den = 3 := by sorry

@@ -1,0 +1,41 @@
+### P099
+Compute the sum of the squares of the roots of the equation \[x^{2018} +44x^{2015} + 3x^3 + 404 = 0.\]
+Answer: 0
+
+### P100
+Find the smallest positive real number $c,$ such that for all nonnegative real numbers $x$ and $y,$
+\[\sqrt{xy} + c |x - y| \ge \frac{x + y}{2}.\]
+Answer: \frac{1}{2}
+
+### P101
+The cubic polynomial $p(x)$ satisfies $p(2) = 1,$ $p(7) = 19,$ $p(15) = 11,$ and $p(20) = 29.$  Find
+\[p(1) + p(2) + p(3) + \dots + p(21).\]
+Answer: 315
+
+### P102
+Let $u_n$ be the $n^\text{th}$ term of the sequence
+\[1,\,\,\,\,\,\,2,\,\,\,\,\,\,5,\,\,\,\,\,\,6,\,\,\,\,\,\,9,\,\,\,\,\,\,12,\,\,\,\,\,\,13,\,\,\,\,\,\,16,\,\,\,\,\,\,19,\,\,\,\,\,\,22,\,\,\,\,\,\,23,\ldots,\]
+where the first term is the smallest positive integer that is $1$ more than a multiple of $3$, the next two terms are the next two smallest positive integers that are each two more than a multiple of $3$, the next three terms are the next three smallest positive integers that are each three more than a multiple of $3$, the next four terms are the next four smallest positive integers that are each four more than a multiple of $3$, and so on:
+\[\underbrace{1}_{1\text{ term}},\,\,\,\,\,\,\underbrace{2,\,\,\,\,\,\,5}_{2\text{ terms}},\,\,\,\,\,\,\underbrace{6,\,\,\,\,\,\,9,\,\,\,\,\,\,12}_{3\text{ terms}},\,\,\,\,\,\,\underbrace{13,\,\,\,\,\,\,16,\,\,\,\,\,\,19,\,\,\,\,\,\,22}_{4\text{ terms}},\,\,\,\,\,\,\underbrace{23,\ldots}_{5\text{ terms}},\,\,\,\,\,\,\ldots.\]
+Determine $u_{2008}$.
+Answer: 5898
+
+### P103
+How many $3$-digit squares are palindromes?
+Answer: 3
+
+### P104
+Convert $\rm{A}03_{16}$ to a base 10 integer, where the 'digits' A through F represent the values 10, 11, 12, 13, 14, and 15 in order.
+Answer: 2563
+
+### P105
+What is the smallest positive four-digit number divisible by 9 which has two even and two odd digits?
+Answer: 1089
+
+### P106
+A palindrome is a number that reads the same forward and backward. What is the smallest 5-digit palindrome in base 2 that can be expressed as a 3-digit palindrome in a different base?  Give your response in base 2.
+Answer: 10001_2
+
+### P107
+The decimal representation of a fraction ends in $0.\overline{3}$. When the decimal is changed to a common fraction and reduced to lowest terms, what is the denominator of the fraction?
+Answer: 3

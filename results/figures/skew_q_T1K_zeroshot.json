@@ -1,0 +1,22 @@
+{
+ "tasks": 1000,
+ "total_lean_s": 47.52,
+ "partition_time_max_over_mean": 4.087,
+ "task_time_max_s": 10.0,
+ "share_of_time_in_slowest_1pct_tasks": 0.262,
+ "w2": {
+  "ideal_s": 23.76,
+  "static_partition_makespan_s": 29.83,
+  "work_stealing_makespan_s": 23.78
+ },
+ "w4": {
+  "ideal_s": 11.88,
+  "static_partition_makespan_s": 20.84,
+  "work_stealing_makespan_s": 11.9
+ },
+ "w8": {
+  "ideal_s": 5.94,
+  "static_partition_makespan_s": 14.68,
+  "work_stealing_makespan_s": 10.04
+ }
+}

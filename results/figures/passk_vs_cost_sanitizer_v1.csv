@@ -1,0 +1,5 @@
+setting,k,n_problems,pass_at_k,tokens_per_problem
+zero-shot,1,100,0.98,329.6
+few-shot,1,100,0.98,672.3
+few-shot,2,100,1.0,1344.5
+few-shot,4,100,1.0,2689.1

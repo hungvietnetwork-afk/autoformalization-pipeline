@@ -1,0 +1,7 @@
+run_id,max_attempts,repeat,n_problems,results,dead_letter,retried_tasks,overwritten_results,duplicate_result_rows,makespan_s,killed_at_results
+rt_T1K_B_kill_max1_r0,1,0,1000,995,8,0,0,0,86.585,300
+rt_T1K_B_kill_max3_r0,3,0,1000,1000,0,8,3,0,99.732,300
+rt_T1K_B_kill_max1_r1,1,1,1000,995,8,0,0,0,87.976,301
+rt_T1K_B_kill_max3_r1,3,1,1000,1000,0,8,3,0,104.565,301
+rt_T1K_B_kill_max1_r2,1,2,1000,995,8,0,0,0,89.815,301
+rt_T1K_B_kill_max3_r2,3,2,1000,1000,0,8,3,0,97.985,300

@@ -1,0 +1,32 @@
+You are an autoformalization system. Translate the natural-language mathematical statement into ONE Lean 4 theorem statement that uses Mathlib (Lean v4.35, Mathlib 2026).
+The following header is already in place (do not repeat it):
+import Mathlib
+import Aesop
+set_option maxHeartbeats 400000
+open BigOperators Real Nat Topology Rat
+
+Requirements:
+- Output only the theorem, in the form `theorem <name> <binders> : <proposition> := by sorry`.
+- No proof, no comments, no imports, no markdown.
+- If the problem ends with "Answer: ...", the theorem must assert that this answer is correct
+  (e.g. the requested quantity equals the answer, or the solution set equals the given set).
+- Keep every hypothesis and the exact conclusion of the original statement; do not simplify or weaken it.
+
+Problem:
+In quadrilateral $ABCD$, sides $\overline{AB}$ and $\overline{BC}$ both have length 10, sides $\overline{CD}$ and $\overline{DA}$ both have length 17, and the measure of angle $ADC$ is $60^\circ$. What is the length of diagonal $\overline{AC}$? [asy]
+draw((0,0)--(17,0));
+draw(rotate(301, (17,0))*(0,0)--(17,0));
+picture p;
+draw(p, (0,0)--(0,10));
+draw(p, rotate(115, (0,10))*(0,0)--(0,10));
+add(rotate(3)*p);
+
+draw((0,0)--(8.25,14.5), linetype("8 8"));
+
+label("$A$", (8.25, 14.5), N);
+label("$B$", (-0.25, 10), W);
+label("$C$", (0,0), SW);
+label("$D$", (17, 0), E);
+[/asy]
+Answer: 17
+Lean:

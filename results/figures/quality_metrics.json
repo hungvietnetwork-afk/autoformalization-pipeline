@@ -1,0 +1,88 @@
+{
+ "q_T1K_zeroshot": {
+  "candidates": 1000,
+  "problems": 1000,
+  "parse_rate": 0.997,
+  "compile_rate": 0.989,
+  "pass_at_1": 0.989,
+  "pass_at_all": 0.989,
+  "failure_by_type": {
+   "TIMEOUT": 1,
+   "OTHER_ERROR": 1,
+   "TYPE_MISMATCH": 4,
+   "UNKNOWN_IDENTIFIER": 2,
+   "PARSE_ERROR": 3
+  },
+  "semantic_checked": true,
+  "flagged_share_of_compiled": 0.1871,
+  "lean_confirmed_share_of_compiled": 0.2942,
+  "latency_ms_p50": 27.0,
+  "latency_ms_p95": 104.6
+ },
+ "q_T100_fewshot": {
+  "candidates": 400,
+  "problems": 100,
+  "parse_rate": 1.0,
+  "compile_rate": 0.9825,
+  "pass_at_1": 0.9825,
+  "pass_at_all": 1.0,
+  "failure_by_type": {
+   "TYPE_MISMATCH": 5,
+   "OTHER_ERROR": 2
+  },
+  "semantic_checked": true,
+  "flagged_share_of_compiled": 0.1272,
+  "lean_confirmed_share_of_compiled": 0.2799,
+  "latency_ms_p50": 21.2,
+  "latency_ms_p95": 82.9
+ },
+ "base_T20_1req_A": {
+  "candidates": 20,
+  "problems": 20,
+  "parse_rate": 1.0,
+  "compile_rate": 1.0,
+  "pass_at_1": 1.0,
+  "pass_at_all": 1.0,
+  "failure_by_type": {},
+  "semantic_checked": true,
+  "flagged_share_of_compiled": 0.1,
+  "lean_confirmed_share_of_compiled": 0.15,
+  "latency_ms_p50": 35.5,
+  "latency_ms_p95": 99.3
+ },
+ "base_T20_batchjob_A": {
+  "candidates": 20,
+  "problems": 20,
+  "parse_rate": 1.0,
+  "compile_rate": 1.0,
+  "pass_at_1": 1.0,
+  "pass_at_all": 1.0,
+  "failure_by_type": {},
+  "semantic_checked": true,
+  "flagged_share_of_compiled": 0.1,
+  "lean_confirmed_share_of_compiled": 0.2,
+  "latency_ms_p50": 31.0,
+  "latency_ms_p95": 90.8
+ },
+ "semantic_accuracy_on_audit_set": {
+  "llm_rater_A": {
+   "n": 100,
+   "DUNG": 0.81,
+   "DUNG_or_GAN_DUNG": 0.9
+  },
+  "llm_rater_B": {
+   "n": 100,
+   "DUNG": 0.82,
+   "DUNG_or_GAN_DUNG": 0.96
+  },
+  "human_rater_1": {
+   "n": 100,
+   "DUNG": 0.82
+  },
+  "human_rater_2": {
+   "n": 100,
+   "DUNG": 0.81
+  }
+ },
+ "note": "semantic accuracy = share labelled DUNG on the 100-item audit sample of q_T1K_zeroshot; the LLM raters are a pilot of the procedure, the human ratings (rater1/rater2.xlsx) replace them"
+}

@@ -1,0 +1,35 @@
+{
+ "n_items": 100,
+ "observed_agreement_3class": 0.87,
+ "kappa_3class": 0.5927,
+ "kappa_3class_linear_weighted": 0.7002,
+ "kappa_binary_DUNG_vs_rest": 0.8342,
+ "kappa_binary_SAI_vs_rest": 0.3939,
+ "label_dist_a": {
+  "DUNG": 81,
+  "GAN_DUNG": 9,
+  "SAI": 10
+ },
+ "label_dist_b": {
+  "DUNG": 82,
+  "GAN_DUNG": 14,
+  "SAI": 4
+ },
+ "confusion_3class(rows=a, cols=b)": [
+  [
+   79,
+   2,
+   0
+  ],
+  [
+   3,
+   5,
+   1
+  ],
+  [
+   0,
+   7,
+   3
+  ]
+ ]
+}

@@ -1,0 +1,132 @@
+=== keep sanitizer-v1 quality runs 14:34:26
+=== re-import with sanitizer v2 14:34:26
+{
+ "jobs": 8,
+ "tasks": 1000,
+ "answered": 1000,
+ "empty_after_sanitize": 0,
+ "missing_output_files": []
+}
+{
+ "jobs": 4,
+ "tasks": 400,
+ "answered": 400,
+ "empty_after_sanitize": 0,
+ "missing_output_files": []
+}
+=== quality runs (sanitizer v2) 14:34:26
+[
+ {
+  "setting": "zero-shot",
+  "k": 1,
+  "n_problems": 100,
+  "pass_at_k": 0.99,
+  "tokens_per_problem": 329.6
+ },
+ {
+  "setting": "few-shot",
+  "k": 1,
+  "n_problems": 100,
+  "pass_at_k": 0.9825,
+  "tokens_per_problem": 672.3
+ },
+ {
+  "setting": "few-shot",
+  "k": 2,
+  "n_problems": 100,
+  "pass_at_k": 1.0,
+  "tokens_per_problem": 1344.5
+ },
+ {
+  "setting": "few-shot",
+  "k": 4,
+  "n_problems": 100,
+  "pass_at_k": 1.0,
+  "tokens_per_problem": 2689.1
+ }
+]
+=== semantic T1K 14:36:51
+TIMEOUT check=auto_prove key=08180877bac1bb62162f34a4e2bebbc45ab6c8a63ef9d57b5db9e343a832
+  250/3121 checks, 1 wall timeouts, 148s
+TIMEOUT check=gold_to_cand key=1fa0b3f0086a3b08ae79cef94fa368c9332e454a07a0329e74264392d62f
+TIMEOUT check=auto_prove key=216b992a83582955257fca0adafe743754b2926063a230089d03c354e4c6
+TIMEOUT check=refuted key=13988c3cc5c342301303e687acb3676c3dc04db7be12864494c5a39e7628
+  500/3121 checks, 4 wall timeouts, 270s
+TIMEOUT check=auto_prove key=2ea5662f166e8d234485efc252eb63214d16d2d160bcf6ef4dc690fadac2
+  750/3121 checks, 5 wall timeouts, 349s
+TIMEOUT check=auto_prove key=3cbd0120854206584eb77a5446df2ae2273185b2157284d7fe3cb05e418c
+TIMEOUT check=cand_to_gold key=41f6b10fea95e36cb93174dfde2ad623c5f4f64967584eb3f961fce40be2
+TIMEOUT check=gold_to_cand key=41f6b10fea95e36cb93174dfde2ad623c5f4f64967584eb3f961fce40be2
+TIMEOUT check=gold_to_cand key=4ced3e5e2cc7d840ed8859932c7834e32ebf2462b394daab5c7390bce4c2
+  1000/3121 checks, 9 wall timeouts, 488s
+TIMEOUT check=cand_to_gold key=67120117e69b8be869fe477b04ee4310089ebe3ce2af73d83845b5d67c94
+  1250/3121 checks, 10 wall timeouts, 576s
+TIMEOUT check=gold_to_cand key=6a34b92058a4a80600d6ca548bd48809b89a226cfd1458d7644d98b8d005
+TIMEOUT check=cand_to_gold key=6a34b92058a4a80600d6ca548bd48809b89a226cfd1458d7644d98b8d005
+TIMEOUT check=auto_prove key=731327739fdea4f6777f558c3938ac8b0e8d808f44de7b77517902e15832
+TIMEOUT check=auto_prove key=71d695ae04242d927bafd430f96344c3915f0b84e278407c96750f4a9488
+  1500/3121 checks, 14 wall timeouts, 755s
+TIMEOUT check=cand_to_gold key=830ea5a10d87cccb1e4bc3368becf21d3c0fd6627f8cef62de8f5da117bd
+TIMEOUT check=vacuous key=731327739fdea4f6777f558c3938ac8b0e8d808f44de7b77517902e15832
+TIMEOUT check=cand_to_gold key=7bd4dff69e6bbc971fb4c88bf46b8226793f88a6dd62fc4ddcb2f3295c6d
+  1750/3121 checks, 17 wall timeouts, 889s
+TIMEOUT check=gold_to_cand key=a0718b23e4717a0bca20740487b07101f9b9990cb7f780e743bf8984861d
+TIMEOUT check=auto_prove key=b6e6c37f4dc2b0378e0f6ff7b9625b57ba243ca60c5147c51c66621f16b5
+  2000/3121 checks, 19 wall timeouts, 1010s
+TIMEOUT check=auto_prove key=bed053205248565a4b937ec630d842072185d8e8f6a6d84e60be288aad97
+TIMEOUT check=cand_to_gold key=a0718b23e4717a0bca20740487b07101f9b9990cb7f780e743bf8984861d
+TIMEOUT check=auto_prove key=a23f33455aa7419b09ca38a314ebc68f7fd243b7a9749f8200df9ec9838c
+  2250/3121 checks, 22 wall timeouts, 1156s
+TIMEOUT check=cand_to_gold key=ccad074d376339a696a0441c2d096eede1cbcc11723f0c330c6dfd1b25e4
+TIMEOUT check=gold_to_cand key=b3178582fe33d085034e862ece802d24293e24fd6c54b821811424fe15d1
+  2500/3121 checks, 24 wall timeouts, 1279s
+TIMEOUT check=auto_prove key=e2d08ba4f049e7445e47c660ea1243e5745c71a6d7f97fbd9da176d77fd5
+TIMEOUT check=gold_to_cand key=bed053205248565a4b937ec630d842072185d8e8f6a6d84e60be288aad97
+  2750/3121 checks, 26 wall timeouts, 1384s
+TIMEOUT check=gold_to_cand key=ccad074d376339a696a0441c2d096eede1cbcc11723f0c330c6dfd1b25e4
+TIMEOUT check=refuted key=ddf084820afdcb182a5cf5f19f0c8d718ecf84a1efc223c22351e23d7f00
+  3000/3121 checks, 28 wall timeouts, 1538s
+989 compiled candidates, 3121 checks in 1571s -> runs/q_T1K_zeroshot/semantic.jsonl
+=== semantic T100 few-shot 15:03:03
+TIMEOUT check=auto_prove key=0e6522bca161cd29e1f30a329d285ad17ea09683274f1bfb0601072e9ab0
+  250/1251 checks, 1 wall timeouts, 156s
+  500/1251 checks, 1 wall timeouts, 202s
+  750/1251 checks, 1 wall timeouts, 268s
+  1000/1251 checks, 1 wall timeouts, 319s
+  1250/1251 checks, 1 wall timeouts, 396s
+393 compiled candidates, 1251 checks in 397s -> runs/q_T100_fewshot/semantic.jsonl
+=== corpus 15:09:41
+{
+ "problems": 1000,
+ "formalized": 990,
+ "by_source": {
+  "gsm8k": {
+   "problems": 100,
+   "formalized": 100
+  },
+  "math": {
+   "problems": 814,
+   "formalized": 806
+  },
+  "minif2f": {
+   "problems": 49,
+   "formalized": 49
+  },
+  "proofnet": {
+   "problems": 37,
+   "formalized": 35
+  }
+ },
+ "semantic_verdicts": {
+  "ARITHMETIC_ONLY": 36,
+  "PROVED_CONSISTENT": 271,
+  "NO_EVIDENCE_OF_ERROR": 509,
+  "ANSWER_MISSING": 143,
+  "EQUIV_GOLD": 29,
+  "TRIVIAL": 2
+ },
+ "formalized_not_flagged": 809,
+ "selection": "per problem: best semantic verdict, then shortest statement, then fastest check"
+}
+=== mutation 15:09:42
+=== done 15:48:59

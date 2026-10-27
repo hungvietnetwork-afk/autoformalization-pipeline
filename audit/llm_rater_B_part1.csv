@@ -1,0 +1,51 @@
+audit_id,label,reason
+A001,DUNG,All hypotheses and ordering captured; representation is unique so the sum 13 is well defined
+A002,DUNG,Both step sequences modeled exactly with no Nat truncation; common count 10 correct
+A003,DUNG,All durations encoded as hypotheses; total minutes over 60 equals 6 hours
+A004,DUNG,Two distinct points on both curves; their distance equals sqrt 10
+A005,DUNG,Set of positive m admitting positive n with mn <= m+n is infinite; matches choice E
+A006,GAN_DUNG,Vieta pre-applied as n = 2r+1 and m = r(r+1); equivalent but quadratic not modeled
+A007,DUNG,Exact transcription with unit modulus and each z_j different from 1
+A008,DUNG,Topology axioms spelled out; nonempty family matches Munkres convention for intersections
+A009,DUNG,Integral domain as CommRing plus IsDomain; conclusion x = 1 or x = -1
+A010,DUNG,c_s expanded correctly over Int; prime and size conditions present; positivity matches IMO naturals
+A011,DUNG,Exact trigonometric expression in radians asserted equal to 1
+A012,DUNG,Equation with x nonzero implies x = 2
+A013,DUNG,Direct rational computation matching the answer
+A014,DUNG,Planted trees equal three times total chopped which is 1500
+A015,GAN_DUNG,Uses positive cubes and a <= b rather than distinct integral cubes; equivalent taxicab statement
+A016,DUNG,Integer square mod 3 is 0 or 1
+A017,DUNG,IsGreatest of a^2+b^2 over all valid a b; answer 40
+A018,DUNG,Commutativity of product group iff both factors commutative
+A019,DUNG,Product over 1..n below 5/2 for positive n over Real
+A020,GAN_DUNG,Bare arithmetic identity but transparently encodes the word problem computation
+A021,DUNG,Natural a > 1 so subtraction exact; n divides totient of a^n - 1
+A022,DUNG,Complex linear system with stated solution
+A023,SAI,Counting stack orders reduced to bare identity 4! = 24; orderings not modeled
+A024,DUNG,Cyclic sum via finRotate; set of n >= 3 with the property has two elements
+A025,DUNG,Direct rational simplification
+A026,DUNG,Restriction from A to p(A) with subspace topology is an open map
+A027,DUNG,IsLeast with four-digit range divisibility by 9 and digit parity counts
+A028,DUNG,All prices and weights encoded; total equals 40
+A029,DUNG,Sum in ZMod p equals -1 or 0 according to whether p-1 divides k
+A030,DUNG,Unique residue below 1000 inverting 11 is 91; standard answer form
+A031,DUNG,Series reindexed from n = 17 has sum 272
+A032,DUNG,Counts n in 1..25 with prime divisor sum; equals 5
+A033,DUNG,Even positive n with product twenty times sum gives sum 24
+A034,DUNG,Substitution evaluation equals 19
+A035,DUNG,Discontinuous f with symmetric difference limit zero exists; nhds 0 harmless since value at 0 is 0
+A036,GAN_DUNG,Diagram encoded as injectivity facts plus product of labels; reasonable but indirect modeling
+A037,SAI,No real a b satisfy both equations so the statement over Real is vacuous; needs complex
+A038,DUNG,Direct modular computation
+A039,DUNG,Chain of equal ratios with nonzero denominators forces k = 18
+A040,DUNG,Hausdorff product with nonempty factors implies each factor Hausdorff
+A041,DUNG,Midpoint coordinates computed by definition match the answer
+A042,DUNG,Matrix determined by images of standard basis vectors
+A043,DUNG,Given cos theta = 4/7 the expression equals 49/8
+A044,GAN_DUNG,Bare arithmetic identity with exact Nat division; transparent encoding of the word problem
+A045,DUNG,No real eigenvalues and invariant subspace imply even finrank
+A046,DUNG,Matches Putnam 1998 A3 and reference although the problem text is truncated
+A047,DUNG,Sqrt junk values create no extra solutions; x = 25
+A048,DUNG,Right inverse of bijective f is its inverse; equation gives 47/24
+A049,DUNG,Earnings and spending encoded; shortfall 2000
+A050,DUNG,Nat subtraction and division exact under hypotheses; difference 14238

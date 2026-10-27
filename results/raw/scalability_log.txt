@@ -1,0 +1,197 @@
+=== matrix T100,T1K start 11:52:58
+mx_T100_A_r0: 38s thr=2.684 p95=73.2
+mx_T100_B_r0: 60s thr=1.716 p95=117.43
+mx_T100_C_r0: 91s thr=1.127 p95=167.61
+mx_T1K_A_r0: 67s thr=15.403 p95=79.23
+mx_T1K_B_r0: 97s thr=12.616 p95=102.34
+mx_T1K_C_r0: 139s thr=9.099 p95=187.94
+mx_T100_A_r1: 33s thr=3.137 p95=66.74
+mx_T100_B_r1: 38s thr=2.735 p95=76.62
+mx_T100_C_r1: 84s thr=1.222 p95=156.33
+mx_T1K_A_r1: 63s thr=16.378 p95=64.14
+mx_T1K_B_r1: 92s thr=13.451 p95=92.13
+mx_T1K_C_r1: 131s thr=9.674 p95=171.01
+mx_T100_A_r2: 38s thr=2.772 p95=75.01
+mx_T100_B_r2: 43s thr=2.427 p95=80.32
+mx_T100_C_r2: 92s thr=1.117 p95=215.16
+mx_T1K_A_r2: 65s thr=15.796 p95=75.84
+mx_T1K_B_r2: 98s thr=12.423 p95=110.58
+mx_T1K_C_r2: 135s thr=9.398 p95=184.07
+wrote /home/claude/af/autoformalization-pipeline/results/matrix_median.csv
+=== matrix T100,T1K end 12:16:21
+=== matrix T10K start 12:16:21
+mx_T10K_A_r0: 450s thr=22.343 p95=67.13
+mx_T10K_B_r0: 474s thr=21.72 p95=92.15
+mx_T10K_C_r0: 683s thr=16.162 p95=189.74
+mx_T10K_A_r1: 465s thr=22.25 p95=75.05
+mx_T10K_B_r1: 419s thr=25.645 p95=85.68
+mx_T10K_C_r1: 662s thr=16.594 p95=183.31
+mx_T10K_A_r2: 442s thr=23.799 p95=68.47
+mx_T10K_B_r2: 521s thr=20.319 p95=87.1
+mx_T10K_C_r2: 664s thr=16.965 p95=169.14
+wrote /home/claude/af/autoformalization-pipeline/results/matrix_median.csv
+=== matrix T10K end 13:36:01
+=== scaling start 13:36:04
+sc_T10K_w1_r0: 379s thr=27.458 steady=30.509
+sc_T10K_w2_r0: 292s thr=40.412 steady=48.842
+sc_T10K_w4_r0: 752s thr=14.416 steady=16.347
+Process lean-2:
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/af/autoformalization-pipeline/afp/workers.py", line 125, in verifier_main
+    restart_repl(remaining)
+    ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/claude/af/autoformalization-pipeline/afp/workers.py", line 87, in restart_repl
+    repl.restart()
+    ~~~~~~~~~~~~^^
+  File "/home/claude/af/autoformalization-pipeline/afp/lean/repl.py", line 121, in restart
+    return self.start()
+           ~~~~~~~~~~^^
+  File "/home/claude/af/autoformalization-pipeline/afp/lean/repl.py", line 88, in start
+    resp = self._send({"cmd": self.header}, timeout)
+  File "/home/claude/af/autoformalization-pipeline/afp/lean/repl.py", line 141, in _send
+    raise ReplTimeout(f"no answer within {timeout}s")
+afp.lean.repl.ReplTimeout: no answer within 300.0s
+Process lean-4:
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
+    self.run()
+    ~~~~~~~~^^
+  File "/usr/lib/python3.13/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/af/autoformalization-pipeline/afp/workers.py", line 125, in verifier_main
+    restart_repl(remaining)
+    ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/claude/af/autoformalization-pipeline/afp/workers.py", line 87, in restart_repl
+    repl.restart()
+    ~~~~~~~~~~~~^^
+  File "/home/claude/af/autoformalization-pipeline/afp/lean/repl.py", line 121, in restart
+    return self.start()
+           ~~~~~~~~~~^^
+  File "/home/claude/af/autoformalization-pipeline/afp/lean/repl.py", line 88, in start
+    resp = self._send({"cmd": self.header}, timeout)
+  File "/home/claude/af/autoformalization-pipeline/afp/lean/repl.py", line 141, in _send
+    raise ReplTimeout(f"no answer within {timeout}s")
+afp.lean.repl.ReplTimeout: no answer within 300.0s
+sc_T10K_w8_r0: 795s thr=13.602 steady=18.77
+=== scaling end 14:13:16
+=== scaling r1 (1-2 workers) start 14:13:29
+sc_T10K_w1_r1: 400s thr=25.791 steady=29.042
+sc_T10K_w2_r1: 269s thr=45.302 steady=54.971
+wrote /home/claude/af/autoformalization-pipeline/results/scaling_median.csv
+=== fault start 14:24:38
+{
+ "ref_candidates": 1000,
+ "fault_candidates": 1000,
+ "same_status": 999,
+ "retried_tasks": 8,
+ "overwritten_results": 3,
+ "duplicate_result_rows": 0,
+ "dead_letter": 0,
+ "inference": {
+  "batches": 125,
+  "candidates": 1000,
+  "backend_stats": {
+   "cache_hits": 1000,
+   "cache_misses": 0
+  }
+ },
+ "fault": {
+  "worker": "lean-0",
+  "at_results": 302,
+  "ts": 1792160849.0826309
+ },
+ "makespan_ref_s": 98.122,
+ "makespan_fault_s": 85.314
+}
+=== determinism start 14:28:02
+{
+ "runs": [
+  "mx_T1K_A_r0",
+  "mx_T1K_A_r1",
+  "mx_T1K_A_r2",
+  "mx_T1K_B_r0",
+  "mx_T1K_B_r1",
+  "mx_T1K_B_r2",
+  "mx_T1K_C_r0",
+  "mx_T1K_C_r1",
+  "mx_T1K_C_r2"
+ ],
+ "tasks": 1000,
+ "identical_within_config": {
+  "A": 1000,
+  "B": 1000,
+  "C": 1000
+ },
+ "identical_across_all_runs": 999,
+ "disagreements": [
+  {
+   "problem_id": "math:test/counting_and_probability/933",
+   "status_by_run": {
+    "mx_T1K_A_r0": "TYPE_MISMATCH",
+    "mx_T1K_A_r1": "TYPE_MISMATCH",
+    "mx_T1K_A_r2": "TYPE_MISMATCH",
+    "mx_T1K_B_r0": "TIMEOUT",
+    "mx_T1K_B_r1": "TIMEOUT",
+    "mx_T1K_B_r2": "TIMEOUT",
+    "mx_T1K_C_r0": "TIMEOUT",
+    "mx_T1K_C_r1": "TIMEOUT",
+    "mx_T1K_C_r2": "TIMEOUT"
+   }
+  }
+ ]
+}
+=== broker start 14:28:02
+{
+ "sqlite": {
+  "makespan_s": 75.801,
+  "steady_throughput_candidates_per_s": 28.982,
+  "latency_ms_p95": 95.23,
+  "compile_rate": 0.983,
+  "duplicate_result_rows": 0,
+  "retried_tasks": 0
+ },
+ "redis": {
+  "makespan_s": 77.36,
+  "steady_throughput_candidates_per_s": 27.542,
+  "latency_ms_p95": 101.11,
+  "compile_rate": 0.983,
+  "duplicate_result_rows": 0,
+  "retried_tasks": 0
+ },
+ "remote_join": {
+  "makespan_s": 81.733,
+  "results_per_worker": {
+   "lean-1": 376,
+   "lean-0": 624
+  },
+  "duplicate_result_rows": 0,
+  "n_candidates": 1000
+ }
+}
+=== bench_queue start 14:32:36
+{"depth": 1000, "indexed": false, "batch": 1, "leases": 300, "ms_per_lease_median": 0.264, "ms_per_lease_p95": 0.443, "ms_per_task_median": 0.264}
+{"depth": 1000, "indexed": false, "batch": 8, "leases": 300, "ms_per_lease_median": 0.022, "ms_per_lease_p95": 0.512, "ms_per_task_median": 0.003}
+{"depth": 1000, "indexed": false, "batch": 32, "leases": 300, "ms_per_lease_median": 0.017, "ms_per_lease_p95": 0.933, "ms_per_task_median": 0.001}
+{"depth": 1000, "indexed": true, "batch": 1, "leases": 300, "ms_per_lease_median": 0.055, "ms_per_lease_p95": 0.119, "ms_per_task_median": 0.055}
+{"depth": 1000, "indexed": true, "batch": 8, "leases": 300, "ms_per_lease_median": 0.016, "ms_per_lease_p95": 0.481, "ms_per_task_median": 0.002}
+{"depth": 1000, "indexed": true, "batch": 32, "leases": 300, "ms_per_lease_median": 0.01, "ms_per_lease_p95": 1.245, "ms_per_task_median": 0.0}
+{"depth": 10000, "indexed": false, "batch": 1, "leases": 300, "ms_per_lease_median": 2.543, "ms_per_lease_p95": 3.598, "ms_per_task_median": 2.543}
+{"depth": 10000, "indexed": false, "batch": 8, "leases": 300, "ms_per_lease_median": 2.88, "ms_per_lease_p95": 3.781, "ms_per_task_median": 0.36}
+{"depth": 10000, "indexed": false, "batch": 32, "leases": 300, "ms_per_lease_median": 3.642, "ms_per_lease_p95": 15.368, "ms_per_task_median": 0.114}
+{"depth": 10000, "indexed": true, "batch": 1, "leases": 300, "ms_per_lease_median": 0.055, "ms_per_lease_p95": 0.127, "ms_per_task_median": 0.055}
+{"depth": 10000, "indexed": true, "batch": 8, "leases": 300, "ms_per_lease_median": 0.353, "ms_per_lease_p95": 9.559, "ms_per_task_median": 0.044}
+{"depth": 10000, "indexed": true, "batch": 32, "leases": 300, "ms_per_lease_median": 1.38, "ms_per_lease_p95": 12.088, "ms_per_task_median": 0.043}
+{"depth": 100000, "indexed": false, "batch": 1, "leases": 300, "ms_per_lease_median": 96.789, "ms_per_lease_p95": 116.982, "ms_per_task_median": 96.789}
+{"depth": 100000, "indexed": false, "batch": 8, "leases": 300, "ms_per_lease_median": 92.292, "ms_per_lease_p95": 109.871, "ms_per_task_median": 11.536}
+{"depth": 100000, "indexed": false, "batch": 32, "leases": 300, "ms_per_lease_median": 90.12, "ms_per_lease_p95": 112.157, "ms_per_task_median": 2.816}
+{"depth": 100000, "indexed": true, "batch": 1, "leases": 300, "ms_per_lease_median": 0.064, "ms_per_lease_p95": 0.17, "ms_per_task_median": 0.064}
+{"depth": 100000, "indexed": true, "batch": 8, "leases": 300, "ms_per_lease_median": 0.322, "ms_per_lease_p95": 0.934, "ms_per_task_median": 0.04}
+{"depth": 100000, "indexed": true, "batch": 32, "leases": 300, "ms_per_lease_median": 1.161, "ms_per_lease_p95": 11.844, "ms_per_task_median": 0.036}
+=== rest done 14:34:16
